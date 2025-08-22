@@ -6,9 +6,9 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Senior Product Designer & Front-end Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "hello@andrepilch.com",
   location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "French"], // optional: Leave the array empty if you don't want to display languages
 };
@@ -28,19 +28,9 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/andrepilch/",
   },
   {
     name: "Email",
@@ -55,25 +45,21 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Crafting innovative products through design and code</>,
   featured: {
     display: true,
     title: (
       <>
-        Recent project: <strong className="ml-4">Once UI</strong>
+        Recent project: <strong className="ml-4">WHCC Editors</strong>
       </>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/whcc-editors-suite",
   },
   subline: (
     <>
-      I'm André Pilch, a design engineer at{" "}
-      <Logo
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm André Pilch, a Senior Product Designer & Front-end Engineer at{" "}
+      <strong>White House Custom Colour</strong>, where I craft innovative
+      <br /> products with over a decade of design experience.
     </>
   ),
 };
@@ -99,10 +85,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        André Pilch is a Wisconsin-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        André Pilch is a Senior Product Designer & Front-end Engineer with over a decade of experience crafting innovative products.
+        His work spans from persona research and design systems to front-end development, with expertise in creating 
+        user-centered design solutions that bridge the gap between design and technology.
       </>
     ),
   },
@@ -111,41 +96,53 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "White House Custom Colour",
+        timeframe: "Present",
+        role: "Senior Product Designer & Front-end Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Lead product design and front-end development for WHCC's suite of creative tools including Wall Designer, Album Designer, and Card Designer.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
+            Conducted extensive persona research to understand customer needs and design user-centered solutions that improved workflow efficiency.
+          </>,
+          <>
+            Developed comprehensive design systems that ensure consistency across multiple product offerings while maintaining brand identity.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "WHCC Design Tools",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Thomson Reuters",
+        timeframe: "Previous",
+        role: "Product Designer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Designed and developed ProView, a comprehensive legal research platform that enhanced user experience for legal professionals.
           </>,
           <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
+            Created innovative VR Reports App that received patent recognition for its unique approach to data visualization.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "La Forge Des Marques & Wowiwe Instruction Co.",
+        timeframe: "Previous",
+        role: "Product Designer",
+        achievements: [
+          <>
+            Specialized in 3D modeling and virtual reality applications, creating immersive experiences for various client projects.
+          </>,
+          <>
+            Developed expertise in emerging technologies including AR applications and virtual cell modeling.
           </>,
         ],
         images: [],
@@ -157,12 +154,8 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "MSUM",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Design & Technology",
+        description: <>Focused on product design, user experience, and front-end development.</>,
       },
     ],
   },
@@ -171,36 +164,42 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Product Design & UX",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Expert in user research, persona development, and creating design systems that scale across multiple products.</>
         ),
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "Design System",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Front-end Development",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Proficient in modern web technologies including React, Next.js, and creating responsive, accessible user interfaces.</>
         ),
-        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Front-end Development",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "3D Modeling & AR/VR",
+        description: (
+          <>Experience with 3D modeling, augmented reality applications, and virtual reality development for immersive experiences.</>
+        ),
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "3D and VR Projects",
             width: 16,
             height: 9,
           },
