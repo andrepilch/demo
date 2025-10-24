@@ -5,7 +5,7 @@ import '@/resources/custom.css'
 import classNames from "classnames";
 
 import { Background, Column, Flex, Meta, opacity, SpacingToken } from "@once-ui-system/core";
-import { Footer, Header, RouteGuard, Providers } from '@/components';
+import { Footer, Header, RouteGuard, Providers, OfflineIndicator } from '@/components';
 import { baseURL, effects, fonts, style, dataStyle, home } from '@/resources';
 
 export async function generateMetadata() {
@@ -37,6 +37,12 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="André Pilch" />
+        <link rel="apple-touch-icon" href="/images/avatar.jpg" />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
@@ -94,8 +100,26 @@ export default async function RootLayout({
             `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                      console.log('SW registration failed: ', registrationError);
+                    });
+                });
+              }
+            `,
+          }}
+        />
       </head>
-      <Providers>
+        <Providers>
+        <OfflineIndicator />
         <Column as="body" background="page" fillWidth style={{minHeight: "100vh"}} margin="0" padding="0" horizontal="center">
           <Background
             position="fixed"
