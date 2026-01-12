@@ -1,20 +1,70 @@
 import type { Metadata } from "next";
-import { Didact_Gothic } from "next/font/google";
+import { Figtree, JetBrains_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import "@/styles/global.css";
 
-const didactGothic = Didact_Gothic({
-  weight: "400",
+const figtree = Figtree({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-sans",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  title: "André Pilch",
-  description: "Senior Product Designer & Front-end Engineer",
+  title: {
+    template: "%s | André Pilch",
+    default: "André Pilch | Senior Product Designer & Frontend Engineer",
+  },
+  description:
+    "I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.",
+  keywords: [
+    "Product Designer",
+    "Frontend Engineer",
+    "React",
+    "TypeScript",
+    "UX Design",
+    "Design Systems",
+    "Wisconsin",
+  ],
+  authors: [{ name: "André Pilch" }],
+  creator: "André Pilch",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://andrepilch.com",
+    siteName: "André Pilch",
+    title: "André Pilch | Senior Product Designer & Frontend Engineer",
+    description:
+      "I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.",
+    images: [
+      {
+        url: "/images/og/home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "André Pilch - Senior Product Designer & Frontend Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "André Pilch | Senior Product Designer & Frontend Engineer",
+    description:
+      "I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.",
+    images: ["/images/og/home.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -23,23 +73,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${didactGothic.className} min-h-screen flex flex-col bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100`}
-      >
-        <Header />
-        <main className="flex-1 px-8 py-8 max-w-5xl mx-auto w-full">
-          {children}
-        </main>
-        <Footer />
-        <Link href="/" className="fixed bottom-0 right-0">
-          <Image
-            src="/logo.svg"
-            alt="André Pilch logo"
-            width={156}
-            height={69}
-          />
-        </Link>
+    <html lang="en" className={`${figtree.variable} ${jetbrainsMono.variable}`}>
+      <body className={figtree.className}>
+        <ThemeProvider defaultTheme="dark">
+          <Header />
+          <main style={{ flex: 1 }}>{children}</main>
+          <Footer />
+          <Link
+            href="/"
+            style={{
+              position: "fixed",
+              bottom: 0,
+              right: 0,
+              zIndex: 50,
+              transition: "opacity 0.2s",
+            }}
+          >
+            <Image
+              src="/logo.svg"
+              alt="André Pilch logo"
+              width={156}
+              height={69}
+            />
+          </Link>
+        </ThemeProvider>
       </body>
     </html>
   );
