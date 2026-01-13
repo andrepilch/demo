@@ -10,7 +10,7 @@ export function HeroSection() {
 
         {/* Headline */}
         <h1 className={styles.heroTitle}>
-          Hi, I'm André <br />I design
+          Hi, I'm André. <br />I design
           <span className={styles.interjection}>
             (and sometimes build)
           </span>{" "}
