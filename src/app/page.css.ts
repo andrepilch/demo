@@ -27,6 +27,8 @@ export const pageWrapper = style({
 
 export const heroWrapper = style({
   position: "relative",
+  marginTop: `calc(-1 * ${vars.layout.headerHeight})`,
+  paddingTop: vars.layout.headerHeight,
 });
 
 // Hero Section
@@ -40,15 +42,15 @@ export const heroSection = style({
 });
 
 export const container = style({
-  maxWidth: "72rem",
+  maxWidth: vars.layout.contentMaxWidth,
   marginLeft: "auto",
   marginRight: "auto",
-  paddingLeft: "1.5rem",
-  paddingRight: "1.5rem",
+  paddingLeft: vars.layout.sectionPaddingX,
+  paddingRight: vars.layout.sectionPaddingX,
   "@media": {
     "screen and (min-width: 768px)": {
-      paddingLeft: "2rem",
-      paddingRight: "2rem",
+      paddingLeft: vars.layout.sectionPaddingXMd,
+      paddingRight: vars.layout.sectionPaddingXMd,
     },
   },
 });

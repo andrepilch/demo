@@ -15,22 +15,19 @@ const fadeInUp = keyframes({
 export const heroSection = style({
   position: "relative",
   zIndex: 10,
-  minHeight: "50vh",
+  minHeight: "60vh",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-});
-
-export const container = style({
-  maxWidth: "72rem",
+  maxWidth: vars.layout.contentMaxWidth,
+  paddingLeft: vars.layout.sectionPaddingX,
+  paddingRight: vars.layout.sectionPaddingX,
   marginLeft: "auto",
   marginRight: "auto",
-  paddingLeft: "1.5rem",
-  paddingRight: "1.5rem",
   "@media": {
     "screen and (min-width: 768px)": {
-      paddingLeft: "2rem",
-      paddingRight: "2rem",
+      paddingLeft: vars.layout.sectionPaddingXLg,
+      paddingRight: vars.layout.sectionPaddingXLg,
     },
   },
 });
@@ -116,4 +113,16 @@ export const btnPrimary = style({
 export const iconSm = style({
   width: "16px",
   height: "16px",
+});
+
+export const interjection = style({
+  fontFamily: "var(--font-cursive), cursive",
+  fontSize: "0.6em",
+  fontWeight: "400",
+  opacity: 0.85,
+  display: "inline-block",
+  transform: "rotate(-2deg)",
+  marginLeft: "0.1em",
+  marginRight: "0.1em",
+  whiteSpace: "nowrap",
 });

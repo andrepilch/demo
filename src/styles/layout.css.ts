@@ -146,7 +146,7 @@ export const minHScreen = style({ minHeight: '100vh' });
 export const maxW2xl = style({ maxWidth: '42rem' });
 export const maxW3xl = style({ maxWidth: '48rem' });
 export const maxW4xl = style({ maxWidth: '56rem' });
-export const maxW6xl = style({ maxWidth: '72rem' });
+export const maxW6xl = style({ maxWidth: vars.layout.contentMaxWidth });
 
 // ============================================
 // Position Utilities

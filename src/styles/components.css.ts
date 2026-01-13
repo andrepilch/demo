@@ -59,15 +59,15 @@ export const diagonalMorph = keyframes({
 // ============================================
 
 export const sectionContainer = style({
-  maxWidth: '72rem',
+  maxWidth: vars.layout.contentMaxWidth,
   marginLeft: 'auto',
   marginRight: 'auto',
-  paddingLeft: vars.space.lg,
-  paddingRight: vars.space.lg,
+  paddingLeft: vars.layout.sectionPaddingX,
+  paddingRight: vars.layout.sectionPaddingX,
   '@media': {
     'screen and (min-width: 768px)': {
-      paddingLeft: vars.space.xl,
-      paddingRight: vars.space.xl,
+      paddingLeft: vars.layout.sectionPaddingXMd,
+      paddingRight: vars.layout.sectionPaddingXMd,
     },
   },
 });

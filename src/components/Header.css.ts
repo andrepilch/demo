@@ -5,20 +5,30 @@ export const header = style({
   position: "sticky",
   top: 0,
   zIndex: 50,
+  transition: "background-color 0.3s ease, backdrop-filter 0.3s ease",
+});
+
+export const headerTransparent = style({
+  backgroundColor: "transparent",
+  backdropFilter: "none",
+  color: vars.color.textOnAccent,
+});
+
+export const headerScrolled = style({
   backdropFilter: "blur(12px)",
   backgroundColor: `color-mix(in srgb, ${vars.color.bgPrimary} 80%, transparent)`,
 });
 
 export const container = style({
-  maxWidth: "72rem",
+  maxWidth: vars.layout.contentMaxWidth,
   marginLeft: "auto",
   marginRight: "auto",
-  paddingLeft: "1.5rem",
-  paddingRight: "1.5rem",
+  paddingLeft: vars.layout.sectionPaddingX,
+  paddingRight: vars.layout.sectionPaddingX,
   "@media": {
     "screen and (min-width: 768px)": {
-      paddingLeft: "2rem",
-      paddingRight: "2rem",
+      paddingLeft: vars.layout.sectionPaddingXLg,
+      paddingRight: vars.layout.sectionPaddingXLg,
     },
   },
 });
@@ -27,7 +37,7 @@ export const nav = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  height: "64px",
+  height: vars.layout.headerHeight,
 });
 
 export const logoLink = style({
@@ -66,6 +76,15 @@ export const navLink = style({
   transition: "color 0.2s ease",
   ":hover": {
     color: vars.color.textPrimary,
+  },
+  selectors: {
+    [`${headerTransparent} &`]: {
+      color: vars.color.textOnAccent,
+    },
+    [`${headerTransparent} &:hover`]: {
+      color: vars.color.textOnAccent,
+      opacity: 0.8,
+    },
   },
 });
 
@@ -112,6 +131,16 @@ export const ctaButton = style({
     borderColor: vars.color.accent,
     color: vars.color.accent,
   },
+  selectors: {
+    [`${headerTransparent} &`]: {
+      borderColor: "rgba(255, 255, 255, 0.3)",
+      color: vars.color.textOnAccent,
+    },
+    [`${headerTransparent} &:hover`]: {
+      borderColor: vars.color.textOnAccent,
+      color: vars.color.textOnAccent,
+    },
+  },
 });
 
 export const mobileMenuButton = style({
@@ -128,6 +157,15 @@ export const mobileMenuButton = style({
   },
   ":hover": {
     color: vars.color.textPrimary,
+  },
+  selectors: {
+    [`${headerTransparent} &`]: {
+      color: vars.color.textOnAccent,
+    },
+    [`${headerTransparent} &:hover`]: {
+      color: vars.color.textOnAccent,
+      opacity: 0.8,
+    },
   },
 });
 

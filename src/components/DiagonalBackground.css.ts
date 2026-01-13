@@ -22,8 +22,10 @@ export const diagonalShape = style({
   left: 0,
   width: "100%",
   height: "250%",
+  zIndex: 1,
   pointerEvents: "none",
   clipPath: "polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%)",
   animation: `${diagonalMorph} 100s ease-in-out infinite`,
-  background: vars.gradient.hero,
+  // background: vars.gradient.hero,
+  background: vars.color.accent,
 });

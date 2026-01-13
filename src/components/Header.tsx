@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import * as styles from "./Header.css";
 
@@ -15,12 +15,29 @@ const navLinks = [
 export function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const isHomepage = pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  const headerClassName = `${styles.header} ${
+    isHomepage && !scrolled ? styles.headerTransparent : styles.headerScrolled
+  }`;
+
   return (
-    <header className={styles.header}>
+    <header className={headerClassName}>
       <div className={styles.container}>
         <nav className={styles.nav}>
           {/* Logo */}

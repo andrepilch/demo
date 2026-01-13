@@ -22,9 +22,8 @@ export const ribbonTrack = style({
 
 export const ribbonItem = style({
   display: "flex",
-  alignItems: "flex-start",
-  flexDirection: "column",
-  gap: "0.25rem",
+  alignItems: "center",
+  gap: "0.75rem",
   paddingLeft: "2rem",
   paddingRight: "2rem",
   paddingTop: "8rem",
@@ -41,7 +40,7 @@ export const ribbonItem = style({
 export const ribbonValue = style({
   fontSize: "1.875rem",
   fontWeight: "700",
-  color: vars.color.accent,
+  color: vars.color.textAccentDark,
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "2.25rem",
@@ -50,6 +49,6 @@ export const ribbonValue = style({
 });
 
 export const ribbonLabel = style({
-  color: vars.color.textSecondary,
+  color: vars.color.textAccentDark,
   whiteSpace: "nowrap",
 });
