@@ -152,17 +152,10 @@ export const ctaIcon = style({
 
 export const bottomBar = style({
   paddingTop: "2rem",
-  borderTop: `1px solid ${vars.color.border}`,
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
+  alignItems: "flex-start",
   gap: "1rem",
-  "@media": {
-    "screen and (min-width: 768px)": {
-      flexDirection: "row",
-      justifyContent: "space-between",
-    },
-  },
 });
 
 export const copyright = style({
