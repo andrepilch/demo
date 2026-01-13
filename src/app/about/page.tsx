@@ -264,24 +264,22 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
-
       {/* The Design-to-Code Advantage */}
       <section className={styles.section} id="bridge">
         <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>The Bridge Advantage</p>
-            <h2 className={styles.sectionTitle}>
-              Design-to-Code: Why It Matters
-            </h2>
-            <p className={styles.sectionDescription}>
-              My 5 years of React/TypeScript experience isn't just a bonus—it's
-              a fundamental part of how I design better products.
-            </p>
-          </div>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>The Bridge Advantage</p>
+              <h2 className={styles.sectionTitle}>
+                Design-to-Code: Why It Matters
+              </h2>
+              <p className={styles.sectionDescription}>
+                My 5 years of React/TypeScript experience isn't just a bonus—it's
+                a fundamental part of how I design better products.
+              </p>
+            </div>
 
-          <div className={styles.gridTwo}>
+            <div className={styles.gridTwo}>
             <div className={styles.card}>
               <div className={styles.cardIcon}>
                 <div className={styles.cardIconWrapper}>
@@ -393,161 +391,158 @@ export default function About() {
             </div>
           </div>
         </div>
+        </div>
       </section>
-
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
 
       {/* Design Philosophy */}
       <section className={styles.section} id="philosophy">
         <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>How I Work</p>
-            <h2 className={styles.sectionTitle}>My Design Philosophy</h2>
-            <p className={styles.sectionDescription}>
-              These principles guide every product decision I make, from initial
-              research through final implementation.
-            </p>
-          </div>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>How I Work</p>
+              <h2 className={styles.sectionTitle}>My Design Philosophy</h2>
+              <p className={styles.sectionDescription}>
+                These principles guide every product decision I make, from initial
+                research through final implementation.
+              </p>
+            </div>
 
-          <div className={styles.gridTwo}>
-            {philosophyPrinciples.map((principle, i) => (
-              <div key={i} className={styles.frameworkCard}>
-                <div className={styles.frameworkIcon}>{principle.icon}</div>
-                <h3 className={styles.frameworkTitle}>{principle.title}</h3>
-                <p className={styles.frameworkDescription}>
-                  {principle.description}
-                </p>
-              </div>
-            ))}
+            <div className={styles.gridTwo}>
+              {philosophyPrinciples.map((principle, i) => (
+                <div key={i} className={styles.frameworkCard}>
+                  <div className={styles.frameworkIcon}>{principle.icon}</div>
+                  <h3 className={styles.frameworkTitle}>{principle.title}</h3>
+                  <p className={styles.frameworkDescription}>
+                    {principle.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
 
       {/* Skills Matrix */}
       <section className={styles.section} id="skills">
         <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>Capabilities</p>
-            <h2 className={styles.sectionTitle}>Skills & Methods</h2>
-          </div>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>Capabilities</p>
+              <h2 className={styles.sectionTitle}>Skills & Methods</h2>
+            </div>
 
-          <div className={styles.gridThree}>
-            {skillsMatrix.map((category, i) => (
-              <div key={i} className={styles.skillsCard}>
-                <h3 className={styles.skillsCategory}>{category.category}</h3>
-                <div className={styles.skillsList}>
-                  {category.skills.map((skill, j) => (
-                    <span key={j} className={styles.skillBadge}>
-                      {skill}
-                    </span>
-                  ))}
+            <div className={styles.gridThree}>
+              {skillsMatrix.map((category, i) => (
+                <div key={i} className={styles.skillsCard}>
+                  <h3 className={styles.skillsCategory}>{category.category}</h3>
+                  <div className={styles.skillsList}>
+                    {category.skills.map((skill, j) => (
+                      <span key={j} className={styles.skillBadge}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
 
       {/* Side Projects */}
       <section className={styles.section} id="projects">
         <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>Beyond the Day Job</p>
-            <h2 className={styles.sectionTitle}>Side Projects</h2>
-          </div>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>Beyond the Day Job</p>
+              <h2 className={styles.sectionTitle}>Side Projects</h2>
+            </div>
 
-          <div className={styles.maxW2xl}>
-            {sideProjects.map((project, i) => (
-              <a
-                key={i}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.projectCard}
-              >
-                <div className={styles.projectHeader}>
-                  <h3 className={styles.projectTitle}>{project.title}</h3>
-                  <span className={styles.projectStatus}>{project.status}</span>
-                </div>
-                <p className={styles.projectDescription}>
-                  {project.description}
-                </p>
-                <div className={styles.skillsList}>
-                  {project.tech.map((tech, j) => (
-                    <span key={j} className={styles.skillBadge}>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className={styles.projectLink}>
-                  Visit site
-                  <svg
-                    className={styles.projectLinkIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                </div>
-              </a>
-            ))}
+            <div className={styles.maxW2xl}>
+              {sideProjects.map((project, i) => (
+                <a
+                  key={i}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.projectCard}
+                >
+                  <div className={styles.projectHeader}>
+                    <h3 className={styles.projectTitle}>{project.title}</h3>
+                    <span className={styles.projectStatus}>{project.status}</span>
+                  </div>
+                  <p className={styles.projectDescription}>
+                    {project.description}
+                  </p>
+                  <div className={styles.skillsList}>
+                    {project.tech.map((tech, j) => (
+                      <span key={j} className={styles.skillBadge}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className={styles.projectLink}>
+                    Visit site
+                    <svg
+                      className={styles.projectLinkIcon}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
-
       {/* Career Timeline */}
       <section className={styles.section} id="experience">
         <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>Experience</p>
-            <h2 className={styles.sectionTitle}>Career Timeline</h2>
-          </div>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>Experience</p>
+              <h2 className={styles.sectionTitle}>Career Timeline</h2>
+            </div>
 
-          <div className={styles.timelineContainer}>
-            {careerTimeline.map((item, i) => (
-              <div key={i} className={styles.timelineItem}>
-                <div className={styles.timelinePeriod}>{item.period}</div>
-                <h3 className={styles.timelineRole}>{item.role}</h3>
-                <p className={styles.timelineCompany}>{item.company}</p>
-                <p className={styles.timelineLocation}>{item.location}</p>
-                <div className={styles.timelineHighlights}>
-                  {item.highlights.map((highlight, j) => (
-                    <div key={j} className={styles.timelineHighlight}>
-                      <svg
-                        className={styles.timelineCheckIcon}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span>{highlight}</span>
-                    </div>
-                  ))}
+            <div className={styles.timelineContainer}>
+              {careerTimeline.map((item, i) => (
+                <div key={i} className={styles.timelineItem}>
+                  <div className={styles.timelinePeriod}>{item.period}</div>
+                  <h3 className={styles.timelineRole}>{item.role}</h3>
+                  <p className={styles.timelineCompany}>{item.company}</p>
+                  <p className={styles.timelineLocation}>{item.location}</p>
+                  <div className={styles.timelineHighlights}>
+                    {item.highlights.map((highlight, j) => (
+                      <div key={j} className={styles.timelineHighlight}>
+                        <svg
+                          className={styles.timelineCheckIcon}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        <span>{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

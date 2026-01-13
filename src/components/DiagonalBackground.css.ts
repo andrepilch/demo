@@ -3,28 +3,17 @@ import { vars } from "@/styles";
 
 const diagonalMorph = keyframes({
   "0%, 100%": {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 25%, 0% 55%)",
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 30%, 0% 50%)",
   },
   "25%": {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 45%)",
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 42%, 0% 44%)",
   },
   "50%": {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 60%, 0% 30%)",
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 0% 35%)",
   },
   "75%": {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 45%, 0% 42%)",
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 38%, 0% 48%)",
   },
-});
-
-export const diagonalBackground = style({
-  position: "absolute",
-  top: 0,
-  left: 0,
-  right: 0,
-  height: "2000px",
-  pointerEvents: "none",
-  zIndex: 1,
-  overflow: "visible",
 });
 
 export const diagonalShape = style({
@@ -32,9 +21,9 @@ export const diagonalShape = style({
   top: 0,
   left: 0,
   width: "100%",
-  height: "2000px",
+  height: "250%",
+  pointerEvents: "none",
   clipPath: "polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%)",
   animation: `${diagonalMorph} 100s ease-in-out infinite`,
-  background: vars.color.accent,
   background: vars.gradient.hero,
 });

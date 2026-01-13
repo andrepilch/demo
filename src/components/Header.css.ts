@@ -7,7 +7,6 @@ export const header = style({
   zIndex: 50,
   backdropFilter: "blur(12px)",
   backgroundColor: `color-mix(in srgb, ${vars.color.bgPrimary} 80%, transparent)`,
-  borderBottom: `1px solid ${vars.color.border}`,
 });
 
 export const container = style({
@@ -133,6 +132,9 @@ export const mobileMenuButton = style({
 });
 
 export const mobileMenu = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
   paddingTop: "1rem",
   paddingBottom: "1rem",
   borderTop: `1px solid ${vars.color.border}`,
@@ -168,7 +170,6 @@ export const mobileCta = style({
   alignItems: "center",
   justifyContent: "center",
   gap: "0.5rem",
-  marginTop: "0.5rem",
   paddingLeft: "1.5rem",
   paddingRight: "1.5rem",
   paddingTop: "0.75rem",
@@ -180,7 +181,7 @@ export const mobileCta = style({
   color: vars.color.bgPrimary,
   textAlign: "center",
   ":hover": {
-    background: vars.color.accentLight,
+    background: vars.color.accent,
   },
 });
 

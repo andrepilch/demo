@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Figtree, JetBrains_Mono } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
+import { Figtree } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { FixedLogo } from "@/components/FixedLogo";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "@/styles/global.css";
 
@@ -11,12 +10,6 @@ const figtree = Figtree({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -73,29 +66,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${figtree.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={figtree.variable}>
       <body className={figtree.className}>
-        <ThemeProvider defaultTheme="dark">
+        <ThemeProvider defaultTheme="light">
           <Header />
           <main style={{ flex: 1 }}>{children}</main>
           <Footer />
-          <Link
-            href="/"
-            style={{
-              position: "fixed",
-              bottom: 0,
-              right: 0,
-              zIndex: 50,
-              transition: "opacity 0.2s",
-            }}
-          >
-            <Image
-              src="/logo.svg"
-              alt="André Pilch logo"
-              width={156}
-              height={69}
-            />
-          </Link>
+          <FixedLogo />
         </ThemeProvider>
       </body>
     </html>

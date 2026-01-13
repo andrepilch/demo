@@ -12,9 +12,5 @@ export function DiagonalBackground() {
 
   if (!mounted) return null;
 
-  return (
-    <div className={styles.diagonalBackground} aria-hidden="true">
-      <div className={styles.diagonalShape} />
-    </div>
-  );
+  return <div className={styles.diagonalShape} aria-hidden="true" />;
 }

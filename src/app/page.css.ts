@@ -21,6 +21,12 @@ const fadeInUp = keyframes({
 // Page Layout
 export const pageWrapper = style({
   position: "relative",
+  display: "flex",
+  flexDirection: "column",
+});
+
+export const heroWrapper = style({
+  position: "relative",
 });
 
 // Hero Section
@@ -31,8 +37,6 @@ export const heroSection = style({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  paddingTop: "5rem",
-  paddingBottom: "5rem",
 });
 
 export const container = style({
@@ -51,6 +55,9 @@ export const container = style({
 
 export const heroContent = style({
   maxWidth: "56rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.element,
 });
 
 // Text Styles
@@ -60,7 +67,6 @@ export const eyebrow = style({
   fontWeight: "500",
   letterSpacing: "0.05em",
   textTransform: "uppercase",
-  marginBottom: "1rem",
   opacity: 0,
   animation: `${fadeInUp} 0.6s ease-out forwards`,
 });
@@ -69,7 +75,6 @@ export const heroTitle = style({
   fontSize: "2.25rem",
   fontWeight: "700",
   lineHeight: 1.1,
-  marginBottom: "1.5rem",
   color: "#ffffff",
   opacity: 0,
   animation: `${fadeInUp} 0.6s ease-out forwards`,
@@ -94,7 +99,6 @@ export const accentGradient = style({
 export const heroSubtitle = style({
   fontSize: "1.25rem",
   color: "rgba(255, 255, 255, 0.85)",
-  marginBottom: "2.5rem",
   maxWidth: "42rem",
   opacity: 0,
   animation: `${fadeInUp} 0.6s ease-out forwards`,
@@ -129,7 +133,7 @@ export const btnPrimary = style({
   background: vars.color.accent,
   color: vars.color.bgPrimary,
   ":hover": {
-    background: vars.color.accentLight,
+    background: vars.color.accent,
     transform: "translateY(-1px)",
     boxShadow: vars.shadow.glow,
   },
@@ -169,8 +173,6 @@ export const iconMd = style({
 export const ribbonSection = style({
   position: "relative",
   zIndex: 10,
-  paddingTop: "2rem",
-  paddingBottom: "2rem",
   borderTop: `1px solid ${vars.color.border}`,
   borderBottom: `1px solid ${vars.color.border}`,
 });
@@ -220,24 +222,38 @@ export const ribbonDot = style({
   marginRight: "1rem",
 });
 
-// Content Sections
+// Content Sections - wrapper for all sections to use gap
+export const sectionsWrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.section,
+  paddingTop: vars.gap.section,
+  paddingBottom: vars.gap.section,
+});
+
 export const section = style({
   position: "relative",
   zIndex: 10,
-  paddingTop: "6rem",
-  paddingBottom: "6rem",
+});
+
+// Container with gap for section content layout
+export const sectionContent = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.sectionSm,
 });
 
 export const sectionHeader = style({
   textAlign: "center",
-  marginBottom: "4rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
 });
 
 export const sectionHeaderFlex = style({
   display: "flex",
   flexDirection: "column",
-  gap: "1rem",
-  marginBottom: "4rem",
+  gap: vars.gap.elementSm,
   "@media": {
     "screen and (min-width: 768px)": {
       flexDirection: "row",
@@ -288,15 +304,6 @@ export const viewAllLink = style({
   },
 });
 
-// Section Divider
-export const sectionDivider = style({
-  position: "relative",
-  zIndex: 10,
-  width: "100%",
-  height: "1px",
-  background: `linear-gradient(90deg, transparent, ${vars.color.border}, transparent)`,
-});
-
 // Grid layouts
 export const gridThree = style({
   display: "grid",
@@ -327,6 +334,9 @@ export const statCard = style({
   borderRadius: vars.radius.lg,
   overflow: "hidden",
   textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.5rem",
   "::before": {
     content: '""',
     position: "absolute",
@@ -345,11 +355,10 @@ export const statCard = style({
 export const statValue = style({
   fontSize: "3rem",
   fontWeight: "700",
-  background: `linear-gradient(135deg, ${vars.color.accentLight}, ${vars.color.accent})`,
+  background: vars.color.accent,
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
-  marginBottom: "0.75rem",
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "3.75rem",
@@ -360,7 +369,6 @@ export const statValue = style({
 export const statLabel = style({
   fontSize: "1.25rem",
   fontWeight: "600",
-  marginBottom: "0.5rem",
 });
 
 export const statDescription = style({
@@ -417,12 +425,12 @@ export const caseStudyContent = style({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  gap: "0.75rem",
 });
 
 export const caseStudyTitle = style({
   fontSize: "1.5rem",
   fontWeight: "700",
-  marginBottom: "0.75rem",
   transition: "color 0.2s ease",
   selectors: {
     [`${caseStudyCard}:hover &`]: {
@@ -434,12 +442,10 @@ export const caseStudyTitle = style({
 export const caseStudyOutcome = style({
   color: vars.color.accent,
   fontWeight: "500",
-  marginBottom: "0.75rem",
 });
 
 export const caseStudyDescription = style({
   color: vars.color.textSecondary,
-  marginBottom: "1rem",
 });
 
 export const tagList = style({
@@ -457,7 +463,7 @@ export const tag = style({
   fontSize: "0.875rem",
   background: "rgba(14, 165, 233, 0.1)",
   border: "1px solid rgba(14, 165, 233, 0.2)",
-  color: vars.color.accentLight,
+  color: vars.color.accent,
 });
 
 // Framework Card
@@ -468,6 +474,9 @@ export const frameworkCard = style({
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
   overflow: "hidden",
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.5rem",
   "::before": {
     content: '""',
     position: "absolute",
@@ -481,19 +490,16 @@ export const frameworkCard = style({
 
 export const frameworkIcon = style({
   color: vars.color.accent,
-  marginBottom: "1rem",
 });
 
 export const frameworkName = style({
   fontSize: "1.25rem",
   fontWeight: "700",
-  marginBottom: "0.25rem",
 });
 
 export const frameworkTagline = style({
   color: vars.color.accent,
   fontSize: "0.875rem",
-  marginBottom: "0.75rem",
 });
 
 export const frameworkDescription = style({
@@ -509,13 +515,15 @@ export const codeCard = style({
   fontFamily: vars.font.mono,
   fontSize: "0.875rem",
   overflow: "hidden",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
 });
 
 export const codeHeader = style({
   display: "flex",
   alignItems: "center",
   gap: "0.5rem",
-  marginBottom: "1rem",
 });
 
 export const codeDot = style({
@@ -556,6 +564,10 @@ export const ctaCard = style({
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: vars.gap.element,
   "@media": {
     "screen and (min-width: 768px)": {
       padding: "4rem",
@@ -574,7 +586,6 @@ export const ctaTitle = style({
   position: "relative",
   fontSize: "1.875rem",
   fontWeight: "700",
-  marginBottom: "1rem",
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "2.25rem",
@@ -585,7 +596,6 @@ export const ctaTitle = style({
 export const ctaDescription = style({
   position: "relative",
   color: vars.color.textSecondary,
-  marginBottom: "2rem",
   maxWidth: "36rem",
   marginLeft: "auto",
   marginRight: "auto",

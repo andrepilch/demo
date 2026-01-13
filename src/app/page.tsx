@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   DiagonalBackground,
+  HeroSection,
   ImpactStatsRibbon,
   BigNumbers,
 } from "@/components";
@@ -108,166 +109,114 @@ const frameworks = [
 export default function Home() {
   return (
     <div className={styles.pageWrapper}>
-      {/* Animated diagonal background */}
-      <DiagonalBackground />
-
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.container}>
-          <div className={styles.heroContent}>
-            {/* Eyebrow */}
-            <p className={styles.eyebrow}>
-              Senior Product Designer & Front-end Engineer
-            </p>
-
-            {/* Headline */}
-            <h1 className={styles.heroTitle}>
-              I bridge the gap between{" "}
-              <span className={styles.accentGradient}>product vision</span> and{" "}
-              <span className={styles.accentGradient}>engineering reality</span>
-              .
-            </h1>
-
-            {/* Sub-headline */}
-            <p className={styles.heroSubtitle}>
-              14 years designing and building innovative mobile & web products.
-              I don't just hand off designs—I ship code.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className={styles.ctaButtons}>
-              <Link href="/work" className={styles.btnPrimary}>
-                View Case Studies
-                <svg
-                  className={styles.iconSm}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-              <Link href="/about" className={styles.btnSecondary}>
-                About Me
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Stats Ribbon */}
+      {/* Hero wrapper - provides relative container for diagonal background */}
+      <div className={styles.heroWrapper}>
+        <DiagonalBackground />
+        <HeroSection />
+        <BigNumbers />
+      </div>
       <ImpactStatsRibbon />
+      {/* Main Content Sections */}
+      <div className={styles.sectionsWrapper}>
+        {/* Featured Case Studies */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <div className={styles.sectionContent}>
+              <div className={styles.sectionHeaderFlex}>
+                <div>
+                  <p className={styles.eyebrow}>Featured Work</p>
+                  <h2 className={styles.sectionTitle}>Case Studies</h2>
+                </div>
+                <Link href="/work" className={styles.viewAllLink}>
+                  View all projects →
+                </Link>
+              </div>
 
-      {/* Big Numbers Section */}
-      <BigNumbers />
+              <div className={styles.caseStudyGrid}>
+                {caseStudies.map((study, i) => (
+                  <Link
+                    key={i}
+                    href={study.href}
+                    className={styles.caseStudyCard}
+                  >
+                    {/* Image */}
+                    <div className={styles.caseStudyImage}>
+                      <Image
+                        src={study.image}
+                        alt={study.title}
+                        fill
+                        className={styles.caseStudyImageInner}
+                      />
+                    </div>
 
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
-
-      {/* Featured Case Studies */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeaderFlex}>
-            <div>
-              <p className={styles.eyebrow}>Featured Work</p>
-              <h2 className={styles.sectionTitle}>Case Studies</h2>
+                    {/* Content */}
+                    <div className={styles.caseStudyContent}>
+                      <h3 className={styles.caseStudyTitle}>{study.title}</h3>
+                      <p className={styles.caseStudyOutcome}>{study.outcome}</p>
+                      <p className={styles.caseStudyDescription}>
+                        {study.description}
+                      </p>
+                      <div className={styles.tagList}>
+                        {study.tags.map((tag, j) => (
+                          <span key={j} className={styles.tag}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
-            <Link href="/work" className={styles.viewAllLink}>
-              View all projects →
-            </Link>
           </div>
+        </section>
 
-          <div className={styles.caseStudyGrid}>
-            {caseStudies.map((study, i) => (
-              <Link key={i} href={study.href} className={styles.caseStudyCard}>
-                {/* Image */}
-                <div className={styles.caseStudyImage}>
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    fill
-                    className={styles.caseStudyImageInner}
-                  />
-                </div>
-
-                {/* Content */}
-                <div className={styles.caseStudyContent}>
-                  <h3 className={styles.caseStudyTitle}>{study.title}</h3>
-                  <p className={styles.caseStudyOutcome}>{study.outcome}</p>
-                  <p className={styles.caseStudyDescription}>
-                    {study.description}
-                  </p>
-                  <div className={styles.tagList}>
-                    {study.tags.map((tag, j) => (
-                      <span key={j} className={styles.tag}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
-
-      {/* The Framework Section */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>How I Work</p>
-            <h2 className={styles.sectionTitle}>My Design Philosophy</h2>
-            <p className={styles.sectionDescription}>
-              A strong product saves time, adds value, and competes fiercely.
-              Here's the framework that guides my approach.
-            </p>
-          </div>
-
-          <div className={styles.gridThree}>
-            {frameworks.map((framework, i) => (
-              <div key={i} className={styles.frameworkCard}>
-                <div className={styles.frameworkIcon}>{framework.icon}</div>
-                <h3 className={styles.frameworkName}>{framework.name}</h3>
-                <p className={styles.frameworkTagline}>{framework.tagline}</p>
-                <p className={styles.frameworkDescription}>
-                  {framework.description}
+        {/* The Framework Section */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <div className={styles.sectionContent}>
+              <div className={styles.sectionHeader}>
+                <p className={styles.eyebrow}>How I Work</p>
+                <h2 className={styles.sectionTitle}>My Design Philosophy</h2>
+                <p className={styles.sectionDescription}>
+                  A strong product saves time, adds value, and competes
+                  fiercely. Here's the framework that guides my approach.
                 </p>
               </div>
-            ))}
+
+              <div className={styles.gridThree}>
+                {frameworks.map((framework, i) => (
+                  <div key={i} className={styles.frameworkCard}>
+                    <div className={styles.frameworkIcon}>{framework.icon}</div>
+                    <h3 className={styles.frameworkName}>{framework.name}</h3>
+                    <p className={styles.frameworkTagline}>
+                      {framework.tagline}
+                    </p>
+                    <p className={styles.frameworkDescription}>
+                      {framework.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ textAlign: "center" }}>
+                <Link href="/about#philosophy" className={styles.linkAccent}>
+                  Read my full Design Philosophy →
+                </Link>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div style={{ textAlign: "center", marginTop: "3rem" }}>
-            <Link href="/about#philosophy" className={styles.linkAccent}>
-              Read my full Design Philosophy →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Section Divider */}
-      <div className={styles.sectionDivider} />
-
-      {/* Why Developers Like Working With Me */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.gridTwo}>
-            <div>
-              <p className={styles.eyebrow}>The Engineer's Endorsement</p>
-              <h2
-                className={styles.sectionTitle}
-                style={{ marginBottom: "1.5rem" }}
-              >
-                Why Developers Like Working With Me
-              </h2>
+        {/* Why Developers Like Working With Me */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <div className={styles.gridTwo}>
               <div className={styles.spaceY4}>
+                <p className={styles.eyebrow}>The Engineer's Endorsement</p>
+                <h2 className={styles.sectionTitle}>
+                  Why Developers Like Working With Me
+                </h2>
                 <p className={styles.textSecondary}>
                   <span
                     className={`${styles.textPrimary} ${styles.fontMedium}`}
@@ -297,18 +246,17 @@ export default function Home() {
                   feasible.
                 </p>
               </div>
-            </div>
 
-            {/* Code snippet visual */}
-            <div className={styles.codeCard}>
-              <div className={styles.codeHeader}>
-                <div className={styles.codeDotRed} />
-                <div className={styles.codeDotYellow} />
-                <div className={styles.codeDotGreen} />
-                <span className={styles.codeFilename}>DesignSystem.tsx</span>
-              </div>
-              <pre className={styles.codeContent}>
-                <code>{`interface ButtonProps {
+              {/* Code snippet visual */}
+              <div className={styles.codeCard}>
+                <div className={styles.codeHeader}>
+                  <div className={styles.codeDotRed} />
+                  <div className={styles.codeDotYellow} />
+                  <div className={styles.codeDotGreen} />
+                  <span className={styles.codeFilename}>DesignSystem.tsx</span>
+                </div>
+                <pre className={styles.codeContent}>
+                  <code>{`interface ButtonProps {
   variant: 'primary' | 'secondary';
   size: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
@@ -325,56 +273,57 @@ export const Button = ({
     </button>
   );
 };`}</code>
-              </pre>
+                </pre>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.ctaCard}>
-            {/* Background gradient */}
-            <div className={styles.ctaGradient} />
+        {/* CTA Section */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <div className={styles.ctaCard}>
+              {/* Background gradient */}
+              <div className={styles.ctaGradient} />
 
-            <h2 className={styles.ctaTitle}>Ready to Bridge the Gap?</h2>
-            <p className={styles.ctaDescription}>
-              Whether you need a design partner who understands code, or a
-              leader who can drive product strategy, I'd love to connect.
-            </p>
-            <div className={styles.ctaButtonsWrapper}>
-              <a
-                href="mailto:hello@andrepilch.com"
-                className={styles.btnPrimary}
-              >
-                Email Me
-                <svg
-                  className={styles.iconSm}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+              <h2 className={styles.ctaTitle}>Ready to Bridge the Gap?</h2>
+              <p className={styles.ctaDescription}>
+                Whether you need a design partner who understands code, or a
+                leader who can drive product strategy, I'd love to connect.
+              </p>
+              <div className={styles.ctaButtonsWrapper}>
+                <a
+                  href="mailto:hello@andrepilch.com"
+                  className={styles.btnPrimary}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://linkedin.com/in/andrepilch"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.btnSecondary}
-              >
-                Connect on LinkedIn
-              </a>
+                  Email Me
+                  <svg
+                    className={styles.iconSm}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/andrepilch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.btnSecondary}
+                >
+                  Connect on LinkedIn
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

@@ -2,9 +2,11 @@ import * as styles from "./ImpactStatsRibbon.css";
 
 const impactStats = [
   { value: "14", label: "Years Experience" },
-  { value: "5", label: "Years React/TS" },
-  { value: "18", label: "Released Products" },
-  { value: "2", label: "Patents (US/CH)" },
+  { value: "5", label: "Years React Engineering" },
+  { value: "18", label: "Products Shipped" },
+  { value: "1", label: "Design Patent" },
+  { value: "7", label: "Platforms designed for" },
+  { value: "10", label: "Years longest active product" },
 ];
 
 export function ImpactStatsRibbon() {
@@ -16,7 +18,6 @@ export function ImpactStatsRibbon() {
             <div key={i} className={styles.ribbonItem}>
               <span className={styles.ribbonValue}>{stat.value}</span>
               <span className={styles.ribbonLabel}>{stat.label}</span>
-              <span className={styles.ribbonDot}>•</span>
             </div>
           ))}
         </div>

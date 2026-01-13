@@ -2,7 +2,11 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "@/styles";
 
 export const pageWrapper = style({
-  padding: "4rem 0",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.sectionSm,
+  paddingTop: vars.gap.section,
+  paddingBottom: vars.gap.section,
 });
 
 export const container = style({
@@ -22,12 +26,18 @@ export const container = style({
 export const pageTitle = style({
   fontSize: "2.25rem",
   fontWeight: "700",
-  marginBottom: "1rem",
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "3rem",
     },
   },
+});
+
+// Page header with flex gap
+export const pageHeader = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
 });
 
 export const pageDescription = style({

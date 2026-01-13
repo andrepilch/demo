@@ -1,5 +1,4 @@
 import { globalStyle } from "@vanilla-extract/css";
-import { vars } from "./theme.css";
 
 // Base HTML styles
 globalStyle("html", {
@@ -9,8 +8,10 @@ globalStyle("html", {
 
 globalStyle("body", {
   margin: 0,
-  backgroundColor: vars.color.bgPrimary,
-  color: vars.color.textPrimary,
+  // Background and color are set on the theme wrapper in ThemeProvider
+  // since the body is outside the theme scope and can't access CSS variables
+  backgroundColor: "#ffffff", // Dark fallback
+  color: "#0a0a0f", // Light text fallback
   fontFeatureSettings: '"ss01", "ss02", "cv01"',
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
@@ -18,12 +19,11 @@ globalStyle("body", {
   height: "100%",
   display: "flex",
   flexDirection: "column",
-  transition: "background-color 0.3s ease, color 0.3s ease",
 });
 
 globalStyle("::selection", {
   backgroundColor: "rgba(14, 165, 233, 0.3)",
-  color: vars.color.textPrimary,
+  color: "inherit",
 });
 
 // Reset some defaults
@@ -57,4 +57,13 @@ globalStyle("ul, ol", {
 
 globalStyle("h1, h2, h3, h4, h5, h6, p", {
   margin: 0,
+});
+
+// Fancy text wrapping for better typography
+globalStyle("h1, h2, h3, h4, h5, h6", {
+  textWrap: "balance", // Balanced line lengths for headings
+});
+
+globalStyle("p, li, blockquote, figcaption, dd, dt, label, span", {
+  textWrap: "pretty", // Prevents orphans and awkward breaks in body text
 });

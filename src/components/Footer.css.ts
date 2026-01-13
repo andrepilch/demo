@@ -12,8 +12,11 @@ export const container = style({
   marginRight: "auto",
   paddingLeft: "1.5rem",
   paddingRight: "1.5rem",
-  paddingTop: "4rem",
-  paddingBottom: "4rem",
+  paddingTop: vars.gap.sectionSm,
+  paddingBottom: vars.gap.sectionSm,
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.sectionSm,
   "@media": {
     "screen and (min-width: 768px)": {
       paddingLeft: "2rem",
@@ -33,13 +36,16 @@ export const grid = style({
   },
 });
 
-export const brandSection = style({});
+export const brandSection = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
+});
 
 export const brandHeader = style({
   display: "flex",
   alignItems: "center",
   gap: "0.75rem",
-  marginBottom: "1rem",
 });
 
 export const logoBox = style({
@@ -62,7 +68,6 @@ export const logoText = style({
 
 export const brandDescription = style({
   color: vars.color.textSecondary,
-  marginBottom: "1.5rem",
   lineHeight: 1.6,
 });
 
@@ -84,11 +89,14 @@ export const socialIcon = style({
   height: "20px",
 });
 
-export const linksSection = style({});
+export const linksSection = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
+});
 
 export const sectionTitle = style({
   fontWeight: "600",
-  marginBottom: "1rem",
 });
 
 export const navList = style({
@@ -105,11 +113,14 @@ export const navLink = style({
   },
 });
 
-export const contactSection = style({});
+export const contactSection = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
+});
 
 export const contactText = style({
   color: vars.color.textSecondary,
-  marginBottom: "1rem",
   lineHeight: 1.6,
 });
 
@@ -128,7 +139,7 @@ export const ctaButton = style({
   background: vars.color.accent,
   color: vars.color.bgPrimary,
   ":hover": {
-    background: vars.color.accentLight,
+    background: vars.color.accent,
     transform: "translateY(-1px)",
     boxShadow: vars.shadow.glow,
   },
@@ -140,7 +151,6 @@ export const ctaIcon = style({
 });
 
 export const bottomBar = style({
-  marginTop: "3rem",
   paddingTop: "2rem",
   borderTop: `1px solid ${vars.color.border}`,
   display: "flex",

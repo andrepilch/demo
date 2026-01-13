@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { darkTheme, lightTheme } from "@/styles";
+import { themeWrapper } from "./ThemeProvider.css";
 
 type Theme = "light" | "dark";
 
@@ -78,10 +79,7 @@ export function ThemeProvider({
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
-      <div
-        className={mounted ? themeClass : darkTheme}
-        style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
-      >
+      <div className={`${mounted ? themeClass : darkTheme} ${themeWrapper}`}>
         {children}
       </div>
     </ThemeContext.Provider>

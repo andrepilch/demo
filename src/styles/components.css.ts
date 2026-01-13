@@ -72,12 +72,6 @@ export const sectionContainer = style({
   },
 });
 
-export const sectionDivider = style({
-  width: '100%',
-  height: '1px',
-  background: `linear-gradient(90deg, transparent, ${vars.color.border}, transparent)`,
-});
-
 // ============================================
 // Card Components
 // ============================================
@@ -162,7 +156,7 @@ export const btnPrimary = style({
   background: vars.color.accent,
   color: vars.color.bgPrimary,
   ':hover': {
-    background: vars.color.accentLight,
+    background: vars.color.accent,
     transform: 'translateY(-1px)',
     boxShadow: vars.shadow.glow,
   },
@@ -320,7 +314,7 @@ export const skillBadge = style({
   fontSize: '0.875rem',
   background: 'rgba(14, 165, 233, 0.1)',
   border: '1px solid rgba(14, 165, 233, 0.2)',
-  color: vars.color.accentLight,
+  color: vars.color.accent,
 });
 
 // ============================================
@@ -374,7 +368,7 @@ export const textAccent = style({
 });
 
 export const textAccentGradient = style({
-  background: `linear-gradient(135deg, ${vars.color.accentLight}, ${vars.color.accent})`,
+  background: vars.color.accent,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   backgroundClip: 'text',

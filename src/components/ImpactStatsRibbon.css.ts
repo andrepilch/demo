@@ -8,11 +8,7 @@ const scrollLeft = keyframes({
 
 export const ribbonSection = style({
   position: "relative",
-  zIndex: 10,
-  paddingTop: "2rem",
-  paddingBottom: "2rem",
-  borderTop: `1px solid ${vars.color.border}`,
-  borderBottom: `1px solid ${vars.color.border}`,
+  pointerEvents: "none",
 });
 
 export const ribbonWrapper = style({
@@ -26,10 +22,13 @@ export const ribbonTrack = style({
 
 export const ribbonItem = style({
   display: "flex",
-  alignItems: "center",
-  gap: "0.75rem",
+  alignItems: "flex-start",
+  flexDirection: "column",
+  gap: "0.25rem",
   paddingLeft: "2rem",
   paddingRight: "2rem",
+  paddingTop: "8rem",
+  paddingBottom: "4rem",
   whiteSpace: "nowrap",
   "@media": {
     "screen and (min-width: 768px)": {
@@ -52,10 +51,5 @@ export const ribbonValue = style({
 
 export const ribbonLabel = style({
   color: vars.color.textSecondary,
-});
-
-export const ribbonDot = style({
-  color: vars.color.borderLight,
-  marginLeft: "1rem",
-  marginRight: "1rem",
+  whiteSpace: "nowrap",
 });

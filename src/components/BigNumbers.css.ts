@@ -4,8 +4,13 @@ import { vars } from "@/styles";
 export const section = style({
   position: "relative",
   zIndex: 10,
-  paddingTop: "6rem",
-  paddingBottom: "6rem",
+});
+
+// Container with gap for section content layout
+export const sectionContent = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.sectionSm,
 });
 
 export const container = style({
@@ -24,7 +29,9 @@ export const container = style({
 
 export const sectionHeader = style({
   textAlign: "center",
-  marginBottom: "4rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
 });
 
 export const eyebrow = style({
@@ -33,7 +40,6 @@ export const eyebrow = style({
   fontWeight: "500",
   letterSpacing: "0.05em",
   textTransform: "uppercase",
-  marginBottom: "1rem",
 });
 
 export const sectionTitle = style({
@@ -63,6 +69,9 @@ export const statCard = style({
   borderRadius: vars.radius.lg,
   overflow: "hidden",
   textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.5rem",
   "::before": {
     content: '""',
     position: "absolute",
@@ -81,11 +90,10 @@ export const statCard = style({
 export const statValue = style({
   fontSize: "3rem",
   fontWeight: "700",
-  background: `linear-gradient(135deg, ${vars.color.accentLight}, ${vars.color.accent})`,
+  background: vars.color.accent,
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
-  marginBottom: "0.75rem",
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "3.75rem",
@@ -96,7 +104,6 @@ export const statValue = style({
 export const statLabel = style({
   fontSize: "1.25rem",
   fontWeight: "600",
-  marginBottom: "0.5rem",
   color: vars.color.textSecondary,
 });
 

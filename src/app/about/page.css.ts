@@ -4,6 +4,11 @@ import { vars } from "@/styles";
 // Page Layout
 export const pageWrapper = style({
   position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.section,
+  paddingTop: vars.gap.section,
+  paddingBottom: vars.gap.section,
 });
 
 // Container
@@ -22,25 +27,15 @@ export const container = style({
 });
 
 // Sections
-export const section = style({
-  paddingTop: "6rem",
-  paddingBottom: "6rem",
-});
+export const section = style({});
 
-export const sectionSmall = style({
-  paddingTop: "4rem",
-  paddingBottom: "6rem",
-  "@media": {
-    "screen and (min-width: 768px)": {
-      paddingTop: "6rem",
-    },
-  },
-});
+export const sectionSmall = style({});
 
-export const sectionDivider = style({
-  width: "100%",
-  height: "1px",
-  background: `linear-gradient(90deg, transparent, ${vars.color.border}, transparent)`,
+// Container with gap for section content layout
+export const sectionContent = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.sectionSm,
 });
 
 // Hero Grid
@@ -92,7 +87,11 @@ export const avatarDecoration = style({
 });
 
 // Bio Content
-export const bioContent = style({});
+export const bioContent = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.element,
+});
 
 export const eyebrow = style({
   color: vars.color.accent,
@@ -100,13 +99,11 @@ export const eyebrow = style({
   fontWeight: "500",
   letterSpacing: "0.05em",
   textTransform: "uppercase",
-  marginBottom: "0.75rem",
 });
 
 export const pageTitle = style({
   fontSize: "2.25rem",
   fontWeight: "700",
-  marginBottom: "1.5rem",
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "3rem",
@@ -133,7 +130,6 @@ export const statsRow = style({
   display: "flex",
   flexWrap: "wrap",
   gap: "1.5rem",
-  marginTop: "2rem",
   paddingTop: "2rem",
   borderTop: `1px solid ${vars.color.border}`,
 });
@@ -157,13 +153,14 @@ export const sectionHeader = style({
   marginLeft: "auto",
   marginRight: "auto",
   textAlign: "center",
-  marginBottom: "4rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
 });
 
 export const sectionTitle = style({
   fontSize: "1.875rem",
   fontWeight: "700",
-  marginBottom: "1rem",
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "2.25rem",
@@ -222,12 +219,15 @@ export const cardIconWrapper = style({
   flexShrink: 0,
 });
 
-export const cardContent = style({});
+export const cardContent = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.5rem",
+});
 
 export const cardTitle = style({
   fontSize: "1.25rem",
   fontWeight: "600",
-  marginBottom: "0.5rem",
 });
 
 export const cardDescription = style({
@@ -242,6 +242,9 @@ export const frameworkCard = style({
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
   overflow: "hidden",
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.5rem",
   "::before": {
     content: '""',
     position: "absolute",
@@ -255,13 +258,11 @@ export const frameworkCard = style({
 
 export const frameworkIcon = style({
   color: vars.color.accent,
-  marginBottom: "1rem",
 });
 
 export const frameworkTitle = style({
   fontSize: "1.25rem",
   fontWeight: "700",
-  marginBottom: "0.5rem",
 });
 
 export const frameworkDescription = style({
@@ -274,13 +275,15 @@ export const skillsCard = style({
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
 });
 
 export const skillsCategory = style({
   fontSize: "1.125rem",
   fontWeight: "600",
   color: vars.color.accent,
-  marginBottom: "1rem",
 });
 
 export const skillsList = style({
@@ -298,12 +301,14 @@ export const skillBadge = style({
   fontSize: "0.875rem",
   background: "rgba(14, 165, 233, 0.1)",
   border: "1px solid rgba(14, 165, 233, 0.2)",
-  color: vars.color.accentLight,
+  color: vars.color.accent,
 });
 
 // Project Card
 export const projectCard = style({
-  display: "block",
+  display: "flex",
+  flexDirection: "column",
+  gap: vars.gap.elementSm,
   padding: "2rem",
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
@@ -321,7 +326,6 @@ export const projectHeader = style({
   alignItems: "flex-start",
   justifyContent: "space-between",
   gap: "1rem",
-  marginBottom: "1rem",
 });
 
 export const projectTitle = style({
@@ -350,14 +354,12 @@ export const projectStatus = style({
 
 export const projectDescription = style({
   color: vars.color.textSecondary,
-  marginBottom: "1rem",
 });
 
 export const projectLink = style({
   display: "flex",
   alignItems: "center",
   gap: "0.25rem",
-  marginTop: "1rem",
   color: vars.color.accent,
   fontSize: "0.875rem",
 });
@@ -380,13 +382,15 @@ export const timelineContainer = style({
   marginRight: "auto",
   display: "flex",
   flexDirection: "column",
-  gap: "2rem",
 });
 
 export const timelineItem = style({
   position: "relative",
   paddingLeft: "2rem",
   paddingBottom: "2rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.25rem",
   "::before": {
     content: '""',
     position: "absolute",
@@ -417,24 +421,20 @@ export const timelinePeriod = style({
   color: vars.color.accent,
   fontSize: "0.875rem",
   fontWeight: "500",
-  marginBottom: "0.5rem",
 });
 
 export const timelineRole = style({
   fontSize: "1.25rem",
   fontWeight: "700",
-  marginBottom: "0.25rem",
 });
 
 export const timelineCompany = style({
   color: vars.color.textSecondary,
-  marginBottom: "0.25rem",
 });
 
 export const timelineLocation = style({
   color: vars.color.textMuted,
   fontSize: "0.875rem",
-  marginBottom: "1rem",
 });
 
 export const timelineHighlights = style({
@@ -478,6 +478,10 @@ export const ctaCard = style({
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: vars.gap.element,
   "@media": {
     "screen and (min-width: 768px)": {
       padding: "4rem",
@@ -496,7 +500,6 @@ export const ctaTitle = style({
   position: "relative",
   fontSize: "1.875rem",
   fontWeight: "700",
-  marginBottom: "1rem",
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "2.25rem",
@@ -507,7 +510,6 @@ export const ctaTitle = style({
 export const ctaDescription = style({
   position: "relative",
   color: vars.color.textSecondary,
-  marginBottom: "2rem",
   maxWidth: "36rem",
   marginLeft: "auto",
   marginRight: "auto",
@@ -535,7 +537,7 @@ export const btnPrimary = style({
   background: vars.color.accent,
   color: vars.color.bgPrimary,
   ":hover": {
-    background: vars.color.accentLight,
+    background: vars.color.accent,
     transform: "translateY(-1px)",
     boxShadow: vars.shadow.glow,
   },
