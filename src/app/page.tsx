@@ -1,33 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { DiagonalBackground } from "@/components";
+import {
+  DiagonalBackground,
+  ImpactStatsRibbon,
+  BigNumbers,
+} from "@/components";
 import * as styles from "./page.css";
-
-// Stats data
-const impactStats = [
-  { value: "14", label: "Years Experience" },
-  { value: "5", label: "Years React/TS" },
-  { value: "18", label: "Released Products" },
-  { value: "2", label: "Patents (US/CH)" },
-];
-
-const bigNumbers = [
-  {
-    value: "$22+",
-    label: "Higher AOV",
-    description: "Web editors outperform legacy solutions by 26%",
-  },
-  {
-    value: "1.84x",
-    label: "YoY Growth",
-    description: "Portrait Canvas sales increase year-over-year",
-  },
-  {
-    value: "6.5M+",
-    label: "Editors Served",
-    description: "Total reach across all product platforms",
-  },
-];
 
 const caseStudies = [
   {
@@ -133,36 +111,6 @@ export default function Home() {
       {/* Animated diagonal background */}
       <DiagonalBackground />
 
-      {/* Star field background */}
-      <div className={styles.starField}>
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className={styles.star}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-            }}
-          />
-        ))}
-        <div
-          className={styles.shootingStar}
-          style={{ top: "15%", left: "10%", animationDelay: "0s" }}
-        />
-        <div
-          className={styles.shootingStar}
-          style={{ top: "45%", left: "60%", animationDelay: "2s" }}
-        />
-        <div
-          className={styles.shootingStar}
-          style={{ top: "75%", left: "30%", animationDelay: "4s" }}
-        />
-      </div>
-
-      {/* Hero Gradient */}
-      <div className={styles.heroGradient} />
-
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.container}>
@@ -213,41 +161,10 @@ export default function Home() {
       </section>
 
       {/* Impact Stats Ribbon */}
-      <section className={styles.ribbonSection}>
-        <div className={styles.ribbonWrapper}>
-          <div className={styles.ribbonTrack}>
-            {[...impactStats, ...impactStats].map((stat, i) => (
-              <div key={i} className={styles.ribbonItem}>
-                <span className={styles.ribbonValue}>{stat.value}</span>
-                <span className={styles.ribbonLabel}>{stat.label}</span>
-                <span className={styles.ribbonDot}>•</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ImpactStatsRibbon />
 
       {/* Big Numbers Section */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>Impact By The Numbers</p>
-            <h2 className={styles.sectionTitle}>
-              Designing for Business Outcomes
-            </h2>
-          </div>
-
-          <div className={styles.gridThree}>
-            {bigNumbers.map((stat, i) => (
-              <div key={i} className={styles.statCard}>
-                <div className={styles.statValue}>{stat.value}</div>
-                <div className={styles.statLabel}>{stat.label}</div>
-                <p className={styles.statDescription}>{stat.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BigNumbers />
 
       {/* Section Divider */}
       <div className={styles.sectionDivider} />

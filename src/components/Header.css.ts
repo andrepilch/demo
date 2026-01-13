@@ -34,32 +34,13 @@ export const nav = style({
 export const logoLink = style({
   display: "flex",
   alignItems: "center",
-  gap: "0.75rem",
 });
 
-export const logoBox = style({
-  width: "40px",
-  height: "40px",
-  borderRadius: "8px",
-  backgroundColor: vars.color.accent,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: vars.color.bgPrimary,
-  fontWeight: "700",
-  fontSize: "1.125rem",
-});
-
-export const logoText = style({
-  fontWeight: "600",
-  fontSize: "1.125rem",
-  display: "none",
+export const logo = style({
+  height: "28px",
+  width: "auto",
+  color: vars.color.textPrimary,
   transition: "color 0.2s ease",
-  "@media": {
-    "screen and (min-width: 640px)": {
-      display: "block",
-    },
-  },
   selectors: {
     [`${logoLink}:hover &`]: {
       color: vars.color.accent,

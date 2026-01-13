@@ -33,7 +33,8 @@ export const diagonalShape = style({
   left: 0,
   width: "100%",
   height: "2000px",
-  background: vars.color.accent,
   clipPath: "polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%)",
   animation: `${diagonalMorph} 100s ease-in-out infinite`,
+  background: vars.color.accent,
+  background: vars.gradient.hero,
 });

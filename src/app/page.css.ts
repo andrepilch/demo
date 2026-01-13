@@ -2,24 +2,6 @@ import { style, keyframes } from "@vanilla-extract/css";
 import { vars } from "@/styles";
 
 // Keyframes
-const twinkle = keyframes({
-  "0%, 100%": { opacity: "0.3" },
-  "50%": { opacity: "0.8" },
-});
-
-const shoot = keyframes({
-  "0%": {
-    transform: "translateX(-100%) translateY(-100%) rotate(-45deg)",
-    opacity: "0",
-  },
-  "5%": { opacity: "1" },
-  "15%": { opacity: "0" },
-  "100%": {
-    transform: "translateX(100vw) translateY(100vh) rotate(-45deg)",
-    opacity: "0",
-  },
-});
-
 const scrollLeft = keyframes({
   "0%": { transform: "translateX(0)" },
   "100%": { transform: "translateX(-50%)" },
@@ -39,41 +21,6 @@ const fadeInUp = keyframes({
 // Page Layout
 export const pageWrapper = style({
   position: "relative",
-});
-
-// Star Field
-export const starField = style({
-  position: "absolute",
-  inset: 0,
-  overflow: "hidden",
-  pointerEvents: "none",
-});
-
-export const star = style({
-  position: "absolute",
-  width: "2px",
-  height: "2px",
-  background: "white",
-  borderRadius: "50%",
-  opacity: 0.3,
-  animation: `${twinkle} 3s ease-in-out infinite`,
-});
-
-export const shootingStar = style({
-  position: "absolute",
-  width: "100px",
-  height: "1px",
-  background: "linear-gradient(90deg, rgba(14, 165, 233, 0.8), transparent)",
-  animation: `${shoot} 4s ease-out infinite`,
-  opacity: 0,
-});
-
-// Hero Gradient
-export const heroGradient = style({
-  position: "absolute",
-  inset: 0,
-  background: vars.gradient.hero,
-  pointerEvents: "none",
 });
 
 // Hero Section
@@ -108,7 +55,7 @@ export const heroContent = style({
 
 // Text Styles
 export const eyebrow = style({
-  color: vars.color.accent,
+  color: "#ffffff",
   fontSize: "0.875rem",
   fontWeight: "500",
   letterSpacing: "0.05em",
@@ -123,6 +70,7 @@ export const heroTitle = style({
   fontWeight: "700",
   lineHeight: 1.1,
   marginBottom: "1.5rem",
+  color: "#ffffff",
   opacity: 0,
   animation: `${fadeInUp} 0.6s ease-out forwards`,
   animationDelay: "0.1s",
@@ -137,7 +85,7 @@ export const heroTitle = style({
 });
 
 export const accentGradient = style({
-  background: `linear-gradient(135deg, ${vars.color.accentLight}, ${vars.color.accent})`,
+  background: "linear-gradient(135deg, rgba(255, 255, 255, 0.95), #ffffff)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -145,7 +93,7 @@ export const accentGradient = style({
 
 export const heroSubtitle = style({
   fontSize: "1.25rem",
-  color: vars.color.textSecondary,
+  color: "rgba(255, 255, 255, 0.85)",
   marginBottom: "2.5rem",
   maxWidth: "42rem",
   opacity: 0,
@@ -385,7 +333,8 @@ export const statCard = style({
     inset: 0,
     borderRadius: vars.radius.lg,
     padding: "1px",
-    background: "linear-gradient(135deg, rgba(14, 165, 233, 0.4), transparent 50%)",
+    background:
+      "linear-gradient(135deg, rgba(14, 165, 233, 0.4), transparent 50%)",
     mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
     maskComposite: "exclude",
     WebkitMaskComposite: "xor",
@@ -575,9 +524,18 @@ export const codeDot = style({
   borderRadius: "50%",
 });
 
-export const codeDotRed = style([codeDot, { background: "rgba(239, 68, 68, 0.8)" }]);
-export const codeDotYellow = style([codeDot, { background: "rgba(234, 179, 8, 0.8)" }]);
-export const codeDotGreen = style([codeDot, { background: "rgba(34, 197, 94, 0.8)" }]);
+export const codeDotRed = style([
+  codeDot,
+  { background: "rgba(239, 68, 68, 0.8)" },
+]);
+export const codeDotYellow = style([
+  codeDot,
+  { background: "rgba(234, 179, 8, 0.8)" },
+]);
+export const codeDotGreen = style([
+  codeDot,
+  { background: "rgba(34, 197, 94, 0.8)" },
+]);
 
 export const codeFilename = style({
   marginLeft: "0.5rem",
