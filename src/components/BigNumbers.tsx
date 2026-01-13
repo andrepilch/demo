@@ -9,7 +9,7 @@ const bigNumbers = [
   {
     value: "1.84x",
     label: "YoY Growth",
-    description: "Sales increase year-over-year",
+    description: "vs. alternative solutions",
   },
   {
     value: "2hrs",
