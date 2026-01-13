@@ -7,7 +7,7 @@ const bigNumbers = [
     description: "vs. alternative solutions",
   },
   {
-    value: "1.84x",
+    value: "1.44x",
     label: "YoY Growth",
     description: "vs. alternative solutions",
   },
