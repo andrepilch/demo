@@ -17,7 +17,8 @@ export const ribbonWrapper = style({
 
 export const ribbonTrack = style({
   display: "flex",
-  animation: `${scrollLeft} 20s linear infinite`,
+  width: "fit-content",
+  animation: `${scrollLeft} 30s linear infinite`,
 });
 
 export const ribbonItem = style({
