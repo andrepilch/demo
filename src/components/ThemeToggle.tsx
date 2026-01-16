@@ -11,10 +11,8 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       className={styles.toggleButton}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-      title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
     >
       {theme === "dark" ? (
-        // Sun icon for switching to light mode
         <svg
           className={styles.icon}
           fill="none"
@@ -29,7 +27,6 @@ export function ThemeToggle() {
           />
         </svg>
       ) : (
-        // Moon icon for switching to dark mode
         <svg
           className={styles.icon}
           fill="none"

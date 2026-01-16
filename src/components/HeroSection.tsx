@@ -19,7 +19,8 @@ export function HeroSection() {
 
         {/* Sub-headline */}
         {/* <p className={styles.heroSubtitle}>
-          I bridge the gap between product vision and engineering reality
+          I look for ways to differentiate products in favor of users to achieve
+          growth in competitive markets
         </p> */}
 
         {/* CTA Buttons */}

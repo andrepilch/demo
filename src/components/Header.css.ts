@@ -227,3 +227,55 @@ export const icon = style({
   width: "24px",
   height: "24px",
 });
+
+// Social Links
+export const socialLinks = style({
+  display: "flex",
+  alignItems: "center",
+  gap: "0.5rem",
+});
+
+export const socialLink = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "0.5rem",
+  color: vars.color.textMuted,
+  transition: "color 0.2s ease",
+  ":hover": {
+    color: vars.color.accent,
+  },
+  selectors: {
+    [`${headerTransparent} &`]: {
+      color: "rgba(255, 255, 255, 0.7)",
+    },
+    [`${headerTransparent} &:hover`]: {
+      color: vars.color.textOnAccent,
+    },
+  },
+});
+
+export const socialIcon = style({
+  width: "20px",
+  height: "20px",
+});
+
+// Mobile social links
+export const mobileSocialLinks = style({
+  display: "flex",
+  justifyContent: "center",
+  gap: "1rem",
+  paddingTop: "0.5rem",
+});
+
+export const mobileSocialLink = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "0.75rem",
+  color: vars.color.textMuted,
+  transition: "color 0.2s ease",
+  ":hover": {
+    color: vars.color.accent,
+  },
+});

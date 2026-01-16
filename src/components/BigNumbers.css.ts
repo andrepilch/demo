@@ -35,7 +35,7 @@ export const eyebrow = style({
 export const sectionTitle = style({
   fontSize: "1.875rem",
   fontWeight: "700",
-  color: vars.color.textAccentDark,
+  color: vars.color.textOnAccent,
   "@media": {
     "screen and (min-width: 768px)": {
       fontSize: "2.25rem",

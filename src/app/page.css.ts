@@ -595,20 +595,43 @@ export const ctaTitle = style({
   },
 });
 
-export const ctaDescription = style({
-  position: "relative",
-  color: vars.color.textSecondary,
-  maxWidth: "36rem",
-  marginLeft: "auto",
-  marginRight: "auto",
-});
-
 export const ctaButtonsWrapper = style({
   position: "relative",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
   gap: "1rem",
+});
+
+// Social Links for CTA section
+export const socialLinks = style({
+  position: "relative",
+  display: "flex",
+  justifyContent: "center",
+  gap: "1.5rem",
+});
+
+export const socialLink = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "48px",
+  height: "48px",
+  borderRadius: "50%",
+  background: vars.color.bgSecondary,
+  border: `1px solid ${vars.color.border}`,
+  color: vars.color.textMuted,
+  transition: "all 0.3s ease",
+  ":hover": {
+    color: vars.color.accent,
+    borderColor: vars.color.accent,
+    transform: "translateY(-2px)",
+  },
+});
+
+export const socialIcon = style({
+  width: "24px",
+  height: "24px",
 });
 
 // Text utilities

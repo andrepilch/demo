@@ -99,10 +99,10 @@ export const darkTheme = createTheme(vars, {
   },
   gap: {
     section: "6rem",
-    sectionSm: "4rem",
+    sectionSm: "2rem",
     sectionLg: "8rem",
     element: "1.5rem",
-    elementSm: "1rem",
+    elementSm: "0.5rem",
   },
   layout: {
     headerHeight: "64px",
@@ -162,10 +162,10 @@ export const lightTheme = createTheme(vars, {
   },
   gap: {
     section: "6rem",
-    sectionSm: "4rem",
+    sectionSm: "2rem",
     sectionLg: "8rem",
     element: "1.5rem",
-    elementSm: "1rem",
+    elementSm: "0.5rem",
   },
   layout: {
     headerHeight: "64px",
