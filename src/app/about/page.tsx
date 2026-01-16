@@ -212,7 +212,9 @@ export default function About() {
             {/* Bio Content */}
             <div className={styles.bioContent}>
               <p className={styles.eyebrow}>About Me</p>
-              <h1 className={styles.pageTitle}>André Pilch</h1>
+              <h1 className={styles.pageTitle}>
+                Hi, I'm André <br />
+              </h1>
               <div className={styles.bioText}>
                 <p>
                   Born in France and now residing in Wisconsin, I've spent{" "}
@@ -274,123 +276,126 @@ export default function About() {
                 Design-to-Code: Why It Matters
               </h2>
               <p className={styles.sectionDescription}>
-                My 5 years of React/TypeScript experience isn't just a bonus—it's
-                a fundamental part of how I design better products.
+                My 5 years of React/TypeScript experience isn't just a
+                bonus—it's a fundamental part of how I design better products.
               </p>
             </div>
 
             <div className={styles.gridTwo}>
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <div className={styles.cardIconWrapper}>
-                  <svg
-                    className={styles.iconMd}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>No Translation Loss</h3>
-                  <p className={styles.cardDescription}>
-                    When I design a component, I know exactly how it will be
-                    built. No "that's not technically possible" surprises during
-                    handoff.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <div className={styles.cardIconWrapper}>
-                  <svg
-                    className={styles.iconMd}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>Faster Iteration</h3>
-                  <p className={styles.cardDescription}>
-                    I can prototype in code, not just Figma. This means real
-                    interactions, real state, real feedback—faster.
-                  </p>
+              <div className={styles.card}>
+                <div className={styles.cardIcon}>
+                  <div className={styles.cardIconWrapper}>
+                    <svg
+                      className={styles.iconMd}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>No Translation Loss</h3>
+                    <p className={styles.cardDescription}>
+                      When I design a component, I know exactly how it will be
+                      built. No "that's not technically possible" surprises
+                      during handoff.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <div className={styles.cardIconWrapper}>
-                  <svg
-                    className={styles.iconMd}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </div>
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>Better Collaboration</h3>
-                  <p className={styles.cardDescription}>
-                    Speaking both design and engineering languages means I'm a
-                    natural bridge between teams, reducing friction and
-                    misunderstandings.
-                  </p>
+              <div className={styles.card}>
+                <div className={styles.cardIcon}>
+                  <div className={styles.cardIconWrapper}>
+                    <svg
+                      className={styles.iconMd}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>Faster Iteration</h3>
+                    <p className={styles.cardDescription}>
+                      I can prototype in code, not just Figma. This means real
+                      interactions, real state, real feedback—faster.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <div className={styles.cardIconWrapper}>
-                  <svg
-                    className={styles.iconMd}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                    />
-                  </svg>
+              <div className={styles.card}>
+                <div className={styles.cardIcon}>
+                  <div className={styles.cardIconWrapper}>
+                    <svg
+                      className={styles.iconMd}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>Better Collaboration</h3>
+                    <p className={styles.cardDescription}>
+                      Speaking both design and engineering languages means I'm a
+                      natural bridge between teams, reducing friction and
+                      misunderstandings.
+                    </p>
+                  </div>
                 </div>
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>Design System Ownership</h3>
-                  <p className={styles.cardDescription}>
-                    I can own the design system from Figma tokens to React
-                    components, ensuring consistency across the entire product.
-                  </p>
+              </div>
+
+              <div className={styles.card}>
+                <div className={styles.cardIcon}>
+                  <div className={styles.cardIconWrapper}>
+                    <svg
+                      className={styles.iconMd}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      />
+                    </svg>
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>
+                      Design System Ownership
+                    </h3>
+                    <p className={styles.cardDescription}>
+                      I can own the design system from Figma tokens to React
+                      components, ensuring consistency across the entire
+                      product.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -402,8 +407,8 @@ export default function About() {
               <p className={styles.eyebrow}>How I Work</p>
               <h2 className={styles.sectionTitle}>My Design Philosophy</h2>
               <p className={styles.sectionDescription}>
-                These principles guide every product decision I make, from initial
-                research through final implementation.
+                These principles guide every product decision I make, from
+                initial research through final implementation.
               </p>
             </div>
 
@@ -469,7 +474,9 @@ export default function About() {
                 >
                   <div className={styles.projectHeader}>
                     <h3 className={styles.projectTitle}>{project.title}</h3>
-                    <span className={styles.projectStatus}>{project.status}</span>
+                    <span className={styles.projectStatus}>
+                      {project.status}
+                    </span>
                   </div>
                   <p className={styles.projectDescription}>
                     {project.description}
