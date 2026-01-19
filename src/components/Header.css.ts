@@ -5,7 +5,12 @@ export const header = style({
   position: "sticky",
   top: 0,
   zIndex: 50,
-  transition: "background-color 0.3s ease, backdrop-filter 0.3s ease",
+  transition:
+    "background-color 0.3s ease, backdrop-filter 0.3s ease, transform 0.3s ease",
+});
+
+export const headerHidden = style({
+  transform: "translateY(-100%)",
 });
 
 export const headerTransparent = style({
@@ -15,8 +20,8 @@ export const headerTransparent = style({
 });
 
 export const headerScrolled = style({
-  backdropFilter: "blur(12px)",
-  backgroundColor: `color-mix(in srgb, ${vars.color.bgPrimary} 80%, transparent)`,
+  // backdropFilter: "blur(12px)",
+  // backgroundColor: `color-mix(in srgb, ${vars.color.bgPrimary} 80%, transparent)`,
 });
 
 export const container = style({
@@ -48,13 +53,22 @@ export const logoLink = style({
 export const logo = style({
   height: "28px",
   width: "auto",
-  color: vars.color.textPrimary,
-  transition: "color 0.2s ease",
+  color: vars.color.accent,
+  transition: "color 0.2s ease, opacity 0.3s ease",
   selectors: {
     [`${logoLink}:hover &`]: {
-      color: vars.color.accent,
+      color: vars.color.textPrimary,
     },
   },
+});
+
+export const logoHidden = style({
+  opacity: 0,
+  pointerEvents: "none",
+});
+
+export const logoVisible = style({
+  opacity: 1,
 });
 
 export const desktopNav = style({

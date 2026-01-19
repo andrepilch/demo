@@ -82,7 +82,7 @@ export const darkTheme = createTheme(vars, {
   gradient: {
     hero: "linear-gradient(353deg,#00AEEF 70%, #00131A 95%)",
     card: "linear-gradient(135deg, rgba(14, 165, 233, 0.03) 0%, transparent 50%)",
-    glow: "radial-gradient(circle at center, rgba(14, 165, 233, 0.2), transparent 70%)",
+    glow: "radial-gradient(circle at center, rgba(0, 174, 239, 0.5), transparent 70%)",
   },
   font: {
     sans: "var(--font-sans)",
@@ -101,7 +101,7 @@ export const darkTheme = createTheme(vars, {
     section: "6rem",
     sectionSm: "2rem",
     sectionLg: "8rem",
-    element: "1.5rem",
+    element: "3 rem",
     elementSm: "0.5rem",
   },
   layout: {
@@ -122,7 +122,7 @@ export const darkTheme = createTheme(vars, {
     sm: "0 1px 2px rgba(0, 0, 0, 0.3)",
     md: "0 4px 6px rgba(0, 0, 0, 0.4)",
     lg: "0 10px 15px rgba(0, 0, 0, 0.5)",
-    glow: "0 4px 20px rgba(14, 165, 233, 0.4)",
+    glow: "0 0 30px 8px rgba(0, 174, 239, 0.6)",
   },
 });
 
@@ -143,7 +143,7 @@ export const lightTheme = createTheme(vars, {
     borderLight: "#d4d4d8",
   },
   gradient: {
-    hero: "linear-gradient(353deg,#00AEEF 70%, #002533 95%)",
+    hero: "linear-gradient(360deg,#00AEEF 60%, #002533 98%)",
     card: "linear-gradient(135deg, rgba(2, 132, 199, 0.03) 0%, transparent 50%)",
     glow: "radial-gradient(circle at center, rgba(2, 132, 199, 0.15), transparent 70%)",
   },
@@ -164,7 +164,7 @@ export const lightTheme = createTheme(vars, {
     section: "6rem",
     sectionSm: "2rem",
     sectionLg: "8rem",
-    element: "1.5rem",
+    element: "3rem",
     elementSm: "0.5rem",
   },
   layout: {
@@ -185,6 +185,6 @@ export const lightTheme = createTheme(vars, {
     sm: "0 1px 2px rgba(0, 0, 0, 0.05)",
     md: "0 4px 6px rgba(0, 0, 0, 0.1)",
     lg: "0 10px 15px rgba(0, 0, 0, 0.1)",
-    glow: "0 4px 20px rgba(2, 132, 199, 0.3)",
+    glow: "0 0 25px 6px rgba(0, 174, 239, 0.5)",
   },
 });

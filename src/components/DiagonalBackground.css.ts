@@ -26,6 +26,6 @@ export const diagonalShape = style({
   pointerEvents: "none",
   clipPath: "polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%)",
   animation: `${diagonalMorph} 100s ease-in-out infinite`,
-  // background: vars.gradient.hero,
-  background: vars.color.accent,
+  background: vars.gradient.hero,
+  // background: vars.color.accent,
 });

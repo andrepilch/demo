@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export function FixedLogo() {
@@ -7,13 +6,17 @@ export function FixedLogo() {
       href="/"
       style={{
         position: "fixed",
-        bottom: 0,
-        right: 0,
+        top: 0,
+        left: 0,
         zIndex: 50,
         transition: "opacity 0.2s",
       }}
     >
-      <Image src="/logo.svg" alt="André Pilch logo" width={156} height={69} />
+      <img
+        src="/ap_logo.svg"
+        alt="André Pilch logo"
+        style={{ height: "120px", width: "auto", display: "block" }}
+      />
     </Link>
   );
 }

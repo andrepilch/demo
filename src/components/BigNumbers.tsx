@@ -1,3 +1,14 @@
+import {
+  Container,
+  SectionContent,
+  SectionHeader,
+  Grid,
+  Eyebrow,
+  H2,
+  StatNumber,
+  H3,
+  Body,
+} from "@/components";
 import * as styles from "./BigNumbers.css";
 
 const bigNumbers = [
@@ -20,25 +31,25 @@ const bigNumbers = [
 
 export function BigNumbers() {
   return (
-    <section className={styles.section}>
-      <div className={styles.sectionContent}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.eyebrow}>Impact By The Numbers</p>
-          <h2 className={styles.sectionTitle}>
-            Designing for Business Outcomes
-          </h2>
-        </div>
+    <Container as="section" size="large" className={styles.section}>
+      <div className={styles.whiteWrapper}>
+        <SectionContent>
+          <SectionHeader align="left">
+            <Eyebrow>Impact By The Numbers</Eyebrow>
+            <H2>Designing for Business Outcomes</H2>
+          </SectionHeader>
 
-        <div className={styles.gridThree}>
-          {bigNumbers.map((stat, i) => (
-            <div key={i} className={styles.statCard}>
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-              <p className={styles.statDescription}>{stat.description}</p>
-            </div>
-          ))}
-        </div>
+          <Grid cols={3}>
+            {bigNumbers.map((stat, i) => (
+              <div key={i} className={styles.statCard}>
+                <StatNumber gradient="accent">{stat.value}</StatNumber>
+                <H3 color="secondary">{stat.label}</H3>
+                <Body color="muted">{stat.description}</Body>
+              </div>
+            ))}
+          </Grid>
+        </SectionContent>
       </div>
-    </section>
+    </Container>
   );
 }

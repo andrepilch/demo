@@ -62,7 +62,7 @@ export function Header() {
 
   const headerClassName = `${styles.header} ${
     isHomepage && !scrolled ? styles.headerTransparent : styles.headerScrolled
-  }`;
+  } ${scrolled ? styles.headerHidden : ""}`;
 
   return (
     <header className={headerClassName}>
@@ -71,7 +71,8 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className={styles.logoLink}>
             <svg
-              className={styles.logo}
+              // className={`${styles.logo} ${scrolled ? styles.logoVisible : styles.logoHidden}`}
+              className={`${styles.logo} ${styles.logoHidden}`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 140 58"
               fill="currentColor"
