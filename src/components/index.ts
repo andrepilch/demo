@@ -36,3 +36,9 @@ export {
   iconSm,
   iconMd,
 } from "./Button";
+export { LeadershipSection } from "./LeadershipSection";
+export {
+  PhilosophyMasonry,
+  PhilosophyCard,
+  type PhilosophyItem,
+} from "./PhilosophyMasonry";

@@ -450,6 +450,37 @@ export const caseStudyDescription = style({
   color: vars.color.textSecondary,
 });
 
+// Mini Stats within case study card
+export const caseStudyStats = style({
+  display: "flex",
+  gap: "1.5rem",
+  paddingTop: "0.75rem",
+  paddingBottom: "0.75rem",
+  marginTop: "0.25rem",
+  borderTop: `1px solid ${vars.color.border}`,
+  borderBottom: `1px solid ${vars.color.border}`,
+});
+
+export const caseStudyStat = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.125rem",
+});
+
+export const caseStudyStatValue = style({
+  fontSize: "1.25rem",
+  fontWeight: "700",
+  color: vars.color.accent,
+  lineHeight: 1.2,
+});
+
+export const caseStudyStatLabel = style({
+  fontSize: "0.75rem",
+  color: vars.color.textMuted,
+  textTransform: "uppercase",
+  letterSpacing: "0.025em",
+});
+
 export const tagList = style({
   display: "flex",
   flexWrap: "wrap",

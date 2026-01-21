@@ -5,6 +5,7 @@ import {
   HeroSection,
   ImpactStatsRibbon,
   BigNumbers,
+  LeadershipSection,
 } from "@/components";
 import * as styles from "./page.css";
 
@@ -66,6 +67,10 @@ const caseStudies = [
     tags: ["Product Design", "React", "Design Systems"],
     href: "/work/whcc-editor",
     image: "/images/projects/wall_designer/wall_designer_cover.jpg",
+    stats: [
+      { value: "26%", label: "AOV Increase" },
+      { value: "1.3M", label: "Annual Users" },
+    ],
   },
   {
     title: "Eternity Bible",
@@ -75,6 +80,11 @@ const caseStudies = [
     tags: ["NextJS", "TypeScript", "Full-Stack"],
     href: "/work/eternity-bible",
     image: "/images/projects/eternity/eternity_cover.jpg",
+    stats: [
+      { value: "4.8★", label: "App Rating" },
+      { value: "10K+", label: "Users" },
+      { value: "15min", label: "Avg Session" },
+    ],
   },
 ];
 
@@ -154,6 +164,7 @@ export default function Home() {
         <BigNumbers />
       </div>
       <ImpactStatsRibbon />
+      
       {/* Main Content Sections */}
       <div className={styles.sectionsWrapper}>
         {/* Featured Case Studies */}
@@ -194,6 +205,23 @@ export default function Home() {
                       <p className={styles.caseStudyDescription}>
                         {study.description}
                       </p>
+                      
+                      {/* Mini Stats */}
+                      {study.stats && (
+                        <div className={styles.caseStudyStats}>
+                          {study.stats.map((stat, k) => (
+                            <div key={k} className={styles.caseStudyStat}>
+                              <span className={styles.caseStudyStatValue}>
+                                {stat.value}
+                              </span>
+                              <span className={styles.caseStudyStatLabel}>
+                                {stat.label}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      
                       <div className={styles.tagList}>
                         {study.tags.map((tag, j) => (
                           <span key={j} className={styles.tag}>
@@ -208,6 +236,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Leadership Section */}
+        <LeadershipSection />
 
         {/* The Framework Section */}
         <section className={styles.section}>

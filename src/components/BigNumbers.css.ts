@@ -30,7 +30,7 @@ export const statCard = style({
     inset: 0,
     borderRadius: vars.radius.lg,
     padding: "1px",
-    background: "linear-gradient(135deg,rgba(0, 37, 51, 0.4), transparent 50%)",
+    background: "linear-gradient(135deg,#00aeef 40%, transparent 50%)",
     mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
     maskComposite: "exclude",
     WebkitMaskComposite: "xor",

@@ -1,6 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function FixedLogo() {
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
+
+  // Only show the big triangle logo on homepage
+  if (!isHomepage) {
+    return null;
+  }
+
   return (
     <Link
       href="/"

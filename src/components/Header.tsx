@@ -68,11 +68,12 @@ export function Header() {
     <header className={headerClassName}>
       <div className={styles.container}>
         <nav className={styles.nav}>
-          {/* Logo */}
+          {/* Logo - show on non-homepage or when scrolled on homepage */}
           <Link href="/" className={styles.logoLink}>
             <svg
-              // className={`${styles.logo} ${scrolled ? styles.logoVisible : styles.logoHidden}`}
-              className={`${styles.logo} ${styles.logoHidden}`}
+              className={`${styles.logo} ${
+                isHomepage ? styles.logoHidden : styles.logoVisible
+              }`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 140 58"
               fill="currentColor"
