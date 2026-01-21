@@ -64,20 +64,6 @@ const goals = [
 ];
 
 // ============================================
-// Key Features
-// ============================================
-
-const features = [
-  "Distraction-free reading mode",
-  "Multiple Bible translations",
-  "Custom reading themes",
-  "Typography controls (font, size, spacing)",
-  "Reading progress tracking",
-  "Bookmarks and highlights",
-  "Cross-platform sync",
-];
-
-// ============================================
 // Results/Outcomes
 // ============================================
 
