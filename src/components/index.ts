@@ -5,6 +5,7 @@ export { HeroSection } from "./HeroSection";
 export { ImpactStatsRibbon } from "./ImpactStatsRibbon";
 export { BigNumbers } from "./BigNumbers";
 export { FixedLogo } from "./FixedLogo";
+export { AnimatedLogo } from "./AnimatedLogo";
 export {
   Text,
   H1,
