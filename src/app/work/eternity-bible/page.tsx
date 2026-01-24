@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import * as styles from "./page.css";
 
 // ============================================
@@ -7,60 +6,118 @@ import * as styles from "./page.css";
 // ============================================
 
 const projectMeta = {
-  role: ["Solo Designer", "Solo Developer", "Product Owner"],
-  platforms: ["iOS (React Native)", "Web (NextJS)"],
-  year: "2023–Present",
+  role: ["Solo Designer", "Solo and Lead Developer", "Product Owner"],
+  platforms: ["iOS phone & tablet", "Android phone & tablet", "Web"],
+  tech: ["ReactJS", "TypeScript", "PigmentCSS", "NextJS", "Cursor AI", "Vercel", "Github"],
+  year: "2025–Present",
   status: "Live",
 };
 
 // ============================================
-// Problems Identified
+// Common Pain Points
 // ============================================
 
-const problems = [
+const painPoints = [
+  // "Digital Bibles are designed around print expectations, not around human lives today. Particularly the churched.",
+  "Only one translation available",
+  "Has ads or sponsorships and promotional materials",
+  "Single language eliminates bilinguals",
+  "Hard and slow to navigate the Bible",
+  "Takes longer to find your spot in digital Bible than it does on paper, why?!",
+  "Too many features you never actually use on your phone",
+  "High cognitive load",
+  "Too many taps, 3-4 to get back to bookmark or history in other Bible",
+  "Thinking and memory involved to find your spot means app left unopened",
+  "Contains false teaching",
+  "Costs money",
+  "Poor formatting",
+  "Full of distractions drawing you away from the Bible",
+  "Too many settings",
+  "Not curated",
+  // "Phones don't give the full picture like paper Bibles do",
+];
+
+// ============================================
+// Design Process Steps
+// ============================================
+
+const designProcessSteps = [
+  "Understand problems",
+  "Competitive analysis",
+  "Ideation",
+  "Wireframes",
+  "Interviews with target audience to discuss solutions",
+  "Design",
+  "Develop",
+  "Release incrementally",
+  "Invite users to test along the way",
+  "React to feedback quickly",
+  "Release & Test with closed testing group",
+  "Iterate on design and features",
+  "Release to app stores",
+  "Continue evolving features",
+];
+
+// ============================================
+// Product Strategy Outcomes
+// ============================================
+
+const strategyOutcomes = [
   {
-    number: "1",
-    title: "Overwhelming",
-    description:
-      "Most Bible apps are cluttered with features, ads, and social elements that distract from focused reading and study.",
+    principle: "Everything must be better in the user's mind",
+    outcome: "Clients use and want to share",
   },
   {
-    number: "2",
-    title: "Poor Typography",
-    description:
-      "Long-form reading suffers from poor font choices, inadequate line spacing, and lack of attention to reading comfort.",
+    principle: "No one should feel like they need to know more",
+    outcome: "Users are comfortable",
   },
   {
-    number: "3",
-    title: "Limited Personalization",
-    description:
-      "Users couldn't customize their reading experience to match their preferences, reading context, or accessibility needs.",
+    principle: "No one should feel like our first user, things should work as expected",
+    outcome: "Trust is built",
+  },
+  {
+    principle: "Save user time",
+    outcome: "Adds value; better tools take less time to use. Tools that save time add value.",
+  },
+  {
+    principle: "Minimize effort",
+    outcome: "Easier to be in the app, and most importantly, in the Bible",
   },
 ];
 
 // ============================================
-// Goals (Problem → Solution)
+// Product Principles
 // ============================================
 
-const goals = [
+const productPrinciples = [
   {
-    from: "Overwhelming",
-    to: "Focused",
-    description:
-      "Strip away distractions to create a calm, focused reading environment that puts Scripture first.",
+    title: "UX is primary",
+    description: "Everything must be better",
   },
   {
-    from: "Poor Typography",
-    to: "Beautiful",
-    description:
-      "Implement carefully chosen fonts, generous spacing, and attention to typographic detail for comfortable extended reading.",
+    title: "Designed for the user",
+    description: "Takes you into the Bible, not out of it",
   },
   {
-    from: "Limited",
-    to: "Personal",
-    description:
-      "Give users full control over fonts, colors, themes, and layout to make the experience truly their own.",
+    title: "Content first",
+    description: "The app does not make itself noticed",
   },
+];
+
+// ============================================
+// Digital Bible Benefits
+// ============================================
+
+const digitalBibleBenefits = [
+  "Can read in the dark",
+  "Can hold with children in your arms",
+  "Always on you in your phone",
+  "Can change translation to suit your setting",
+  "Can remember where you left off for many different Bibles",
+  "Weigh nothing in your pocket",
+  "Can have as many Biblesas you need, no limitations",
+  "Quicker to get to a verse",
+  "Quicker to find a verse (with searching)",
 ];
 
 // ============================================
@@ -69,19 +126,24 @@ const goals = [
 
 const results = [
   {
-    value: "4.8★",
-    label: "App Store Rating",
-    description: "User satisfaction",
+    value: "5★",
+    label: "Rated",
+    description: "App Store rating",
+  },
+  // {
+  //   value: "5",
+  //   label: "Device Types",
+  //   description: "iOS phone & tablet, Android phone & tablet, Web",
+  // },
+  {
+    value: "3",
+    label: "Bibles Per User",
+    description: "Average usage",
   },
   {
-    value: "10K+",
-    label: "Active Users",
-    description: "And growing",
-  },
-  {
-    value: "15min",
-    label: "Avg. Session",
-    description: "Engaged reading",
+    value: "95%",
+    label: "Engagement",
+    description: "With core feature",
   },
 ];
 
@@ -96,16 +158,18 @@ export default function EternityCaseStudy() {
           <div className={styles.heroContent}>
             <p className={styles.heroEyebrow}>Case Study</p>
             <h1 className={styles.heroTitle}>
-              Designing Eternity Bible App
+              Challenging the Norms in a Saturated Market
             </h1>
             <p className={styles.heroDescription}>
-              A distraction-free Bible reading experience designed to help you 
-              open the Bible more often. Built for focus, beautiful typography, 
-              and personal customization. Designed and developed as a solo project 
-              from concept to App Store.
+              Designed to help you open the Bible more often. Eternity Bible 
+              lets you create Bibles for every context and resume reading exactly 
+              where you left off in each Bible instantly. You can save settings 
+              and a translation for each Bible. The app also features a powerful 
+              search by meaning. By removing distractions and making the Bible 
+              one-tap away on any device, you can spend more time being in the Word.
             </p>
             <a
-              href="https://about.eternitybible.app"
+              href="https://eternitybible.app"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.heroButton}
@@ -140,13 +204,14 @@ export default function EternityCaseStudy() {
               <h2 className={styles.sectionTitle}>The Project</h2>
             </div>
             <p className={styles.sectionDescription}>
-              Eternity Bible is a personal project born from my own frustration 
-              with existing Bible apps. As both the designer and developer, I had 
-              complete creative control to build exactly the reading experience I 
-              wished existed—one that prioritizes beautiful typography, focused 
-              reading, and thoughtful personalization over feature bloat. The app 
-              is completely free for everyone, with no ads, no tracking, and no 
-              distractions.
+              The thing I wish is that some of these organizations and individuals 
+              who spent their time putting their own app together would just work 
+              together to make an app that truly works for real people, Christians 
+              mostly. People who use a Bible app tend to also have printed Bibles, 
+              they also tend to go to church, and they tend to read several 
+              translations. Many people also speak several languages, one at home 
+              and one at church. And most people aren't sitting on their phone to 
+              do deep Bible study.
             </p>
 
             {/* Project Meta */}
@@ -192,7 +257,7 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Problems Section */}
+      {/* Common Pain Points Section */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
@@ -200,21 +265,118 @@ export default function EternityCaseStudy() {
             <div className={styles.sectionHeaderCentered}>
               <p className={styles.eyebrow}>The Challenge</p>
               <h2 className={styles.sectionTitle}>
-                Why Most Bible Apps Fall Short
+                Solve Common Problems with Other Bible Apps
               </h2>
               <p className={styles.sectionDescription}>
-                Through personal use and user research, I identified three core 
-                problems with existing Bible apps.
+                Digital Bibles are designed around print expectations, not around 
+                human lives today. Particularly the churched.
               </p>
             </div>
 
             <div className={styles.problemsGrid}>
-              {problems.map((problem) => (
-                <div key={problem.number} className={styles.problemCard}>
-                  <span className={styles.problemNumber}>{problem.number}</span>
-                  <h3 className={styles.problemTitle}>{problem.title}</h3>
+              {painPoints.map((painPoint, i) => (
+                <div key={i} className={styles.problemCard}>
+                  <h3 className={styles.problemTitle}>{painPoint}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Product Strategy Section */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>Strategy</p>
+              <h2 className={styles.sectionTitle}>Product Strategy</h2>
+              <p className={styles.sectionDescription}>
+                <strong>Challenger</strong> — We're aiming to position our product 
+                as more exciting than others available in the market based on 
+                features, design, and efficiency.
+              </p>
+            </div>
+
+            <div className={styles.goalsGrid}>
+              {strategyOutcomes.map((item, i) => (
+                <div key={i} className={styles.goalCard}>
+                  <div className={styles.goalTransform}>
+                    <span className={styles.goalFrom}>{item.principle}</span>
+                    <span className={styles.goalArrow}>→</span>
+                    <span className={styles.goalTo}>{item.outcome}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Target Audience Section */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.narrowContainer}>
+            <div className={styles.sectionHeaderCentered}>
+              <p className={styles.eyebrow}>Audience</p>
+              <h2 className={styles.sectionTitle}>Target Audience</h2>
+            </div>
+            <div className={styles.problemsGrid}>
+              <div className={styles.problemCard}>
+                <h3 className={styles.problemTitle}>
+                  Do you wish it could be easier to use your Bible on your phone?
+                </h3>
+              </div>
+              <div className={styles.problemCard}>
+                <h3 className={styles.problemTitle}>
+                  Do you avoid opening the Bible on your phone because it takes 
+                  too long to find your spot?
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* What It Isn't Section */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.narrowContainer}>
+            <div className={styles.sectionHeaderCentered}>
+              <p className={styles.eyebrow}>Focus</p>
+              <h2 className={styles.sectionTitle}>What It Isn't</h2>
+              <p className={styles.sectionDescription}>
+                The aim isn't to create another ecosystem or publishing platform 
+                for our own or someone else's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Product Principles Section */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeaderCentered}>
+              <p className={styles.eyebrow}>Foundation</p>
+              <h2 className={styles.sectionTitle}>Product Principles</h2>
+            </div>
+
+            <div className={styles.problemsGrid}>
+              {productPrinciples.map((principle, i) => (
+                <div key={i} className={styles.problemCard}>
+                  <h3 className={styles.problemTitle}>{principle.title}</h3>
                   <p className={styles.problemDescription}>
-                    {problem.description}
+                    {principle.description}
                   </p>
                 </div>
               ))}
@@ -224,50 +386,59 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Goals Section */}
+      {/* Raison D'être Section */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.sectionContent}>
+          <div className={styles.narrowContainer}>
             <div className={styles.sectionHeaderCentered}>
-              <p className={styles.eyebrow}>The Opportunity</p>
-              <h2 className={styles.sectionTitle}>
-                Transforming Problems into Design Goals
-              </h2>
+              <p className={styles.eyebrow}>Purpose</p>
+              <h2 className={styles.sectionTitle}>Raison D'être</h2>
             </div>
-
-            <div className={styles.goalsGrid}>
-              {goals.map((goal, i) => (
-                <div key={i} className={styles.goalCard}>
-                  <div className={styles.goalTransform}>
-                    <span className={styles.goalFrom}>{goal.from}</span>
-                    <span className={styles.goalArrow}>→</span>
-                    <span className={styles.goalTo}>{goal.to}</span>
-                  </div>
-                  <p className={styles.goalDescription}>{goal.description}</p>
-                </div>
-              ))}
+            <div className={styles.sectionDescription}>
+              <p style={{ marginBottom: "1.5rem" }}>
+                The Bible app shouldn't take more attention than the Bible in the app.
+              </p>
+              <p style={{ marginBottom: "1.5rem" }}>
+                Learn the Bible by seeing the Bible. It's a highly visual way to navigate.
+              </p>
+              <p style={{ marginBottom: "1.5rem" }}>
+                It shouldn't take you longer to open your spot in a digital Bible than 
+                it takes to open a paper Bible. Otherwise what would be the advantage?
+              </p>
+              <p style={{ marginBottom: "1.5rem" }}>
+                Put the user first.
+              </p>
+              <p>
+                Instead of thinking about a Bible translation like a library book on 
+                a shelf. With digital Bibles we have the luxury of being able to 
+                endlessly duplicate our Bibles and carry them all in our pocket. So 
+                why don't we have a Bible for every setting in our lives?
+              </p>
             </div>
           </div>
         </div>
       </section>
 
+
       {/* ============================================ */}
-      {/* Design Iterations */}
+      {/* Design Process Section */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.sectionContent}>
             <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>Process</p>
-              <h2 className={styles.sectionTitle}>Design Iterations</h2>
-              <p className={styles.sectionDescription}>
-                The design evolved through multiple iterations, starting with 
-                wireframes focused on the core "Multiple Bibles" concept, 
-                exploring typography options for optimal readability, developing 
-                a flexible theme system, and finally refining the interface to 
-                be as minimal and focused as possible.
-              </p>
+              <h2 className={styles.sectionTitle}>Design Process</h2>
+            </div>
+
+            <div className={styles.problemsGrid}>
+              {designProcessSteps.map((step, i) => (
+                <div key={i} className={styles.problemCard}>
+                  <span className={styles.problemNumber}>{i + 1}</span>
+                  <h3 className={styles.problemTitle}>{step}</h3>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -285,10 +456,9 @@ export default function EternityCaseStudy() {
                 Make a Bible for Every Context
               </h2>
               <p className={styles.featureDescription}>
-                The core innovation of Eternity is the ability to create multiple 
-                personal Bibles for different study purposes. Whether it's morning 
-                devotion, a sermon series, Sunday School, or a small group study, 
-                each Bible maintains its own reading position and settings.
+                Eternity Bible lets you create Bibles for every context and resume 
+                reading exactly where you left off in each Bible instantly. You can 
+                save settings and translation for each Bible.
               </p>
               <ul className={styles.featureList}>
                 <li className={styles.featureListItem}>
@@ -321,7 +491,23 @@ export default function EternityCaseStudy() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Each Bible remembers where you left off</span>
+                  <span>Resume reading exactly where you left off instantly</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Save settings and translation for each Bible</span>
                 </li>
                 <li className={styles.featureListItem}>
                   <svg
@@ -339,22 +525,6 @@ export default function EternityCaseStudy() {
                   </svg>
                   <span>Pick up where you left off on any device</span>
                 </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Choose different translations for each Bible</span>
-                </li>
               </ul>
             </div>
             <div className={styles.imagePlaceholder}>
@@ -365,23 +535,23 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Feature Highlight: Reading Modes */}
+      {/* Feature Highlight: Search by Meaning */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.featureSection}>
             <div className={styles.imagePlaceholder}>
-              [Reading modes interface]
+              [Search by meaning interface]
             </div>
             <div className={styles.featureContent}>
               <p className={styles.eyebrow}>Key Feature</p>
               <h2 className={styles.featureTitle}>
-                3 Reading Modes
+                Powerful Search by Meaning
               </h2>
               <p className={styles.featureDescription}>
-                Different reading contexts call for different presentation styles. 
-                Eternity offers three distinct reading modes to match how you want 
-                to engage with Scripture.
+                Find verses not just by keywords, but by meaning. Eternity's search 
+                feature helps you discover Scripture based on what you're looking 
+                for, not just exact word matches.
               </p>
               <ul className={styles.featureList}>
                 <li className={styles.featureListItem}>
@@ -398,7 +568,7 @@ export default function EternityCaseStudy() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Paragraph mode for continuous, immersive reading</span>
+                  <span>Search by meaning, not just keywords</span>
                 </li>
                 <li className={styles.featureListItem}>
                   <svg
@@ -414,23 +584,7 @@ export default function EternityCaseStudy() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Verse-by-verse mode for detailed study</span>
-                </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Reader mode for distraction-free focus</span>
+                  <span>Quicker to find a verse than traditional search</span>
                 </li>
               </ul>
             </div>
@@ -439,7 +593,7 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Feature Highlight: Typography */}
+      {/* Feature Highlight: Quick Navigation */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
@@ -447,12 +601,13 @@ export default function EternityCaseStudy() {
             <div className={styles.featureContent}>
               <p className={styles.eyebrow}>Key Feature</p>
               <h2 className={styles.featureTitle}>
-                Typography-First Design
+                One-Tap Access to Your Bible
               </h2>
               <p className={styles.featureDescription}>
-                Reading the Bible shouldn't feel like work. I obsessed over 
-                typography details to create the most comfortable reading 
-                experience possible.
+                By removing distractions and making the Bible one-tap away on any 
+                device, you can spend more time being in the Word. It shouldn't 
+                take you longer to open your spot in a digital Bible than it takes 
+                to open a paper Bible.
               </p>
               <ul className={styles.featureList}>
                 <li className={styles.featureListItem}>
@@ -469,7 +624,7 @@ export default function EternityCaseStudy() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Carefully selected serif and sans-serif font options</span>
+                  <span>Simple navigation for book, chapter, and verse</span>
                 </li>
                 <li className={styles.featureListItem}>
                   <svg
@@ -485,7 +640,7 @@ export default function EternityCaseStudy() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Adjustable line height and letter spacing</span>
+                  <span>Visual way to navigate — learn the Bible by seeing the Bible</span>
                 </li>
                 <li className={styles.featureListItem}>
                   <svg
@@ -501,277 +656,36 @@ export default function EternityCaseStudy() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span>Optimal measure (line length) for readability</span>
+                  <span>Faster than finding your spot in a paper Bible</span>
                 </li>
               </ul>
             </div>
             <div className={styles.imagePlaceholder}>
-              [Typography settings screenshot]
+              [Simple navigation interface]
             </div>
           </div>
         </div>
       </section>
 
       {/* ============================================ */}
-      {/* Feature Highlight: Multi-Language Support */}
+      {/* Digital Bible Benefits Section */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.featureSection}>
-            <div className={styles.imagePlaceholder}>
-              [Multi-language interface showing French, English, Spanish]
-            </div>
-            <div className={styles.featureContent}>
-              <p className={styles.eyebrow}>Key Feature</p>
-              <h2 className={styles.featureTitle}>
-                Multiple Translations & Languages
-              </h2>
-              <p className={styles.featureDescription}>
-                Eternity supports Bible translations in multiple languages, 
-                allowing users to read in their preferred language or study 
-                across different translations.
-              </p>
-              <ul className={styles.featureList}>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Support for multiple Bible translations</span>
-                </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Available in English, French, Spanish, and more</span>
-                </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Simple navigation for book, chapter, and verse selection</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* Feature Highlight: Themes */}
-      {/* ============================================ */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.featureSection}>
-            <div className={styles.featureContent}>
-              <p className={styles.eyebrow}>Key Feature</p>
-              <h2 className={styles.featureTitle}>
-                Personalized Reading Themes
-              </h2>
-              <p className={styles.featureDescription}>
-                Everyone reads differently. Some prefer bright light, others 
-                dim sepia. Eternity offers multiple carefully crafted themes 
-                for every context.
-              </p>
-              <ul className={styles.featureList}>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Light, Dark, and Sepia built-in themes</span>
-                </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Automatic dark mode based on system settings</span>
-                </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Reduced eye strain for night reading</span>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.imagePlaceholder}>
-              [Theme options screenshot]
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* Feature Highlight: Share & Save */}
-      {/* ============================================ */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.featureSection}>
-            <div className={styles.featureContent}>
-              <p className={styles.eyebrow}>Key Feature</p>
-              <h2 className={styles.featureTitle}>
-                Share & Save Meaningful Verses
-              </h2>
-              <p className={styles.featureDescription}>
-                When you encounter a verse that speaks to you, Eternity makes it 
-                easy to share it with others or save it for later reflection.
-              </p>
-              <ul className={styles.featureList}>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Share verses with friends and family</span>
-                </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Copy text for notes and study</span>
-                </li>
-                <li className={styles.featureListItem}>
-                  <svg
-                    className={styles.featureCheckIcon}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Always return to exactly where you left off</span>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.imagePlaceholder}>
-              [Share and save interface]
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* Feature Highlight: Privacy */}
-      {/* ============================================ */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.narrowContainer}>
+          <div className={styles.sectionContent}>
             <div className={styles.sectionHeaderCentered}>
-              <p className={styles.eyebrow}>Philosophy</p>
+              <p className={styles.eyebrow}>CHALLENGING THE NORMS</p>
               <h2 className={styles.sectionTitle}>
-                You Are Not Data, You Are a Person
+                Taking full advantage of digital capabilities
               </h2>
-              <p className={styles.sectionDescription}>
-                Eternity is built on a fundamental respect for users as people 
-                made in the image of God, not as data points. This philosophy 
-                shapes every design and development decision.
-              </p>
             </div>
+
             <div className={styles.problemsGrid}>
-              <div className={styles.problemCard}>
-                <h3 className={styles.problemTitle}>No Tracking</h3>
-                <p className={styles.problemDescription}>
-                  We don't track your app activity. Your reading habits, 
-                  preferences, and engagement are yours alone.
-                </p>
-              </div>
-              <div className={styles.problemCard}>
-                <h3 className={styles.problemTitle}>No Spam</h3>
-                <p className={styles.problemDescription}>
-                  No push notifications, no distractions, no constant calls for 
-                  your attention. It's just you and the Bible.
-                </p>
-              </div>
-              <div className={styles.problemCard}>
-                <h3 className={styles.problemTitle}>Privacy First</h3>
-                <p className={styles.problemDescription}>
-                  Your data stays yours. We don't sell it, share it, or use it 
-                  to manipulate your behavior.
-                </p>
-              </div>
+              {digitalBibleBenefits.map((benefit, i) => (
+                <div key={i} className={styles.problemCard}>
+                  <h3 className={styles.problemTitle}>{benefit}</h3>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -840,6 +754,14 @@ export default function EternityCaseStudy() {
             <div className={styles.sectionHeaderCentered}>
               <p className={styles.eyebrow}>Impact</p>
               <h2 className={styles.sectionTitle}>Project Results</h2>
+              <p className={styles.sectionDescription}>
+                Eternity Bible is receiving overwhelmingly positive feedback for 
+                its core, innovative feature: the ability to set up multiple, 
+                personalized Bibles for different purposes (e.g., personal devotion, 
+                family study, Sunday service). Users describe this as a "fantastic" 
+                and "game changer" feature that simplifies navigation and allows them 
+                to instantly pick up right where they left off in any context.
+              </p>
             </div>
 
             <div className={styles.resultsGrid}>
@@ -852,66 +774,6 @@ export default function EternityCaseStudy() {
                   </span>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* Technical Stack (Optional) */}
-      {/* ============================================ */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.narrowContainer}>
-            <div className={styles.sectionHeader}>
-              <p className={styles.eyebrow}>Tech Stack</p>
-              <h2 className={styles.sectionTitle}>Built With</h2>
-            </div>
-            <p className={styles.sectionDescription}>
-              As a solo designer-developer, I chose a modern stack that allowed 
-              me to move fast while maintaining quality. React Native for 
-              cross-platform mobile development, NextJS for the web app, 
-              TypeScript for type safety, and Vanilla Extract for type-safe 
-              styling. The app is deployed on Vercel with a PostgreSQL database 
-              for user data and sync.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* CTA Section */}
-      {/* ============================================ */}
-      <section className={styles.ctaSection}>
-        <div className={styles.container}>
-          <div className={styles.ctaCard}>
-            <div className={styles.ctaGradient} />
-            <h2 className={styles.ctaTitle}>Interested in Working Together?</h2>
-            <p className={styles.ctaDescription}>
-              This project demonstrates my ability to own a product end-to-end—from 
-              research and design through development and launch. I'd love to bring 
-              this same passion and craftsmanship to your team.
-            </p>
-            <div className={styles.ctaButtons}>
-              <a href="mailto:hello@andrepilch.com" className={styles.btnPrimary}>
-                Get in Touch
-                <svg
-                  className={styles.iconSm}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </a>
-              <Link href="/work" className={styles.btnSecondary}>
-                View More Work
-              </Link>
             </div>
           </div>
         </div>
