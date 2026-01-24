@@ -116,12 +116,6 @@ export const container = style({
   },
 });
 
-export const narrowContainer = style({
-  maxWidth: "48rem",
-  marginLeft: "auto",
-  marginRight: "auto",
-});
-
 // ============================================
 // Section Styles
 // ============================================
@@ -204,6 +198,15 @@ export const overviewLabel = style({
   fontWeight: "500",
   textTransform: "uppercase",
   letterSpacing: "0.05em",
+});
+
+export const overviewList = style({
+  listStyle: "none",
+  padding: 0,
+  margin: 0,
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.25rem",
 });
 
 export const overviewValue = style({

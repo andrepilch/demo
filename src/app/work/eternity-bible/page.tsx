@@ -6,9 +6,10 @@ import * as styles from "./page.css";
 // ============================================
 
 const projectMeta = {
-  role: ["Solo Designer", "Solo and Lead Developer", "Product Owner"],
-  platforms: ["iOS phone & tablet", "Android phone & tablet", "Web"],
-  tech: ["ReactJS", "TypeScript", "PigmentCSS", "NextJS", "Cursor AI", "Vercel", "Github"],
+  role: ["Solo Designer", "Solo and Lead Developer", "Product Owner", "Design system", "Project manager"],
+  platforms: ["iOS", "Android", "Mobile Web", "Desktop Web"],
+  devices: ["iPhone", "iPad", "Android phone", "Android tablet", "Web"],
+  tech: ["ReactJS", "TypeScript", "PigmentCSS", "NextJS", "Cursor AI", "Vercel", "Github", "TWA"],
   year: "2025–Present",
   status: "Live",
 };
@@ -218,21 +219,54 @@ export default function EternityCaseStudy() {
             <div className={styles.overviewGrid}>
               <div className={styles.overviewItem}>
                 <p className={styles.overviewLabel}>My Role</p>
-                <p className={styles.overviewValue}>
-                  {projectMeta.role.join(" · ")}
-                </p>
+                <ul className={styles.overviewList}>
+                  {projectMeta.role.map((item, i) => (
+                    <li key={i} className={styles.overviewValue}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className={styles.overviewItem}>
                 <p className={styles.overviewLabel}>Platforms</p>
-                <p className={styles.overviewValue}>
-                  {projectMeta.platforms.join(" · ")}
-                </p>
+                <ul className={styles.overviewList}>
+                  {projectMeta.platforms.map((item, i) => (
+                    <li key={i} className={styles.overviewValue}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles.overviewItem}>
+                <p className={styles.overviewLabel}>Devices</p>
+                <ul className={styles.overviewList}>
+                  {projectMeta.devices.map((item, i) => (
+                    <li key={i} className={styles.overviewValue}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles.overviewItem}>
+                <p className={styles.overviewLabel}>Tech</p>
+                <ul className={styles.overviewList}>
+                  {projectMeta.tech.map((item, i) => (
+                    <li key={i} className={styles.overviewValue}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className={styles.overviewItem}>
                 <p className={styles.overviewLabel}>Timeline</p>
-                <p className={styles.overviewValue}>
-                  {projectMeta.year} · {projectMeta.status}
-                </p>
+                <ul className={styles.overviewList}>
+                  <li className={styles.overviewValue}>
+                    {projectMeta.year}
+                  </li>
+                  <li className={styles.overviewValue}>
+                    {projectMeta.status}
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -240,32 +274,15 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Cover Image */}
-      {/* ============================================ */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.imageFull}>
-            <Image
-              src="/images/projects/eternity/eternity_cover.jpg"
-              alt="Eternity Bible App Cover"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* Common Pain Points Section */}
+      {/* Problem Identification Section */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.sectionContent}>
-            <div className={styles.sectionHeaderCentered}>
+            <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>The Challenge</p>
               <h2 className={styles.sectionTitle}>
-                Solve Common Problems with Other Bible Apps
+                Problem Identification
               </h2>
               <p className={styles.sectionDescription}>
                 Digital Bibles are designed around print expectations, not around 
@@ -285,14 +302,14 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Product Strategy Section */}
+      {/* Strategy & Goals Section */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.sectionContent}>
             <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>Strategy</p>
-              <h2 className={styles.sectionTitle}>Product Strategy</h2>
+              <h2 className={styles.sectionTitle}>Strategy & Goals</h2>
               <p className={styles.sectionDescription}>
                 <strong>Challenger</strong> — We're aiming to position our product 
                 as more exciting than others available in the market based on 
@@ -320,8 +337,8 @@ export default function EternityCaseStudy() {
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.narrowContainer}>
-            <div className={styles.sectionHeaderCentered}>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>Audience</p>
               <h2 className={styles.sectionTitle}>Target Audience</h2>
             </div>
@@ -347,8 +364,8 @@ export default function EternityCaseStudy() {
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.narrowContainer}>
-            <div className={styles.sectionHeaderCentered}>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>Focus</p>
               <h2 className={styles.sectionTitle}>What It Isn't</h2>
               <p className={styles.sectionDescription}>
@@ -366,7 +383,7 @@ export default function EternityCaseStudy() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.sectionContent}>
-            <div className={styles.sectionHeaderCentered}>
+            <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>Foundation</p>
               <h2 className={styles.sectionTitle}>Product Principles</h2>
             </div>
@@ -386,42 +403,6 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Raison D'être Section */}
-      {/* ============================================ */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.narrowContainer}>
-            <div className={styles.sectionHeaderCentered}>
-              <p className={styles.eyebrow}>Purpose</p>
-              <h2 className={styles.sectionTitle}>Raison D'être</h2>
-            </div>
-            <div className={styles.sectionDescription}>
-              <p style={{ marginBottom: "1.5rem" }}>
-                The Bible app shouldn't take more attention than the Bible in the app.
-              </p>
-              <p style={{ marginBottom: "1.5rem" }}>
-                Learn the Bible by seeing the Bible. It's a highly visual way to navigate.
-              </p>
-              <p style={{ marginBottom: "1.5rem" }}>
-                It shouldn't take you longer to open your spot in a digital Bible than 
-                it takes to open a paper Bible. Otherwise what would be the advantage?
-              </p>
-              <p style={{ marginBottom: "1.5rem" }}>
-                Put the user first.
-              </p>
-              <p>
-                Instead of thinking about a Bible translation like a library book on 
-                a shelf. With digital Bibles we have the luxury of being able to 
-                endlessly duplicate our Bibles and carry them all in our pocket. So 
-                why don't we have a Bible for every setting in our lives?
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* ============================================ */}
       {/* Design Process Section */}
       {/* ============================================ */}
       <section className={styles.section}>
@@ -439,6 +420,30 @@ export default function EternityCaseStudy() {
                   <h3 className={styles.problemTitle}>{step}</h3>
                 </div>
               ))}
+            </div>
+
+            {/* Wireframes */}
+            <div className={styles.imageFull} style={{ marginTop: "3rem" }}>
+              <Image
+                src="/images/projects/eternity/eterntiy_wireframes.png"
+                alt="Design wireframes"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Solution Section */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>Solution</p>
+              <h2 className={styles.sectionTitle}>Solution</h2>
             </div>
           </div>
         </div>
@@ -527,8 +532,13 @@ export default function EternityCaseStudy() {
                 </li>
               </ul>
             </div>
-            <div className={styles.imagePlaceholder}>
-              [My Bibles screen showing multiple Bible cards]
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/images/projects/eternity/eternity_hand.jpg"
+                alt="My Bibles screen showing multiple Bible cards"
+                fill
+                style={{ objectFit: "cover" }}
+              />
             </div>
           </div>
         </div>
@@ -540,8 +550,13 @@ export default function EternityCaseStudy() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.featureSection}>
-            <div className={styles.imagePlaceholder}>
-              [Search by meaning interface]
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/images/projects/eternity/eternity_read.jpg"
+                alt="Search by meaning interface"
+                fill
+                style={{ objectFit: "cover" }}
+              />
             </div>
             <div className={styles.featureContent}>
               <p className={styles.eyebrow}>Key Feature</p>
@@ -660,32 +675,13 @@ export default function EternityCaseStudy() {
                 </li>
               </ul>
             </div>
-            <div className={styles.imagePlaceholder}>
-              [Simple navigation interface]
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* Digital Bible Benefits Section */}
-      {/* ============================================ */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionContent}>
-            <div className={styles.sectionHeaderCentered}>
-              <p className={styles.eyebrow}>CHALLENGING THE NORMS</p>
-              <h2 className={styles.sectionTitle}>
-                Taking full advantage of digital capabilities
-              </h2>
-            </div>
-
-            <div className={styles.problemsGrid}>
-              {digitalBibleBenefits.map((benefit, i) => (
-                <div key={i} className={styles.problemCard}>
-                  <h3 className={styles.problemTitle}>{benefit}</h3>
-                </div>
-              ))}
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/images/projects/eternity/eternity_intro.png"
+                alt="Simple navigation interface"
+                fill
+                style={{ objectFit: "cover" }}
+              />
             </div>
           </div>
         </div>
@@ -697,7 +693,7 @@ export default function EternityCaseStudy() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.sectionContent}>
-            <div className={styles.sectionHeaderCentered}>
+            <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>Final Designs</p>
               <h2 className={styles.sectionTitle}>
                 The Shipped Product
@@ -709,22 +705,42 @@ export default function EternityCaseStudy() {
 
             {/* Final design images */}
             <div className={styles.imageGrid}>
-              <div className={styles.imagePlaceholder}>
-                [My Bibles - Multiple Bible cards for different contexts]
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/images/projects/eternity/eternity_home.jpg"
+                  alt="My Bibles - Multiple Bible cards for different contexts"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
-              <div className={styles.imagePlaceholder}>
-                [Chapter selection - Simple book and chapter navigation]
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/images/projects/eternity/eternity_intro.png"
+                  alt="Chapter selection - Simple book and chapter navigation"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
-              <div className={styles.imagePlaceholder}>
-                [Reading view - Clean, focused reading experience]
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/images/projects/eternity/eternity_read.jpg"
+                  alt="Reading view - Clean, focused reading experience"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
-              <div className={styles.imagePlaceholder}>
-                [Multi-language - Support for different translations]
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/images/projects/eternity/eternity_multilingual.png"
+                  alt="Multi-language - Support for different translations"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
             </div>
 
             {/* Video demo if available */}
-            <div className={styles.videoWrapper}>
+            {/* <div className={styles.videoWrapper}>
               <video
                 className={styles.video}
                 autoPlay
@@ -740,7 +756,7 @@ export default function EternityCaseStudy() {
             </div>
             <p className={styles.imageCaption}>
               App walkthrough demonstrating the core reading experience
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -751,7 +767,7 @@ export default function EternityCaseStudy() {
       <section className={styles.resultsSection}>
         <div className={styles.container}>
           <div className={styles.sectionContent}>
-            <div className={styles.sectionHeaderCentered}>
+            <div className={styles.sectionHeader}>
               <p className={styles.eyebrow}>Impact</p>
               <h2 className={styles.sectionTitle}>Project Results</h2>
               <p className={styles.sectionDescription}>
@@ -772,6 +788,30 @@ export default function EternityCaseStudy() {
                   <span className={styles.resultDescription}>
                     {result.description}
                   </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Conclusion Section */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionContent}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrow}>Conclusion</p>
+              <h2 className={styles.sectionTitle}>Challenging the Norms</h2>
+              <p className={styles.sectionDescription}>
+                After more than a year of hard work, we launched the new website taking full advantage of digital capabilities
+              </p>
+            </div>
+            <div className={styles.problemsGrid}>
+              {digitalBibleBenefits.map((benefit, i) => (
+                <div key={i} className={styles.problemCard}>
+                  <h3 className={styles.problemTitle}>{benefit}</h3>
                 </div>
               ))}
             </div>
