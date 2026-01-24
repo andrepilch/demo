@@ -17,20 +17,28 @@ function DiamondIcon({ className }: { className?: string }) {
 // Achievement card data
 const achievements = [
   {
-    highlight: "Led functional & cross-functional product teams",
-    text: "of up to 10 members.",
+    highlight: "14 years of Product Design experience",
+    text: "with 18 released products across 7 platforms, including a longest active product of 10 years.",
   },
   {
-    highlight: "Developed UX strategy and design",
-    text: "process from scratch in 4 months.",
+    highlight: "Established the first design system",
+    text: "at White House Custom Colour, creating scalable infrastructure that boosted application efficiency and unified design workflows.",
   },
   {
-    highlight: "Launched a monetization project",
-    text: "(2.5 months, 5 teams of up to 12 members).",
+    highlight: "Pioneered the first virtual reality experience",
+    text: "for Thomson Reuters, resulting in secured patents in both the USA and Switzerland.",
   },
   {
-    highlight: "Mentored a junior designer",
-    text: "to a middle position in 9 months.",
+    highlight: "Initiated user research and analytics practices",
+    text: "fostering a culture of data-informed design decisions and collaboration through design workshops and team principles.",
+  },
+  {
+    highlight: "Led company-wide design initiatives",
+    text: "to craft design and team principles, and create product strategy and vision that aligned cross-functional teams.",
+  },
+  {
+    highlight: "Created and led design workshops",
+    text: "to share leadership learnings and design thinking, elevating the professional maturity of the entire organization.",
   },
 ];
 
@@ -92,7 +100,7 @@ export function LeadershipSection() {
               <Eyebrow>Why Me</Eyebrow>
               <H2>Leadership</H2>
               <p className={styles.subtitle}>
-                Fostering growth through collaboration, where everyone learns and grows together.
+                Leading through strategic infrastructure, global innovation, and cultural transformation that drives organizational impact.
               </p>
             </div>
 
