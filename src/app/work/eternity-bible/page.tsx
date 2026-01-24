@@ -99,12 +99,13 @@ export default function EternityCaseStudy() {
               Designing Eternity Bible App
             </h1>
             <p className={styles.heroDescription}>
-              A distraction-free Bible reading experience built for focus, 
-              beautiful typography, and personal customization. Designed and 
-              developed as a solo project from concept to App Store.
+              A distraction-free Bible reading experience designed to help you 
+              open the Bible more often. Built for focus, beautiful typography, 
+              and personal customization. Designed and developed as a solo project 
+              from concept to App Store.
             </p>
             <a
-              href="https://eternitybible.app"
+              href="https://about.eternitybible.app"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.heroButton}
@@ -143,7 +144,9 @@ export default function EternityCaseStudy() {
               with existing Bible apps. As both the designer and developer, I had 
               complete creative control to build exactly the reading experience I 
               wished existed—one that prioritizes beautiful typography, focused 
-              reading, and thoughtful personalization over feature bloat.
+              reading, and thoughtful personalization over feature bloat. The app 
+              is completely free for everyone, with no ads, no tracking, and no 
+              distractions.
             </p>
 
             {/* Project Meta */}
@@ -259,25 +262,177 @@ export default function EternityCaseStudy() {
               <p className={styles.eyebrow}>Process</p>
               <h2 className={styles.sectionTitle}>Design Iterations</h2>
               <p className={styles.sectionDescription}>
-                The app went through multiple design iterations before arriving 
-                at the final, refined experience.
+                The design evolved through multiple iterations, starting with 
+                wireframes focused on the core "Multiple Bibles" concept, 
+                exploring typography options for optimal readability, developing 
+                a flexible theme system, and finally refining the interface to 
+                be as minimal and focused as possible.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Placeholder grid for iteration images */}
-            <div className={styles.imageGrid}>
-              <div className={styles.imagePlaceholder}>
-                [Iteration 1 - Early wireframes]
-              </div>
-              <div className={styles.imagePlaceholder}>
-                [Iteration 2 - Typography exploration]
-              </div>
-              <div className={styles.imagePlaceholder}>
-                [Iteration 3 - Theme system]
-              </div>
-              <div className={styles.imagePlaceholder}>
-                [Iteration 4 - Final refinements]
-              </div>
+      {/* ============================================ */}
+      {/* Feature Highlight: Multiple Bibles */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.featureSection}>
+            <div className={styles.featureContent}>
+              <p className={styles.eyebrow}>Key Feature</p>
+              <h2 className={styles.featureTitle}>
+                Make a Bible for Every Context
+              </h2>
+              <p className={styles.featureDescription}>
+                The core innovation of Eternity is the ability to create multiple 
+                personal Bibles for different study purposes. Whether it's morning 
+                devotion, a sermon series, Sunday School, or a small group study, 
+                each Bible maintains its own reading position and settings.
+              </p>
+              <ul className={styles.featureList}>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Create unlimited personal Bibles for different purposes</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Each Bible remembers where you left off</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Pick up where you left off on any device</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Choose different translations for each Bible</span>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.imagePlaceholder}>
+              [My Bibles screen showing multiple Bible cards]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Feature Highlight: Reading Modes */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.featureSection}>
+            <div className={styles.imagePlaceholder}>
+              [Reading modes interface]
+            </div>
+            <div className={styles.featureContent}>
+              <p className={styles.eyebrow}>Key Feature</p>
+              <h2 className={styles.featureTitle}>
+                3 Reading Modes
+              </h2>
+              <p className={styles.featureDescription}>
+                Different reading contexts call for different presentation styles. 
+                Eternity offers three distinct reading modes to match how you want 
+                to engage with Scripture.
+              </p>
+              <ul className={styles.featureList}>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Paragraph mode for continuous, immersive reading</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Verse-by-verse mode for detailed study</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Reader mode for distraction-free focus</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -358,14 +513,85 @@ export default function EternityCaseStudy() {
       </section>
 
       {/* ============================================ */}
-      {/* Feature Highlight: Themes */}
+      {/* Feature Highlight: Multi-Language Support */}
       {/* ============================================ */}
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.featureSection}>
             <div className={styles.imagePlaceholder}>
-              [Theme options screenshot]
+              [Multi-language interface showing French, English, Spanish]
             </div>
+            <div className={styles.featureContent}>
+              <p className={styles.eyebrow}>Key Feature</p>
+              <h2 className={styles.featureTitle}>
+                Multiple Translations & Languages
+              </h2>
+              <p className={styles.featureDescription}>
+                Eternity supports Bible translations in multiple languages, 
+                allowing users to read in their preferred language or study 
+                across different translations.
+              </p>
+              <ul className={styles.featureList}>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Support for multiple Bible translations</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Available in English, French, Spanish, and more</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Simple navigation for book, chapter, and verse selection</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Feature Highlight: Themes */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.featureSection}>
             <div className={styles.featureContent}>
               <p className={styles.eyebrow}>Key Feature</p>
               <h2 className={styles.featureTitle}>
@@ -427,6 +653,126 @@ export default function EternityCaseStudy() {
                 </li>
               </ul>
             </div>
+            <div className={styles.imagePlaceholder}>
+              [Theme options screenshot]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Feature Highlight: Share & Save */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.featureSection}>
+            <div className={styles.featureContent}>
+              <p className={styles.eyebrow}>Key Feature</p>
+              <h2 className={styles.featureTitle}>
+                Share & Save Meaningful Verses
+              </h2>
+              <p className={styles.featureDescription}>
+                When you encounter a verse that speaks to you, Eternity makes it 
+                easy to share it with others or save it for later reflection.
+              </p>
+              <ul className={styles.featureList}>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Share verses with friends and family</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Copy text for notes and study</span>
+                </li>
+                <li className={styles.featureListItem}>
+                  <svg
+                    className={styles.featureCheckIcon}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Always return to exactly where you left off</span>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.imagePlaceholder}>
+              [Share and save interface]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* Feature Highlight: Privacy */}
+      {/* ============================================ */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.narrowContainer}>
+            <div className={styles.sectionHeaderCentered}>
+              <p className={styles.eyebrow}>Philosophy</p>
+              <h2 className={styles.sectionTitle}>
+                You Are Not Data, You Are a Person
+              </h2>
+              <p className={styles.sectionDescription}>
+                Eternity is built on a fundamental respect for users as people 
+                made in the image of God, not as data points. This philosophy 
+                shapes every design and development decision.
+              </p>
+            </div>
+            <div className={styles.problemsGrid}>
+              <div className={styles.problemCard}>
+                <h3 className={styles.problemTitle}>No Tracking</h3>
+                <p className={styles.problemDescription}>
+                  We don't track your app activity. Your reading habits, 
+                  preferences, and engagement are yours alone.
+                </p>
+              </div>
+              <div className={styles.problemCard}>
+                <h3 className={styles.problemTitle}>No Spam</h3>
+                <p className={styles.problemDescription}>
+                  No push notifications, no distractions, no constant calls for 
+                  your attention. It's just you and the Bible.
+                </p>
+              </div>
+              <div className={styles.problemCard}>
+                <h3 className={styles.problemTitle}>Privacy First</h3>
+                <p className={styles.problemDescription}>
+                  Your data stays yours. We don't sell it, share it, or use it 
+                  to manipulate your behavior.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -447,19 +793,19 @@ export default function EternityCaseStudy() {
               </p>
             </div>
 
-            {/* Placeholder grid for final design images */}
+            {/* Final design images */}
             <div className={styles.imageGrid}>
               <div className={styles.imagePlaceholder}>
-                [Reading view - Light theme]
+                [My Bibles - Multiple Bible cards for different contexts]
               </div>
               <div className={styles.imagePlaceholder}>
-                [Reading view - Dark theme]
+                [Chapter selection - Simple book and chapter navigation]
               </div>
               <div className={styles.imagePlaceholder}>
-                [Book/Chapter selector]
+                [Reading view - Clean, focused reading experience]
               </div>
               <div className={styles.imagePlaceholder}>
-                [Settings & customization]
+                [Multi-language - Support for different translations]
               </div>
             </div>
 
