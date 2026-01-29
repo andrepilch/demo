@@ -206,6 +206,28 @@ export const logoWrapper = style({
   zIndex: 100,
 });
 
+// Fade in animation for overlay
+const fadeIn = keyframes({
+  "0%": {
+    opacity: 0,
+  },
+  "100%": {
+    opacity: 1,
+  },
+});
+
+// Fade in up animation for menu content
+const fadeInUp = keyframes({
+  "0%": {
+    opacity: 0,
+    transform: "translateY(20px)",
+  },
+  "100%": {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+});
+
 // Menu overlay backdrop
 export const menuOverlay = style({
   position: "fixed",
@@ -215,7 +237,7 @@ export const menuOverlay = style({
   bottom: 0,
   backgroundColor: "rgba(0, 0, 0, 0.5)",
   zIndex: 99,
-  animation: "fadeIn 0.3s ease-out",
+  animation: `${fadeIn} 0.3s ease-out`,
 });
 
 // Triangle menu animation - grows from top left
@@ -279,35 +301,13 @@ export const menuContent = style({
   display: "flex",
   flexDirection: "column",
   gap: "1.5rem",
-  animation: "fadeInUp 0.5s ease-out 0.2s both",
+  animation: `${fadeInUp} 0.5s ease-out 0.2s both`,
   "@media": {
     "(min-width: 768px)": {
       top: "180px",
       left: "40px",
       gap: "2rem",
     },
-  },
-});
-
-// Fade in animation for overlay
-const fadeIn = keyframes({
-  "0%": {
-    opacity: 0,
-  },
-  "100%": {
-    opacity: 1,
-  },
-});
-
-// Fade in up animation for menu content
-const fadeInUp = keyframes({
-  "0%": {
-    opacity: 0,
-    transform: "translateY(20px)",
-  },
-  "100%": {
-    opacity: 1,
-    transform: "translateY(0)",
   },
 });
 

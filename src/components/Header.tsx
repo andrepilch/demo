@@ -5,12 +5,6 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import * as styles from "./Header.css";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Case Studies" },
-  { href: "/about", label: "About" },
-];
-
 const socialLinks = [
   {
     name: "LinkedIn",
@@ -55,9 +49,6 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const headerClassName = `${styles.header} ${
     isHomepage && !scrolled ? styles.headerTransparent : styles.headerScrolled
