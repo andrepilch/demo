@@ -48,8 +48,8 @@ export const logoContainer = style({
 
 export const triangleSvg = style({
   position: "absolute",
-  top: 0,
-  left: 0,
+  top: "8px",
+  left: "8px",
   width: "100%",
   height: "100%",
   overflow: "visible",
@@ -96,8 +96,8 @@ export const gradientStop3 = style({
 
 export const logoText = style({
   position: "absolute",
-  top: 0,
-  left: 0,
+  top: "8px",
+  left: "8px",
   width: "100%",
   height: "100%",
   color: "#ffffff",
@@ -113,8 +113,8 @@ export const logoText = style({
 // Edge glow effect
 export const edgeGlow = style({
   position: "absolute",
-  top: 0,
-  left: 0,
+  top: "8px",
+  left: "8px",
   width: "100%",
   height: "100%",
   pointerEvents: "none",

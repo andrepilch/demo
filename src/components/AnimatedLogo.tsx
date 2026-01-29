@@ -20,25 +20,18 @@ const SHARP_HYPOTENUSE = "M 0 121 L 190 0";
 const ROUNDED_HYPOTENUSE = "M 20 108 Q 95 55 160 18";
 
 export function AnimatedLogo({ size = 120, href = "/" }: AnimatedLogoProps) {
-  const [isRounded, setIsRounded] = useState(false); // false = sharp, true = rounded
+  const isRounded = true; // Always rounded corners
   const [fillOpacity, setFillOpacity] = useState(0); // 0 = outline only, 1 = fully filled
   const [outlineDrawn, setOutlineDrawn] = useState(false);
 
-  // Start corner animation cycle and mark outline as drawn
+  // Mark outline as drawn after initial animation
   useEffect(() => {
-    // Mark outline as drawn after initial animation
     const outlineTimer = setTimeout(() => {
       setOutlineDrawn(true);
     }, 1500);
 
-    // Pulse between sharp and rounded corners very slowly
-    const roundingInterval = setInterval(() => {
-      setIsRounded((prev) => !prev);
-    }, 8000);
-
     return () => {
       clearTimeout(outlineTimer);
-      clearInterval(roundingInterval);
     };
   }, []);
 
