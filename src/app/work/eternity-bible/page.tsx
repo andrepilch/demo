@@ -146,6 +146,11 @@ const results = [
     label: "Engagement",
     description: "With core feature",
   },
+    {
+    value: "18",
+    label: "Countries",
+    description: "Worldwide",
+  },
 ];
 
 export default function EternityCaseStudy() {
