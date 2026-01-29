@@ -42,7 +42,6 @@ const socialLinks = [
 
 export function Header() {
   const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const isHomepage = pathname === "/";
@@ -121,85 +120,7 @@ export function Header() {
               Contact
             </a>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={styles.mobileMenuButton}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <svg
-                className={styles.icon}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className={styles.icon}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
         </nav>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className={styles.mobileMenu}>
-            <div className={styles.mobileNavList}>
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`${styles.mobileNavLink} ${
-                    isActive(link.href) ? styles.mobileNavLinkActive : ""
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className={styles.mobileSocialLinks}>
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.mobileSocialLink}
-                    aria-label={social.name}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-              <a
-                href="mailto:hello@andrepilch.com"
-                className={styles.mobileCta}
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-        )}
       </div>
     </header>
   );

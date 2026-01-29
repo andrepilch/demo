@@ -44,6 +44,8 @@ export const logoContainer = style({
   width: "190px",
   height: "121px",
   display: "block",
+  cursor: "pointer",
+  userSelect: "none",
 });
 
 export const triangleSvg = style({
@@ -198,3 +200,189 @@ export const hypotenuseLine = style({
   },
 });
 
+// Logo wrapper for menu
+export const logoWrapper = style({
+  position: "relative",
+  zIndex: 100,
+});
+
+// Menu overlay backdrop
+export const menuOverlay = style({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  zIndex: 99,
+  animation: "fadeIn 0.3s ease-out",
+});
+
+// Triangle menu animation - grows from top left
+const triangleMenuGrow = keyframes({
+  "0%": {
+    transform: "scale(0) translate(0, 0)",
+    opacity: 0,
+  },
+  "100%": {
+    transform: "scale(1) translate(0, 0)",
+    opacity: 1,
+  },
+});
+
+// Triangle menu container
+export const triangleMenu = style({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  zIndex: 100,
+  width: "100vw",
+  height: "100vh",
+  overflow: "hidden",
+  pointerEvents: "auto",
+});
+
+// Triangle menu SVG - grows from top left
+export const triangleMenuSvg = style({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
+  transformOrigin: "top left",
+  animation: `${triangleMenuGrow} 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards`,
+  // Scale to cover viewport - triangle is 190x121, so we need to scale it up
+  // Using a large scale factor to ensure it covers the viewport
+  transform: "scale(20)",
+  "@media": {
+    "(min-width: 768px)": {
+      transform: "scale(15)",
+    },
+    "(min-width: 1024px)": {
+      transform: "scale(12)",
+    },
+  },
+});
+
+// Triangle menu path - fill transitions to white
+export const triangleMenuPath = style({
+  fill: "#ffffff",
+  transition: "fill 0.3s ease-out",
+});
+
+// Menu content container
+export const menuContent = style({
+  position: "absolute",
+  top: "140px",
+  left: "20px",
+  zIndex: 101,
+  display: "flex",
+  flexDirection: "column",
+  gap: "1.5rem",
+  animation: "fadeInUp 0.5s ease-out 0.2s both",
+  "@media": {
+    "(min-width: 768px)": {
+      top: "180px",
+      left: "40px",
+      gap: "2rem",
+    },
+  },
+});
+
+// Fade in animation for overlay
+const fadeIn = keyframes({
+  "0%": {
+    opacity: 0,
+  },
+  "100%": {
+    opacity: 1,
+  },
+});
+
+// Fade in up animation for menu content
+const fadeInUp = keyframes({
+  "0%": {
+    opacity: 0,
+    transform: "translateY(20px)",
+  },
+  "100%": {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+});
+
+// Menu navigation
+export const menuNav = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: "1rem",
+});
+
+// Menu nav link
+export const menuNavLink = style({
+  fontSize: "1.5rem",
+  fontWeight: "500",
+  color: "#0a0a0f",
+  textDecoration: "none",
+  transition: "color 0.2s ease, opacity 0.2s ease",
+  ":hover": {
+    color: "#00aeef",
+    opacity: 0.8,
+  },
+  "@media": {
+    "(min-width: 768px)": {
+      fontSize: "2rem",
+    },
+  },
+});
+
+// Menu nav link active
+export const menuNavLinkActive = style({
+  color: "#00aeef",
+});
+
+// Menu social links
+export const menuSocialLinks = style({
+  display: "flex",
+  gap: "1rem",
+  paddingTop: "0.5rem",
+});
+
+// Menu social link
+export const menuSocialLink = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "0.75rem",
+  color: "#0a0a0f",
+  transition: "color 0.2s ease, opacity 0.2s ease",
+  ":hover": {
+    color: "#00aeef",
+    opacity: 0.8,
+  },
+});
+
+// Menu CTA button
+export const menuCta = style({
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "0.5rem",
+  paddingLeft: "1.5rem",
+  paddingRight: "1.5rem",
+  paddingTop: "0.75rem",
+  paddingBottom: "0.75rem",
+  borderRadius: "9999px",
+  fontWeight: "500",
+  fontSize: "1rem",
+  transition: "all 0.3s ease",
+  background: "#00aeef",
+  color: "#ffffff",
+  textAlign: "center",
+  textDecoration: "none",
+  width: "fit-content",
+  ":hover": {
+    background: "#0088cc",
+    transform: "translateY(-2px)",
+  },
+});
