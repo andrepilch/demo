@@ -35,12 +35,14 @@ const sectionBase = style({
   width: "100%",
   margin: "0 auto",
   maxWidth: vars.layout.mobileContentMaxWidth,
+  padding: `0 ${vars.gap.section}`,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   "@media": {
     "screen and (min-width: 768px)": {
       maxWidth: vars.layout.contentMaxWidth,
+      padding: `0 ${vars.gap.section}`,
     },
   },
 });

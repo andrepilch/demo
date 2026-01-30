@@ -45,5 +45,10 @@ export {
   type PhilosophyItem,
 } from "./PhilosophyMasonry";
 export { DesignPhilosophy } from "./DesignPhilosophy";
+export { AboutDesignPhilosophy } from "./AboutDesignPhilosophy";
+export { ProductPhilosophy } from "./ProductPhilosophy";
+export { Bio } from "./Bio";
+export { SkillsMatrix } from "./SkillsMatrix";
+export { SideProjects } from "./SideProjects";
 export { FeaturedCaseStudies } from "./FeaturedCaseStudies";
 export { CTASection } from "./CTASection";

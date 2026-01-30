@@ -71,7 +71,7 @@ export const avatarContainer = style({
   position: "relative",
   aspectRatio: "1 / 1",
   width: "100%",
-  borderRadius: vars.radius.xl,
+  borderRadius: vars.radius.full,
   overflow: "hidden",
 });
 
@@ -81,8 +81,9 @@ export const avatarDecoration = style({
   right: "-1rem",
   width: "100%",
   height: "100%",
+  scale: "1.04",
   border: `2px solid ${vars.color.accent}`,
-  borderRadius: vars.radius.xl,
+  borderRadius: vars.radius.full,
   zIndex: -1,
 });
 

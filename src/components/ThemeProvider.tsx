@@ -11,10 +11,12 @@ import {
 import { darkTheme, lightTheme } from "@/styles";
 import { themeWrapper } from "./ThemeProvider.css";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "system";
+type ResolvedTheme = "light" | "dark";
 
 interface ThemeContextValue {
   theme: Theme;
+  resolvedTheme: ResolvedTheme;
   toggleTheme: () => void;
   setTheme: (theme: Theme) => void;
 }
@@ -27,6 +29,7 @@ export function useTheme() {
   if (context === undefined) {
     return {
       theme: "dark" as Theme,
+      resolvedTheme: "dark" as ResolvedTheme,
       toggleTheme: () => {},
       setTheme: () => {},
     };
@@ -39,21 +42,47 @@ interface ThemeProviderProps {
   defaultTheme?: Theme;
 }
 
+function getSystemTheme(): ResolvedTheme {
+  if (typeof window === "undefined") return "dark";
+  return window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+}
+
 export function ThemeProvider({
   children,
-  defaultTheme = "dark",
+  defaultTheme = "system",
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(defaultTheme);
+  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("dark");
   const [mounted, setMounted] = useState(false);
   const isInitialMount = useRef(true);
+
+  // Resolve theme based on system preference when theme is "system"
+  useEffect(() => {
+    const resolveTheme = () => {
+      if (theme === "system") {
+        setResolvedTheme(getSystemTheme());
+      } else {
+        setResolvedTheme(theme);
+      }
+    };
+
+    resolveTheme();
+
+    if (theme === "system") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
+      const handleChange = () => resolveTheme();
+      mediaQuery.addEventListener("change", handleChange);
+      return () => mediaQuery.removeEventListener("change", handleChange);
+    }
+  }, [theme]);
 
   // Read from localStorage on mount
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as Theme | null;
-    if (savedTheme) {
+    if (savedTheme && ["light", "dark", "system"].includes(savedTheme)) {
       setThemeState(savedTheme);
-    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-      setThemeState("light");
     }
     setMounted(true);
   }, []);
@@ -68,17 +97,23 @@ export function ThemeProvider({
   }, [theme]);
 
   const toggleTheme = () => {
-    setThemeState((prev) => (prev === "light" ? "dark" : "light"));
+    setThemeState((prev) => {
+      if (prev === "light") return "dark";
+      if (prev === "dark") return "system";
+      return "light";
+    });
   };
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
   };
 
-  const themeClass = theme === "light" ? lightTheme : darkTheme;
+  const themeClass = resolvedTheme === "light" ? lightTheme : darkTheme;
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
+    <ThemeContext.Provider
+      value={{ theme, resolvedTheme, toggleTheme, setTheme }}
+    >
       <div className={`${mounted ? themeClass : darkTheme} ${themeWrapper}`}>
         {children}
       </div>

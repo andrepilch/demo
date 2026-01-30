@@ -171,7 +171,7 @@ interface SectionHeaderProps<T extends ElementType> extends BaseProps<T> {
 
 export function SectionHeader<T extends ElementType = "div">({
   as,
-  align = "center",
+  align = "left",
   className,
   children,
   ...props

@@ -155,7 +155,7 @@ export const darkTheme = createTheme(vars, {
     textPrimary: colors.white.$value.hex,
     textSecondary: "#a1a1aa",
     textOnAccent: colors.white.$value.hex,
-    textAccentDark: colors.accentDark.$value.hex,
+    textAccentDark: colors.accentLight.$value.hex,
     textMuted: "#71717a",
     border: "#27272a",
     borderLight: "#3f3f46",
@@ -255,7 +255,7 @@ export const lightTheme = createTheme(vars, {
   },
   layout: {
     headerHeight: "64px",
-    contentMaxWidth: "80vw",
+    contentMaxWidth: "72rem",
     mobileContentMaxWidth: "90vw",
     sectionPaddingX: "1.5rem",
     sectionPaddingXMd: "2rem",

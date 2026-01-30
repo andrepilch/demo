@@ -6,7 +6,7 @@ import * as styles from "./PhilosophyMasonry.css";
 
 export interface PhilosophyItem {
   title: string;
-  description: string;
+  description?: string;
   quote?: string;
   attribution?: string;
   category?: string;
@@ -36,7 +36,9 @@ export function PhilosophyCard({ item, index }: PhilosophyCardProps) {
           <span className={styles.categoryTag}>{item.category}</span>
         )}
         <h3 className={styles.cardTitle}>{item.title}</h3>
-        <p className={styles.cardDescription}>{item.description}</p>
+        {item.description && (
+          <p className={styles.cardDescription}>{item.description}</p>
+        )}
         {item.quote && (
           <blockquote className={styles.cardQuote}>
             {item.quote}
