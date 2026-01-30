@@ -649,9 +649,9 @@ export const socialLink = style({
   width: "48px",
   height: "48px",
   borderRadius: "50%",
-  background: vars.color.bgSecondary,
+  background: vars.color.bgPrimary,
   border: `1px solid ${vars.color.border}`,
-  color: vars.color.textMuted,
+  color: vars.color.textSecondary,
   transition: "all 0.3s ease",
   ":hover": {
     color: vars.color.accent,

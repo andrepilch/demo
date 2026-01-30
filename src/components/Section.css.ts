@@ -28,39 +28,38 @@ export const sectionsWrapper = style({
 // Section
 // ============================================
 
-// Base section - just positioning context
-export const section = style({
+// Base section style - combines positioning, centering, and maxWidth
+const sectionBase = style({
   position: "relative",
   zIndex: 10,
-});
-
-// ============================================
-// Container
-// ============================================
-
-// Centered content container with responsive padding
-export const container = style({
-  maxWidth: vars.layout.contentMaxWidth,
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: vars.layout.sectionPaddingX,
-  paddingRight: vars.layout.sectionPaddingX,
+  width: "100%",
+  margin: "0 auto",
+  maxWidth: vars.layout.mobileContentMaxWidth,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
   "@media": {
     "screen and (min-width: 768px)": {
-      paddingLeft: vars.layout.sectionPaddingXMd,
-      paddingRight: vars.layout.sectionPaddingXMd,
+      maxWidth: vars.layout.contentMaxWidth,
     },
   },
 });
 
-// Container with larger padding (for hero sections within gradient backgrounds)
-export const containerLarge = style({
-  maxWidth: vars.layout.contentMaxWidth,
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: vars.layout.sectionPaddingXLg,
-  paddingRight: vars.layout.sectionPaddingXLg,
+// Gap variants for section spacing
+export const sectionGapVariants = styleVariants({
+  none: [sectionBase, { gap: "0" }],
+  sm: [sectionBase, { gap: vars.gap.elementSm }],
+  md: [sectionBase, { gap: vars.gap.sectionSm }],
+  lg: [sectionBase, { gap: vars.gap.element }],
+  xl: [sectionBase, { gap: vars.gap.section }],
 });
+
+// ============================================
+// Container (kept for backward compatibility, uses same base)
+// ============================================
+
+export const container = sectionBase;
+export const containerLarge = sectionBase;
 
 // ============================================
 // Section Content
@@ -151,7 +150,7 @@ export const gridThree = style([
 
 export const gapVariants = styleVariants({
   sm: { gap: vars.gap.elementSm },
-  md: { gap: vars.gap.element },
-  lg: { gap: vars.gap.sectionSm },
+  md: { gap: vars.gap.sectionSm },
+  lg: { gap: vars.gap.element },
   xl: { gap: vars.gap.section },
 });

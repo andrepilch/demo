@@ -5,6 +5,12 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import * as styles from "./Header.css";
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/work", label: "Case Studies" },
+  { href: "/about", label: "About" },
+];
+
 const socialLinks = [
   {
     name: "LinkedIn",
@@ -50,6 +56,9 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+    const isActive = (linkHref: string) =>
+    linkHref === "/" ? pathname === "/" : pathname.startsWith(linkHref);
+  
   const headerClassName = `${styles.header} ${
     isHomepage && !scrolled ? styles.headerTransparent : styles.headerScrolled
   } ${scrolled ? styles.headerHidden : ""}`;
@@ -74,7 +83,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          {/* <div className={styles.desktopNav}>
+          {!isHomepage && <div className={styles.desktopNav}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -89,10 +98,10 @@ export function Header() {
                 )}
               </Link>
             ))}
-          </div> */}
+          </div>}
 
           {/* Desktop CTA */}
-          <div className={styles.desktopCta}>
+          {!isHomepage && <div className={styles.desktopCta}>
             <div className={styles.socialLinks}>
               {socialLinks.map((social) => (
                 <a
@@ -110,7 +119,7 @@ export function Header() {
             <a href="mailto:hello@andrepilch.com" className={styles.ctaButton}>
               Contact
             </a>
-          </div>
+          </div>}
         </nav>
       </div>
     </header>

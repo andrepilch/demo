@@ -22,6 +22,7 @@ export {
   PageWrapper,
   SectionsWrapper,
   Section,
+  SectionGap,
   Container,
   SectionContent,
   SectionHeader,
@@ -43,3 +44,6 @@ export {
   PhilosophyCard,
   type PhilosophyItem,
 } from "./PhilosophyMasonry";
+export { DesignPhilosophy } from "./DesignPhilosophy";
+export { FeaturedCaseStudies } from "./FeaturedCaseStudies";
+export { CTASection } from "./CTASection";

@@ -1,5 +1,4 @@
 import { style, keyframes } from "@vanilla-extract/css";
-import { vars } from "@/styles";
 
 const fadeInUp = keyframes({
   from: {
@@ -13,30 +12,7 @@ const fadeInUp = keyframes({
 });
 
 export const heroSection = style({
-  position: "relative",
-  zIndex: 10,
   minHeight: "75vh",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  maxWidth: vars.layout.contentMaxWidth,
-  paddingLeft: vars.layout.sectionPaddingX,
-  paddingRight: vars.layout.sectionPaddingX,
-  marginLeft: "auto",
-  marginRight: "auto",
-  "@media": {
-    "screen and (min-width: 768px)": {
-      paddingLeft: vars.layout.sectionPaddingXLg,
-      paddingRight: vars.layout.sectionPaddingXLg,
-    },
-  },
-});
-
-export const heroContent = style({
-  maxWidth: "56rem",
-  display: "flex",
-  flexDirection: "column",
-  gap: vars.gap.element,
 });
 
 export const heroTitle = style({

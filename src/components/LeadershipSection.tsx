@@ -1,4 +1,4 @@
-import { Section, Container, Eyebrow, H2 } from "@/components";
+import { Section, SectionGap, H2, Body } from "@/components";
 import * as styles from "./LeadershipSection.css";
 
 // Diamond sparkle icon component
@@ -17,93 +17,32 @@ function DiamondIcon({ className }: { className?: string }) {
 // Achievement card data
 const achievements = [
   {
-    highlight: "14 years of Product Design experience",
-    text: "with 18 released products across 7 platforms, including a longest active product of 10 years.",
+    highlight: "Strategic Infrastructure & Design Systems",
+    text: "Established the first design system at whcc which boosted efficiency and added consistency",
   },
   {
-    highlight: "Established the first design system",
-    text: "at White House Custom Colour, creating scalable infrastructure that boosted application efficiency and unified design workflows.",
+    highlight: "Global Innovation & Intellectual Property",
+    text: "Pioneered the first VR experience for Thomson Reuters that resulted in secured patents",
   },
   {
-    highlight: "Pioneered the first virtual reality experience",
-    text: "for Thomson Reuters, resulting in secured patents in both the USA and Switzerland.",
+    highlight: "Cultural Transformation & Data-Informed Leadership",
+    text: "Initiated the organization’s user research and analytics practices",
   },
   {
-    highlight: "Initiated user research and analytics practices",
-    text: "fostering a culture of data-informed design decisions and collaboration through design workshops and team principles.",
+    highlight: "Leadership & Cross-Functional Collaboration",
+    text: "Led the effort to create design and team principles, and to align product strategy and vision with business goals",
   },
-  {
-    highlight: "Led company-wide design initiatives",
-    text: "to craft design and team principles, and create product strategy and vision that aligned cross-functional teams.",
-  },
-  {
-    highlight: "Created and led design workshops",
-    text: "to share leadership learnings and design thinking, elevating the professional maturity of the entire organization.",
-  },
-];
-
-// Random stars for the background
-function generateStars(count: number) {
-  return Array.from({ length: count }, (_, i) => ({
-    id: i,
-    top: `${Math.random() * 100}%`,
-    left: `${Math.random() * 100}%`,
-    delay: `${Math.random() * 3}s`,
-    duration: `${2 + Math.random() * 2}s`,
-  }));
-}
-
-const stars = generateStars(30);
-
-// Shooting stars data
-const shootingStars = [
-  { top: "15%", left: "20%", delay: "0s" },
-  { top: "35%", left: "70%", delay: "2s" },
-  { top: "65%", left: "40%", delay: "4s" },
 ];
 
 export function LeadershipSection() {
   return (
-    <Section className={styles.leadershipWrapper}>
-      <Container>
-        <div className={styles.outerCard}>
-          {/* Starfield background */}
-          <div className={styles.starfield}>
-            {stars.map((star) => (
-              <div
-                key={star.id}
-                className={styles.star}
-                style={{
-                  top: star.top,
-                  left: star.left,
-                  animationDelay: star.delay,
-                  animationDuration: star.duration,
-                }}
-              />
-            ))}
-            {shootingStars.map((star, i) => (
-              <div
-                key={i}
-                className={styles.shootingStarLine}
-                style={{
-                  top: star.top,
-                  left: star.left,
-                  animationDelay: star.delay,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Content */}
-          <div className={styles.contentWrapper}>
+    <Section gap={SectionGap.md}>
             <div className={styles.headerWrapper}>
-              <Eyebrow>Why Me</Eyebrow>
               <H2>Leadership</H2>
-              <p className={styles.subtitle}>
+              <Body className={styles.subtitle}>
                 Leading through strategic infrastructure, global innovation, and cultural transformation that drives organizational impact.
-              </p>
+              </Body>
             </div>
-
             <div className={styles.cardsGrid}>
               {achievements.map((achievement, index) => (
                 <div key={index} className={styles.achievementCard}>
@@ -115,9 +54,6 @@ export function LeadershipSection() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </Container>
     </Section>
   );
 }

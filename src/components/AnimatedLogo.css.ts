@@ -1,4 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
+import { vars } from "@/styles";
 
 // Logo text shimmer animation
 const logoShimmer = keyframes({
@@ -269,8 +270,8 @@ export const triangleMenuSvg = style({
   position: "absolute",
   top: 0,
   left: 0,
-  width: "100vw",
-  height: "100vh",
+  width: "80vw",
+  height: "80vh",
   transformOrigin: "top left",
   animation: `${triangleMenuGrow} 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards`,
   // Scale to cover viewport - triangle is 190x121, so we need to scale it up
@@ -279,9 +280,13 @@ export const triangleMenuSvg = style({
   "@media": {
     "(min-width: 768px)": {
       transform: "scale(15)",
+      width: "60vw",
+      height: "60vh",
     },
     "(min-width: 1024px)": {
       transform: "scale(12)",
+      width: "40vw",
+      height: "40vh",
     },
   },
 });
@@ -295,17 +300,19 @@ export const triangleMenuPath = style({
 // Menu content container
 export const menuContent = style({
   position: "absolute",
-  top: "140px",
-  left: "20px",
+  top: vars.space.md,
+  left: vars.space.md,
   zIndex: 101,
   display: "flex",
-  flexDirection: "column",
-  gap: "1.5rem",
+  flexDirection: "row",
+  alignItems: "flex-start",
+  justifyContent: "space-between",
+  gap: vars.space.lg,
   animation: `${fadeInUp} 0.5s ease-out 0.2s both`,
   "@media": {
     "(min-width: 768px)": {
-      top: "180px",
-      left: "40px",
+      top: vars.space.xl,
+      left: vars.space.xl,
       gap: "2rem",
     },
   },
@@ -315,7 +322,7 @@ export const menuContent = style({
 export const menuNav = style({
   display: "flex",
   flexDirection: "column",
-  gap: "1rem",
+  gap: vars.space.md,
 });
 
 // Menu nav link

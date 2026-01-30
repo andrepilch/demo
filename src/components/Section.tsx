@@ -5,7 +5,24 @@ import * as styles from "./Section.css";
 // Type Definitions
 // ============================================
 
-type GapSize = "sm" | "md" | "lg" | "xl";
+// ============================================
+// Section Gap Enum
+// ============================================
+
+export enum SectionGap {
+  none = "none",
+  sm = "sm",
+  md = "md",
+  lg = "lg",
+  xl = "xl",
+}
+
+enum GapSize {
+  sm = "sm",
+  md = "md",
+  lg = "lg",
+  xl = "xl",
+}
 
 interface BaseProps<T extends ElementType> {
   as?: T;
@@ -56,17 +73,27 @@ export function SectionsWrapper<T extends ElementType = "div">({
 }
 
 // ============================================
-// Section - Semantic section element
+// Section - Semantic section element with positioning, centering, maxWidth, and gap
 // ============================================
+
+interface SectionProps<T extends ElementType> extends BaseProps<T> {
+  gap?: SectionGap;
+}
 
 export function Section<T extends ElementType = "section">({
   as,
+  gap = SectionGap.none,
   className,
   children,
   ...props
-}: BaseProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>) {
+}: SectionProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof SectionProps<T>>) {
   const Component = as || "section";
-  const classNames = [styles.section, className].filter(Boolean).join(" ");
+  const classNames = [
+    styles.sectionGapVariants[gap],
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <Component className={classNames} {...props}>

@@ -128,6 +128,7 @@ export function LinkButton({
   size = "md",
   className,
   children,
+  style,
   ...props
 }: LinkButtonProps) {
   const classNames = [
@@ -139,7 +140,7 @@ export function LinkButton({
     .join(" ");
 
   return (
-    <Link className={classNames} {...props}>
+    <Link className={classNames} style={style} {...props}>
       {children}
     </Link>
   );

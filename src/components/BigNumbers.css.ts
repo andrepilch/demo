@@ -1,23 +1,19 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "@/styles";
 
-// Only positioning context needed - Container handles maxWidth/padding
-export const section = style({
-  position: "relative",
-  zIndex: 10,
-});
-
 export const whiteWrapper = style({
-  background: "#ffffff",
-  borderRadius: vars.radius.xl,
-  padding: "3rem",
+  borderRadius: vars.radius["4xl"],
+  padding: "2rem",
   boxShadow: vars.shadow.lg,
+  background: vars.color.bgCardFrosted,
+  backdropFilter: "blur(10px)",
+  WebkitBackdropFilter: "blur(10px)",
 });
 
 export const statCard = style({
   position: "relative",
-  padding: "2rem",
-  background: vars.color.bgCard,
+  padding: "1rem",
+  background: vars.color.bgCardFrosted,
   borderRadius: vars.radius.lg,
   overflow: "hidden",
   textAlign: "center",
@@ -36,4 +32,9 @@ export const statCard = style({
     WebkitMaskComposite: "xor",
     pointerEvents: "none",
   },
+});
+
+export const statDetailsContainer = style({
+  display: "flex",
+  flexDirection: "column",
 });

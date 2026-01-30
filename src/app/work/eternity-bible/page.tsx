@@ -125,7 +125,7 @@ const digitalBibleBenefits = [
 // Results/Outcomes
 // ============================================
 
-const results = [
+export const eternityResults = [
   {
     value: "5★",
     label: "Rated",
@@ -136,21 +136,21 @@ const results = [
   //   label: "Device Types",
   //   description: "iOS phone & tablet, Android phone & tablet, Web",
   // },
-  {
-    value: "3",
-    label: "Bibles Per User",
-    description: "Average usage",
-  },
+  // {
+  //   value: "3",
+  //   label: "Bibles Per User",
+  //   description: "Average usage",
+  // },
   {
     value: "95%",
     label: "Engagement",
     description: "With core feature",
   },
-    {
-    value: "18",
-    label: "Countries",
-    description: "Worldwide",
-  },
+  //   {
+  //   value: "18",
+  //   label: "Countries",
+  //   description: "Worldwide",
+  // },
 ];
 
 export default function EternityCaseStudy() {
@@ -786,7 +786,7 @@ export default function EternityCaseStudy() {
             </div>
 
             <div className={styles.resultsGrid}>
-              {results.map((result, i) => (
+              {eternityResults.map((result, i) => (
                 <div key={i} className={styles.resultCard}>
                   <span className={styles.resultValue}>{result.value}</span>
                   <span className={styles.resultLabel}>{result.label}</span>

@@ -1,89 +1,12 @@
-import { style, keyframes } from "@vanilla-extract/css";
+import { style } from "@vanilla-extract/css";
 import { vars } from "@/styles";
-
-// Shooting star animation
-const shootingStar = keyframes({
-  "0%": {
-    transform: "translateX(0) translateY(0)",
-    opacity: 1,
-  },
-  "70%": {
-    opacity: 1,
-  },
-  "100%": {
-    transform: "translateX(-300px) translateY(300px)",
-    opacity: 0,
-  },
-});
-
-const twinkle = keyframes({
-  "0%, 100%": {
-    opacity: 0.3,
-  },
-  "50%": {
-    opacity: 0.8,
-  },
-});
-
-// Section wrapper with starfield background
-export const leadershipWrapper = style({
-  position: "relative",
-  padding: "4rem 0",
-  overflow: "hidden",
-});
-
-// Large rounded container
-export const outerCard = style({
-  position: "relative",
-  background: vars.color.bgCard,
-  borderRadius: "2rem",
-  padding: "3rem 2rem",
-  overflow: "hidden",
-  "@media": {
-    "screen and (min-width: 768px)": {
-      padding: "4rem 3rem",
-      borderRadius: "2.5rem",
-    },
-  },
-});
-
-// Starfield background
-export const starfield = style({
-  position: "absolute",
-  inset: 0,
-  pointerEvents: "none",
-  overflow: "hidden",
-});
-
-// Individual star
-export const star = style({
-  position: "absolute",
-  width: "2px",
-  height: "2px",
-  background: "rgba(255, 255, 255, 0.6)",
-  borderRadius: "50%",
-  animation: `${twinkle} 3s ease-in-out infinite`,
-});
-
-// Shooting star
-export const shootingStarLine = style({
-  position: "absolute",
-  width: "80px",
-  height: "1px",
-  background: `linear-gradient(90deg, rgba(255,255,255,0.8), transparent)`,
-  animation: `${shootingStar} 3s ease-in-out infinite`,
-});
-
-// Content wrapper (above starfield)
-export const contentWrapper = style({
-  position: "relative",
-  zIndex: 1,
-});
 
 // Header styles
 export const headerWrapper = style({
-  textAlign: "center",
-  marginBottom: "2.5rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.75rem",
+  justifyContent: "center",
 });
 
 export const subtitle = style({

@@ -1,13 +1,14 @@
 import {
-  Container,
+  Section,
   SectionContent,
   SectionHeader,
   Grid,
   Eyebrow,
-  H2,
+  // H2,
   StatNumber,
   H3,
   Body,
+  SectionGap,
 } from "@/components";
 import * as styles from "./BigNumbers.css";
 
@@ -31,25 +32,25 @@ const bigNumbers = [
 
 export function BigNumbers() {
   return (
-    <Container as="section" size="large" className={styles.section}>
+    <Section gap={SectionGap.lg}>
       <div className={styles.whiteWrapper}>
         <SectionContent>
           <SectionHeader align="left">
-            <Eyebrow>Impact By The Numbers</Eyebrow>
-            <H2>Designing for Business Outcomes</H2>
+            {/* <Eyebrow>Impact By The Numbers</Eyebrow> */}
+            <Eyebrow>Designing for Business Outcomes</Eyebrow>
           </SectionHeader>
-
           <Grid cols={3}>
             {bigNumbers.map((stat, i) => (
               <div key={i} className={styles.statCard}>
                 <StatNumber gradient="accent">{stat.value}</StatNumber>
-                <H3 color="secondary">{stat.label}</H3>
-                <Body color="muted">{stat.description}</Body>
+                <span className={styles.statDetailsContainer}>
+                <H3 color="primary">{stat.label}</H3>
+                <Body color="secondary">{stat.description}</Body></span>
               </div>
             ))}
           </Grid>
         </SectionContent>
       </div>
-    </Container>
+    </Section>
   );
 }
