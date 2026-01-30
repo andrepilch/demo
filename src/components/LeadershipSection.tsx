@@ -48,7 +48,7 @@ export function LeadershipSection() {
                 <div key={index} className={styles.achievementCard}>
                   <DiamondIcon className={styles.diamondIcon} />
                   <p className={styles.cardText}>
-                    <span className={styles.highlight}>{achievement.highlight}</span>{" "}
+                    <span className={styles.highlight}>{achievement.highlight}</span><br />
                     {achievement.text}
                   </p>
                 </div>

@@ -35,7 +35,6 @@ const sectionBase = style({
   width: "100%",
   margin: "0 auto",
   maxWidth: vars.layout.mobileContentMaxWidth,
-  padding: `0 ${vars.gap.section}`,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

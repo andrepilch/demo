@@ -26,7 +26,7 @@ export function Bio() {
           <p className={styles.eyebrow}>About Me</p>
           <H2 className={styles.pageTitle}>
             Hi, I'm André <br />
-            I value achieving unity, building strong products, and iterative improvement
+            I value achieving unity and building strong products through iterative improvement
           </H2>
           <Body>
             I'm a christian born and raised in France, now residing and working in the United States. Currently helping digital products grow through design and engineering at whcc.
