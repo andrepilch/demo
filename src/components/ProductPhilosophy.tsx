@@ -114,7 +114,7 @@ export function ProductPhilosophy() {
           <Body color="secondary">
             Collected insights and principles from years of building
             products. These shape how I approach every design challenge.
-          </Body>
+        </Body>
         </SectionHeader>
 
         <PhilosophyMasonry items={productPhilosophies} />
