@@ -1,5 +1,5 @@
-import { style, keyframes } from '@vanilla-extract/css';
-import { vars } from './theme.css';
+import { style, keyframes } from '@vanilla-extract/css'
+import { vars } from './theme.css'
 
 // ============================================
 // Keyframes
@@ -8,7 +8,7 @@ import { vars } from './theme.css';
 export const twinkle = keyframes({
   '0%, 100%': { opacity: '0.3' },
   '50%': { opacity: '0.8' },
-});
+})
 
 export const shoot = keyframes({
   '0%': {
@@ -21,12 +21,12 @@ export const shoot = keyframes({
     transform: 'translateX(100vw) translateY(100vh) rotate(-45deg)',
     opacity: '0',
   },
-});
+})
 
 export const scrollLeft = keyframes({
   '0%': { transform: 'translateX(0)' },
   '100%': { transform: 'translateX(-50%)' },
-});
+})
 
 export const fadeInUp = keyframes({
   from: {
@@ -37,7 +37,7 @@ export const fadeInUp = keyframes({
     opacity: '1',
     transform: 'translateY(0)',
   },
-});
+})
 
 export const diagonalMorph = keyframes({
   '0%, 100%': {
@@ -52,7 +52,7 @@ export const diagonalMorph = keyframes({
   '75%': {
     clipPath: 'polygon(0% 0%, 100% 0%, 100% 45%, 0% 42%)',
   },
-});
+})
 
 // ============================================
 // Layout Components
@@ -70,7 +70,7 @@ export const sectionContainer = style({
       paddingRight: vars.layout.sectionPaddingXMd,
     },
   },
-});
+})
 
 // ============================================
 // Card Components
@@ -86,7 +86,7 @@ export const card = style({
     borderColor: vars.color.borderLight,
     transform: 'translateY(-2px)',
   },
-});
+})
 
 export const statCard = style({
   position: 'relative',
@@ -105,7 +105,7 @@ export const statCard = style({
     WebkitMaskComposite: 'xor',
     pointerEvents: 'none',
   },
-});
+})
 
 export const frameworkCard = style({
   position: 'relative',
@@ -123,7 +123,7 @@ export const frameworkCard = style({
     height: '3px',
     background: `linear-gradient(90deg, ${vars.color.accent}, transparent)`,
   },
-});
+})
 
 export const caseStudyCard = style({
   position: 'relative',
@@ -136,7 +136,7 @@ export const caseStudyCard = style({
     background: `linear-gradient(to top, ${vars.color.bgPrimary}, transparent 60%)`,
     pointerEvents: 'none',
   },
-});
+})
 
 // ============================================
 // Button Components
@@ -160,7 +160,7 @@ export const btnPrimary = style({
     transform: 'translateY(-1px)',
     boxShadow: vars.shadow.glow,
   },
-});
+})
 
 export const btnSecondary = style({
   display: 'inline-flex',
@@ -180,7 +180,7 @@ export const btnSecondary = style({
     borderColor: vars.color.accent,
     color: vars.color.accent,
   },
-});
+})
 
 // ============================================
 // Background Effects
@@ -191,14 +191,14 @@ export const heroGradient = style({
   inset: '0',
   background: vars.gradient.hero,
   pointerEvents: 'none',
-});
+})
 
 export const starField = style({
   position: 'absolute',
   inset: '0',
   overflow: 'hidden',
   pointerEvents: 'none',
-});
+})
 
 export const star = style({
   position: 'absolute',
@@ -208,7 +208,7 @@ export const star = style({
   borderRadius: '50%',
   opacity: '0.3',
   animation: `${twinkle} 3s ease-in-out infinite`,
-});
+})
 
 export const shootingStar = style({
   position: 'absolute',
@@ -217,7 +217,7 @@ export const shootingStar = style({
   background: `linear-gradient(90deg, rgba(14, 165, 233, 0.8), transparent)`,
   animation: `${shoot} 4s ease-out infinite`,
   opacity: '0',
-});
+})
 
 export const diagonalBackground = style({
   position: 'absolute',
@@ -228,7 +228,7 @@ export const diagonalBackground = style({
   pointerEvents: 'none',
   zIndex: 1,
   overflow: 'visible',
-});
+})
 
 export const diagonalShape = style({
   position: 'absolute',
@@ -239,7 +239,7 @@ export const diagonalShape = style({
   background: vars.color.accent,
   clipPath: 'polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%)',
   animation: `${diagonalMorph} 100s ease-in-out infinite`,
-});
+})
 
 // ============================================
 // Animation Utilities
@@ -247,17 +247,17 @@ export const diagonalShape = style({
 
 export const animateScroll = style({
   animation: `${scrollLeft} 20s linear infinite`,
-});
+})
 
 export const animateFadeInUp = style({
   animation: `${fadeInUp} 0.6s ease-out forwards`,
-});
+})
 
-export const animationDelay100 = style({ animationDelay: '0.1s' });
-export const animationDelay200 = style({ animationDelay: '0.2s' });
-export const animationDelay300 = style({ animationDelay: '0.3s' });
-export const animationDelay400 = style({ animationDelay: '0.4s' });
-export const animationDelay500 = style({ animationDelay: '0.5s' });
+export const animationDelay100 = style({ animationDelay: '0.1s' })
+export const animationDelay200 = style({ animationDelay: '0.2s' })
+export const animationDelay300 = style({ animationDelay: '0.3s' })
+export const animationDelay400 = style({ animationDelay: '0.4s' })
+export const animationDelay500 = style({ animationDelay: '0.5s' })
 
 // ============================================
 // Interactive Elements
@@ -280,7 +280,7 @@ export const linkUnderline = style({
       width: '100%',
     },
   },
-});
+})
 
 export const glow = style({
   position: 'relative',
@@ -299,7 +299,7 @@ export const glow = style({
       opacity: '1',
     },
   },
-});
+})
 
 // ============================================
 // Badge / Tag Components
@@ -315,7 +315,7 @@ export const skillBadge = style({
   background: 'rgba(14, 165, 233, 0.1)',
   border: '1px solid rgba(14, 165, 233, 0.2)',
   color: vars.color.accent,
-});
+})
 
 // ============================================
 // Timeline
@@ -348,7 +348,7 @@ export const timelineItem = style({
       display: 'none',
     },
   },
-});
+})
 
 // ============================================
 // Pattern Background
@@ -357,7 +357,7 @@ export const timelineItem = style({
 export const patternDots = style({
   backgroundImage: `radial-gradient(circle, ${vars.color.border} 1px, transparent 1px)`,
   backgroundSize: '24px 24px',
-});
+})
 
 // ============================================
 // Text Utilities
@@ -365,19 +365,19 @@ export const patternDots = style({
 
 export const textAccent = style({
   color: vars.color.accent,
-});
+})
 
 export const textAccentGradient = style({
   background: vars.color.accent,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   backgroundClip: 'text',
-});
+})
 
 export const textSecondary = style({
   color: vars.color.textSecondary,
-});
+})
 
 export const textMuted = style({
   color: vars.color.textMuted,
-});
+})

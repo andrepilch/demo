@@ -9,48 +9,49 @@ import {
   H3,
   Body,
   SectionGap,
-} from "@/components";
-import * as styles from "./BigNumbers.css";
+} from '@/components'
+import * as styles from './BigNumbers.css'
 
 const bigNumbers = [
   {
-    value: "26%",
-    label: "AOV Increase",
-    description: "vs. alternative solutions",
+    value: '26%',
+    label: 'AOV Increase',
+    description: 'vs. alternative solutions',
   },
   {
-    value: "1.44x",
-    label: "YoY Growth",
-    description: "vs. alternative solutions",
+    value: '1.44x',
+    label: 'YoY Growth',
+    description: 'vs. alternative solutions',
   },
   {
-    value: "2hrs",
-    label: "Weekly Time Saved",
-    description: "By eliminating manual tasks",
+    value: '2hrs',
+    label: 'Weekly Time Saved',
+    description: 'By eliminating manual tasks',
   },
-];
+]
 
 export function BigNumbers() {
   return (
     <Section gap={SectionGap.lg}>
       <div className={styles.whiteWrapper}>
         <SectionContent>
-          <SectionHeader align="left">
+          <SectionHeader align='left'>
             {/* <Eyebrow>Impact By The Numbers</Eyebrow> */}
             <Eyebrow>Designing for Business Outcomes</Eyebrow>
           </SectionHeader>
           <Grid cols={3}>
             {bigNumbers.map((stat, i) => (
               <div key={i} className={styles.statCard}>
-                <StatNumber gradient="accent">{stat.value}</StatNumber>
+                <StatNumber gradient='accent'>{stat.value}</StatNumber>
                 <span className={styles.statDetailsContainer}>
-                <H3 color="primary">{stat.label}</H3>
-                <Body color="secondary">{stat.description}</Body></span>
+                  <H3 color='primary'>{stat.label}</H3>
+                  <Body color='secondary'>{stat.description}</Body>
+                </span>
               </div>
             ))}
           </Grid>
         </SectionContent>
       </div>
     </Section>
-  );
+  )
 }

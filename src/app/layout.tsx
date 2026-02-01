@@ -1,80 +1,80 @@
-import type { Metadata } from "next";
-import { Figtree, Caveat } from "next/font/google";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { FixedLogo } from "@/components/FixedLogo";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import "@/styles/global.css";
+import type { Metadata } from 'next'
+import { Figtree, Caveat } from 'next/font/google'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { FixedLogo } from '@/components/FixedLogo'
+import { ThemeProvider } from '@/components/ThemeProvider'
+import '@/styles/global.css'
 
 const figtree = Figtree({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-sans",
-});
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+})
 
 const caveat = Caveat({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-cursive",
-});
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-cursive',
+})
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | André Pilch",
-    default: "André Pilch | Senior Product Designer & Frontend Engineer",
+    template: '%s | André Pilch',
+    default: 'André Pilch | Senior Product Designer & Frontend Engineer',
   },
   description:
-    "I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.",
+    'I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.',
   keywords: [
-    "Product Designer",
-    "Frontend Engineer",
-    "React",
-    "TypeScript",
-    "UX Design",
-    "Design Systems",
-    "Wisconsin",
+    'Product Designer',
+    'Frontend Engineer',
+    'React',
+    'TypeScript',
+    'UX Design',
+    'Design Systems',
+    'Wisconsin',
   ],
-  authors: [{ name: "André Pilch" }],
-  creator: "André Pilch",
+  authors: [{ name: 'André Pilch' }],
+  creator: 'André Pilch',
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://andrepilch.com",
-    siteName: "André Pilch",
-    title: "André Pilch | Senior Product Designer & Frontend Engineer",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://andrepilch.com',
+    siteName: 'André Pilch',
+    title: 'André Pilch | Senior Product Designer & Frontend Engineer',
     description:
-      "I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.",
+      'I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.',
     images: [
       {
-        url: "/images/og/home.jpg",
+        url: '/images/og/home.jpg',
         width: 1200,
         height: 630,
-        alt: "André Pilch - Senior Product Designer & Frontend Engineer",
+        alt: 'André Pilch - Senior Product Designer & Frontend Engineer',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "André Pilch | Senior Product Designer & Frontend Engineer",
+    card: 'summary_large_image',
+    title: 'André Pilch | Senior Product Designer & Frontend Engineer',
     description:
-      "I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.",
-    images: ["/images/og/home.jpg"],
+      'I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.',
+    images: ['/images/og/home.jpg'],
   },
   robots: {
     index: true,
     follow: true,
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${figtree.variable} ${caveat.variable}`}>
+    <html lang='en' className={`${figtree.variable} ${caveat.variable}`}>
       <body className={figtree.className}>
-        <ThemeProvider defaultTheme="light">
+        <ThemeProvider defaultTheme='light'>
           <main style={{ flex: 1 }}>
             <Header />
             {children}
@@ -84,5 +84,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

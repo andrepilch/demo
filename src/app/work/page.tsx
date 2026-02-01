@@ -1,4 +1,4 @@
-import * as styles from "./page.css";
+import * as styles from './page.css'
 
 export default function Work() {
   return (
@@ -12,5 +12,5 @@ export default function Work() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import { ThemeToggle } from "./ThemeToggle";
-import * as styles from "./Footer.css";
+import { ThemeToggle } from './ThemeToggle'
+import * as styles from './Footer.css'
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className={styles.footer}>
@@ -13,5 +13,5 @@ export function Footer() {
         </p>
       </div>
     </footer>
-  );
+  )
 }

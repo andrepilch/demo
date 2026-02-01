@@ -1,4 +1,4 @@
-import * as styles from "./page.css";
+import * as styles from './page.css'
 import {
   Bio,
   // AboutDesignPhilosophy,
@@ -9,7 +9,7 @@ import {
   ImpactStatsRibbon,
   H2,
   Section,
-} from "@/components";
+} from '@/components'
 
 // Timeline/Resume Data
 // const careerTimeline = [
@@ -60,15 +60,21 @@ import {
 //   },
 // ];
 
-
 export default function About() {
   return (
     <div className={styles.pageWrapper}>
       <Bio />
       <ImpactStatsRibbon />
-      <Section style={{ paddingTop: "20vh", paddingBottom: "20vh", color: "#00aeef" }}><H2>A strong product saves time, adds value, competes well, and provides a good experience start to finish.</H2></Section>
+      <Section
+        style={{ paddingTop: '20vh', paddingBottom: '20vh', color: '#00aeef' }}
+      >
+        <H2>
+          A strong product saves time, adds value, competes well, and provides a
+          good experience start to finish.
+        </H2>
+      </Section>
       {/* <AboutDesignPhilosophy /> */}
-      <ProductPhilosophy   />
+      <ProductPhilosophy />
       <SkillsMatrix />
       <SideProjects />
       <CTASection />
@@ -247,5 +253,5 @@ export default function About() {
         </div>
       </section> */}
     </div>
-  );
+  )
 }

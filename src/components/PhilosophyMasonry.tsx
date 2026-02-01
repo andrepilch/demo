@@ -1,25 +1,25 @@
-import * as styles from "./PhilosophyMasonry.css";
+import * as styles from './PhilosophyMasonry.css'
 
 // ============================================
 // Types
 // ============================================
 
 export interface PhilosophyItem {
-  title: string;
-  description?: string;
-  quote?: string;
-  attribution?: string;
-  category?: string;
+  title: string
+  description?: string
+  quote?: string
+  attribution?: string
+  category?: string
 }
 
 interface PhilosophyCardProps {
-  item: PhilosophyItem;
-  index: number;
+  item: PhilosophyItem
+  index: number
 }
 
 interface PhilosophyMasonryProps {
-  items: PhilosophyItem[];
-  className?: string;
+  items: PhilosophyItem[]
+  className?: string
 }
 
 // ============================================
@@ -27,7 +27,7 @@ interface PhilosophyMasonryProps {
 // ============================================
 
 export function PhilosophyCard({ item, index }: PhilosophyCardProps) {
-  const delayClass = styles.cardDelays[index % styles.cardDelays.length];
+  const delayClass = styles.cardDelays[index % styles.cardDelays.length]
 
   return (
     <article className={`${styles.philosophyCard} ${delayClass}`}>
@@ -51,15 +51,18 @@ export function PhilosophyCard({ item, index }: PhilosophyCardProps) {
         )}
       </div>
     </article>
-  );
+  )
 }
 
 // ============================================
 // PhilosophyMasonry Component
 // ============================================
 
-export function PhilosophyMasonry({ items, className }: PhilosophyMasonryProps) {
-  const classNames = [styles.masonryGrid, className].filter(Boolean).join(" ");
+export function PhilosophyMasonry({
+  items,
+  className,
+}: PhilosophyMasonryProps) {
+  const classNames = [styles.masonryGrid, className].filter(Boolean).join(' ')
 
   return (
     <div className={classNames}>
@@ -67,5 +70,5 @@ export function PhilosophyMasonry({ items, className }: PhilosophyMasonryProps) 
         <PhilosophyCard key={item.title} item={item} index={index} />
       ))}
     </div>
-  );
+  )
 }

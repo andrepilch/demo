@@ -6,10 +6,8 @@ import {
   LeadershipSection,
   FeaturedCaseStudies,
   CTASection,
-} from "@/components";
-import * as styles from "./page.css";
-
-
+} from '@/components'
+import * as styles from './page.css'
 
 export default function Home() {
   return (
@@ -28,5 +26,5 @@ export default function Home() {
         <CTASection />
       </div>
     </div>
-  );
+  )
 }

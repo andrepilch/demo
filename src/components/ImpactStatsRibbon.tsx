@@ -1,13 +1,13 @@
-import * as styles from "./ImpactStatsRibbon.css";
+import * as styles from './ImpactStatsRibbon.css'
 
 const impactStats = [
-  { value: "14", label: "Years Experience" },
-  { value: "5", label: "Years React Engineering" },
-  { value: "18", label: "Products Shipped" },
-  { value: "1", label: "Design Patent" },
-  { value: "7", label: "Platforms designed for" },
-  { value: "10", label: "Years longest active product" },
-];
+  { value: '14', label: 'Years Experience' },
+  { value: '5', label: 'Years React Engineering' },
+  { value: '18', label: 'Products Shipped' },
+  { value: '1', label: 'Design Patent' },
+  { value: '7', label: 'Platforms designed for' },
+  { value: '10', label: 'Years longest active product' },
+]
 
 export function ImpactStatsRibbon() {
   return (
@@ -23,5 +23,5 @@ export function ImpactStatsRibbon() {
         </div>
       </div>
     </section>
-  );
+  )
 }

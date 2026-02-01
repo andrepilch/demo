@@ -1,56 +1,56 @@
-import { type ElementType, type ComponentPropsWithoutRef } from "react";
-import * as styles from "./Text.css";
+import { type ElementType, type ComponentPropsWithoutRef } from 'react'
+import * as styles from './Text.css'
 
 // ============================================
 // Type Definitions
 // ============================================
 
 type TextVariant =
-  | "h1"
-  | "h2"
-  | "h3"
-  | "bodyLarge"
-  | "body"
-  | "bodySmall"
-  | "eyebrow"
-  | "stat"
-  | "ribbon";
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'bodyLarge'
+  | 'body'
+  | 'bodySmall'
+  | 'eyebrow'
+  | 'stat'
+  | 'ribbon'
 
 type TextColor =
-  | "primary"
-  | "secondary"
-  | "muted"
-  | "accent"
-  | "onAccent"
-  | "inherit";
+  | 'primary'
+  | 'secondary'
+  | 'muted'
+  | 'accent'
+  | 'onAccent'
+  | 'inherit'
 
-type TextWeight = "normal" | "medium" | "semibold" | "bold";
+type TextWeight = 'normal' | 'medium' | 'semibold' | 'bold'
 
-type TextAlign = "left" | "center" | "right";
+type TextAlign = 'left' | 'center' | 'right'
 
 interface TextProps<T extends ElementType> {
-  as?: T;
-  variant?: TextVariant;
-  color?: TextColor;
-  weight?: TextWeight;
-  align?: TextAlign;
-  gradient?: "accent";
-  className?: string;
-  children?: React.ReactNode;
+  as?: T
+  variant?: TextVariant
+  color?: TextColor
+  weight?: TextWeight
+  align?: TextAlign
+  gradient?: 'accent'
+  className?: string
+  children?: React.ReactNode
 }
 
 // Default element mapping for variants
 const variantElementMap: Record<TextVariant, ElementType> = {
-  h1: "h1",
-  h2: "h2",
-  h3: "h3",
-  bodyLarge: "p",
-  body: "p",
-  bodySmall: "p",
-  eyebrow: "span",
-  stat: "span",
-  ribbon: "span",
-};
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  bodyLarge: 'p',
+  body: 'p',
+  bodySmall: 'p',
+  eyebrow: 'span',
+  stat: 'span',
+  ribbon: 'span',
+}
 
 // Style mapping for variants
 const variantStyleMap: Record<TextVariant, string> = {
@@ -63,15 +63,15 @@ const variantStyleMap: Record<TextVariant, string> = {
   eyebrow: styles.eyebrow,
   stat: styles.statNumber,
   ribbon: styles.ribbonNumber,
-};
+}
 
 // ============================================
 // Text Component
 // ============================================
 
-export function Text<T extends ElementType = "span">({
+export function Text<T extends ElementType = 'span'>({
   as,
-  variant = "body",
+  variant = 'body',
   color,
   weight,
   align,
@@ -80,75 +80,75 @@ export function Text<T extends ElementType = "span">({
   children,
   ...props
 }: TextProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof TextProps<T>>) {
-  const Component = as || variantElementMap[variant];
+  const Component = as || variantElementMap[variant]
 
   const classNames = [
     variantStyleMap[variant],
     color && styles.colorVariants[color],
     weight && styles.weightVariants[weight],
     align && styles.alignVariants[align],
-    gradient === "accent" && styles.accentGradient,
+    gradient === 'accent' && styles.accentGradient,
     className,
   ]
     .filter(Boolean)
-    .join(" ");
+    .join(' ')
 
   return (
     <Component className={classNames} {...props}>
       {children}
     </Component>
-  );
+  )
 }
 
 // ============================================
 // Convenience Components
 // ============================================
 
-type ConvenienceProps<T extends ElementType> = Omit<TextProps<T>, "variant"> &
-  Omit<ComponentPropsWithoutRef<T>, keyof TextProps<T>>;
+type ConvenienceProps<T extends ElementType> = Omit<TextProps<T>, 'variant'> &
+  Omit<ComponentPropsWithoutRef<T>, keyof TextProps<T>>
 
-export function H1<T extends ElementType = "h1">(props: ConvenienceProps<T>) {
-  return <Text variant="h1" {...props} />;
+export function H1<T extends ElementType = 'h1'>(props: ConvenienceProps<T>) {
+  return <Text variant='h1' {...props} />
 }
 
-export function H2<T extends ElementType = "h2">(props: ConvenienceProps<T>) {
-  return <Text variant="h2" {...props} />;
+export function H2<T extends ElementType = 'h2'>(props: ConvenienceProps<T>) {
+  return <Text variant='h2' {...props} />
 }
 
-export function H3<T extends ElementType = "h3">(props: ConvenienceProps<T>) {
-  return <Text variant="h3" {...props} />;
+export function H3<T extends ElementType = 'h3'>(props: ConvenienceProps<T>) {
+  return <Text variant='h3' {...props} />
 }
 
-export function BodyLarge<T extends ElementType = "p">(
+export function BodyLarge<T extends ElementType = 'p'>(
   props: ConvenienceProps<T>
 ) {
-  return <Text variant="bodyLarge" {...props} />;
+  return <Text variant='bodyLarge' {...props} />
 }
 
-export function Body<T extends ElementType = "p">(props: ConvenienceProps<T>) {
-  return <Text variant="body" {...props} />;
+export function Body<T extends ElementType = 'p'>(props: ConvenienceProps<T>) {
+  return <Text variant='body' {...props} />
 }
 
-export function BodySmall<T extends ElementType = "p">(
+export function BodySmall<T extends ElementType = 'p'>(
   props: ConvenienceProps<T>
 ) {
-  return <Text variant="bodySmall" {...props} />;
+  return <Text variant='bodySmall' {...props} />
 }
 
-export function Eyebrow<T extends ElementType = "span">(
+export function Eyebrow<T extends ElementType = 'span'>(
   props: ConvenienceProps<T>
 ) {
-  return <Text variant="eyebrow" {...props} />;
+  return <Text variant='eyebrow' {...props} />
 }
 
-export function StatNumber<T extends ElementType = "span">(
+export function StatNumber<T extends ElementType = 'span'>(
   props: ConvenienceProps<T>
 ) {
-  return <Text variant="stat" {...props} />;
+  return <Text variant='stat' {...props} />
 }
 
-export function RibbonNumber<T extends ElementType = "span">(
+export function RibbonNumber<T extends ElementType = 'span'>(
   props: ConvenienceProps<T>
 ) {
-  return <Text variant="ribbon" {...props} />;
+  return <Text variant='ribbon' {...props} />
 }
