@@ -1,7 +1,7 @@
 import * as styles from "./page.css";
 import {
   Bio,
-  AboutDesignPhilosophy,
+  // AboutDesignPhilosophy,
   ProductPhilosophy,
   SkillsMatrix,
   SideProjects,
@@ -64,7 +64,7 @@ export default function About() {
     <div className={styles.pageWrapper}>
       <Bio />
       <ImpactStatsRibbon />
-      <AboutDesignPhilosophy />
+      {/* <AboutDesignPhilosophy /> */}
       <ProductPhilosophy   />
       <SkillsMatrix />
       <SideProjects />

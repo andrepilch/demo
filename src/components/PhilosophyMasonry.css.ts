@@ -124,7 +124,7 @@ export const cardQuote = style({
   borderLeft: `2px solid ${vars.color.accent}`,
   fontStyle: "italic",
   fontSize: "0.875rem",
-  color: vars.color.textMuted,
+  color: vars.color.textSecondary,
   lineHeight: 1.5,
 });
 

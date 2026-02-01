@@ -6,99 +6,95 @@ import { PhilosophyMasonry, type PhilosophyItem } from "./PhilosophyMasonry";
 const productPhilosophies: PhilosophyItem[] = [
   {
     category: "Focus",
-    title: "Building the Right Product",
-    description:
-      "You have to create an attraction for real people. Given enough time, a product will usually end up in the right place—but you don't want to be the last one there, if you still make it with funding.",
+    title: "Build the right product",
+    description: "Products have to create an attraction for real people. Spend time on what matters."
   },
   {
     category: "Value",
-    title: "User-Created Content Wins",
+    title: "Always add value",
     description:
-      "No content you create is as valuable as the content a user creates. Users return to see what they've been working on, not what you've been working on.",
+      "Value must be proven. More work, change, or progress can be good or bad, but value focuses on real metrics. It helps focus on what matters. Adding value does not require perfection and it insinuates there needs to be a clear increase in value that can be demonstrated at some level in the work.",
   },
   {
     category: "Simplicity",
-    title: "Simplicity Is Hard",
+    title: "Keep it simple",
     description:
-      "Simplicity is hard to build, easy to use, and hard to charge for. Complexity is easy to build, hard to use, and easy to charge for.",
-    quote:
-      "Simplicity doesn't mean limiting features—it means taking more time on each feature.",
-    attribution: "Chris Sacca",
+      "Users usually want something very simple. Power users can still benefit from simple features, and they might enjoy it better too!",
+  },
+  {
+    category: "Simplicity",
+    title: "Simplicity is complicated",
+    description: "There is always a danger when you simplify things which makes good simplicity hard to achieve. Simplicity which enhances usability is worth the effort. Complexity loses engagement."
   },
   {
     category: "Strategy",
-    title: "Don't Re-invent, Plan Ahead",
+    title: "Establish UX Reciprocity",
     description:
-      "Build on existing patterns, flows, and products. Building in isolation leads to disconnected flows and weaker code. Build a castle of stone, not cards.",
+      "Rely on patterns elsewhere for a mutual benefit. Everything that’s the same should be the same. Save users time by not making them relearn.",
   },
   {
-    category: "UX",
-    title: "User-Driven Design",
+    category: "Marketing",
+    title: "Marketing is a big deal",
     description:
-      "Don't exercise user-manual-driven design. Instead, design to remove the need for a user manual entirely.",
+"There is always a point in product development when marketing becomes the most important, it can truly make or break a product no matter how good.",
   },
   {
-    category: "Baseline",
-    title: "Strong Products",
+    category: "Brand",
+    title: "Remember who you are",
     description:
-      "A strong product saves time, adds value, competes well, and provides a good experience from start to finish.",
+      "Don’t forget the past when adapting for the future. Don’t lose the essence of what made the business what it is today.",
   },
   {
-    category: "Iteration",
-    title: "Always Add Value",
+    category: "Value",
+    title: "Prioritize user content",
     description:
-      "Progress is subjective and can sometimes be equated to change. But value can and has to be proven. Are users enjoying the app better? Are we selling more?",
-    quote:
-      "We recognize that what we ship is never in a perfect state. Iterate to Greatness allows us to balance business goals with craft.",
+      "No content you create is as valuable as the content a user creates. Users return for their own content.",
+  },
+  {
+    category: "Collaboration",
+    title: "Work transparently",
+    description:"Early visibility is easier than late presentation."
+  },
+  {
+    category: "Collaboration",
+    title: "Listen to others",
+    description: "As designers it is easy to think we have to come up with all the solutions. In reality we don't, most of our solutions will come from others and our job is often simply just to listen and ask the right questions. If we listen and are able to apply the best solutions we hear, we can almost guarantee the outcome to be successful."
+  },
+  {
+    category: "Research",
+    title: "Don't assume",
+    description: "Do research and build strong intuition. Builders don’t build a new house with top-bottom split doors just because it could be a nice feature somebody wants. Don’t build software that way either."
+  },
+  {
+    category: "Brand",
+    title: "Meet expectations",
+    description: "Users are always benchmarking: faster, easier, cheaper, stronger, nicer, cooler, …. Users form expectations based on their experience with similar kinds of software. Those expectations influence a user’s response to software."
+  },
+    {
+    category: "Process",
+    title: "Progress over correctness",
+      quote: "Iterate to greatness. Balance business goals with craft by shipping continuous improvements and avoiding the perfection trap.",
     attribution: "Vercel",
   },
-  {
-    category: "Focus",
-    title: "Meet Expectations",
-    description:
-      "Users form expectations based on their experience with similar software. Those expectations influence their response to your product.",
+    {
+    category: "Simplicity",
+    title: "Don't distract",
+    description: "Good design is invisible. Keep the user on track by removing friction. Every bit of friction is something in the way of the happy path and a return customer."
+  },
+    {
+    category: "Collaboration",
+    title: "Work together",
+    description: "Work for the name on the front of the jersey, not the back."
+  },
+    {
+    category: "Competition",
+    title: "Pave the way",
+    description: "Innovation carves out its own path to create a competitive advantage."
   },
   {
-    category: "Mindset",
-    title: "The App Is Its People",
-    description:
-      "Software has very little overhead—some infrastructure and the rest labor. The people making the app are the app.",
-  },
-  {
-    category: "Process",
-    title: "Transparency First",
-    description:
-      "Early visibility is easier than late presentation. Share progress openly to avoid surprises.",
-  },
-  {
-    category: "Product vs Feature",
-    title: "Products Have Purpose",
-    description:
-      "Products stem from research, have personas, and solve real problems with complete flows. Features fit into products—but building products as features doesn't work.",
-  },
-  {
-    category: "Presentation",
-    title: "Make It a Big Deal",
-    description:
-      "Make your product a big deal and users will follow with trust to invest themselves in it.",
-  },
-  {
-    category: "Consistency",
-    title: "Reciprocity in Design",
-    description:
-      "Everything that's the same should be the same. Don't make different menus for the same thing. Users should not have to play 'find the differences.'",
-  },
-  {
-    category: "Quality",
-    title: "Accidental Features Cause Accidents",
-    description:
-      "Every feature should be intentional and designed for a purpose. Undesigned functionality opens the door for user accidents and quality loss.",
-  },
-  {
-    category: "Leadership",
-    title: "Product Thinking Makes Good Products",
-    description:
-      "It's product thinking that makes good products, not engineering. Apps also end up bloated with features that failed—those should be removed or redesigned.",
+    category: "Intuition",
+    title: "Wear their shoes",
+    description: "No customer should feel like your first customer. Know the user experience, and refine it."
   },
   {
     category: "Prototyping",

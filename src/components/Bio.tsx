@@ -35,7 +35,7 @@ export function Bio() {
             <br /><br />
             My extensive design experience combined with years of software engineering allow me to push the boundaries of innovation with seamless collaboration.
             <br /><br />
-            When I'm not designing or coding, you'll find me kayaking, exploring my Christian faith, or spending time with family.  
+            When I'm not designing or coding, you'll find me learning about God, spending time with my family, or kayaking down a river.  
           </Body> 
         </div>
       </div>
