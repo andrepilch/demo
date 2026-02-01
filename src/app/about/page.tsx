@@ -1,7 +1,7 @@
 import * as styles from './page.css'
 import {
   Bio,
-  // AboutDesignPhilosophy,
+  AboutDesignPhilosophy,
   ProductPhilosophy,
   SkillsMatrix,
   SideProjects,
@@ -73,7 +73,7 @@ export default function About() {
           good experience start to finish.
         </H2>
       </Section>
-      {/* <AboutDesignPhilosophy /> */}
+      <AboutDesignPhilosophy />
       <ProductPhilosophy />
       <SkillsMatrix />
       <SideProjects />

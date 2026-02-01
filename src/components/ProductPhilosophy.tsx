@@ -112,6 +112,11 @@ const productPhilosophies: PhilosophyItem[] = [
       'While a picture is worth a thousand words, a prototype is worth a thousand meetings',
     attribution: 'Kevin Grennan',
   },
+  {
+    category: 'Simplicity',
+    title: 'Guide the user',
+    description: 'Make decisions easy by removing choice when possible. Create structure and hierarchy. Provide visual feedback to actions users take and ',
+  },
 ]
 
 export function ProductPhilosophy() {

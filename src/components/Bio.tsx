@@ -28,7 +28,7 @@ export function Bio() {
           <Body>
             I'm a christian born and raised in France, now residing and working
             in the United States. Currently helping digital products grow
-            through design and engineering at whcc.
+            through design and engineering at whcc. Previously at Thomson Reuters, La Forge Des Marques, & Wowiwe Instruction Co.
             <br />
             <br />
             I'm experienced in concepting and scaling lasting products that

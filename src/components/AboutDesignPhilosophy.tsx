@@ -100,8 +100,7 @@ export function AboutDesignPhilosophy() {
         <Eyebrow>How I Work</Eyebrow>
         <H2>My Design Philosophy</H2>
         <Body color='secondary'>
-          These principles guide every product decision I make, from initial
-          research through final implementation.
+          I don't make the same thing everyone else is already making.
         </Body>
       </SectionHeader>
 
