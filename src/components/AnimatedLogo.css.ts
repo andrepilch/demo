@@ -347,15 +347,72 @@ export const menuNavLinkActive = style({
   color: '#00aeef',
 })
 
-// Menu social links
-export const menuSocialLinks = style({
-  display: 'flex',
-  gap: '1rem',
-  paddingTop: '0.5rem',
+// Diagonal menu layout: absolutely positioned items (L-shaped flow in white triangle)
+// Order: home top-center, email right/slightly lower, avatar center, LinkedIn left, GitHub bottom-left
+export const menuDiagonalLayout = style({
+  position: 'relative',
+  minWidth: '200px',
+  minHeight: '7rem',
 })
 
-// Menu social link
+// Home link: house icon, top and horizontally centered among the group
+export const menuHomeLink = style({
+  position: 'absolute',
+  top: 0,
+  left: '5.5rem',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '0.75rem',
+  color: '#0a0a0f',
+  textDecoration: 'none',
+  transition: 'color 0.2s ease, opacity 0.2s ease',
+  ':hover': {
+    color: '#00aeef',
+    opacity: 0.85,
+  },
+})
+
+export const menuHomeIcon = style({
+  width: '24px',
+  height: '24px',
+})
+
+// About link: circular avatar, central, below home, to the right of LinkedIn
+export const menuAboutLink = style({
+  position: 'absolute',
+  top: '4rem',
+  left: '5.5rem',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '0.25rem',
+  borderRadius: '50%',
+  overflow: 'hidden',
+  border: '2px solid #0a0a0f',
+  transition: 'border-color 0.2s ease, opacity 0.2s ease',
+  ':hover': {
+    borderColor: '#00aeef',
+    opacity: 0.9,
+  },
+})
+
+export const menuAvatarImg = style({
+  width: '2.5rem',
+  height: '2.5rem',
+  objectFit: 'cover',
+  borderRadius: '50%',
+  display: 'block',
+})
+
+// Social links placed in diagonal via absolute positioning
+export const menuSocialLinks = style({
+  display: 'contents',
+})
+
+// Menu social link base
 export const menuSocialLink = style({
+  position: 'absolute',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -366,6 +423,24 @@ export const menuSocialLink = style({
     color: '#00aeef',
     opacity: 0.8,
   },
+})
+
+// Email: to the right of home, slightly lower, near diagonal
+export const menuSocialLinkEmail = style({
+  top: 0,
+  right: '-1.5rem',
+})
+
+// LinkedIn: left side, left of avatar, slightly below home
+export const menuSocialLinkLinkedIn = style({
+  top: '4.5rem',
+  left: 0,
+})
+
+// GitHub: bottom-most, below LinkedIn, vertically aligned
+export const menuSocialLinkGitHub = style({
+  top: '8rem',
+  left: 0,
 })
 
 // Menu CTA button

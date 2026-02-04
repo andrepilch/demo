@@ -1,16 +1,16 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 import { AnimatedLogo } from './AnimatedLogo'
 
 export function FixedLogo() {
-  const pathname = usePathname()
-  const isHomepage = pathname === '/'
+  // const pathname = usePathname()
+  // const isHomepage = pathname === '/'
 
   // Only show the big triangle logo on homepage
-  if (!isHomepage) {
-    return null
-  }
+  // if (!isHomepage) {
+  //   return null
+  // }
 
   return (
     <div

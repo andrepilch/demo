@@ -163,6 +163,7 @@ export const mobileMenuButton = style({
   justifyContent: 'center',
   padding: '0.5rem',
   color: vars.color.textSecondary,
+  backgroundColor: vars.color.accent,
   transition: 'color 0.2s ease',
   '@media': {
     'screen and (min-width: 768px)': {

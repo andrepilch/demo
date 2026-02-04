@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import * as styles from './AnimatedLogo.css'
 import { socialLinks } from '@/components/CTASection'
 
@@ -22,7 +23,7 @@ const SHARP_HYPOTENUSE = 'M 0 121 L 190 0'
 const ROUNDED_HYPOTENUSE = 'M 20 108 Q 95 55 160 18'
 
 export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
-  // const pathname = usePathname();
+  const pathname = usePathname()
   const isRounded = true // Always rounded corners
   const [fillOpacity, setFillOpacity] = useState(0) // 0 = outline only, 1 = fully filled
   const [outlineDrawn, setOutlineDrawn] = useState(false)
@@ -40,24 +41,22 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
     }
   }, [])
 
-  // Handle scroll-based fill animation (only when menu is closed)
+  // Fill: on homepage fill on scroll; on other pages fill right away
   useEffect(() => {
     if (menuOpen) return
-
+    if (pathname !== '/') {
+      setFillOpacity(1)
+      return
+    }
     const handleScroll = () => {
-      // Fill completes within the first 300px of scroll
       const scrollThreshold = 300
       const scrollY = window.scrollY
-      const newFillOpacity = Math.min(1, scrollY / scrollThreshold)
-      setFillOpacity(newFillOpacity)
+      setFillOpacity(Math.min(1, scrollY / scrollThreshold))
     }
-
-    // Initial check
     handleScroll()
-
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [menuOpen])
+  }, [menuOpen, pathname])
 
   // Close menu on escape key
   useEffect(() => {
@@ -107,6 +106,7 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
     e.preventDefault()
     setMenuOpen(!menuOpen)
   }
+  
 
   const content = (
     <div className={styles.logoWrapper}>
@@ -258,20 +258,55 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
               />
             </svg>
             <div ref={menuContentRef} className={styles.menuContent}>
-              <div className={styles.menuSocialLinks}>
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className={styles.menuSocialLink}
-                    aria-label={social.name}
-                    onClick={() => setMenuOpen(false)}
+              <div className={styles.menuDiagonalLayout}>
+                <Link
+                  href='/'
+                  className={styles.menuHomeLink}
+                  onClick={() => setMenuOpen(false)}
+                  aria-label='Home'
+                >
+                  <svg
+                    className={styles.menuHomeIcon}
+                    viewBox='0 -960 960 960'
+                    fill='currentColor'
+                    aria-hidden
                   >
-                    {social.icon}
-                  </a>
-                ))}
+                    <path d='M160-200v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H600q-17 0-28.5-11.5T560-160v-200q0-17-11.5-28.5T520-400h-80q-17 0-28.5 11.5T400-360v200q0 17-11.5 28.5T360-120H240q-33 0-56.5-23.5T160-200Z' />
+                  </svg>
+                </Link>
+                <Link
+                  href='/about'
+                  className={styles.menuAboutLink}
+                  onClick={() => setMenuOpen(false)}
+                  aria-label='About'
+                >
+                  <img
+                    src='/images/avatar.jpg'
+                    alt=''
+                    className={styles.menuAvatarImg}
+                  />
+                </Link>
+                {[
+                  { name: 'Email', pos: styles.menuSocialLinkEmail },
+                  { name: 'LinkedIn', pos: styles.menuSocialLinkLinkedIn },
+                  { name: 'GitHub', pos: styles.menuSocialLinkGitHub },
+                ].map(({ name, pos }) => {
+                  const social = socialLinks.find((s) => s.name === name)
+                  if (!social) return null
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className={`${styles.menuSocialLink} ${pos}`}
+                      aria-label={social.name}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {social.icon}
+                    </a>
+                  )
+                })}
               </div>
             </div>
           </div>

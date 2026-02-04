@@ -24,9 +24,9 @@ const bigNumbers = [
     description: 'vs. alternative solutions',
   },
   {
-    value: '2hrs',
-    label: 'Weekly Time Saved',
-    description: 'By eliminating manual tasks',
+    value: '9min',
+    label: 'Average session',
+    description: 'beating competitors',
   },
 ]
 

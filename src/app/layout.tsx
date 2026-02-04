@@ -76,7 +76,7 @@ export default function RootLayout({
       <body className={figtree.className}>
         <ThemeProvider defaultTheme='light'>
           <main style={{ flex: 1 }}>
-            <Header />
+            {/* <Header /> */}
             {children}
           </main>
           <Footer />
