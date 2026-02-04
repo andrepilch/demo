@@ -76,6 +76,12 @@ const productPhilosophies: PhilosophyItem[] = [
       'Users are always benchmarking: faster, easier, cheaper, stronger, nicer, cooler, …. Users form expectations based on their experience with similar kinds of software. Those expectations influence a user’s response to software.',
   },
   {
+    category: 'Brand',
+    title: 'Be ethical',
+    description:
+      'Putting users best interest first creates loyalty and trust.',
+  },
+  {
     category: 'Process',
     title: 'Progress over correctness',
     quote:
