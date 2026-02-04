@@ -1,5 +1,6 @@
-import { Section, SectionGap, Container, SectionContent } from './Section'
+import { Section, SectionGap, Container, SectionContent, SectionHeader } from './Section'
 import * as styles from './PassionAreas.css'
+import { H2, Body } from './Text'
 
 const passionAreas = [
   {
@@ -42,9 +43,15 @@ const passionAreas = [
 export function PassionAreas() {
   return (
     <Section gap={SectionGap.lg} id="passion-areas">
+      <SectionHeader>
+        <H2>Passion Areas</H2>
+        <Body color="secondary">
+          I'm passionate about creating products that are not only functional
+          but also provide a good experience start to finish.
+        </Body>
+      </SectionHeader>
       <Container>
         <SectionContent>
-          <h2 className={styles.title}>Passion Areas</h2>
           <div className={styles.columns}>
             {passionAreas.map((area, i) => (
               <div key={i} className={styles.column}>

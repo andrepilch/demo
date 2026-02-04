@@ -77,13 +77,13 @@ export default function About() {
           good experience start to finish.
         </H2>
       </Section>
+      <PassionAreas />
       <AboutDesignPhilosophy />
       <ProductPhilosophy />
-      <SkillsMatrix />
-      <PassionAreas />
       <Partnerships />
       <Accomplishments />
       <Process />
+      <SkillsMatrix />
       <SideProjects />
       <CTASection />
       {/* The Design-to-Code Advantage */}
