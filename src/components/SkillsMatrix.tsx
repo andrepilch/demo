@@ -15,6 +15,7 @@ const skillsMatrix: SkillCategory[] = [
       'Product Strategy',
       'Design Systems',
       'Interaction Design',
+      'Motion Design',
       'Aligning with Vision',
       'Stakeholder Alignment',
       'Design Leadership',
@@ -58,8 +59,9 @@ const skillsMatrix: SkillCategory[] = [
   {
     category: 'Technical',
     skills: [
-      'Pen and Paper',
+      'Pen & Paper',
       'Figma',
+      'Figma Prototyping',
       'Figma Make',
       'Figjam',
       'Cursor AI',
