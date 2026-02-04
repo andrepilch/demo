@@ -15,8 +15,8 @@ const caseStudies = [
     href: '/work/whcc-editor',
     image: '/images/projects/wall_designer/wall_designer_cover.jpg',
     stats: [
-      { value: '26%', label: 'AOV Increase' },
-      { value: '1.3M', label: 'Annual Users' },
+      // { value: '26%', label: 'AOV Increase' },
+      { value: '3M', label: 'Sessions served' },
     ],
   },
   {
