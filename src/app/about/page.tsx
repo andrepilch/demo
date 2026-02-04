@@ -4,6 +4,10 @@ import {
   AboutDesignPhilosophy,
   ProductPhilosophy,
   SkillsMatrix,
+  PassionAreas,
+  Partnerships,
+  Accomplishments,
+  Process,
   SideProjects,
   CTASection,
   ImpactStatsRibbon,
@@ -76,6 +80,10 @@ export default function About() {
       <AboutDesignPhilosophy />
       <ProductPhilosophy />
       <SkillsMatrix />
+      <PassionAreas />
+      <Partnerships />
+      <Accomplishments />
+      <Process />
       <SideProjects />
       <CTASection />
       {/* The Design-to-Code Advantage */}
