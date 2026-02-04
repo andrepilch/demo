@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Figtree, Caveat } from 'next/font/google'
-import { Header } from '@/components/Header'
+// import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { FixedLogo } from '@/components/FixedLogo'
 import { ThemeProvider } from '@/components/ThemeProvider'
