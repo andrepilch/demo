@@ -1,11 +1,44 @@
+import * as styles from './page.css'
+import {
+  Bio,
+  ProductPhilosophy,
+  CraftFocus,
+  SkillsMatrix,
+  PassionAreas,
+  Partnerships,
+  Accomplishments,
+  AdviceTopics,
+  Process,
+  SideProjects,
+  CTASection,
+  ImpactStatsRibbon,
+  H2,
+  Section,
+} from '@/components'
+
 export default function About() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-4">About</h1>
-      <p className="text-lg text-neutral-600 dark:text-neutral-400">
-        I'm André Pilch, a Senior Product Designer & Front-end Engineer with
-        over a decade of experience crafting innovative products.
-      </p>
+    <div className={styles.pageWrapper}>
+      <Bio />
+      <ImpactStatsRibbon />
+      <Section
+        style={{ paddingTop: '20vh', paddingBottom: '20vh', color: '#00aeef' }}
+      >
+        <H2>
+          A strong product saves time, adds value, competes well, and provides a
+          good experience start to finish.
+        </H2>
+      </Section>
+      <PassionAreas />
+      <CraftFocus />
+      <ProductPhilosophy />
+      <Partnerships />
+      <Accomplishments />
+      <Process />
+      <SideProjects />
+      <SkillsMatrix />
+      <AdviceTopics />
+      <CTASection />
     </div>
-  );
+  )
 }
