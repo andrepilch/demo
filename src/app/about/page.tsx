@@ -6,6 +6,7 @@ import {
   PassionAreas,
   Partnerships,
   Accomplishments,
+  AdviceTopics,
   Process,
   SideProjects,
   CTASection,
@@ -31,6 +32,7 @@ export default function About() {
       <ProductPhilosophy />
       <Partnerships />
       <Accomplishments />
+      <AdviceTopics />
       <Process />
       <SkillsMatrix />
       <SideProjects />
