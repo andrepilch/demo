@@ -5,9 +5,9 @@ import * as styles from './SideProjects.css'
 interface SideProject {
   title: string
   description: string
-  url: string
-  tech: string[]
-  status: string
+  url?: string
+  tech?: string[]
+  status?: string
 }
 
 // Side Projects
@@ -15,26 +15,21 @@ const sideProjects: SideProject[] = [
   {
     title: 'Eternity Bible',
     description:
-      'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production.',
+      'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production',
     url: 'https://eternitybible.app',
-    tech: ['NextJS', 'TypeScript', 'Vanilla Extract', 'Vercel'],
+    tech: ['ReactJS', 'NextJS', 'TypeScript', 'PigmentCSS', 'Supabase', 'Vercel'],
     status: 'Live',
   },
   {
-    title: 'Website Design & Development Volunteer Work for Non-Profits',
+    title: 'Website Design & Development Volunteer Work for various Non-Profits',
     description:
-      'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production.',
-    url: 'https://eternitybible.app',
-    tech: ['NextJS', 'TypeScript', 'Vanilla Extract', 'Vercel'],
-    status: 'Live',
+      'Volunteer work for various Non-Profits to help them with their websites, branding, and digital presence',
   },
   {
     title: 'Freelance Branding & Design for 15 Years',
     description:
-      'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production.',
-    url: 'https://eternitybible.app',
-    tech: ['NextJS', 'TypeScript', 'Vanilla Extract', 'Vercel'],
-    status: 'Live',
+      'Freelance branding and design work for a wide variety of clients over the past 15 years',
+    url: '/branding',
   },
 ]
 
@@ -46,44 +41,54 @@ export function SideProjects() {
         <H2>Side Projects</H2>
       </SectionHeader>
 
-      {sideProjects.map((project, i) => (
-        <a
-          key={i}
-          href={project.url}
-          target='_blank'
-          rel='noopener noreferrer'
-          className={styles.projectCard}
-        >
-          <div className={styles.projectHeader}>
-            <h3 className={styles.projectTitle}>{project.title}</h3>
-            <span className={styles.projectStatus}>{project.status}</span>
-          </div>
-          <p className={styles.projectDescription}>{project.description}</p>
-          <div className={styles.skillsList}>
-            {project.tech.map((tech, j) => (
-              <span key={j} className={styles.skillBadge}>
-                {tech}
-              </span>
-            ))}
-          </div>
-          <div className={styles.projectLink}>
-            Visit site
-            <svg
-              className={styles.projectLinkIcon}
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
-              />
-            </svg>
-          </div>
-        </a>
-      ))}
+      {sideProjects.map((project, i) => {
+        const CardWrapper = project.url ? 'a' : 'div'
+        const linkProps = project.url
+          ? { href: project.url, target: '_blank' as const, rel: 'noopener noreferrer' }
+          : {}
+        return (
+          <CardWrapper
+            key={i}
+            className={styles.projectCard}
+            {...linkProps}
+          >
+            <div className={styles.projectHeader}>
+              <h3 className={styles.projectTitle}>{project.title}</h3>
+              {project.status != null && project.status !== '' && (
+                <span className={styles.projectStatus}>{project.status}</span>
+              )}
+            </div>
+            <p className={styles.projectDescription}>{project.description}</p>
+            {project.tech != null && project.tech.length > 0 && (
+              <div className={styles.skillsList}>
+                {project.tech.map((tech, j) => (
+                  <span key={j} className={styles.skillBadge}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+            {project.url != null && project.url !== '' && (
+              <div className={styles.projectLink}>
+                Visit site
+                <svg
+                  className={styles.projectLinkIcon}
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+                  />
+                </svg>
+              </div>
+            )}
+          </CardWrapper>
+        )
+      })}
     </Section>
   )
 }

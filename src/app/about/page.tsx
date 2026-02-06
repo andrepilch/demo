@@ -32,10 +32,10 @@ export default function About() {
       <ProductPhilosophy />
       <Partnerships />
       <Accomplishments />
-      <AdviceTopics />
       <Process />
-      <SkillsMatrix />
       <SideProjects />
+      <SkillsMatrix />
+      <AdviceTopics />
       <CTASection />
     </div>
   )
