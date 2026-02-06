@@ -6,6 +6,7 @@ import {
   LeadershipSection,
   FeaturedCaseStudies,
   CTASection,
+  BridgeAdvantage,
 } from '@/components'
 import * as styles from './page.css'
 
@@ -21,8 +22,8 @@ export default function Home() {
       <ImpactStatsRibbon />
       <div className={styles.sectionsWrapper}>
         <FeaturedCaseStudies />
+        <BridgeAdvantage />
         <LeadershipSection />
-        {/* <DesignPhilosophy /> */}
         <CTASection />
       </div>
     </div>

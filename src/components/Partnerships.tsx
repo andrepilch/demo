@@ -7,7 +7,6 @@ const partners: { name: string; svg?: string }[] = [
   { name: 'Adobe', svg: '/partners/adobe-logo.svg' },
   { name: 'Archimed', svg: '/partners/archimed-logo.svg' },
   { name: 'Thomson Reuters', svg: '/partners/thomson-reuters-logo.svg' },
-  { name: 'and more...' },
 ]
 
 export function Partnerships() {
@@ -16,7 +15,7 @@ export function Partnerships() {
       <SectionHeader>
         <H2>Partnerships</H2>
         <Body color="secondary">
-          I&apos;ve successfully collaborated with partnerships to create an
+          Some partners I&apos;ve successfully collaborated with to create an
           integration, unique products, and proof of concepts to drive growth
           and innovation
         </Body>

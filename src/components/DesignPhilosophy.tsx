@@ -7,6 +7,7 @@ import {
   Grid,
 } from './Section'
 import { Eyebrow, H2, Body } from './Text'
+import { Card } from './Card'
 import { iconMd } from './Button'
 import * as styles from './DesignPhilosophy.css'
 
@@ -94,14 +95,13 @@ export function DesignPhilosophy() {
 
           <Grid cols={3}>
             {frameworks.map((framework, i) => (
-              <div key={i} className={styles.frameworkCard}>
-                <div className={styles.frameworkIcon}>{framework.icon}</div>
-                <h3 className={styles.frameworkName}>{framework.name}</h3>
-                <p className={styles.frameworkTagline}>{framework.tagline}</p>
-                <p className={styles.frameworkDescription}>
-                  {framework.description}
-                </p>
-              </div>
+              <Card
+                key={i}
+                icon={framework.icon}
+                title={framework.name}
+                tagline={framework.tagline}
+                description={framework.description}
+              />
             ))}
           </Grid>
 

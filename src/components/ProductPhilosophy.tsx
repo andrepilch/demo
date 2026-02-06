@@ -121,7 +121,13 @@ const productPhilosophies: PhilosophyItem[] = [
   {
     category: 'Simplicity',
     title: 'Guide the user',
-    description: 'Make decisions easy by removing choice when possible. Create structure and hierarchy. Provide visual feedback to actions users take and ',
+    description: 'Make decisions easy by removing choice when possible. Create structure and hierarchy. Provide visual feedback to actions users take and guide them to the next step.',
+  },
+  {
+    category: 'Value',
+    title: 'Success can be measured',
+    description:
+      'Beautiful interfaces are table stakes. Design for metrics that matter: conversion rates, AOV, retention, and long-term product sustainability.',
   },
 ]
 

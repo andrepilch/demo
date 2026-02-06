@@ -17,16 +17,11 @@ export const partnerCard = style({
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
   minHeight: '5rem',
-  transition: 'all 0.2s ease',
-  ':hover': {
-    background: vars.color.bgCardHover,
-    borderColor: vars.color.borderLight,
-  },
 })
 
 export const partnerLogo = style({
-  width: '100px',
-  height: '40px',
+  width: '200px',
+  height: '80px',
   objectFit: 'contain',
 })
 
