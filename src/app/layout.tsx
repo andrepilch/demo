@@ -19,9 +19,10 @@ const caveat = Caveat({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://andrepilch.com'),
   title: {
     template: '%s | André Pilch',
-    default: 'André Pilch | Senior Product Designer & Frontend Engineer',
+    default: 'André Pilch | Strategic Product Designer',
   },
   description:
     'I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.',

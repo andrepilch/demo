@@ -8,7 +8,10 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: { '@next/next': nextPlugin },
-    rules: { ...nextPlugin.configs.recommended.rules },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      '@next/next/no-img-element': 'off', // unoptimized images in next.config
+    },
   },
   {
     ignores: ['.next/*', 'node_modules/*'],
