@@ -1,4 +1,4 @@
-import { Section, SectionGap, Container, SectionContent, SectionHeader } from './Section'
+import { Section, SectionGap, SectionContent, SectionHeader } from './Section'
 import * as styles from './PassionAreas.css'
 import { H2, Body } from './Text'
 
@@ -18,6 +18,8 @@ const passionAreas = [
   {
     title: 'Leadership',
     items: [
+      'Leading Design of Ambiguous Projects',
+      'Strategic Design',
       'Design Team Standards',
       'Cross-Functional Collaboration',
       'Strategic Infrastructure',
@@ -50,7 +52,6 @@ export function PassionAreas() {
           but also provide a good experience start to finish.
         </Body>
       </SectionHeader>
-      <Container>
         <SectionContent>
           <div className={styles.columns}>
             {passionAreas.map((area, i) => (
@@ -67,7 +68,6 @@ export function PassionAreas() {
             ))}
           </div>
         </SectionContent>
-      </Container>
     </Section>
   )
 }

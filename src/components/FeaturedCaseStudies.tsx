@@ -12,7 +12,7 @@ const caseStudies = [
     description:
       'Building user confidence and saving time with a versatile designer',
     tags: ['Product Design', 'React', 'Design Systems'],
-    href: '/work/whcc-editor',
+    href: '/work/wall-designer',
     image: '/images/projects/wall_designer/wall_designer_cover.jpg',
     stats: [
       // { value: '26%', label: 'AOV Increase' },

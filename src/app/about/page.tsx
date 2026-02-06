@@ -2,6 +2,7 @@ import * as styles from './page.css'
 import {
   Bio,
   ProductPhilosophy,
+  CraftFocus,
   SkillsMatrix,
   PassionAreas,
   Partnerships,
@@ -29,6 +30,7 @@ export default function About() {
         </H2>
       </Section>
       <PassionAreas />
+      <CraftFocus />
       <ProductPhilosophy />
       <Partnerships />
       <Accomplishments />

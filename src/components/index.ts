@@ -47,6 +47,7 @@ export {
 export { DesignPhilosophy } from './DesignPhilosophy'
 export { AboutDesignPhilosophy } from './AboutDesignPhilosophy'
 export { ProductPhilosophy } from './ProductPhilosophy'
+export { CraftFocus } from './CraftFocus'
 export { Bio } from './Bio'
 export { SkillsMatrix } from './SkillsMatrix'
 export { SideProjects } from './SideProjects'
