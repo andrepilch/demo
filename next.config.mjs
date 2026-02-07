@@ -12,9 +12,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // experimental: {
-  //   webpackBuildWorker: false,
-  // },
+  experimental: {
+    webpackBuildWorker: false,
+  },
 }
 
 export default withVanillaExtract(nextConfig)
