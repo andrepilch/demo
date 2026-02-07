@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "echo \"No tests configured\""
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.18.0",
