@@ -28,7 +28,7 @@ const craftFocusItems: PhilosophyItem[] = [
   {
     title: 'Sweating the details on components',
     description:
-      'Designing in code means my attention to detail reaches every customer; not just design file viewers.',
+      'Designing in code means my attention to detail actually reaches beyond design files to every customer',
   },
 ]
 
