@@ -7,7 +7,7 @@ import {
   PassionAreas,
   Partnerships,
   Accomplishments,
-  AdviceTopics,
+  // AdviceTopics,
   Process,
   SideProjects,
   CTASection,
@@ -37,7 +37,7 @@ export default function About() {
       <Process />
       <SideProjects />
       <SkillsMatrix />
-      <AdviceTopics />
+      {/* <AdviceTopics /> */}
       <CTASection />
     </div>
   )
