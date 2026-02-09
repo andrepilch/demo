@@ -18,7 +18,7 @@ const sideProjects: SideProject[] = [
       'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production',
     url: 'https://eternitybible.app',
     // tech: ['ReactJS', 'NextJS', 'TypeScript', 'PigmentCSS', 'Supabase', 'Vercel'],
-    status: 'Live',
+    // status: 'Live',
   },
   {
     title: 'Website Design & Development Volunteer Work for various Non-Profits',

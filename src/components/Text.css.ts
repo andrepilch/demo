@@ -26,7 +26,7 @@ export const headingBase = style([
 export const heading1 = style([
   headingBase,
   {
-    fontSize: '4rem',
+    fontSize: '3rem',
     '@media': {
       'screen and (min-width: 768px)': {
         fontSize: '4rem',

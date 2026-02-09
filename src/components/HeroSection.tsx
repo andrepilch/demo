@@ -15,11 +15,7 @@ export function HeroSection() {
         <LinkButton
           href='/about'
           variant='primary'
-          style={{
-            transform: 'rotate(-4deg)',
-            position: 'relative',
-            left: '65%',
-          }}
+          style={{marginTop: '1rem'}}
         >
           About Me
         </LinkButton>

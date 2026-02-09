@@ -21,7 +21,7 @@ export const partnerCard = style({
 
 export const partnerLogo = style({
   width: '200px',
-  height: '80px',
+  height: '40px',
   objectFit: 'contain',
 })
 
