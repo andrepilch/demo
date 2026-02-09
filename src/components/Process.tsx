@@ -101,16 +101,14 @@ export function Process() {
       <SectionContent>
           <SectionHeader>
             <Eyebrow>How I Work</Eyebrow>
-            <H2 >I use AI to help build the right prototypes and products. I do not use AI to tell me what that product should be.</H2>
-            {/* <H2>My Process</H2> */}
+            <H2>Process</H2>
             <Body color='secondary'>
               I look for ways to differentiate products in favor of users to
-              achieve growth in competitive markets. A strong product saves
-              time, adds value, and competes well. Here's the framework that
-              guides my approach. 
-              <br /><br /><b>I speed up this process by using AI to assist
+              achieve growth in competitive markets.
+              <br /><br />
+              I speed up this process by using AI to assist
               discovery and prototyping, and by building intuition through
-            continuous learning about users.</b>
+              continuous learning about users.
           </Body>
           </SectionHeader>
 
@@ -124,7 +122,7 @@ export function Process() {
                 description={step.description}
               />
             ))}
-          </Grid>
+        </Grid>
         </SectionContent>
     </Section>
   )

@@ -14,6 +14,7 @@ import {
   ImpactStatsRibbon,
   H2,
   Section,
+  AI,
 } from '@/components'
 
 export default function About() {
@@ -35,6 +36,7 @@ export default function About() {
       <Partnerships />
       <Accomplishments />
       <Process />
+      <AI />
       <SideProjects />
       <SkillsMatrix />
       {/* <AdviceTopics /> */}
