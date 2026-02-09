@@ -6,17 +6,18 @@ import { eternityResults } from '@/app/work/eternity-bible/page'
 
 const caseStudies = [
   {
-    title: 'Wall Designer',
+    title: 'WHCC Designer',
     outcome:
       'Increased Average Order Value by 26% through radical simplification',
     description:
       'Building user confidence and saving time with a versatile designer',
     tags: ['Product Design', 'React', 'Design Systems'],
-    href: '/work/wall-designer',
+    href: '/work/designer',
     image: '/images/projects/wall_designer/wall_designer_cover.jpg',
     stats: [
       // { value: '26%', label: 'AOV Increase' },
-      { value: '3M', label: 'Sessions served' },
+      // { value: '3M', label: 'Sessions served' },
+      { value: '6.5M+', label: 'Sessions served' },
     ],
   },
   {
@@ -25,7 +26,7 @@ const caseStudies = [
     description: 'Challenging the norms in a saturated market',
     tags: ['NextJS', 'TypeScript', 'Full-Stack'],
     href: '/work/eternity-bible',
-    image: '/images/projects/eternity/eternity_cover.jpg',
+    image: '/images/projects/eternity/eternity_hand.jpg',
     stats: eternityResults,
   },
 ]
