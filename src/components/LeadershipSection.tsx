@@ -4,20 +4,28 @@ import * as styles from './LeadershipSection.css'
 // Achievement card data
 const achievements = [
   {
-    highlight: 'Strategic Infrastructure & Design Systems',
+    highlight: 'Strategic Infrastructure',
     text: 'Established the first design system at whcc which boosted efficiency and added consistency',
   },
   {
-    highlight: 'Global Innovation & Intellectual Property',
+    highlight: 'Intellectual Property',
     text: 'Pioneered the first VR experience for Thomson Reuters that resulted in secured patents',
   },
   {
-    highlight: 'Cultural Transformation & Data-Informed Leadership',
-    text: 'Initiated the organization’s user research and analytics practices',
+    highlight: 'Cultural Transformation',
+    text: 'Initiated the organization’s user research and analytics practices, opened avenues of communication with other branches for feedback, and created environement for building rapport with teammates',
   },
   {
-    highlight: 'Leadership & Cross-Functional Collaboration',
-    text: 'Led the effort to create design and team principles, and to align product strategy and vision with business goals',
+    highlight: 'Cross-Functional Collaboration',
+    text: 'Led the effort to create design and team principles through cross-team workshops, and to align product strategy and vision with business goals',
+  },
+  {
+    highlight: 'Communication',
+    text: 'Encouraged a culture of communication with business leadership, and a framework for regular team check-ins',
+  },
+  {
+    highlight: 'Leadership thinking',
+    text: 'Co-workers trust my continual business-minded perspective and balance with user-centric design',
   },
 ]
 
