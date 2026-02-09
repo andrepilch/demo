@@ -34,11 +34,10 @@ const craftFocusItems: PhilosophyItem[] = [
 
 export function CraftFocus() {
   return (
-    <Section gap={SectionGap.lg} id='craft-focus'>
+    <Section gap={SectionGap.sm} id='craft-focus'>
       <SectionHeader>
-        <Eyebrow>What I Really Enjoy Doing</Eyebrow>
+        <Eyebrow>What I Really Enjoy</Eyebrow>
       </SectionHeader>
-
       <PhilosophyMasonry items={craftFocusItems} />
     </Section>
   )

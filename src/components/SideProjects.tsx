@@ -35,7 +35,7 @@ const sideProjects: SideProject[] = [
 
 export function SideProjects() {
   return (
-    <Section gap={SectionGap.lg} id='projects'>
+    <Section gap={SectionGap.md} id='projects'>
       <SectionHeader>
         <Eyebrow>Beyond the Day Job</Eyebrow>
         <H2>Side Projects</H2>
