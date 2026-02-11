@@ -6,6 +6,7 @@ interface SideProject {
   title: string
   description: string
   url?: string
+  urlText?: string
   tech?: string[]
   status?: string
 }
@@ -17,6 +18,7 @@ const sideProjects: SideProject[] = [
     description:
       'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production',
     url: 'https://eternitybible.app',
+    urlText: 'Visit site',
     // tech: ['ReactJS', 'NextJS', 'TypeScript', 'PigmentCSS', 'Supabase', 'Vercel'],
     // status: 'Live',
   },
@@ -30,6 +32,7 @@ const sideProjects: SideProject[] = [
     description:
       'Freelance branding and design work for a wide variety of clients over the past 15 years',
     url: '/branding',
+    urlText: 'See the brands',
   },
 ]
 
@@ -70,7 +73,7 @@ export function SideProjects() {
             )}
             {project.url != null && project.url !== '' && (
               <div className={styles.projectLink}>
-                Visit site
+                {project.urlText} || 'Visit site'
                 <svg
                   className={styles.projectLinkIcon}
                   fill='none'
