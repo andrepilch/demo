@@ -4,7 +4,7 @@ import {
   SectionHeader,
   Grid,
 } from './Section'
-import { Eyebrow, H2, Body } from './Text'
+import { H2, Body } from './Text'
 import { Card } from './Card'
 import { iconMd } from './Button'
 
