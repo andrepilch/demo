@@ -96,8 +96,9 @@ export function BridgeAdvantage() {
     <Section id="bridge">
         <SectionContent>
           <SectionHeader>
-            <Eyebrow>The Bridge Advantage</Eyebrow>
-          <H2>Design-to-Code: Why It Matters</H2>
+            {/* <Eyebrow>The Bridge Advantage</Eyebrow> */}
+          {/* <H2>Design-to-Code: Why It Matters</H2> */}
+          <H2>Value of Design-to-Code</H2>
             <Body color="secondary">
               My 5 years of React/TypeScript experience isn't just a bonus—it's
               a fundamental part of how I design better products.
