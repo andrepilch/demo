@@ -73,7 +73,7 @@ export function SideProjects() {
             )}
             {project.url != null && project.url !== '' && (
               <div className={styles.projectLink}>
-                {project.urlText} || 'Visit site'
+                {project.urlText || 'Visit site'}
                 <svg
                   className={styles.projectLinkIcon}
                   fill='none'

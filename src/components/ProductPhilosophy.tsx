@@ -1,5 +1,5 @@
 import { Section, SectionGap, SectionHeader } from './Section'
-import { Eyebrow, H2, Body } from './Text'
+import { H2, Body } from './Text'
 import { PhilosophyMasonry, type PhilosophyItem } from './PhilosophyMasonry'
 
 // Product Design Philosophy (masonry grid)
@@ -135,7 +135,6 @@ export function ProductPhilosophy() {
   return (
     <Section gap={SectionGap.lg} id='product-philosophy'>
       <SectionHeader>
-        <Eyebrow>Product Thinking</Eyebrow>
         <H2>Product Design Philosophy</H2>
         <Body color='secondary'>
           Collected insights and principles from years of building products.

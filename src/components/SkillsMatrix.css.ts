@@ -35,3 +35,20 @@ export const skillBadge = style({
   border: '1px solid rgba(14, 165, 233, 0.2)',
   color: vars.color.accent,
 })
+
+// Accordion
+export const accordionHeaderRow = style({
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  gap: '1rem',
+})
+
+export const accordionContent = style({
+  overflow: 'hidden',
+})
+
+export const skillsSectionNoPadding = style({
+  padding: 0,
+})

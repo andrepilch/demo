@@ -1,5 +1,4 @@
-import { Section, SectionGap, SectionHeader, Grid } from './Section'
-import { Eyebrow, H2 } from './Text'
+import { Section, SectionGap, Grid } from './Section'
 import * as styles from './SkillsMatrix.css'
 
 interface SkillCategory {
@@ -84,28 +83,35 @@ const skillsMatrix: SkillCategory[] = [
   },
 ]
 
-export function SkillsMatrix() {
+interface SkillsMatrixProps {
+  expanded: boolean
+}
+
+export function SkillsMatrix({ expanded }: SkillsMatrixProps) {
   return (
-    <Section gap={SectionGap.lg} id='skills'>
-      <SectionHeader>
+    <Section gap={SectionGap.lg} id='skills' className={styles.skillsSectionNoPadding}>
+      {/* <SectionHeader>
         <Eyebrow>Capabilities</Eyebrow>
         <H2>Skills & Methods</H2>
-      </SectionHeader>
-
-      <Grid cols={3}>
-        {skillsMatrix.map((category, i) => (
-          <div key={i} className={styles.skillsCard}>
-            <h3 className={styles.skillsCategory}>{category.category}</h3>
-            <div className={styles.skillsList}>
-              {category.skills.map((skill, j) => (
-                <span key={j} className={styles.skillBadge}>
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </Grid>
+      </SectionHeader> */}
+      {expanded && (
+        <div className={styles.accordionContent}>
+          <Grid cols={3}>
+            {skillsMatrix.map((category, i) => (
+              <div key={i} className={styles.skillsCard}>
+                <h3 className={styles.skillsCategory}>{category.category}</h3>
+                <div className={styles.skillsList}>
+                  {category.skills.map((skill, j) => (
+                    <span key={j} className={styles.skillBadge}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </Grid>
+        </div>
+      )}
     </Section>
   )
 }

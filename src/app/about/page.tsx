@@ -4,7 +4,6 @@ import {
   Bio,
   ProductPhilosophy,
   CraftFocus,
-  SkillsMatrix,
   PassionAreas,
   Partnerships,
   // AdviceTopics,
@@ -21,6 +20,9 @@ export default function About() {
     <div className={styles.pageWrapper}>
       <Bio />
       <ImpactStatsRibbon />
+      <PassionAreas />
+      <CraftFocus />
+      <Partnerships />
       <section className={brandBlock}>
         <div className={brandBlockInner}>
           <H2>
@@ -29,14 +31,10 @@ export default function About() {
           </H2>
         </div>
       </section>
-      <PassionAreas />
-      <CraftFocus />
       <ProductPhilosophy />
-      <Partnerships />
       <Process />
       <AI />
       <SideProjects />
-      <SkillsMatrix />
       {/* <AdviceTopics /> */}
       <CTASection />
     </div>

@@ -1,6 +1,11 @@
+'use client'
+
+import { useState } from 'react'
 import { Section, SectionGap, SectionContent, SectionHeader } from './Section'
 import * as styles from './PassionAreas.css'
 import { H2, Body } from './Text'
+import { SecondaryButton } from './Button'
+import { SkillsMatrix } from './SkillsMatrix'
 
 const passionAreas = [
   {
@@ -43,6 +48,8 @@ const passionAreas = [
 ]
 
 export function PassionAreas() {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <Section gap={SectionGap.lg} id="passion-areas">
       <SectionHeader>
@@ -68,6 +75,10 @@ export function PassionAreas() {
             ))}
           </div>
         </SectionContent>
+        <SecondaryButton onClick={() => setExpanded((e) => !e)}>
+          {expanded ? 'Show less' : 'See All Skills'}
+        </SecondaryButton>
+        <SkillsMatrix expanded={expanded} />
     </Section>
   )
 }
