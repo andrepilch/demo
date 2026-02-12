@@ -1,5 +1,5 @@
 import { Section, SectionGap, SectionHeader } from './Section'
-import { Eyebrow, H2, H3 } from './Text'
+import { H2, H3 } from './Text'
 import * as styles from './SideProjects.css'
 
 interface SideProject {
@@ -42,7 +42,6 @@ export function SideProjects() {
   return (
     <Section gap={SectionGap.md} id='projects'>
       <SectionHeader>
-        <Eyebrow>Beyond the Day Job</Eyebrow>
         <H2>Side Projects</H2>
       </SectionHeader>
 
