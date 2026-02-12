@@ -1,12 +1,24 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '@/styles'
 
+// Grid of cards - 3 side by side
+export const projectGrid = style({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)',
+  gap: vars.gap.elementSm,
+  '@media': {
+    'screen and (max-width: 1023px)': {
+      gridTemplateColumns: '1fr',
+    },
+  },
+})
+
 // Project Card
 export const projectCard = style({
   display: 'flex',
   flexDirection: 'column',
   gap: vars.gap.elementSm,
-  padding: '2rem',
+  padding: '1.25rem',
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
@@ -18,6 +30,29 @@ export const projectCard = style({
   },
 })
 
+export const projectImageWrap = style({
+  width: '100%',
+  aspectRatio: '16 / 9',
+  overflow: 'hidden',
+  borderRadius: vars.radius.lg,
+  marginBottom: vars.gap.elementSm,
+  flexShrink: 0,
+})
+
+export const projectImage = style({
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  display: 'block',
+})
+
+export const projectContent = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: vars.gap.elementSm,
+  flex: 1,
+})
+
 export const projectHeader = style({
   display: 'flex',
   alignItems: 'flex-start',
@@ -26,8 +61,6 @@ export const projectHeader = style({
 })
 
 export const projectTitle = style({
-  fontSize: '1.5rem',
-  fontWeight: '700',
   transition: 'color 0.2s ease',
   selectors: {
     [`${projectCard}:hover &`]: {

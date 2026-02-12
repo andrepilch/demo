@@ -1,10 +1,11 @@
 import { Section, SectionGap, SectionHeader } from './Section'
-import { Eyebrow, H2 } from './Text'
+import { Eyebrow, H2, H3 } from './Text'
 import * as styles from './SideProjects.css'
 
 interface SideProject {
   title: string
   description: string
+  image?: string
   url?: string
   urlText?: string
   tech?: string[]
@@ -19,6 +20,7 @@ const sideProjects: SideProject[] = [
       'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production',
     url: 'https://eternitybible.app',
     urlText: 'Visit site',
+    image: '/images/projects/eternity/eternity_cover.jpg',
     // tech: ['ReactJS', 'NextJS', 'TypeScript', 'PigmentCSS', 'Supabase', 'Vercel'],
     // status: 'Live',
   },
@@ -30,7 +32,7 @@ const sideProjects: SideProject[] = [
   {
     title: 'Freelance Branding & Design for 15 Years',
     description:
-      'Freelance branding and design work for a wide variety of clients over the past 15 years',
+      'Freelance branding and design work for a wide variety of clients for 15 years',
     url: '/branding',
     urlText: 'See the brands',
   },
@@ -44,6 +46,7 @@ export function SideProjects() {
         <H2>Side Projects</H2>
       </SectionHeader>
 
+      <div className={styles.projectGrid}>
       {sideProjects.map((project, i) => {
         const CardWrapper = project.url ? 'a' : 'div'
         const linkProps = project.url
@@ -55,13 +58,23 @@ export function SideProjects() {
             className={styles.projectCard}
             {...linkProps}
           >
-            <div className={styles.projectHeader}>
-              <h3 className={styles.projectTitle}>{project.title}</h3>
-              {project.status != null && project.status !== '' && (
-                <span className={styles.projectStatus}>{project.status}</span>
-              )}
-            </div>
-            <p className={styles.projectDescription}>{project.description}</p>
+            {project.image != null && project.image !== '' && (
+              <div className={styles.projectImageWrap}>
+                <img
+                  src={project.image}
+                  alt=""
+                  className={styles.projectImage}
+                />
+              </div>
+            )}
+            <div className={styles.projectContent}>
+              <div className={styles.projectHeader}>
+                <H3 className={styles.projectTitle}>{project.title}</H3>
+                {project.status != null && project.status !== '' && (
+                  <span className={styles.projectStatus}>{project.status}</span>
+                )}
+              </div>
+              <p className={styles.projectDescription}>{project.description}</p>
             {project.tech != null && project.tech.length > 0 && (
               <div className={styles.skillsList}>
                 {project.tech.map((tech, j) => (
@@ -89,9 +102,11 @@ export function SideProjects() {
                 </svg>
               </div>
             )}
+            </div>
           </CardWrapper>
         )
       })}
+      </div>
     </Section>
   )
 }
