@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import { Section, SectionGap } from './Section'
 import { H2, Body } from './Text'
+import { Accomplishments } from './Accomplishments'
+import { Education } from './Education'
 import * as styles from './Bio.css'
 
 export function Bio() {
   return (
-    <Section gap={SectionGap.lg}>
+    <Section gap={SectionGap.md}>
       <div className={styles.heroGrid}>
         {/* Avatar */}
         <div className={styles.avatarWrapper}>
@@ -23,7 +25,7 @@ export function Bio() {
         </div>
         {/* Bio Content */}
         <div className={styles.bioContent}>
-          <p className={styles.eyebrow}>About Me</p>
+          {/* <p className={styles.eyebrow}>About Me</p> */}
           <H2 className={styles.pageTitle}>Hi, I'm André</H2>
           <Body>
             I'm a christian born and raised in France, now residing and working
@@ -44,6 +46,8 @@ export function Bio() {
             When I'm not designing or coding, you'll find me learning about God,
             spending time with my family, or kayaking down a river.
           </Body>
+          <Accomplishments />
+          <Education />
         </div>
       </div>
     </Section>

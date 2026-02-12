@@ -15,7 +15,7 @@ export function HeroSection() {
         <LinkButton
           href='/about'
           variant='primary'
-          style={{marginTop: '1rem'}}
+          style={{marginTop: '1.5rem'}}
         >
           About Me
         </LinkButton>

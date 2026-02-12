@@ -5,12 +5,12 @@ import { vars } from '@/styles'
 export const heroGrid = style({
   display: 'grid',
   gridTemplateColumns: '1fr',
-  gap: '2.5rem',
+  gap: '1.5rem',
   alignItems: 'flex-start',
   '@media': {
     'screen and (min-width: 768px)': {
       gridTemplateColumns: '280px 1fr',
-      gap: '4rem',
+      gap: '2rem',
     },
   },
 })
@@ -19,7 +19,7 @@ export const heroGrid = style({
 export const avatarWrapper = style({
   position: 'relative',
   width: '100%',
-  maxWidth: '280px',
+  maxWidth: '240px',
   marginLeft: 'auto',
   marginRight: 'auto',
   '@media': {

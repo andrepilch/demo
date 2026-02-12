@@ -6,7 +6,6 @@ import {
   SkillsMatrix,
   PassionAreas,
   Partnerships,
-  Accomplishments,
   // AdviceTopics,
   Process,
   SideProjects,
@@ -34,7 +33,6 @@ export default function About() {
       <CraftFocus />
       <ProductPhilosophy />
       <Partnerships />
-      <Accomplishments />
       <Process />
       <AI />
       <SideProjects />
