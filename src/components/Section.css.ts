@@ -155,3 +155,36 @@ export const gapVariants = styleVariants({
   lg: { gap: vars.gap.element },
   xl: { gap: vars.gap.section },
 })
+
+// ============================================
+// Brand block - full-width accent fill, white text
+// ============================================
+
+export const brandBlock = style({
+  width: '100vw',
+  marginLeft: 'calc(-50vw + 50%)',
+  marginRight: 'calc(-50vw + 50%)',
+  minHeight: '600px',
+  background: vars.color.accent,
+  color: '#fff',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: `${vars.gap.section} ${vars.gap.section}`,
+  '@media': {
+    'screen and (min-width: 768px)': {
+      padding: `${vars.gap.section} ${vars.gap.section}`,
+    },
+  },
+})
+
+export const brandBlockInner = style({
+  width: '100%',
+  maxWidth: vars.layout.contentMaxWidth,
+  margin: '0 auto',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      padding: `0 ${vars.gap.section}`,
+    },
+  },
+})

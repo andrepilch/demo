@@ -1,4 +1,5 @@
 import * as styles from './page.css'
+import { brandBlock, brandBlockInner } from '@/components/Section.css'
 import {
   Bio,
   ProductPhilosophy,
@@ -12,7 +13,6 @@ import {
   CTASection,
   ImpactStatsRibbon,
   H2,
-  Section,
   AI,
 } from '@/components'
 
@@ -21,14 +21,14 @@ export default function About() {
     <div className={styles.pageWrapper}>
       <Bio />
       <ImpactStatsRibbon />
-      <Section
-        style={{ paddingTop: '20vh', paddingBottom: '20vh', color: '#00aeef' }}
-      >
-        <H2>
-          A strong product saves time, adds value, competes well, and provides a
-          good experience start to finish.
-        </H2>
-      </Section>
+      <section className={brandBlock}>
+        <div className={brandBlockInner}>
+          <H2>
+            A strong product saves time, adds value, competes well, and provides
+            a good experience start to finish.
+          </H2>
+        </div>
+      </section>
       <PassionAreas />
       <CraftFocus />
       <ProductPhilosophy />
