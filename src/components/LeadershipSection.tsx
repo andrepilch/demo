@@ -1,4 +1,5 @@
 import { Section, SectionGap, H2, Body, SectionHeader } from '@/components'
+import { masonryGrid } from './PhilosophyMasonry.css'
 import * as styles from './LeadershipSection.css'
 
 // Achievement card data
@@ -12,16 +13,16 @@ const achievements = [
     text: 'Pioneered the first VR experience for Thomson Reuters that resulted in secured patents',
   },
   {
+    highlight: 'Cultural Transformation',
+    text: 'Initiated the organization’s user research and analytics practices, opened avenues of communication with other branches for feedback, and created environement for building rapport with teammates',
+  },
+  {
     highlight: 'Cross-Functional Collaboration',
     text: 'Led the effort to create design and team principles through cross-team workshops, and to align product strategy and vision with business goals',
   },
   {
     highlight: 'Communication',
     text: 'Encouraged a culture of communication with business leadership, and a framework for regular team check-ins',
-  },
-  {
-    highlight: 'Cultural Transformation',
-    text: 'Initiated the organization’s user research and analytics practices, opened avenues of communication with other branches for feedback, and created environement for building rapport with teammates',
   },
   {
     highlight: 'Leadership thinking',
@@ -39,7 +40,7 @@ export function LeadershipSection() {
           cultural transformation that drives organizational impact.
         </Body>
       </SectionHeader>
-      <div className={styles.cardsGrid}>
+      <div className={masonryGrid}>
         {achievements.map((achievement, index) => (
           <div key={index} className={styles.achievementCard}>
             <p className={styles.cardText}>

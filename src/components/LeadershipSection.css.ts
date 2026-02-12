@@ -1,20 +1,10 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '@/styles'
 
-// Achievement cards grid
-export const cardsGrid = style({
-  display: 'grid',
-  gap: '1rem',
-  '@media': {
-    'screen and (min-width: 768px)': {
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: '1.25rem',
-    },
-  },
-})
-
-// Individual achievement card
+// Individual achievement card (masonry: avoid break inside columns)
 export const achievementCard = style({
+  breakInside: 'avoid',
+  marginBottom: '1.25rem',
   display: 'flex',
   alignItems: 'flex-start',
   gap: '0.875rem',
