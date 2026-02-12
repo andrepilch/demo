@@ -67,6 +67,11 @@ export const trianglePath = style({
   transition: 'd 4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease-out',
 })
 
+// When menu is open, main logo triangle uses theme surface to match nav
+export const trianglePathMenuOpen = style({
+  fill: vars.color.bgCard,
+})
+
 // Triangle outline that draws on load
 export const triangleOutline = style({
   fill: 'none',
@@ -290,9 +295,9 @@ export const triangleMenuSvg = style({
   },
 })
 
-// Triangle menu path - fill transitions to white
+// Triangle menu path - uses theme surface so nav is themed
 export const triangleMenuPath = style({
-  fill: '#ffffff',
+  fill: vars.color.bgCard,
   transition: 'fill 0.3s ease-out',
 })
 
@@ -312,7 +317,7 @@ export const menuContent = style({
     '(min-width: 768px)': {
       top: vars.space.xl,
       left: vars.space.xl,
-      gap: '2rem',
+      gap: vars.space.xl,
     },
   },
 })
@@ -328,11 +333,11 @@ export const menuNav = style({
 export const menuNavLink = style({
   fontSize: '1.5rem',
   fontWeight: '500',
-  color: '#0a0a0f',
+  color: vars.color.textPrimary,
   textDecoration: 'none',
   transition: 'color 0.2s ease, opacity 0.2s ease',
   ':hover': {
-    color: '#00aeef',
+    color: vars.color.accent,
     opacity: 0.8,
   },
   '@media': {
@@ -344,7 +349,7 @@ export const menuNavLink = style({
 
 // Menu nav link active
 export const menuNavLinkActive = style({
-  color: '#00aeef',
+  color: vars.color.accent,
 })
 
 // Diagonal menu layout: absolutely positioned items (L-shaped flow in white triangle)
@@ -364,11 +369,11 @@ export const menuHomeLink = style({
   alignItems: 'center',
   justifyContent: 'center',
   padding: '0.75rem',
-  color: '#0a0a0f',
+  color: vars.color.textPrimary,
   textDecoration: 'none',
   transition: 'color 0.2s ease, opacity 0.2s ease',
   ':hover': {
-    color: '#00aeef',
+    color: vars.color.accent,
     opacity: 0.85,
   },
 })
@@ -389,10 +394,10 @@ export const menuAboutLink = style({
   padding: '0.25rem',
   borderRadius: '50%',
   overflow: 'hidden',
-  border: '2px solid #0a0a0f',
+  border: `2px solid ${vars.color.border}`,
   transition: 'border-color 0.2s ease, opacity 0.2s ease',
   ':hover': {
-    borderColor: '#00aeef',
+    borderColor: vars.color.accent,
     opacity: 0.9,
   },
 })
@@ -417,10 +422,10 @@ export const menuSocialLink = style({
   alignItems: 'center',
   justifyContent: 'center',
   padding: '0.75rem',
-  color: '#0a0a0f',
+  color: vars.color.textPrimary,
   transition: 'color 0.2s ease, opacity 0.2s ease',
   ':hover': {
-    color: '#00aeef',
+    color: vars.color.accent,
     opacity: 0.8,
   },
 })
@@ -453,17 +458,18 @@ export const menuCta = style({
   paddingRight: '1.5rem',
   paddingTop: '0.75rem',
   paddingBottom: '0.75rem',
-  borderRadius: '9999px',
+  borderRadius: vars.radius.full,
   fontWeight: '500',
   fontSize: '1rem',
   transition: 'all 0.3s ease',
-  background: '#00aeef',
-  color: '#ffffff',
+  background: vars.color.accent,
+  color: vars.color.textOnAccent,
   textAlign: 'center',
   textDecoration: 'none',
   width: 'fit-content',
   ':hover': {
-    background: '#0088cc',
+    background: vars.color.accent,
+    opacity: 0.9,
     transform: 'translateY(-2px)',
   },
 })

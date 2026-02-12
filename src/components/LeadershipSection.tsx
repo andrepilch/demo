@@ -12,16 +12,16 @@ const achievements = [
     text: 'Pioneered the first VR experience for Thomson Reuters that resulted in secured patents',
   },
   {
-    highlight: 'Cultural Transformation',
-    text: 'Initiated the organization’s user research and analytics practices, opened avenues of communication with other branches for feedback, and created environement for building rapport with teammates',
-  },
-  {
     highlight: 'Cross-Functional Collaboration',
     text: 'Led the effort to create design and team principles through cross-team workshops, and to align product strategy and vision with business goals',
   },
   {
     highlight: 'Communication',
     text: 'Encouraged a culture of communication with business leadership, and a framework for regular team check-ins',
+  },
+  {
+    highlight: 'Cultural Transformation',
+    text: 'Initiated the organization’s user research and analytics practices, opened avenues of communication with other branches for feedback, and created environement for building rapport with teammates',
   },
   {
     highlight: 'Leadership thinking',

@@ -159,9 +159,9 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
 
           {/* Main triangle fill - opacity controlled by scroll or menu */}
           <path
-            className={styles.trianglePath}
+            className={`${styles.trianglePath} ${menuOpen ? styles.trianglePathMenuOpen : ''}`}
             d={currentPath}
-            fill={menuOpen ? '#ffffff' : 'url(#triangleGradient)'}
+            fill={menuOpen ? undefined : 'url(#triangleGradient)'}
             style={
               {
                 d: `path("${currentPath}")`,
@@ -254,7 +254,6 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
               <path
                 className={styles.triangleMenuPath}
                 d={currentPath}
-                fill='#ffffff'
               />
             </svg>
             <div ref={menuContentRef} className={styles.menuContent}>
