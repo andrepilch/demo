@@ -16,6 +16,10 @@ export { CaseStudyHero } from './CaseStudyHero'
 export { CaseStudySection } from './CaseStudySection'
 export { CaseStudyOverview } from './CaseStudyOverview'
 export { CaseStudyCardsGrid, type CardItem } from './CaseStudyCardsGrid'
+export {
+  CaseStudyProcessList,
+  type ProcessStepItem,
+} from './CaseStudyProcessList'
 export { CaseStudyCards } from './CaseStudyCards'
 export { CaseStudyStrategyGoals } from './CaseStudyStrategyGoals'
 export { CaseStudyFeatureHighlight } from './CaseStudyFeatureHighlight'

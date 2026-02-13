@@ -16,10 +16,14 @@ export function CaseStudyStrategyGoals({
       <div className={styles.goalsGrid}>
         {items.map((item, i) => (
           <div key={i} className={styles.goalCard}>
-            <div className={styles.goalTransform}>
-              <span className={styles.goalFrom}>{item.principle}</span>
-              <span className={styles.goalArrow}>→</span>
-              <span className={styles.goalTo}>{item.outcome}</span>
+            <div className={styles.goalBlock}>
+              <span className={styles.goalLabel}>Principle</span>
+              <span className={styles.goalPrincipleText}>{item.principle}</span>
+            </div>
+            <span className={styles.goalArrow} aria-hidden>↓</span>
+            <div className={styles.goalBlock}>
+              <span className={styles.goalLabel}>Outcome</span>
+              <span className={styles.goalOutcomeText}>{item.outcome}</span>
             </div>
           </div>
         ))}

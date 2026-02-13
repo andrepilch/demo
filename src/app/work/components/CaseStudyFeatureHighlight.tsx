@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Section, SectionGap, Container } from '@/components/Section'
+import { Section, SectionGap } from '@/components/Section'
 import { H3 } from '@/components/Text'
 import type { CaseStudyFeatureHighlightData } from './types'
 import * as styles from './case-study.css'
@@ -56,21 +56,19 @@ export function CaseStudyFeatureHighlight({ data }: CaseStudyFeatureHighlightPro
 
   return (
     <Section gap={SectionGap.lg}>
-      <Container>
-        <div className={styles.featureSection}>
-          {data.imagePosition === 'left' ? (
-            <>
-              {imageBlock}
-              {contentBlock}
-            </>
-          ) : (
-            <>
-              {contentBlock}
-              {imageBlock}
-            </>
-          )}
-        </div>
-      </Container>
+      <div className={styles.featureSection}>
+        {data.imagePosition === 'left' ? (
+          <>
+            {imageBlock}
+            {contentBlock}
+          </>
+        ) : (
+          <>
+            {contentBlock}
+            {imageBlock}
+          </>
+        )}
+      </div>
     </Section>
   )
 }

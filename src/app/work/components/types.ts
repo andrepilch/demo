@@ -9,6 +9,8 @@ export interface CaseStudyProjectMeta {
   tech: string[]
   year: string
   status: string
+  /** Target audience segments (e.g. Churchgoers, Bilinguals). Optional. */
+  targetAudience?: string[]
 }
 
 export interface CaseStudyStrategyOutcome {

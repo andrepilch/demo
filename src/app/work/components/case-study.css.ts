@@ -217,6 +217,25 @@ export const overviewValue = style({
 })
 
 // ============================================
+// Process steps list (numbered list)
+// ============================================
+
+export const processStepsList = style({
+  listStyle: 'decimal',
+  paddingLeft: '1.5rem',
+  margin: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.5rem',
+})
+
+export const processStepItem = style({
+  color: vars.color.textSecondary,
+  lineHeight: 1.6,
+  paddingLeft: '0.25rem',
+})
+
+// ============================================
 // Problem/Solution Cards
 // ============================================
 
@@ -289,6 +308,7 @@ export const goalCard = style({
   overflow: 'hidden',
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'stretch',
   gap: '1rem',
   '::before': {
     content: '""',
@@ -301,24 +321,39 @@ export const goalCard = style({
   },
 })
 
-export const goalTransform = style({
+export const goalBlock = style({
   display: 'flex',
-  alignItems: 'center',
-  gap: '0.75rem',
-  fontSize: '1.125rem',
-  fontWeight: '600',
+  flexDirection: 'column',
+  gap: '0.375rem',
 })
 
-export const goalFrom = style({
-  color: vars.color.textMuted,
+export const goalLabel = style({
+  fontSize: '0.75rem',
+  fontWeight: '600',
+  letterSpacing: '0.05em',
+  textTransform: 'uppercase',
+  color: vars.color.textSecondary,
+})
+
+export const goalPrincipleText = style({
+  fontSize: '1.125rem',
+  fontWeight: '500',
+  color: vars.color.textSecondary,
+  lineHeight: 1.4,
 })
 
 export const goalArrow = style({
+  alignSelf: 'center',
+  fontSize: '1.5rem',
   color: vars.color.accent,
+  lineHeight: 1,
 })
 
-export const goalTo = style({
+export const goalOutcomeText = style({
+  fontSize: '1.125rem',
+  fontWeight: '600',
   color: vars.color.accent,
+  lineHeight: 1.4,
 })
 
 // ============================================

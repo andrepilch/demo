@@ -4,10 +4,9 @@ import {
   CaseStudyOverview,
   CaseStudySection,
   CaseStudyCards,
-  CaseStudyCardsGrid,
+  CaseStudyProcessList,
   CaseStudyStrategyGoals,
   CaseStudyFeatureHighlight,
-  CaseStudyImageBlock,
   CaseStudyImageGallery,
   CaseStudyResults,
 } from '@/app/work/components'
@@ -18,9 +17,6 @@ import {
   painPoints,
   strategySection,
   strategyOutcomes,
-  audienceSection,
-  audienceCards,
-  whatItIsntSection,
   principlesSection,
   productPrinciples,
   designProcessSection,
@@ -33,6 +29,7 @@ import {
   finalDesignsImages,
   resultsData,
   featureMultipleLanguages,
+  designProcessImages,
 } from './data'
 
 export default function EternityCaseStudy() {
@@ -46,20 +43,14 @@ export default function EternityCaseStudy() {
 
       <CaseStudyStrategyGoals section={strategySection} items={strategyOutcomes} />
 
-      <CaseStudyCards section={audienceSection} items={audienceCards} />
-
-      <CaseStudySection data={whatItIsntSection} />
-
       <CaseStudyCards section={principlesSection} items={productPrinciples} />
 
-      <CaseStudySection data={designProcessSection}>
-        <CaseStudyCardsGrid items={designProcessSteps} />
-        <CaseStudyImageBlock
-          src="/images/projects/eternity/eterntiy_wireframes.png"
-          alt="Design wireframes"
-          marginTop="3rem"
-        />
-      </CaseStudySection>
+      <CaseStudyImageGallery
+        section={designProcessSection}
+        images={designProcessImages}
+      >
+        <CaseStudyProcessList items={designProcessSteps} />
+      </CaseStudyImageGallery>
 
       <CaseStudySection data={solutionSection} />
 

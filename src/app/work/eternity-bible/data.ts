@@ -38,6 +38,7 @@ const projectMeta = {
   ],
   year: '2025–Present',
   status: 'Live',
+  targetAudience: ['Churchgoers', 'Bilinguals', 'Bible Readers'],
 }
 
 export const heroData: CaseStudyHeroData = {
@@ -76,7 +77,7 @@ export const painPoints: CardItem[] = [
   'Has ads or sponsorships and promotional materials',
   'Single language eliminates bilinguals',
   'Hard and slow to navigate the Bible',
-  'Takes longer to find your spot in digital Bible than it does on paper, why?!',
+  'Takes longer to find your spot in digital Bible than it does on paper',
   'Too many features you never actually use on your phone',
   'High cognitive load',
   'Too many taps, 3-4 to get back to bookmark or history in other Bible',
@@ -90,9 +91,9 @@ export const painPoints: CardItem[] = [
 ].map((title) => ({ title }))
 
 export const strategySection: CaseStudySectionData = {
-  eyebrow: 'Strategy',
-  title: 'Strategy & Goals',
-  description: `**Challenger** — We're aiming to position our product as more exciting than others available in the market based on features, design, and efficiency.`,
+  eyebrow: 'Strategic Thinking',
+  title: 'Product Strategy',
+  description: `Challenger strategy aiming to position the product as more exciting than others available in the market based on features, design, and efficiency.`,
 }
 
 export const strategyOutcomes: CaseStudyStrategyOutcome[] = [
@@ -111,27 +112,11 @@ export const strategyOutcomes: CaseStudyStrategyOutcome[] = [
   },
   {
     principle: 'Save user time',
-    outcome:
-      'Adds value; better tools take less time to use. Tools that save time add value.',
+    outcome: 'Creates value for the user',
   },
   {
     principle: 'Minimize effort',
-    outcome: 'Easier to be in the app, and most importantly, in the Bible',
-  },
-]
-
-export const audienceSection: CaseStudySectionData = {
-  eyebrow: 'Audience',
-  title: 'Target Audience',
-}
-
-export const audienceCards: CardItem[] = [
-  {
-    title: 'Do you wish it could be easier to use your Bible on your phone?',
-  },
-  {
-    title:
-      'Do you avoid opening the Bible on your phone because it takes too long to find your spot?',
+    outcome: 'Easier to be in the app',
   },
 ]
 
@@ -148,7 +133,10 @@ export const principlesSection: CaseStudySectionData = {
 }
 
 export const productPrinciples: CardItem[] = [
-  { title: 'UX is primary', description: 'Everything must be better' },
+  {
+    title: 'UX is primary',
+    description: 'Everything must be better than the competition',
+  },
   {
     title: 'Designed for the user',
     description: 'Takes you into the Bible, not out of it',
@@ -160,17 +148,30 @@ export const productPrinciples: CardItem[] = [
 ]
 
 export const designProcessSection: CaseStudySectionData = {
-  eyebrow: 'Methods',
-  title: 'Design Methods',
+  eyebrow: 'Process',
+  title: 'The 0 to 1',
 }
+
+export const designProcessImages: CaseStudyGalleryImage[] = [
+  {
+    src: '/images/projects/eternity/eternity_process.jpg',
+    alt: 'Design wireframes',
+  },
+  {
+    src: '/images/projects/eternity/eternity_wireframes.jpg',
+    alt: 'Design wireframes',
+  },
+]
 
 export const designProcessSteps: CardItem[] = [
   'Understand problems',
   'Competitive analysis',
   'Ideation',
+  'Information architecture',
   'Wireframes',
   'Interviews with target audience to discuss solutions',
   'Design',
+  'Data architecture',
   'Develop',
   'Release incrementally',
   'Invite users to test along the way',
@@ -183,7 +184,7 @@ export const designProcessSteps: CardItem[] = [
 
 export const solutionSection: CaseStudySectionData = {
   eyebrow: 'Solution',
-  title: 'Solution',
+  title: 'Challenging the Norms',
 }
 
 export const featureMultipleBibles: CaseStudyFeatureHighlightData = {

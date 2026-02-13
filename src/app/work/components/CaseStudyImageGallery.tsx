@@ -6,11 +6,13 @@ import * as styles from './case-study.css'
 export interface CaseStudyImageGalleryProps {
   section: CaseStudySectionData
   images: CaseStudyGalleryImage[]
+  children?: React.ReactNode
 }
 
 export function CaseStudyImageGallery({
   section,
   images,
+  children,
 }: CaseStudyImageGalleryProps) {
   return (
     <CaseStudySection data={section}>
@@ -26,6 +28,7 @@ export function CaseStudyImageGallery({
           </div>
         ))}
       </div>
+      {children}
     </CaseStudySection>
   )
 }
