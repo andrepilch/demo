@@ -32,8 +32,6 @@ import {
   finalDesignsSection,
   finalDesignsImages,
   resultsData,
-  conclusionSection,
-  digitalBibleBenefits,
   featureMultipleLanguages,
 } from './data'
 
