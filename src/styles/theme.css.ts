@@ -158,7 +158,7 @@ export const darkTheme = createTheme(vars, {
     textPrimary: colors.white.$value.hex,
     textSecondary: '#a1a1aa',
     textOnAccent: colors.white.$value.hex,
-    textAccentDark: colors.accentLight.$value.hex,
+    textAccentDark: colors.accentDark.$value.hex,
     textMuted: '#71717a',
     border: '#27272a',
     borderLight: '#3f3f46',

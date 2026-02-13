@@ -10,7 +10,7 @@ const accomplishments = [
 export function Accomplishments() {
   return (
     <div className={styles.block}>
-      <Eyebrow>Accomplishments</Eyebrow>
+      <Eyebrow color='accent'>Accomplishments</Eyebrow>
       <ul className={styles.list}>
         {accomplishments.map((item, i) => (
           <li key={i}>{item}</li>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Section, SectionGap } from './Section'
-import { H2, Body } from './Text'
+import { H2, Body, Eyebrow } from './Text'
 import { Accomplishments } from './Accomplishments'
 import { Education } from './Education'
 import * as styles from './Bio.css'
@@ -46,18 +46,30 @@ export function Bio() {
             When I'm not designing or coding, you'll find me learning about God,
             spending time with my family, or kayaking down a river.
           </Body>
-          <p>
-            <a
-              href='https://drive.google.com/file/d/1P4RGrBPG0-VclAu-JuCHNVEtmseylZSO/view?usp=sharing'
-              target='_blank'
-              rel='noopener noreferrer'
-              className={styles.resumeLink}
-            >
-              View my Resume
-            </a>
-          </p>
           <Accomplishments />
           <Education />
+          <Eyebrow
+            as='a'
+            href='https://drive.google.com/file/d/1P4RGrBPG0-VclAu-JuCHNVEtmseylZSO/view?usp=sharing'
+            target='_blank'
+            rel='noopener noreferrer'
+            className={styles.resumeLink}
+            weight='bold'
+          >
+            View my Resume
+            <svg
+              className={styles.resumeLinkIcon}
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+              strokeWidth={2}
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              aria-hidden
+            >
+              <path d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+            </svg>
+          </Eyebrow>
         </div>
       </div>
     </Section>

@@ -1,6 +1,9 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '@/styles'
 
+// Case study accent – used for hero flood and project-specific accents
+const caseStudyAccent = '#380BBB'
+
 // ============================================
 // Page Layout
 // ============================================
@@ -21,8 +24,11 @@ export const heroSection = style({
   position: 'relative',
   paddingTop: '8rem',
   paddingBottom: '4rem',
-  background: vars.color.bgSecondary,
-  borderBottom: `1px solid ${vars.color.border}`,
+  backgroundImage: `linear-gradient(135deg, ${caseStudyAccent}e6 0%, ${caseStudyAccent}99 50%, ${caseStudyAccent}80 100%), url("/images/projects/eternity/eternity_read.jpg")`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  color: vars.color.textOnAccent,
   overflow: 'hidden',
 })
 
@@ -47,8 +53,15 @@ export const heroContent = style({
   maxWidth: '48rem',
 })
 
+export const heroHeadline = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: vars.gap.elementSm,
+  marginTop: vars.space.xl,
+})
+
 export const heroEyebrow = style({
-  color: vars.color.accent,
+  color: vars.color.textOnAccent,
   fontSize: '0.875rem',
   fontWeight: '500',
   letterSpacing: '0.1em',
@@ -58,7 +71,7 @@ export const heroEyebrow = style({
 export const heroTitle = style({
   fontSize: '2.5rem',
   fontWeight: '700',
-  color: vars.color.textPrimary,
+  color: 'inherit',
   lineHeight: 1.1,
   '@media': {
     'screen and (min-width: 768px)': {
@@ -72,7 +85,8 @@ export const heroTitle = style({
 
 export const heroDescription = style({
   fontSize: '1.25rem',
-  color: vars.color.textSecondary,
+  color: 'inherit',
+  opacity: 0.95,
   lineHeight: 1.6,
   maxWidth: '36rem',
 })
@@ -87,9 +101,9 @@ export const heroButton = style({
   paddingBottom: '0.875rem',
   borderRadius: '9999px',
   fontWeight: '500',
-  background: vars.color.accent,
+  background: vars.color.textOnAccent,
   border: 'none',
-  color: vars.color.textOnAccent,
+  color: vars.color.textAccentDark,
   transition: 'all 0.3s ease',
   width: 'fit-content',
   ':hover': {
@@ -307,7 +321,6 @@ export const goalTransform = style({
 
 export const goalFrom = style({
   color: vars.color.textMuted,
-  textDecoration: 'line-through',
 })
 
 export const goalArrow = style({

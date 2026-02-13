@@ -41,10 +41,12 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
     }
   }, [])
 
-  // Fill: on homepage fill on scroll; on other pages fill right away
+  // Fill: on homepage and case study pages (/work/...) fill on scroll; elsewhere fill right away
+  const useScrollToFill =
+    pathname === '/' || pathname.startsWith('/work/')
   useEffect(() => {
     if (menuOpen) return
-    if (pathname !== '/') {
+    if (!useScrollToFill) {
       setFillOpacity(1)
       return
     }
@@ -56,7 +58,7 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [menuOpen, pathname])
+  }, [menuOpen, pathname, useScrollToFill])
 
   // Close menu on escape key
   useEffect(() => {

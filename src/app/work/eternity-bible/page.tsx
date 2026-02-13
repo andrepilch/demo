@@ -179,10 +179,12 @@ export default function EternityCaseStudy() {
       <section className={styles.heroSection}>
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
-            <p className={styles.heroEyebrow}>Case Study</p>
-            <h1 className={styles.heroTitle}>
-              Challenging the Norms in a Saturated Market
-            </h1>
+            <div className={styles.heroHeadline}>
+              <p className={styles.heroEyebrow}>Case Study</p>
+              <h1 className={styles.heroTitle}>
+                Challenging the Norms in a Saturated Market
+              </h1>
+            </div>
             <p className={styles.heroDescription}>
               Designed to help you open the Bible more often. Eternity Bible
               lets you create Bibles for every context and resume reading

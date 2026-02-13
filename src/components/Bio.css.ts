@@ -77,4 +77,13 @@ export const pageTitle = style({
 
 export const resumeLink = style({
   color: vars.color.accent,
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '0.35rem',
+})
+
+export const resumeLinkIcon = style({
+  width: '0.875rem',
+  height: '0.875rem',
+  flexShrink: 0,
 })
