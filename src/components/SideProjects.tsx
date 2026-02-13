@@ -1,5 +1,5 @@
 import { Section, SectionGap, SectionHeader } from './Section'
-import { H2, H3 } from './Text'
+import { H2, H3, Body } from './Text'
 import * as styles from './SideProjects.css'
 
 interface SideProject {
@@ -43,6 +43,9 @@ export function SideProjects() {
     <Section gap={SectionGap.md} id='projects'>
       <SectionHeader>
         <H2>Side Projects</H2>
+        <Body color="secondary">
+          I've worked on a variety of side projects to help me learn new skills, help others excell in their fields, and explore new ideas.
+        </Body>
       </SectionHeader>
 
       <div className={styles.projectGrid}>

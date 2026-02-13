@@ -23,6 +23,7 @@ export const partnerLogo = style({
   width: '200px',
   height: '40px',
   objectFit: 'contain',
+  filter: vars.image.logoFilter,
 })
 
 export const partnerName = style({

@@ -3,10 +3,8 @@ import { brandBlock, brandBlockInner } from '@/components/Section.css'
 import {
   Bio,
   ProductPhilosophy,
-  CraftFocus,
   PassionAreas,
   Partnerships,
-  // AdviceTopics,
   Process,
   SideProjects,
   CTASection,
@@ -21,7 +19,6 @@ export default function About() {
       <Bio />
       <ImpactStatsRibbon />
       <PassionAreas />
-      <CraftFocus />
       <Partnerships />
       <section className={brandBlock}>
         <div className={brandBlockInner}>
@@ -35,7 +32,6 @@ export default function About() {
       <Process />
       <AI />
       <SideProjects />
-      {/* <AdviceTopics /> */}
       <CTASection />
     </div>
   )

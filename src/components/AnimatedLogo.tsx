@@ -286,7 +286,7 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
                   />
                 </Link>
                 {[
-                  { name: 'Email', pos: styles.menuSocialLinkEmail },
+                  // { name: 'Email', pos: styles.menuSocialLinkEmail },
                   { name: 'LinkedIn', pos: styles.menuSocialLinkLinkedIn },
                   { name: 'GitHub', pos: styles.menuSocialLinkGitHub },
                 ].map(({ name, pos }) => {

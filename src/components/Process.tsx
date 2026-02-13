@@ -4,7 +4,7 @@ import {
   SectionHeader,
   Grid,
 } from './Section'
-import { Eyebrow, H2, Body } from './Text'
+import { H2, Body } from './Text'
 import { Card } from './Card'
 import { iconMd } from './Button'
 
@@ -100,15 +100,14 @@ export function Process() {
     <Section>
       <SectionContent>
           <SectionHeader>
-            <Eyebrow>How I Work</Eyebrow>
             <H2>Process</H2>
             <Body color='secondary'>
               I look for ways to differentiate products in favor of users to
               achieve growth in competitive markets.
               <br /><br />
-              I speed up this process by using AI to assist
+              <b>I speed up this process by using AI to assist
               discovery and prototyping, and by building intuition through
-              continuous learning about users.
+              continuous learning about users.</b>
           </Body>
           </SectionHeader>
 

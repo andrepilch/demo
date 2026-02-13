@@ -301,11 +301,11 @@ export const triangleMenuPath = style({
   transition: 'fill 0.3s ease-out',
 })
 
-// Menu content container
+// Menu content container - positioned closer to top-left corner of triangle
 export const menuContent = style({
   position: 'absolute',
-  top: vars.space.md,
-  left: vars.space.md,
+  top: vars.space.sm,
+  left: vars.space.sm,
   zIndex: 101,
   display: 'flex',
   flexDirection: 'row',
@@ -315,8 +315,8 @@ export const menuContent = style({
   animation: `${fadeInUp} 0.5s ease-out 0.2s both`,
   '@media': {
     '(min-width: 768px)': {
-      top: vars.space.xl,
-      left: vars.space.xl,
+      top: vars.space.md,
+      left: vars.space.md,
       gap: vars.space.xl,
     },
   },
@@ -354,21 +354,22 @@ export const menuNavLinkActive = style({
 
 // Diagonal menu layout: absolutely positioned items (L-shaped flow in white triangle)
 // Order: home top-center, email right/slightly lower, avatar center, LinkedIn left, GitHub bottom-left
+// Positions pulled closer to top-left corner
 export const menuDiagonalLayout = style({
   position: 'relative',
-  minWidth: '200px',
-  minHeight: '7rem',
+  minWidth: '140px',
+  minHeight: '6rem',
 })
 
-// Home link: house icon, top and horizontally centered among the group
+// Home link: house icon, top-left area, sized to match avatar
 export const menuHomeLink = style({
   position: 'absolute',
-  top: 0,
-  left: '5.5rem',
+  top: '0.25rem',
+  left: '0.5rem',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '0.75rem',
+  padding: '0.25rem',
   color: vars.color.textPrimary,
   textDecoration: 'none',
   transition: 'color 0.2s ease, opacity 0.2s ease',
@@ -378,16 +379,17 @@ export const menuHomeLink = style({
   },
 })
 
+// Home icon sized to visually match the about avatar (2.5rem)
 export const menuHomeIcon = style({
-  width: '24px',
-  height: '24px',
+  width: '2.5rem',
+  height: '2.5rem',
 })
 
-// About link: circular avatar, central, below home, to the right of LinkedIn
+// About link: circular avatar, below home, same horizontal alignment
 export const menuAboutLink = style({
   position: 'absolute',
-  top: '4rem',
-  left: '5.5rem',
+  top: '3rem',
+  left: '3.75rem',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -430,21 +432,21 @@ export const menuSocialLink = style({
   },
 })
 
-// Email: to the right of home, slightly lower, near diagonal
+// Email: to the right of home, same row
 export const menuSocialLinkEmail = style({
-  top: 0,
-  right: '-1.5rem',
+  top: '0.35rem',
+  left: '3.25rem',
 })
 
-// LinkedIn: left side, left of avatar, slightly below home
+// LinkedIn: left of avatar row, slightly below home
 export const menuSocialLinkLinkedIn = style({
-  top: '4.5rem',
-  left: 0,
+  top: '0.25rem',
+  left: '6rem',
 })
 
-// GitHub: bottom-most, below LinkedIn, vertically aligned
+// GitHub: below avatar row
 export const menuSocialLinkGitHub = style({
-  top: '8rem',
+  top: '6rem',
   left: 0,
 })
 

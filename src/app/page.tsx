@@ -7,6 +7,7 @@ import {
   FeaturedCaseStudies,
   CTASection,
   BridgeAdvantage,
+  CraftFocus,
 } from '@/components'
 import * as styles from './page.css'
 
@@ -23,6 +24,7 @@ export default function Home() {
       <div className={styles.sectionsWrapper}>
         <FeaturedCaseStudies />
         <BridgeAdvantage />
+        <CraftFocus />
         <LeadershipSection />
         <CTASection />
       </div>

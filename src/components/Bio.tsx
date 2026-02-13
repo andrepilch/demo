@@ -46,6 +46,16 @@ export function Bio() {
             When I'm not designing or coding, you'll find me learning about God,
             spending time with my family, or kayaking down a river.
           </Body>
+          <p>
+            <a
+              href='https://drive.google.com/file/d/1P4RGrBPG0-VclAu-JuCHNVEtmseylZSO/view?usp=sharing'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.resumeLink}
+            >
+              View my Resume
+            </a>
+          </p>
           <Accomplishments />
           <Education />
         </div>

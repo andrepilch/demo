@@ -141,6 +141,9 @@ export const vars = createThemeContract({
     lg: null,
     glow: null,
   },
+  image: {
+    logoFilter: null,
+  },
 })
 
 // Dark theme (default)
@@ -209,6 +212,9 @@ export const darkTheme = createTheme(vars, {
     lg: '0 10px 15px rgba(0, 0, 0, 0.5)',
     glow: '0 0 30px 8px rgba(0, 174, 239, 0.6)',
   },
+  image: {
+    logoFilter: 'brightness(0) invert(1)',
+  },
 })
 
 // Light theme
@@ -276,5 +282,8 @@ export const lightTheme = createTheme(vars, {
     md: '0 4px 6px rgba(0, 0, 0, 0.1)',
     lg: '0 10px 15px rgba(0, 0, 0, 0.1)',
     glow: '0 0 25px 6px rgba(0, 174, 239, 0.5)',
+  },
+  image: {
+    logoFilter: 'brightness(0)',
   },
 })

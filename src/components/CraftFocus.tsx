@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import { Section, SectionGap, SectionHeader } from './Section'
-import { Eyebrow} from './Text'
+import { H2, Body } from './Text'
 import { PhilosophyMasonry, type PhilosophyItem } from './PhilosophyMasonry'
+import { Button } from './Button'
 
 const craftFocusItems: PhilosophyItem[] = [
   {
@@ -34,9 +36,20 @@ const craftFocusItems: PhilosophyItem[] = [
 
 export function CraftFocus() {
   return (
-    <Section gap={SectionGap.sm} id='craft-focus'>
+    <Section gap={SectionGap.md} id='craft-focus'>
       <SectionHeader>
-        <Eyebrow>What I Really Enjoy</Eyebrow>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <H2>Driven by Design</H2>
+        <Button
+          as={Link}
+          href="/about#passion-areas"
+          variant="secondary"
+          size="sm"
+        >
+          See Passion Areas
+          </Button>
+          </div>
+        <Body color="secondary">These are some of the things that keep me motivated to design and build great products.</Body>
       </SectionHeader>
       <PhilosophyMasonry items={craftFocusItems} />
     </Section>

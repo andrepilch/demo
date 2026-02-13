@@ -54,7 +54,7 @@ export const avatarDecoration = style({
 export const bioContent = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: vars.gap.element,
+  gap: vars.space.lg,
 })
 
 export const eyebrow = style({
@@ -73,4 +73,8 @@ export const pageTitle = style({
       fontSize: '3rem',
     },
   },
+})
+
+export const resumeLink = style({
+  color: vars.color.accent,
 })

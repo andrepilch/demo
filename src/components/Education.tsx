@@ -1,7 +1,7 @@
 import { Eyebrow } from './Text'
 import * as styles from './Accomplishments.css'
 
-const education = ['B.F.A Art & Design with Emphasis in Graphic Design']
+const education = ['B.F.A Art & Design']
 
 export function Education() {
   return (
@@ -9,9 +9,7 @@ export function Education() {
       <Eyebrow>Education</Eyebrow>
       <ul className={styles.list}>
         {education.map((item, i) => (
-          <li key={i}>{item}
-          <li> Minnesota State University Moorhead</li>
-          </li>
+          <li key={i}>{item}<br />Emphasis in Graphic Design<br />MSUM</li>
         ))}
       </ul>
     </div>

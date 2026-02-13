@@ -15,8 +15,8 @@ export function Partnerships() {
       <SectionHeader>
         <H2>Partnerships</H2>
         <Body color="secondary">
-          I&apos;ve partnered with the following to create unique
-          products, an integration, and proof of concepts that drive growth and innovation
+          I've successfully partnered with the following companies to create unique
+          products, an integration, and proof of concepts that drive growth and innovation.
         </Body>
       </SectionHeader>
       <div className={styles.grid}>
