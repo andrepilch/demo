@@ -12,8 +12,8 @@ import type { CardItem } from '@/app/work/components'
 
 // Re-export for FeaturedCaseStudies
 export const eternityResults: CaseStudyResult[] = [
-  { value: '5★', label: 'Rated', description: 'App Store rating' },
-  { value: '95%', label: 'Engagement', description: 'With core feature' },
+  { value: '5★', label: 'Rated', description: 'in Play Store' },
+  { value: '95%', label: 'Engagement', description: 'with core feature' },
 ]
 
 const projectMeta = {
