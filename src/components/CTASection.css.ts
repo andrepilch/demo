@@ -51,8 +51,8 @@ export const socialLink = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  width: '48px',
-  height: '48px',
+  width: '80px',
+  height: '80px',
   borderRadius: '50%',
   background: vars.color.bgPrimary,
   // border: `1px solid ${vars.color.border}`,
@@ -66,6 +66,6 @@ export const socialLink = style({
 })
 
 export const socialIcon = style({
-  width: '24px',
-  height: '24px',
+  width: '40px',
+  height: '40px',
 })

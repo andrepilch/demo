@@ -28,6 +28,7 @@ const sideProjects: SideProject[] = [
     title: 'Website Design & Development Volunteer Work for various Non-Profits',
     description:
       'Volunteer work for various Non-Profits to help them with their websites, branding, and digital presence',
+    image: '/branding/freelance_cover_1.png',
   },
   {
     title: 'Freelance Branding & Design for 15 Years',
@@ -35,6 +36,7 @@ const sideProjects: SideProject[] = [
       'Freelance branding and design work for a wide variety of clients for 15 years',
     url: '/branding',
     urlText: 'See the brands',
+    image: '/branding/freelance_cover_2.jpg',
   },
 ]
 

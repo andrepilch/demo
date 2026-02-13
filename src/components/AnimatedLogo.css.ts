@@ -365,8 +365,8 @@ export const menuDiagonalLayout = style({
 // Home link: house icon, top-left area, sized to match avatar
 export const menuHomeLink = style({
   position: 'absolute',
-  top: '0.25rem',
-  left: '0.5rem',
+  top: '0.3rem',
+  left: 0,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -389,7 +389,7 @@ export const menuHomeIcon = style({
 // About link: circular avatar, below home, same horizontal alignment
 export const menuAboutLink = style({
   position: 'absolute',
-  top: '3rem',
+  top: '2.5rem',
   left: '3.75rem',
   display: 'flex',
   alignItems: 'center',
@@ -418,19 +418,26 @@ export const menuSocialLinks = style({
   display: 'contents',
 })
 
-// Menu social link base
+// Menu social link base: 40px container, 20px icon
 export const menuSocialLink = style({
   position: 'absolute',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '0.75rem',
+  width: '40px',
+  height: '40px',
+  padding: 0,
   color: vars.color.textPrimary,
   transition: 'color 0.2s ease, opacity 0.2s ease',
   ':hover': {
     color: vars.color.accent,
     opacity: 0.8,
   },
+})
+
+export const menuSocialLinkIcon = style({
+  width: '20px',
+  height: '20px',
 })
 
 // Email: to the right of home, same row
@@ -441,13 +448,13 @@ export const menuSocialLinkEmail = style({
 
 // LinkedIn: left of avatar row, slightly below home
 export const menuSocialLinkLinkedIn = style({
-  top: '0.25rem',
-  left: '6rem',
+  top: 0,
+  left: '8rem',
 })
 
 // GitHub: below avatar row
 export const menuSocialLinkGitHub = style({
-  top: '6rem',
+  top: '5rem',
   left: 0,
 })
 

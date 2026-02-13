@@ -302,7 +302,9 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
                       aria-label={social.name}
                       onClick={() => setMenuOpen(false)}
                     >
-                      {social.icon}
+                      <span className={styles.menuSocialLinkIcon}>
+                        {social.icon}
+                      </span>
                     </a>
                   )
                 })}
