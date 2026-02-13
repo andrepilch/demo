@@ -1,32 +1,37 @@
 import { Section, SectionGap, H2, Body, SectionHeader } from '@/components'
-import { masonryGrid } from './PhilosophyMasonry.css'
-import * as styles from './LeadershipSection.css'
+import { PhilosophyMasonry, type PhilosophyItem } from './PhilosophyMasonry'
 
-// Achievement card data
-const achievements = [
+// Achievement card data (mapped to PhilosophyItem for consistent card styling)
+const achievements: PhilosophyItem[] = [
   {
-    highlight: 'Strategic Infrastructure',
-    text: 'Established the first design system at whcc which boosted efficiency and added consistency',
+    title: 'Strategic Infrastructure',
+    description:
+      'Established the first design system at whcc which boosted efficiency and added consistency',
   },
   {
-    highlight: 'Intellectual Property',
-    text: 'Pioneered the first VR experience for Thomson Reuters that resulted in secured patents',
+    title: 'Intellectual Property',
+    description:
+      'Pioneered the first VR experience for Thomson Reuters that resulted in secured patents',
   },
   {
-    highlight: 'Cultural Transformation',
-    text: 'Initiated the organization’s user research and analytics practices, opened avenues of communication with other branches for feedback, and created environement for building rapport with teammates',
+    title: 'Cultural Transformation',
+    description:
+      "Initiated the organization's user research and analytics practices, opened avenues of communication with other branches for feedback, and created environement for building rapport with teammates",
   },
   {
-    highlight: 'Cross-Functional Collaboration',
-    text: 'Led the effort to create design and team principles through cross-team workshops, and to align product strategy and vision with business goals',
+    title: 'Cross-Functional Collaboration',
+    description:
+      'Led the effort to create design and team principles through cross-team workshops, and to align product strategy and vision with business goals',
   },
   {
-    highlight: 'Communication',
-    text: 'Encouraged a culture of communication with business leadership, and a framework for regular team check-ins',
+    title: 'Communication',
+    description:
+      'Encouraged a culture of communication with business leadership, and a framework for regular team check-ins',
   },
   {
-    highlight: 'Leadership thinking',
-    text: 'Co-workers trust my continual business-minded perspective and balance with user-centric design',
+    title: 'Leadership thinking',
+    description:
+      'Co-workers trust my continual business-minded perspective and balance with user-centric design',
   },
 ]
 
@@ -40,17 +45,7 @@ export function LeadershipSection() {
           cultural transformation that drives organizational impact.
         </Body>
       </SectionHeader>
-      <div className={masonryGrid}>
-        {achievements.map((achievement, index) => (
-          <div key={index} className={styles.achievementCard}>
-            <p className={styles.cardText}>
-              <span className={styles.highlight}>{achievement.highlight}</span>
-              <br />
-              {achievement.text}
-            </p>
-          </div>
-        ))}
-      </div>
+      <PhilosophyMasonry items={achievements} />
     </Section>
   )
 }
