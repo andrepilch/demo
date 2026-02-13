@@ -1,4 +1,6 @@
+import { masonryGrid } from '@/components/PhilosophyMasonry.css'
 import * as styles from './case-study.css'
+import { H3, StatNumber, Body } from '@/components/Text'
 
 export interface CardItem {
   title: string
@@ -14,15 +16,15 @@ export interface CaseStudyCardsGridProps {
 /** Renders only the cards grid (no section wrapper). Use inside CaseStudySection when you need custom layout (e.g. grid + image). */
 export function CaseStudyCardsGrid({ items }: CaseStudyCardsGridProps) {
   return (
-    <div className={styles.problemsGrid}>
+    <div className={masonryGrid}>
       {items.map((item, i) => (
         <div key={i} className={styles.problemCard}>
           {item.number != null && (
-            <span className={styles.problemNumber}>{item.number}</span>
+            <StatNumber className={styles.problemNumber}>{item.number}</StatNumber>
           )}
-          <h3 className={styles.problemTitle}>{item.title}</h3>
+          <H3 className={styles.problemTitle}>{item.title}</H3>
           {item.description != null && item.description !== '' && (
-            <p className={styles.problemDescription}>{item.description}</p>
+            <Body className={styles.problemDescription}>{item.description}</Body>
           )}
         </div>
       ))}

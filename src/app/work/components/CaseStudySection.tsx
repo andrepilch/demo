@@ -1,5 +1,6 @@
+import { Section, SectionGap, SectionHeader } from '@/components/Section'
+import { Eyebrow, H2, Body } from '@/components/Text'
 import type { CaseStudySectionData } from './types'
-import * as styles from './case-study.css'
 
 export interface CaseStudySectionProps {
   /** Section header (eyebrow, title, optional description) */
@@ -16,19 +17,18 @@ export function CaseStudySection({
   className,
 }: CaseStudySectionProps) {
   return (
-    <section className={[styles.section, className].filter(Boolean).join(' ')}>
-      <div className={styles.container}>
-        <div className={styles.sectionContent}>
-          <div className={styles.sectionHeader}>
-            <p className={styles.eyebrow}>{data.eyebrow}</p>
-            <h2 className={styles.sectionTitle}>{data.title}</h2>
-            {data.description != null && data.description !== '' && (
-              <p className={styles.sectionDescription}>{data.description}</p>
-            )}
-          </div>
-          {children}
-        </div>
-      </div>
-    </section>
+    <Section
+      gap={SectionGap.lg}
+      className={className}
+    >
+      <SectionHeader align="left">
+        <Eyebrow color="accent">{data.eyebrow}</Eyebrow>
+        <H2>{data.title}</H2>
+        {data.description != null && data.description !== '' && (
+          <Body color="secondary">{data.description}</Body>
+        )}
+      </SectionHeader>
+      {children}
+    </Section>
   )
 }

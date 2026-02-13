@@ -160,8 +160,8 @@ export const productPrinciples: CardItem[] = [
 ]
 
 export const designProcessSection: CaseStudySectionData = {
-  eyebrow: 'Process',
-  title: 'Design Process',
+  eyebrow: 'Methods',
+  title: 'Design Methods',
 }
 
 export const designProcessSteps: CardItem[] = [
@@ -187,7 +187,7 @@ export const solutionSection: CaseStudySectionData = {
 }
 
 export const featureMultipleBibles: CaseStudyFeatureHighlightData = {
-  eyebrow: 'Key Feature',
+  eyebrow: 'Creating Value',
   title: 'Make a Bible for Every Context',
   description: `Eternity Bible lets you create Bibles for every context and resume reading exactly where you left off in each Bible instantly. You can save settings and translation for each Bible.`,
   bullets: [
@@ -202,36 +202,50 @@ export const featureMultipleBibles: CaseStudyFeatureHighlightData = {
 }
 
 export const featureSearchByMeaning: CaseStudyFeatureHighlightData = {
-  eyebrow: 'Key Feature',
+  eyebrow: 'Challenging Competition',
   title: 'Powerful Search by Meaning',
-  description: `Find verses not just by keywords, but by meaning. Eternity's search feature helps you discover Scripture based on what you're looking for, not just exact word matches.`,
+  description: `Eternity's vector search feature helps you discover Scripture based on what you're looking for, not just exact word matches.`,
   bullets: [
     'Search by meaning, not just keywords',
     'Quicker to find a verse than traditional search',
   ],
-  imageSrc: '/images/projects/eternity/eternity_read.jpg',
+  imageSrc: '/images/projects/eternity/eternity_search.jpg',
   imageAlt: 'Search by meaning interface',
-  imagePosition: 'left',
+  imagePosition: 'right',
 }
 
 export const featureOneTapAccess: CaseStudyFeatureHighlightData = {
-  eyebrow: 'Key Feature',
-  title: 'One-Tap Access to Your Bible',
-  description: `By removing distractions and making the Bible one-tap away on any device, you can spend more time being in the Word. It shouldn't take you longer to open your spot in a digital Bible than it takes to open a paper Bible.`,
+  eyebrow: 'Enhancing Brand Experience',
+  title: 'Quick Access to Your Chapter',
+  description: `Eternity Bible lets you quickly access your chapter with a unique navigation tray.`,
   bullets: [
-    'Simple navigation for book, chapter, and verse',
-    'Visual way to navigate — learn the Bible by seeing the Bible',
-    'Faster than finding your spot in a paper Bible',
+    'Quick access to your chapter by tapping the chapter number in the navigation tray',
+    'This UI pattern turns 4 taps into 2 taps without losing context',
+    'Light cognitive load for an action that is repeated often',
   ],
-  imageSrc: '/images/projects/eternity/eternity_intro.png',
+  imageSrc: '/images/projects/eternity/eternity_tray.jpg',
   imageAlt: 'Simple navigation interface',
-  imagePosition: 'right',
+  imagePosition: 'left',
+}
+
+export const featureMultipleLanguages: CaseStudyFeatureHighlightData = {
+  eyebrow: 'Creating Visibility',
+  title: 'Multiple Languages',
+  description: `Eternity Bible supports multiple languages, so you can read the Bible in your native language.`,
+  bullets: [
+    'Support for multiple languages',
+    'Read the Bible in your native language without all the taps to switch back to your churched language',
+  ],
+  imageSrc: '/images/projects/eternity/eternity_multilingual.jpg',
+  imageAlt: 'Multiple languages interface',
+  imagePosition: 'left',
 }
 
 export const finalDesignsSection: CaseStudySectionData = {
   eyebrow: 'Final Designs',
   title: 'The Shipped Product',
-  description: 'The final designs shipped to the App Store and web.',
+  description:
+    'The final designs shipped to the App Store and Google Play and available across devices on the web.',
 }
 
 export const finalDesignsImages: CaseStudyGalleryImage[] = [
@@ -240,16 +254,8 @@ export const finalDesignsImages: CaseStudyGalleryImage[] = [
     alt: 'My Bibles - Multiple Bible cards for different contexts',
   },
   {
-    src: '/images/projects/eternity/eternity_intro.png',
-    alt: 'Chapter selection - Simple book and chapter navigation',
-  },
-  {
     src: '/images/projects/eternity/eternity_read.jpg',
     alt: 'Reading view - Clean, focused reading experience',
-  },
-  {
-    src: '/images/projects/eternity/eternity_multilingual.png',
-    alt: 'Multi-language - Support for different translations',
   },
 ]
 
@@ -263,17 +269,15 @@ export const resultsData: CaseStudyResultsData = {
 export const conclusionSection: CaseStudySectionData = {
   eyebrow: 'Conclusion',
   title: 'Challenging the Norms',
-  description: `After more than a year of hard work, we launched the new website taking full advantage of digital capabilities`,
+  description: `The app takes full advantage of digital capabilities to create a better alternative to print.`,
 }
 
 export const digitalBibleBenefits: CardItem[] = [
   'Can read in the dark',
   'Can hold with children in your arms',
-  'Always on you in your phone',
-  'Can change translation to suit your setting',
-  'Can remember where you left off for many different Bibles',
-  'Weigh nothing in your pocket',
-  'Can have as many Biblesas you need, no limitations',
-  'Quicker to get to a verse',
-  'Quicker to find a verse (with searching)',
+  'Always in your pocket',
+  'Adapts to your setting',
+  'Remembers for you',
+  'Many Bibles without the weight',
+  'Quicker to find a verse',
 ].map((title) => ({ title }))

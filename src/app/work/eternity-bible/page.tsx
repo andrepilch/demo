@@ -34,6 +34,7 @@ import {
   resultsData,
   conclusionSection,
   digitalBibleBenefits,
+  featureMultipleLanguages,
 } from './data'
 
 export default function EternityCaseStudy() {
@@ -65,20 +66,20 @@ export default function EternityCaseStudy() {
       <CaseStudySection data={solutionSection} />
 
       <CaseStudyFeatureHighlight data={featureMultipleBibles} />
-      <CaseStudyFeatureHighlight data={featureSearchByMeaning} />
       <CaseStudyFeatureHighlight data={featureOneTapAccess} />
+      <CaseStudyFeatureHighlight data={featureSearchByMeaning} />
+      <CaseStudyFeatureHighlight data={featureMultipleLanguages} />
 
       <CaseStudyImageGallery
         section={finalDesignsSection}
         images={finalDesignsImages}
       />
 
-      <CaseStudyResults data={resultsData} />
-
-      <CaseStudyCards
+      {/* <CaseStudyCards
         section={conclusionSection}
         items={digitalBibleBenefits}
-      />
+      /> */}
+      <CaseStudyResults data={resultsData} />
     </CaseStudyPageWrapper>
   )
 }

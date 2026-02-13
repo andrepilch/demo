@@ -137,7 +137,7 @@ export const section = style({
 export const sectionContent = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: vars.gap.sectionSm,
+  gap: vars.gap.elementMd,
 })
 
 export const sectionHeader = style({
@@ -233,6 +233,8 @@ export const problemsGrid = style({
 export const problemCard = style({
   position: 'relative',
   padding: '2rem',
+  marginBottom: '1.25rem',
+  breakInside: 'avoid',
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
@@ -361,15 +363,6 @@ export const imageCaption = style({
 // ============================================
 // Results / Stats
 // ============================================
-
-export const resultsSection = style({
-  position: 'relative',
-  padding: '4rem 0',
-  background: vars.color.bgCard,
-  borderTop: `1px solid ${vars.color.border}`,
-  borderBottom: `1px solid ${vars.color.border}`,
-})
-
 export const resultsGrid = style({
   display: 'grid',
   gap: '2rem',
@@ -381,7 +374,13 @@ export const resultsGrid = style({
 })
 
 export const resultCard = style({
-  textAlign: 'center',
+  position: 'relative',
+  padding: '2rem',
+  marginBottom: '1.25rem',
+  breakInside: 'avoid',
+  background: vars.color.bgCard,
+  border: `1px solid ${vars.color.border}`,
+  borderRadius: vars.radius.xl,
   display: 'flex',
   flexDirection: 'column',
   gap: '0.5rem',
@@ -409,7 +408,7 @@ export const resultLabel = style({
 })
 
 export const resultDescription = style({
-  color: vars.color.textMuted,
+  color: vars.color.textSecondary,
   fontSize: '0.875rem',
 })
 
