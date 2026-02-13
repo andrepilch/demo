@@ -34,7 +34,7 @@ const projectMeta = {
     'Cursor AI',
     'Vercel',
     'Github',
-    'TWA',
+    'PWA/TWA',
   ],
   year: '2025–Present',
   status: 'Live',
