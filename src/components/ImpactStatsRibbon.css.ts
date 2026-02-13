@@ -41,7 +41,7 @@ export const ribbonItem = style({
 export const ribbonValue = style({
   fontSize: '1.875rem',
   fontWeight: '700',
-  color: vars.color.textAccentDark,
+  color: vars.color.textPrimary,
   '@media': {
     'screen and (min-width: 768px)': {
       fontSize: '2.25rem',
@@ -50,6 +50,6 @@ export const ribbonValue = style({
 })
 
 export const ribbonLabel = style({
-  color: vars.color.textAccentDark,
+  color: vars.color.textPrimary,
   whiteSpace: 'nowrap',
 })
