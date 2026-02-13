@@ -104,7 +104,7 @@ export function BridgeAdvantage() {
               a fundamental part of how I design better products.
             </Body>
           </SectionHeader>
-          <Grid cols={2}>
+          <Grid cols={2} gap="tight">
             {bridgeCards.map((item, i) => (
               <Card
                 key={i}

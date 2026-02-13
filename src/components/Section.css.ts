@@ -123,6 +123,12 @@ const gridBase = style({
   gap: '2rem',
 })
 
+// Same as gridBase but gap matches PhilosophyMasonry / craft-focus (1.25rem)
+const gridBaseTight = style({
+  display: 'grid',
+  gap: '1.25rem',
+})
+
 export const gridTwo = style([
   gridBase,
   {
@@ -134,8 +140,30 @@ export const gridTwo = style([
   },
 ])
 
+export const gridTwoTight = style([
+  gridBaseTight,
+  {
+    '@media': {
+      'screen and (min-width: 768px)': {
+        gridTemplateColumns: 'repeat(2, 1fr)',
+      },
+    },
+  },
+])
+
 export const gridThree = style([
   gridBase,
+  {
+    '@media': {
+      'screen and (min-width: 768px)': {
+        gridTemplateColumns: 'repeat(3, 1fr)',
+      },
+    },
+  },
+])
+
+export const gridThreeTight = style([
+  gridBaseTight,
   {
     '@media': {
       'screen and (min-width: 768px)': {

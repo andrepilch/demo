@@ -15,7 +15,7 @@ interface SideProject {
 // Side Projects
 const sideProjects: SideProject[] = [
   {
-    title: 'Eternity Bible',
+    title: 'Created Eternity Bible App PWA & Shipped to App Stores in Under 1 Year',
     description:
       'A full-stack web application demonstrating my solo React/NextJS capabilities. Built with modern tools and deployed to production',
     url: 'https://eternitybible.app',
@@ -31,7 +31,7 @@ const sideProjects: SideProject[] = [
     image: '/branding/freelance_cover_1.png',
   },
   {
-    title: 'Freelance Branding & Design for 15 Years',
+    title: 'Freelance Branding & Design across industriesfor 15 Years',
     description:
       'Freelance branding and design work for a wide variety of clients for 15 years',
     url: '/branding',

@@ -64,8 +64,8 @@ export const caseStudyTitle = style({
 })
 
 export const caseStudyOutcome = style({
-  color: vars.color.accent,
-  fontWeight: '500',
+  color: vars.color.textPrimary,
+  fontWeight: '600',
 })
 
 export const caseStudyDescription = style({

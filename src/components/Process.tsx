@@ -111,7 +111,7 @@ export function Process() {
           </Body>
           </SectionHeader>
 
-          <Grid cols={2}>
+          <Grid cols={2} gap="tight">
             {steps.map((step, i) => (
               <Card
                 key={i}

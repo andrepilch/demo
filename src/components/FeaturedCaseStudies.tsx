@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { H3, Section, SectionGap, H2 } from '@/components'
+import { Section, SectionGap, H2, Body } from '@/components'
 import * as styles from './FeaturedCaseStudies.css'
 import { eternityResults } from '@/app/work/eternity-bible/page'
 
@@ -8,7 +8,7 @@ const caseStudies = [
   {
     title: 'WHCC Designer',
     outcome:
-      'Increased Average Order Value by 26% through radical simplification',
+      'React multi-brand web app for whcc and its partners used by hundreds of thousands of users that continues to scale  ',
     description:
       'Building user confidence and saving time with a versatile designer',
     tags: ['Product Design', 'React', 'Design Systems'],
@@ -16,13 +16,14 @@ const caseStudies = [
     image: '/images/projects/wall_designer/wall_designer_cover.jpg',
     stats: [
       // { value: '26%', label: 'AOV Increase' },
-      // { value: '3M', label: 'Sessions served' },
       { value: '6.5M+', label: 'Sessions served' },
+      // { value: '3M', label: 'Sessions served' },
+      { value: '10+ Years', label: 'Sustained growth' },
     ],
   },
   {
     title: 'Eternity Bible',
-    outcome: 'Full-stack React/NextJS application built and shipped solo',
+    outcome: 'Full-stack React/NextJS application built and shipped solo to app stores in under 1 year',
     description: 'Challenging the norms in a saturated market',
     tags: ['NextJS', 'TypeScript', 'Full-Stack'],
     href: '/work/eternity-bible',
@@ -47,12 +48,20 @@ export function FeaturedCaseStudies() {
           <div className={styles.caseStudyContent}>
             <div className={styles.caseStudyTitleContainer}>
               <H2 className={styles.caseStudyTitle}>{study.title}</H2>
-              {/* <p className={styles.caseStudyOutcome}>{study.outcome}</p> */}
-              <H3 color='primary' className={styles.caseStudyDescription}>
+              <Body className={styles.caseStudyDescription}>
                 {study.description}
-              </H3>
+              </Body>
+              <Body className={styles.caseStudyOutcome}>{study.outcome}</Body>
               {/* Mini Stats */}
-              {study.stats && (
+            </div>
+            {/* <div className={styles.tagList}>
+              {study.tags.map((tag, j) => (
+                <span key={j} className={styles.tag}>
+                  {tag}
+                </span>
+              ))}
+            </div> */}
+            {study.stats && (
                 <div className={styles.caseStudyStats}>
                   {study.stats.map((stat, k) => (
                     <div key={k} className={styles.caseStudyStat}>
@@ -66,14 +75,6 @@ export function FeaturedCaseStudies() {
                   ))}
                 </div>
               )}
-            </div>
-            <div className={styles.tagList}>
-              {study.tags.map((tag, j) => (
-                <span key={j} className={styles.tag}>
-                  {tag}
-                </span>
-              ))}
-            </div>
           </div>
         </Link>
       ))}

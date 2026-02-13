@@ -199,17 +199,27 @@ export function SectionHeader<T extends ElementType = 'div'>({
 
 interface GridProps<T extends ElementType> extends BaseProps<T> {
   cols?: 2 | 3
+  /** Use 'tight' to match craft-focus / PhilosophyMasonry gap (1.25rem) */
+  gap?: 'default' | 'tight'
 }
 
 export function Grid<T extends ElementType = 'div'>({
   as,
   cols = 2,
+  gap = 'default',
   className,
   children,
   ...props
 }: GridProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof GridProps<T>>) {
   const Component = as || 'div'
-  const gridStyle = cols === 3 ? styles.gridThree : styles.gridTwo
+  const gridStyle =
+    gap === 'tight'
+      ? cols === 3
+        ? styles.gridThreeTight
+        : styles.gridTwoTight
+      : cols === 3
+        ? styles.gridThree
+        : styles.gridTwo
   const classNames = [gridStyle, className].filter(Boolean).join(' ')
 
   return (
