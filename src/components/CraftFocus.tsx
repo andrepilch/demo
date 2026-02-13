@@ -45,9 +45,10 @@ export function CraftFocus() {
           href="/about#passion-areas"
           variant="secondary"
           size="sm"
+          style={{ whiteSpace: 'nowrap' }}
         >
           See Passion Areas
-          </Button>
+        </Button>
           </div>
         <Body color="secondary">These are some of the things that keep me motivated to design and build great products.</Body>
       </SectionHeader>

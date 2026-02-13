@@ -7,7 +7,7 @@ export const caseStudyCard = style({
   padding: '1rem',
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
-  borderRadius: vars.radius['4xl'],
+  borderRadius: vars.radius['xl'],
   transition: 'all 0.3s ease',
   ':hover': {
     background: vars.gradient.card,
@@ -18,6 +18,7 @@ export const caseStudyCard = style({
       gridTemplateColumns: '2fr 1fr',
       gap: '2.5rem',
       padding: '1rem',
+      borderRadius: vars.radius['4xl'],
     },
   },
 })
@@ -25,9 +26,14 @@ export const caseStudyCard = style({
 export const caseStudyImage = style({
   position: 'relative',
   aspectRatio: '3 / 2',
-  borderRadius: vars.radius['2xl'],
+  borderRadius: vars.radius['md'],
   overflow: 'hidden',
   background: vars.color.bgSecondary,
+  '@media': {
+    'screen and (min-width: 768px)': {
+      borderRadius: vars.radius['2xl'],
+    },
+  },
 })
 
 export const caseStudyImageInner = style({

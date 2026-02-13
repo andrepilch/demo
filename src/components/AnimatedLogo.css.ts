@@ -454,7 +454,7 @@ export const menuSocialLinkLinkedIn = style({
 
 // GitHub: below avatar row
 export const menuSocialLinkGitHub = style({
-  top: '5rem',
+  top: '5.25rem',
   left: 0,
 })
 
