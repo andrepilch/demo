@@ -292,6 +292,7 @@ export const problemDescription = style({
 export const goalsGrid = style({
   display: 'grid',
   gap: '1.5rem',
+  alignItems: 'stretch',
   '@media': {
     'screen and (min-width: 768px)': {
       gridTemplateColumns: 'repeat(3, 1fr)',
@@ -302,6 +303,8 @@ export const goalsGrid = style({
 export const goalCard = style({
   position: 'relative',
   padding: '2rem',
+  minHeight: '16rem',
+  height: '100%',
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
@@ -309,6 +312,7 @@ export const goalCard = style({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'stretch',
+  justifyContent: 'space-between',
   gap: '1rem',
   '::before': {
     content: '""',
