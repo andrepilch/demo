@@ -276,6 +276,7 @@ export const triangleMenuSvg = style({
   left: 0,
   width: '80vw',
   height: '80vh',
+  maxWidth: '300px',
   transformOrigin: 'top left',
   animation: `${triangleMenuGrow} 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards`,
   // Scale to cover viewport - triangle is 190x121, so we need to scale it up
