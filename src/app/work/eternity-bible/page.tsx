@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { H3 } from '@/components/Text'
 import * as styles from './page.css'
 
 // ============================================
@@ -180,19 +181,13 @@ export default function EternityCaseStudy() {
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
             <div className={styles.heroHeadline}>
-              <p className={styles.heroEyebrow}>Case Study</p>
+              <p className={styles.heroEyebrow}>Eterntiy Bible App Case Study</p>
               <h1 className={styles.heroTitle}>
                 Challenging the Norms in a Saturated Market
               </h1>
             </div>
             <p className={styles.heroDescription}>
-              Designed to help you open the Bible more often. Eternity Bible
-              lets you create Bibles for every context and resume reading
-              exactly where you left off in each Bible instantly. You can save
-              settings and a translation for each Bible. The app also features a
-              powerful search by meaning. By removing distractions and making
-              the Bible one-tap away on any device, you can spend more time
-              being in the Word.
+              Full-stack React/NextJS application built and shipped solo to app stores in under 1 year
             </p>
             <a
               href='https://eternitybible.app'
@@ -230,14 +225,13 @@ export default function EternityCaseStudy() {
               <h2 className={styles.sectionTitle}>The Project</h2>
             </div>
             <p className={styles.sectionDescription}>
-              The thing I wish is that some of these organizations and
-              individuals who spent their time putting their own app together
-              would just work together to make an app that truly works for real
-              people, Christians mostly. People who use a Bible app tend to also
-              have printed Bibles, they also tend to go to church, and they tend
-              to read several translations. Many people also speak several
-              languages, one at home and one at church. And most people aren't
-              sitting on their phone to do deep Bible study.
+              Designed to help you open the Bible more often. The challenge of Eternity Bible was to rethink the status quo of digital Bibles from the perspective of the user.
+              The people using Bible apps tend to follow the same patterns as well like attending church, reading several translations or sometimes even languages in different settings and groups.
+             
+              The reality is that most people don't open the Bible on their phone because of the cognitive load of finding your spot and navigating the app. 
+              Eternity Bible lets you create Bibles for every context and resume reading
+              exactly where you left off in each Bible instantly. You can save
+              settings and a translation for each Bible.
             </p>
 
             {/* Project Meta */}
@@ -477,9 +471,9 @@ export default function EternityCaseStudy() {
           <div className={styles.featureSection}>
             <div className={styles.featureContent}>
               <p className={styles.eyebrow}>Key Feature</p>
-              <h2 className={styles.featureTitle}>
+              <H3 className={styles.featureTitle}>
                 Make a Bible for Every Context
-              </h2>
+              </H3>
               <p className={styles.featureDescription}>
                 Eternity Bible lets you create Bibles for every context and
                 resume reading exactly where you left off in each Bible
@@ -584,9 +578,9 @@ export default function EternityCaseStudy() {
             </div>
             <div className={styles.featureContent}>
               <p className={styles.eyebrow}>Key Feature</p>
-              <h2 className={styles.featureTitle}>
+              <H3 className={styles.featureTitle}>
                 Powerful Search by Meaning
-              </h2>
+              </H3>
               <p className={styles.featureDescription}>
                 Find verses not just by keywords, but by meaning. Eternity's
                 search feature helps you discover Scripture based on what you're
@@ -639,9 +633,9 @@ export default function EternityCaseStudy() {
           <div className={styles.featureSection}>
             <div className={styles.featureContent}>
               <p className={styles.eyebrow}>Key Feature</p>
-              <h2 className={styles.featureTitle}>
+              <H3 className={styles.featureTitle}>
                 One-Tap Access to Your Bible
-              </h2>
+              </H3>
               <p className={styles.featureDescription}>
                 By removing distractions and making the Bible one-tap away on
                 any device, you can spend more time being in the Word. It

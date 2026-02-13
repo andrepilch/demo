@@ -49,7 +49,7 @@ export const heroContainer = style({
 export const heroContent = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: vars.gap.element,
+  gap: vars.gap.elementMd,
   maxWidth: '48rem',
 })
 

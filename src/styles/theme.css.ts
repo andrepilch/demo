@@ -115,6 +115,7 @@ export const vars = createThemeContract({
     sectionSm: null,
     sectionLg: null,
     element: null,
+    elementMd: null,
     elementSm: null,
   },
   layout: {
@@ -186,6 +187,7 @@ export const darkTheme = createTheme(vars, {
     sectionSm: '2rem',
     sectionLg: '8rem',
     element: '3rem',
+    elementMd: '1.5rem',
     elementSm: '0.5rem',
   },
   layout: {
@@ -257,6 +259,7 @@ export const lightTheme = createTheme(vars, {
     sectionSm: '2rem',
     sectionLg: '8rem',
     element: '3rem',
+    elementMd: '1.5rem',
     elementSm: '0.5rem',
   },
   layout: {
