@@ -90,6 +90,7 @@ export const projectLink = style({
   display: 'flex',
   alignItems: 'center',
   gap: '0.25rem',
+  marginTop: 'auto',
   color: vars.color.accent,
   fontSize: '0.875rem',
 })

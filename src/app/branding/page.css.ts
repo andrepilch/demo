@@ -19,4 +19,5 @@ export const logoImg = style({
   height: 'auto',
   maxHeight: '400px',
   objectFit: 'contain',
+  filter: vars.image.logoFilter,
 })
