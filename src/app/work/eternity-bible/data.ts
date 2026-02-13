@@ -47,7 +47,7 @@ export const heroData: CaseStudyHeroData = {
   description:
     'Full-stack React/NextJS application built and shipped solo to app stores in under 1 year',
   ctaLabel: 'Visit Eternity Bible',
-  ctaUrl: 'https://eternitybible.app',
+  ctaUrl: 'https://about.eternitybible.app',
   accentColor: '#380BBB',
   heroImage: '/images/projects/eternity/eternity_read.jpg',
 }
