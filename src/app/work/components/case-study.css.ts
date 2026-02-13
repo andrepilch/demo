@@ -217,22 +217,57 @@ export const overviewValue = style({
 })
 
 // ============================================
-// Process steps list (numbered list)
+// Process steps (numbered cards grid)
 // ============================================
 
 export const processStepsList = style({
-  listStyle: 'decimal',
-  paddingLeft: '1.5rem',
+  listStyle: 'none',
   margin: 0,
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '0.5rem',
+  padding: 0,
+  display: 'grid',
+  gap: '1.5rem',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      gridTemplateColumns: 'repeat(3, 1fr)',
+    },
+  },
 })
 
 export const processStepItem = style({
+  position: 'relative',
+  padding: '2rem',
+  background: vars.color.bgCard,
+  border: `1px solid ${vars.color.border}`,
+  borderRadius: vars.radius.xl,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.75rem',
+  transition: 'all 0.3s ease',
+  ':hover': {
+    borderColor: vars.color.borderLight,
+    transform: 'translateY(-2px)',
+  },
+})
+
+export const processStepNumber = style({
+  fontSize: '2.5rem',
+  fontWeight: '700',
+  color: vars.color.accent,
+  opacity: 0.35,
+  lineHeight: 1,
+})
+
+export const processStepTitle = style({
+  fontSize: '1.125rem',
+  fontWeight: '600',
+  color: vars.color.textPrimary,
+  lineHeight: 1.4,
+})
+
+export const processStepDescription = style({
   color: vars.color.textSecondary,
+  fontSize: '0.9375rem',
   lineHeight: 1.6,
-  paddingLeft: '0.25rem',
 })
 
 // ============================================

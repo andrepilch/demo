@@ -179,7 +179,7 @@ export const designProcessSteps: CardItem[] = [
   'Release & Test with closed testing group',
   'Iterate on design and features',
   'Release to app stores',
-  'Continue evolving features',
+  // 'Continue evolving features',
 ].map((title, i) => ({ title, number: i + 1 }))
 
 export const solutionSection: CaseStudySectionData = {
