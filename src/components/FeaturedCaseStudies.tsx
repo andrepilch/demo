@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Section, SectionGap, H2, Body } from '@/components'
 import * as styles from './FeaturedCaseStudies.css'
-import { eternityResults } from '@/app/work/eternity-bible/page'
+import { eternityResults } from '@/app/work/eternity-bible/data'
 
 const caseStudies = [
   {
