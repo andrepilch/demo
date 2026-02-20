@@ -270,6 +270,20 @@ export const processStepDescription = style({
   lineHeight: 1.6,
 })
 
+export const processImageCard = style({
+  position: 'relative',
+  aspectRatio: '16 / 10',
+  borderRadius: vars.radius.xl,
+  overflow: 'hidden',
+  background: vars.color.bgCard,
+  border: `1px solid ${vars.color.border}`,
+  '@media': {
+    'screen and (min-width: 768px)': {
+      gridColumn: 'span 2',
+    },
+  },
+})
+
 // ============================================
 // Problem/Solution Cards
 // ============================================

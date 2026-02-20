@@ -45,12 +45,12 @@ export default function EternityCaseStudy() {
 
       <CaseStudyCards section={principlesSection} items={productPrinciples} />
 
-      <CaseStudyImageGallery
-        section={designProcessSection}
-        images={designProcessImages}
-      >
-        <CaseStudyProcessList items={designProcessSteps} />
-      </CaseStudyImageGallery>
+      <CaseStudySection data={designProcessSection}>
+        <CaseStudyProcessList
+          items={designProcessSteps}
+          images={designProcessImages}
+        />
+      </CaseStudySection>
 
       <CaseStudySection data={solutionSection} />
 

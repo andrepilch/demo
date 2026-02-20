@@ -31,7 +31,7 @@ const sideProjects: SideProject[] = [
     image: '/branding/freelance_cover_1.png',
   },
   {
-    title: 'Freelance Branding & Design across industriesfor 15 Years',
+    title: 'Freelance Branding & Design across industries for 15 Years',
     description:
       'Freelance branding and design work for a wide variety of clients for 15 years',
     url: '/branding',

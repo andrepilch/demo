@@ -29,6 +29,7 @@ globalStyle('::selection', {
 // Reset some defaults
 globalStyle('*, *::before, *::after', {
   boxSizing: 'border-box',
+  WebkitTapHighlightColor: 'transparent', // Remove tap highlight color on mobile
 })
 
 globalStyle('a', {

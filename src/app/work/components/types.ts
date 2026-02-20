@@ -76,6 +76,8 @@ export interface CaseStudyFeatureHighlightData {
 export interface CaseStudyGalleryImage {
   src: string
   alt: string
+  /** Insert this image after step N (1-indexed). Used with CaseStudyProcessList. */
+  afterStep?: number
 }
 
 export interface CaseStudyResultsData {

@@ -25,7 +25,7 @@ export function CaseStudySection({
         <Eyebrow color="accent">{data.eyebrow}</Eyebrow>
         <H2>{data.title}</H2>
         {data.description != null && data.description !== '' && (
-          <Body color="secondary">{data.description}</Body>
+          <Body color="secondary" style={{ whiteSpace: 'pre-line' }}>{data.description}</Body>
         )}
       </SectionHeader>
       {children}

@@ -13,6 +13,7 @@ export const container = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  gap: '1rem',
   '@media': {
     'screen and (min-width: 768px)': {
       paddingLeft: vars.layout.sectionPaddingXMd,

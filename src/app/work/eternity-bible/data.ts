@@ -14,6 +14,7 @@ import type { CardItem } from '@/app/work/components'
 export const eternityResults: CaseStudyResult[] = [
   { value: '5★', label: 'Rated', description: 'in Play Store' },
   { value: '95%', label: 'Engagement', description: 'with core feature' },
+  // { value: '5', label: 'Growing a team', description: 'people offering help' },
 ]
 
 const projectMeta = {
@@ -156,10 +157,12 @@ export const designProcessImages: CaseStudyGalleryImage[] = [
   {
     src: '/images/projects/eternity/eternity_process.jpg',
     alt: 'Design wireframes',
+    afterStep: 4,
   },
   {
     src: '/images/projects/eternity/eternity_wireframes.jpg',
     alt: 'Design wireframes',
+    afterStep: 7,
   },
 ]
 
@@ -179,7 +182,7 @@ export const designProcessSteps: CardItem[] = [
   'Release & Test with closed testing group',
   'Iterate on design and features',
   'Release to app stores',
-  // 'Continue evolving features',
+  'Continue evolving features',
 ].map((title, i) => ({ title, number: i + 1 }))
 
 export const solutionSection: CaseStudySectionData = {
@@ -263,7 +266,9 @@ export const finalDesignsImages: CaseStudyGalleryImage[] = [
 export const resultsData: CaseStudyResultsData = {
   eyebrow: 'Impact',
   title: 'Project Results',
-  description: `Eternity Bible is receiving overwhelmingly positive feedback for its core, innovative feature: the ability to set up multiple, personalized Bibles for different purposes (e.g., personal devotion, family study, Sunday service). Users describe this as a "fantastic" and "game changer" feature that simplifies navigation and allows them to instantly pick up right where they left off in any context.`,
+  description: `Eternity Bible is receiving overwhelmingly positive feedback for its core, innovative feature: the ability to set up multiple, personalized Bibles for different purposes (e.g., personal devotion, family study, Sunday service). Users describe this as a "fantastic" and "game changer" feature that simplifies navigation and allows them to instantly pick up right where they left off in any context.
+
+  The app is organically growing a team with five users who have offered to help with the app with their own time and skills after having seen the value for themselves.`,
   results: eternityResults,
 }
 

@@ -192,7 +192,7 @@ export const brandBlock = style({
   width: '100vw',
   marginLeft: 'calc(-50vw + 50%)',
   marginRight: 'calc(-50vw + 50%)',
-  minHeight: '600px',
+  minHeight: '100vh',
   background: vars.color.accent,
   color: '#fff',
   display: 'flex',

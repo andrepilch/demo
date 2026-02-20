@@ -4,6 +4,7 @@ import { H2, Body, Eyebrow } from './Text'
 import { Accomplishments } from './Accomplishments'
 import { Education } from './Education'
 import * as styles from './Bio.css'
+import { socialLinks } from './CTASection'
 
 export function Bio() {
   return (
@@ -48,28 +49,48 @@ export function Bio() {
           </Body>
           <Accomplishments />
           <Education />
-          <Eyebrow
-            as='a'
-            href='https://drive.google.com/file/d/1P4RGrBPG0-VclAu-JuCHNVEtmseylZSO/view?usp=sharing'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={styles.resumeLink}
-            weight='bold'
-          >
-            View my Resume
-            <svg
-              className={styles.resumeLinkIcon}
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-              strokeWidth={2}
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              aria-hidden
+          <div className={styles.resumeLinkWrapper}>
+            <div className={styles.resumeLinkContainer}>
+            <Eyebrow
+              as='a'
+              href='https://drive.google.com/file/d/1P4RGrBPG0-VclAu-JuCHNVEtmseylZSO/view?usp=sharing'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.resumeLink}
+              weight='bold'
             >
-              <path d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
-            </svg>
-          </Eyebrow>
+              View my Resume
+              </Eyebrow>
+              <svg
+                className={styles.resumeLinkIcon}
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+                strokeWidth={2}
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                aria-hidden
+              >
+                <path d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+              </svg>
+              </div>
+                {socialLinks.filter((social) => social.name !== 'Email').map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target={social.href.startsWith('mailto') ? undefined : '_blank'}
+                    rel={
+                      social.href.startsWith('mailto')
+                        ? undefined
+                        : 'noopener noreferrer'
+                    }
+                    className={styles.socialLink}
+                    aria-label={social.name}
+                  >
+                {social.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </Section>

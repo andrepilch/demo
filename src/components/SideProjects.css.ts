@@ -5,7 +5,7 @@ import { vars } from '@/styles'
 export const projectGrid = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 1fr)',
-  gap: vars.gap.elementSm,
+  gap: vars.gap.elementMd,
   '@media': {
     'screen and (max-width: 1023px)': {
       gridTemplateColumns: '1fr',

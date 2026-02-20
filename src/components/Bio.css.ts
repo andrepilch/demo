@@ -5,7 +5,7 @@ import { vars } from '@/styles'
 export const heroGrid = style({
   display: 'grid',
   gridTemplateColumns: '1fr',
-  gap: '1.5rem',
+  gap: '3.5rem',
   alignItems: 'flex-start',
   '@media': {
     'screen and (min-width: 768px)': {
@@ -75,6 +75,13 @@ export const pageTitle = style({
   },
 })
 
+export const resumeLinkWrapper = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+  gap: '1.5rem',
+})
+
 export const resumeLink = style({
   color: vars.color.accent,
   display: 'inline-flex',
@@ -86,4 +93,30 @@ export const resumeLinkIcon = style({
   width: '0.875rem',
   height: '0.875rem',
   flexShrink: 0,
+  color: vars.color.accent,
+  transition: 'all 0.3s ease',
+  ':hover': {
+    color: vars.color.textSecondary,
+  },
+})
+
+export const resumeLinkContainer = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '0.15rem',
+})
+export const socialLink = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '0.875rem',
+  height: '0.875rem',
+  borderRadius: '50%',
+  color: vars.color.textSecondary,
+  transition: 'all 0.3s ease',
+  ':hover': {
+    color: vars.color.accent,
+    transform: 'translateY(-2px)',
+  },
 })
