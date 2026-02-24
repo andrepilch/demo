@@ -1,15 +1,71 @@
-import { Eyebrow, H1, Section, SectionHeader } from '@/components'
-import * as styles from '../../page.css'
-
+// import { CaseStudyFeatureHighlight, CaseStudyImageGallery } from '../components'
+import {
+  CaseStudyHero,
+  CaseStudyPageWrapper,
+  //   CaseStudyOverview,
+  //   CaseStudyCards,
+  //   CaseStudyProcessList,
+  //   CaseStudySection,
+  //   CaseStudyStrategyGoals,
+  //   CaseStudyResults,
+} from '../components'
+import {
+  heroData,
+  //   overviewData,
+  //   designProcessImages,
+  //   designProcessSection,
+  //   designProcessSteps,
+  //   featureMultipleBibles,
+  //   featureOneTapAccess,
+  //   featureSearchByMeaning,
+  //   featureMultipleLanguages,
+  //   finalDesignsSection,
+  //   finalDesignsImages,
+  //   painPoints,
+  //   principlesSection,
+  //   problemSection,
+  //   productPrinciples,
+  //   resultsData,
+  //   solutionSection,
+  //   strategyOutcomes,
+  //   strategySection,
+} from './data'
 export default function DesignerPage() {
   return (
-    <div className={styles.pageWrapper} style={{ paddingTop: '200px' }}>
-      <Section>
-        <SectionHeader>
-          <Eyebrow>Case Study Coming Soon</Eyebrow>
-          <H1>WHCC Designer</H1>
-        </SectionHeader>
-      </Section>
-    </div>
+    <CaseStudyPageWrapper>
+      <CaseStudyHero data={heroData} />
+
+      {/* <CaseStudyOverview data={overviewData} /> */}
+
+      {/* <CaseStudyCards section={problemSection} items={painPoints} />
+
+      <CaseStudyStrategyGoals
+        section={strategySection}
+        items={strategyOutcomes}
+      />
+
+      <CaseStudyCards section={principlesSection} items={productPrinciples} />
+
+      <CaseStudySection data={designProcessSection}>
+        <CaseStudyProcessList
+          items={designProcessSteps}
+          images={designProcessImages}
+        />
+      </CaseStudySection>
+
+      <CaseStudySection data={solutionSection} />
+
+      <CaseStudyFeatureHighlight data={featureMultipleBibles} />
+      <CaseStudyFeatureHighlight data={featureOneTapAccess} />
+      <CaseStudyFeatureHighlight data={featureSearchByMeaning} />
+      <CaseStudyFeatureHighlight data={featureMultipleLanguages} />
+
+      <CaseStudyImageGallery
+        section={finalDesignsSection}
+        images={finalDesignsImages}
+      />
+
+      <CaseStudyResults data={resultsData} /> */}
+    </CaseStudyPageWrapper>
   )
 }
