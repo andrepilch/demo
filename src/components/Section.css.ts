@@ -198,7 +198,7 @@ export const brandBlock = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: `${vars.gap.section} ${vars.gap.section}`,
+  padding: `${vars.gap.section} ${vars.gap.sectionSm}`,
   '@media': {
     'screen and (min-width: 768px)': {
       padding: `${vars.gap.section} ${vars.gap.section}`,
