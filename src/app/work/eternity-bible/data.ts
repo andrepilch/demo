@@ -265,7 +265,7 @@ export const finalDesignsImages: CaseStudyGalleryImage[] = [
 
 export const resultsData: CaseStudyResultsData = {
   eyebrow: 'Impact',
-  title: 'Project Results',
+  // title: 'Project Results',
   description: `Eternity Bible is receiving overwhelmingly positive feedback for its core, innovative feature: the ability to set up multiple, personalized Bibles for different purposes (e.g., personal devotion, family study, Sunday service). Users describe this as a "fantastic" and "game changer" feature that simplifies navigation and allows them to instantly pick up right where they left off in any context.
 
   The app is organically growing a team with five users who have offered to help with the app with their own time and skills after having seen the value for themselves.`,
@@ -279,11 +279,11 @@ export const conclusionSection: CaseStudySectionData = {
 }
 
 export const digitalBibleBenefits: CardItem[] = [
-  'Can read in the dark',
-  'Can hold with children in your arms',
-  'Always in your pocket',
+  // 'Can read in the dark',
+  // 'Can hold with children in your arms',
+  // 'Always in your pocket',
   'Adapts to your setting',
   'Remembers for you',
-  'Many Bibles without the weight',
+  // 'Many Bibles without the weight',
   'Quicker to find a verse',
 ].map((title) => ({ title }))

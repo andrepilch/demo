@@ -82,7 +82,7 @@ export interface CaseStudyGalleryImage {
 
 export interface CaseStudyResultsData {
   eyebrow: string
-  title: string
+  title?: string
   description: string
   results: CaseStudyResult[]
 }

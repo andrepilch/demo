@@ -30,6 +30,8 @@ import {
   resultsData,
   featureMultipleLanguages,
   designProcessImages,
+  conclusionSection,
+  digitalBibleBenefits,
 } from './data'
 
 export default function EternityCaseStudy() {
@@ -37,11 +39,16 @@ export default function EternityCaseStudy() {
     <CaseStudyPageWrapper>
       <CaseStudyHero data={heroData} />
 
+      <CaseStudyResults data={resultsData} />
+
       <CaseStudyOverview data={overviewData} />
 
       <CaseStudyCards section={problemSection} items={painPoints} />
 
-      <CaseStudyStrategyGoals section={strategySection} items={strategyOutcomes} />
+      <CaseStudyStrategyGoals
+        section={strategySection}
+        items={strategyOutcomes}
+      />
 
       <CaseStudyCards section={principlesSection} items={productPrinciples} />
 
@@ -64,11 +71,10 @@ export default function EternityCaseStudy() {
         images={finalDesignsImages}
       />
 
-      {/* <CaseStudyCards
+      <CaseStudyCards
         section={conclusionSection}
         items={digitalBibleBenefits}
-      /> */}
-      <CaseStudyResults data={resultsData} />
+      />
     </CaseStudyPageWrapper>
   )
 }

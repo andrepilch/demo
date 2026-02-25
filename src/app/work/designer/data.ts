@@ -265,8 +265,8 @@ export const finalDesignsImages: CaseStudyGalleryImage[] = [
 ]
 
 export const resultsData: CaseStudyResultsData = {
-  eyebrow: 'Results',
-  title: 'Project Results',
+  eyebrow: 'Impact',
+  // title: 'Project Results',
   description: `Adoption of the Designer has continued to grow year over year. The success of this tool from the beginning set off the plan for creating more apps just like this one and saved the card product line from being discontinued.`,
   results: designerResults,
 }

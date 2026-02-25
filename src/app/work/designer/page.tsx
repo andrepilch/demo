@@ -33,6 +33,8 @@ export default function DesignerPage() {
     <CaseStudyPageWrapper>
       <CaseStudyHero data={heroData} />
 
+      <CaseStudyResults data={resultsData} />
+
       <CaseStudyOverview data={overviewData} />
 
       <CaseStudyCards section={problemSection} items={painPoints} />
@@ -70,7 +72,6 @@ export default function DesignerPage() {
         </div>
       </CaseStudyImageGallery>
 
-      <CaseStudyResults data={resultsData} />
       <CaseStudySection data={conclusionSection} />
     </CaseStudyPageWrapper>
   )

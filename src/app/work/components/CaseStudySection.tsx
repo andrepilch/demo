@@ -17,15 +17,14 @@ export function CaseStudySection({
   className,
 }: CaseStudySectionProps) {
   return (
-    <Section
-      gap={SectionGap.lg}
-      className={className}
-    >
-      <SectionHeader align="left">
-        <Eyebrow color="accent">{data.eyebrow}</Eyebrow>
-        <H2>{data.title}</H2>
+    <Section gap={SectionGap.lg} className={className}>
+      <SectionHeader align='left'>
+        <Eyebrow color='accent'>{data.eyebrow}</Eyebrow>
+        {data.title != null && data.title !== '' && <H2>{data.title}</H2>}
         {data.description != null && data.description !== '' && (
-          <Body color="secondary" style={{ whiteSpace: 'pre-line' }}>{data.description}</Body>
+          <Body color='secondary' style={{ whiteSpace: 'pre-line' }}>
+            {data.description}
+          </Body>
         )}
       </SectionHeader>
       {children}

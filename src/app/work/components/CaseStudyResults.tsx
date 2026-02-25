@@ -9,9 +9,7 @@ export interface CaseStudyResultsProps {
 export function CaseStudyResults({ data }: CaseStudyResultsProps) {
   const { eyebrow, title, description, results } = data
   return (
-    <CaseStudySection
-      data={{ eyebrow, title, description }}
-    >
+    <CaseStudySection data={{ eyebrow, title: title ?? '', description }}>
       <div className={styles.resultsGrid}>
         {results.map((result, i) => (
           <div key={i} className={styles.resultCard}>
