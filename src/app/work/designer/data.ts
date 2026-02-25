@@ -10,59 +10,66 @@ import type {
 } from '@/app/work/components'
 import type { CardItem } from '@/app/work/components'
 
-// Re-export for FeaturedCaseStudies
-export const eternityResults: CaseStudyResult[] = [
-  { value: '5★', label: 'Rated', description: 'in Play Store' },
-  { value: '95%', label: 'Engagement', description: 'with core feature' },
-  // { value: '5', label: 'Growing a team', description: 'people offering help' },
+export const designerResults: CaseStudyResult[] = [
+  {
+    value: '26%',
+    label: 'AOV Increase',
+    description: 'vs. alternative solutions',
+  },
+  {
+    value: '1.44x',
+    label: 'YoY Growth',
+    description: 'vs. alternative solutions',
+  },
+  { value: '6.5M+', label: 'Sessions served', description: 'and counting' },
+  {
+    value: '10yrs+',
+    label: 'Sustained growth',
+    description: 'continuing to scale',
+  },
 ]
 
 const projectMeta = {
-  role: [
-    'Solo Designer',
-    'Solo and Lead Developer',
-    'Product Owner',
-    'Design system',
-    'Project manager',
-  ],
-  platforms: ['iOS', 'Android', 'Mobile Web', 'Desktop Web'],
-  devices: ['iPhone', 'iPad', 'Android phone', 'Android tablet', 'Web'],
+  role: ['Product Designer', 'Design System', 'Research', 'Frontend Developer'],
+  platforms: ['Desktop Web', 'Mobile Web'],
+  devices: ['Desktop', 'Mobile'],
   tech: [
-    'ReactJS',
-    'TypeScript',
-    'PigmentCSS',
-    'NextJS',
+    'Figma',
     'Cursor AI',
-    'Vercel',
+    'Styled Components',
+    'React',
     'Github',
-    'PWA/TWA',
+    'Typescript',
+    'Storybook',
+    'Chromatic',
+    'Zeroheight',
+    'Pixate',
+    'Origami Studio',
+    'Framer',
+    'InVision',
   ],
-  year: '2025–Present',
+  year: '2016–Present',
   status: 'Live',
-  targetAudience: ['Churchgoers', 'Bilinguals', 'Bible Readers'],
+  targetAudience: ['Photographers', 'Designers', 'Photographer Clients'],
 }
 
 export const heroData: CaseStudyHeroData = {
-  eyebrow: 'Case Study Coming Soon',
-  title: 'Building User Confidence and Saving Time with a Versatile Designer',
+  eyebrow: 'WHCC Designer',
+  title: 'Building user confidence and saving time with a versatile designer',
   description:
     'React multi-brand web app for whcc and its partners used by hundreds of thousands of users that continues to scale',
   ctaLabel: 'Visit WHCC Designer',
   ctaUrl: 'https://www.whcc.com/ordering/',
   accentColor: '#0e5fd3',
-  heroImage: '/images/projects/wall_designer/wall_designer_cover.jpg',
+  heroImage: '/images/projects/designer/wall_designer_cover.jpg',
 }
 
 export const overviewData: CaseStudyOverviewData = {
-  eyebrow: 'Case Study Coming Soon',
+  eyebrow: 'Overview',
   title: 'WHCC Designer',
-  description: `Designed to help you open the Bible more often. The challenge of Eternity Bible was to rethink the status quo of digital Bibles from the perspective of the user.
-The people using Bible apps tend to follow the same patterns as well like attending church, reading several translations or sometimes even languages in different settings and groups.
- 
-The reality is that most people don't open the Bible on their phone because of the cognitive load of finding your spot and navigating the app. 
-Eternity Bible lets you create Bibles for every context and resume reading
-exactly where you left off in each Bible instantly. You can save
-settings and a translation for each Bible.`,
+  description: `WHCC endeavored to create a new era of design and ordering tools for photo products. The purpose of creating this new Designer was to supply creatives in the Photography industry with professional designs and simple customization to enable them to stay focused on their expertise of taking photos while still receiving the beautiful products their clients expect and are proud to share.
+
+This allowed clients to free up countless hours that they would have otherwise spent in Photoshop and clunky ordering software with little return. It also provided the opportunity for Photographers to share the design process with their clients and save even more time. We knew we could achieve this by combining professional designs with quality printing and easy to use software in the browser.`,
   projectMeta,
 }
 
@@ -70,178 +77,167 @@ export const problemSection: CaseStudySectionData = {
   eyebrow: 'The Challenge',
   title: 'Problem Identification',
   description:
-    'Digital Bibles are designed around print expectations, not around human lives today. Particularly the churched.',
+    'Ordering products was previously done through a clunky java desktop app from the early 2000s. This tool was limiting to our business and also to our clients. It was also a third party tool which made it hard to differentiate ourselves from competitors. To solve these problems, we needed to build an easy to use tool on modern web technologies that can be expanded to support multiple partner and internal brands, endless product variations, and always produce quality design results for clients who likely are not designers themselves.',
 }
 
 export const painPoints: CardItem[] = [
-  'Only one translation available',
-  'Has ads or sponsorships and promotional materials',
-  'Single language eliminates bilinguals',
-  'Hard and slow to navigate the Bible',
-  'Takes longer to find your spot in digital Bible than it does on paper',
-  'Too many features you never actually use on your phone',
-  'High cognitive load',
-  'Too many taps, 3-4 to get back to bookmark or history in other Bible',
-  'Thinking and memory involved to find your spot means app left unopened',
-  'Contains false teaching',
-  'Costs money',
-  'Poor formatting',
-  'Full of distractions drawing you away from the Bible',
-  'Too many settings',
-  'Not curated',
+  'Our business relied on a clunky Java desktop app from the early 2000s',
+  'Third party tool was limiting to our business and our clients',
+  'Designs had to be made manually in Photoshop',
+  'Third party tool made it hard to differentiate from competitors',
+  'Could not support multiple partner and internal brands',
+  'Clients who are not designers need quality design results',
+  'Needed a user manual and support to order products',
+  'Ordering was time consuming and frustrating',
+  'Proofing products with clients was manual and time consuming',
 ].map((title) => ({ title }))
 
 export const strategySection: CaseStudySectionData = {
-  eyebrow: 'Strategic Thinking',
-  title: 'Product Strategy',
-  description: `Challenger strategy aiming to position the product as more exciting than others available in the market based on features, design, and efficiency.`,
+  eyebrow: 'Goals & Vision',
+  title: 'Strategic Direction',
+  description: `Integrate custom card, album, and wall layout design with ordering in a theme-able tool that can be plugged into our own and our partner websites. The solution had to work for everyone from consumers to professionals and provide trusted design and printing outcomes every time.`,
 }
 
 export const strategyOutcomes: CaseStudyStrategyOutcome[] = [
   {
-    principle: "Everything must be better in the user's mind",
-    outcome: 'Clients use and want to share',
-  },
-  {
-    principle: 'No one should feel like they need to know more',
-    outcome: 'Users are comfortable',
+    principle:
+      "Invite folks who've never printed all the way to people who print things every day",
+    outcome: "Users don't have to be print experts",
   },
   {
     principle:
-      'No one should feel like our first user, things should work as expected',
-    outcome: 'Trust is built',
+      'Build a standalone tool that is entirely self-operable within any branded flow',
+    outcome:
+      'Can integrate with first and third party brands to attract more print',
   },
   {
-    principle: 'Save user time',
-    outcome: 'Creates value for the user',
+    principle: 'Invest in mobile flows to meet customers on any device',
+    outcome: 'Provides access to print in more places',
   },
   {
-    principle: 'Minimize effort',
-    outcome: 'Easier to be in the app',
+    principle:
+      'Establish systems that remove repetitive work and enhance reusability',
+    outcome: 'Enables continuous improvement',
+  },
+  {
+    principle: 'Support the needs of our enterprise accounts',
+    outcome: 'Reaches a wider audience',
+  },
+  {
+    principle:
+      'Give everyone access to beautiful custom design through built-in templates and layouts',
+    outcome: "Users don't have to be design experts",
+  },
+  {
+    principle:
+      'Create efficiency for the masses by relying on integrated power tools to serve power users',
+    outcome: "Users and development aren't slowed down by extra features",
+  },
+  {
+    principle: 'Always be accurate and honest about products',
+    outcome: 'Builds confidence and trust that causes clients to return',
+  },
+  {
+    principle: 'Combine design with ordering for more products',
+    outcome: 'Offers more value and confidence than any other ordering tool',
   },
 ]
+
+export const desiredResponseSection: CaseStudySectionData = {
+  eyebrow: 'Desired Response',
+  title: 'Success Metric',
+  description: `Adoption of this new software for design and ordering was the key metric which was expected to convert into more product sales. This meant the tool had to integrate into workflows and add more value than traditional design and ordering patterns.`,
+}
 
 export const whatItIsntSection: CaseStudySectionData = {
   eyebrow: 'Focus',
   title: "What It Isn't",
-  description:
-    "The aim isn't to create another ecosystem or publishing platform for our own or someone else's content.",
+  description: '',
 }
 
 export const principlesSection: CaseStudySectionData = {
   eyebrow: 'Foundation',
-  title: 'Product Principles',
+  title: 'Methodologies',
 }
 
 export const productPrinciples: CardItem[] = [
   {
-    title: 'UX is primary',
-    description: 'Everything must be better than the competition',
+    title: 'Research-Driven Design',
+    description:
+      'I conducted many forms of user research to understand user needs and pain points to create solutions that meet their needs.',
   },
   {
-    title: 'Designed for the user',
-    description: 'Takes you into the Bible, not out of it',
+    title: 'Design System-First',
+    description:
+      'I created the first design system in the company which was used to create consistent designs and experiences.',
   },
   {
-    title: 'Content first',
-    description: 'The app does not make itself noticed',
+    title: 'Continuous Iteration',
+    description:
+      'I iterated on the design based on user feedback and metrics to improve the tool. Proposing new features and solutions.',
+  },
+  {
+    title: 'Collaborative Design',
+    description:
+      'I fostered cross-team collaboration to build the best possible product for users.',
+  },
+  {
+    title: 'Design for Business Outcomes',
+    description:
+      'Design for metrics that matter: conversion rates, AOV, retention, and long-term product sustainability.',
   },
 ]
 
 export const designProcessSection: CaseStudySectionData = {
   eyebrow: 'Process',
-  title: 'The 0 to 1',
+  title: 'Design Process',
+  description: '',
 }
 
-export const designProcessImages: CaseStudyGalleryImage[] = [
-  {
-    src: '/images/projects/eternity/eternity_process.jpg',
-    alt: 'Design wireframes',
-    afterStep: 4,
-  },
-  {
-    src: '/images/projects/eternity/eternity_wireframes.jpg',
-    alt: 'Design wireframes',
-    afterStep: 7,
-  },
-]
+export const designProcessImages: CaseStudyGalleryImage[] = []
 
 export const designProcessSteps: CardItem[] = [
-  'Understand problems',
-  'Competitive analysis',
-  'Ideation',
-  'Information architecture',
-  'Wireframes',
-  'Interviews with target audience to discuss solutions',
-  'Design',
-  'Data architecture',
-  'Develop',
-  'Release incrementally',
-  'Invite users to test along the way',
-  'React to feedback quickly',
-  'Release & Test with closed testing group',
-  'Iterate on design and features',
-  'Release to app stores',
-  'Continue evolving features',
-].map((title, i) => ({ title, number: i + 1 }))
+  { title: 'Research & Persona Discovery', number: 1 },
+  { title: 'Competitive Analysis', number: 2 },
+  { title: 'Ideate & Explore', number: 3 },
+  { title: 'Prototype & Design', number: 4 },
+  { title: 'Test & Iterate', number: 5 },
+  { title: 'Release & Iterate', number: 6 },
+  { title: 'Build a System', number: 7 },
+  { title: 'Repeat & Scale', number: 8 },
+]
 
 export const solutionSection: CaseStudySectionData = {
   eyebrow: 'Solution',
-  title: 'Challenging the Norms',
+  title: 'The Designer',
+  description: '',
 }
 
-export const featureMultipleBibles: CaseStudyFeatureHighlightData = {
-  eyebrow: 'Creating Value',
-  title: 'Make a Bible for Every Context',
-  description: `Eternity Bible lets you create Bibles for every context and resume reading exactly where you left off in each Bible instantly. You can save settings and translation for each Bible.`,
+export const designFeatures: CaseStudyFeatureHighlightData = {
+  eyebrow: 'Interaction Design',
+  title: 'Built-in Design Features',
+  description:
+    'The designer can be trusted to generate beautiful designs every time.',
   bullets: [
-    'Create unlimited personal Bibles for different purposes',
-    'Resume reading exactly where you left off instantly',
-    'Save settings and translation for each Bible',
-    'Pick up where you left off on any device',
+    'Professional design templates easy to customize',
+    'Smart handles to resize layouts',
+    'Balances starter layouts with easy customization',
   ],
-  imageSrc: '/images/projects/eternity/eternity_hand.jpg',
-  imageAlt: 'My Bibles screen showing multiple Bible cards',
+  imageSrc: '/images/projects/designer/collage_handles.gif',
+  imageAlt: 'Collage Handles',
   imagePosition: 'right',
 }
 
-export const featureSearchByMeaning: CaseStudyFeatureHighlightData = {
-  eyebrow: 'Challenging Competition',
-  title: 'Powerful Search by Meaning',
-  description: `Eternity's vector search feature helps you discover Scripture based on what you're looking for, not just exact word matches.`,
+export const multipleBrandSupport: CaseStudyFeatureHighlightData = {
+  eyebrow: 'Design System',
+  title: 'Theming & Branding',
+  description: 'The Designer can be branded for multiple brands and partners.',
   bullets: [
-    'Search by meaning, not just keywords',
-    'Quicker to find a verse than traditional search',
+    'Support for multiple brands and partners',
+    'Custom brand can dynamically be passed in to the designer for white labeling',
   ],
-  imageSrc: '/images/projects/eternity/eternity_search.jpg',
-  imageAlt: 'Search by meaning interface',
-  imagePosition: 'right',
-}
-
-export const featureOneTapAccess: CaseStudyFeatureHighlightData = {
-  eyebrow: 'Enhancing Brand Experience',
-  title: 'Quick Access to Your Chapter',
-  description: `Eternity Bible lets you quickly access your chapter with a unique navigation tray.`,
-  bullets: [
-    'Quick access to your chapter by tapping the chapter number in the navigation tray',
-    'This UI pattern turns 4 taps into 2 taps without losing context',
-    'Light cognitive load for an action that is repeated often',
-  ],
-  imageSrc: '/images/projects/eternity/eternity_tray.jpg',
-  imageAlt: 'Simple navigation interface',
-  imagePosition: 'left',
-}
-
-export const featureMultipleLanguages: CaseStudyFeatureHighlightData = {
-  eyebrow: 'Creating Visibility',
-  title: 'Multiple Languages',
-  description: `Eternity Bible supports multiple languages, so you can read the Bible in your native language.`,
-  bullets: [
-    'Support for multiple languages',
-    'Read the Bible in your native language without all the taps to switch back to your churched language',
-  ],
-  imageSrc: '/images/projects/eternity/eternity_multilingual.jpg',
-  imageAlt: 'Multiple languages interface',
+  imageSrc: '/images/projects/designer/theming.gif',
+  imageAlt: 'Theming',
   imagePosition: 'left',
 }
 
@@ -249,41 +245,32 @@ export const finalDesignsSection: CaseStudySectionData = {
   eyebrow: 'Final Designs',
   title: 'The Shipped Product',
   description:
-    'The final designs shipped to the App Store and Google Play and available across devices on the web.',
+    'The Designer is a versatile tool that can be used to design and order a variety of products.',
 }
 
 export const finalDesignsImages: CaseStudyGalleryImage[] = [
   {
-    src: '/images/projects/eternity/eternity_home.jpg',
-    alt: 'My Bibles - Multiple Bible cards for different contexts',
+    src: '/images/projects/designer/wall_designer_cover.jpg',
+    alt: 'Collage Handles',
   },
   {
-    src: '/images/projects/eternity/eternity_read.jpg',
-    alt: 'Reading view - Clean, focused reading experience',
+    src: '/images/projects/designer/editor_variations.gif',
+    alt: 'Designer Variations',
   },
 ]
 
 export const resultsData: CaseStudyResultsData = {
-  eyebrow: 'Impact',
+  eyebrow: 'Results',
   title: 'Project Results',
-  description: `Eternity Bible is receiving overwhelmingly positive feedback for its core, innovative feature: the ability to set up multiple, personalized Bibles for different purposes (e.g., personal devotion, family study, Sunday service). Users describe this as a "fantastic" and "game changer" feature that simplifies navigation and allows them to instantly pick up right where they left off in any context.
+  description: `Adoption of the Designer has continued to grow year over year. The success of this tool from the beginning set off the plan for creating more apps just like this one and saved the card product line from being discontinued. 
+  
+  Customers praised the tool for its ease of use, huge time savings, and quick learning curve—many calling it a life changer and returning to offer products again that were previously not worth their effort.`,
 
-  The app is organically growing a team with five users who have offered to help with the app with their own time and skills after having seen the value for themselves.`,
-  results: eternityResults,
+  results: designerResults,
 }
 
 export const conclusionSection: CaseStudySectionData = {
   eyebrow: 'Conclusion',
-  title: 'Challenging the Norms',
-  description: `The app takes full advantage of digital capabilities to create a better alternative to print.`,
+  title: '',
+  description: '',
 }
-
-export const digitalBibleBenefits: CardItem[] = [
-  'Can read in the dark',
-  'Can hold with children in your arms',
-  'Always in your pocket',
-  'Adapts to your setting',
-  'Remembers for you',
-  'Many Bibles without the weight',
-  'Quicker to find a verse',
-].map((title) => ({ title }))

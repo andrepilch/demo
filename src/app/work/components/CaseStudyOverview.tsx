@@ -65,18 +65,19 @@ export function CaseStudyOverview({ data }: CaseStudyOverviewProps) {
             <li className={styles.overviewValue}>{projectMeta.status}</li>
           </ul>
         </div>
-        {projectMeta.targetAudience != null && projectMeta.targetAudience.length > 0 && (
-          <div className={styles.overviewItem}>
-            <p className={styles.overviewLabel}>Target Audience</p>
-            <ul className={styles.overviewList}>
-              {projectMeta.targetAudience.map((item, i) => (
-                <li key={i} className={styles.overviewValue}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        {projectMeta.targetAudience != null &&
+          projectMeta.targetAudience.length > 0 && (
+            <div className={styles.overviewItem}>
+              <p className={styles.overviewLabel}>Target Audience</p>
+              <ul className={styles.overviewList}>
+                {projectMeta.targetAudience.map((item, i) => (
+                  <li key={i} className={styles.overviewValue}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
       </div>
     </CaseStudySection>
   )

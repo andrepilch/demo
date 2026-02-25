@@ -1,43 +1,44 @@
-// import { CaseStudyFeatureHighlight, CaseStudyImageGallery } from '../components'
 import {
   CaseStudyHero,
   CaseStudyPageWrapper,
-  //   CaseStudyOverview,
-  //   CaseStudyCards,
-  //   CaseStudyProcessList,
-  //   CaseStudySection,
-  //   CaseStudyStrategyGoals,
-  //   CaseStudyResults,
+  CaseStudyOverview,
+  CaseStudyCards,
+  CaseStudyProcessList,
+  CaseStudySection,
+  CaseStudyStrategyGoals,
+  CaseStudyResults,
+  CaseStudyFeatureHighlight,
+  CaseStudyImageGallery,
 } from '../components'
 import {
   heroData,
-  //   overviewData,
-  //   designProcessImages,
-  //   designProcessSection,
-  //   designProcessSteps,
-  //   featureMultipleBibles,
-  //   featureOneTapAccess,
-  //   featureSearchByMeaning,
-  //   featureMultipleLanguages,
-  //   finalDesignsSection,
-  //   finalDesignsImages,
-  //   painPoints,
-  //   principlesSection,
-  //   problemSection,
-  //   productPrinciples,
-  //   resultsData,
-  //   solutionSection,
-  //   strategyOutcomes,
-  //   strategySection,
+  overviewData,
+  designProcessImages,
+  designProcessSection,
+  designProcessSteps,
+  finalDesignsSection,
+  finalDesignsImages,
+  painPoints,
+  problemSection,
+  resultsData,
+  solutionSection,
+  strategyOutcomes,
+  strategySection,
+  multipleBrandSupport,
+  designFeatures,
+  principlesSection,
+  productPrinciples,
 } from './data'
+import Image from 'next/image'
+import * as styles from '../components/case-study.css'
 export default function DesignerPage() {
   return (
     <CaseStudyPageWrapper>
       <CaseStudyHero data={heroData} />
 
-      {/* <CaseStudyOverview data={overviewData} /> */}
+      <CaseStudyOverview data={overviewData} />
 
-      {/* <CaseStudyCards section={problemSection} items={painPoints} />
+      <CaseStudyCards section={problemSection} items={painPoints} />
 
       <CaseStudyStrategyGoals
         section={strategySection}
@@ -55,17 +56,24 @@ export default function DesignerPage() {
 
       <CaseStudySection data={solutionSection} />
 
-      <CaseStudyFeatureHighlight data={featureMultipleBibles} />
-      <CaseStudyFeatureHighlight data={featureOneTapAccess} />
-      <CaseStudyFeatureHighlight data={featureSearchByMeaning} />
-      <CaseStudyFeatureHighlight data={featureMultipleLanguages} />
+      <CaseStudyFeatureHighlight data={designFeatures} />
+      <CaseStudyFeatureHighlight data={multipleBrandSupport} />
 
       <CaseStudyImageGallery
         section={finalDesignsSection}
         images={finalDesignsImages}
-      />
+      >
+        <div className={styles.imageFull}>
+          <Image
+            src='/images/projects/designer/wall.gif'
+            alt='Wall Designer'
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
+      </CaseStudyImageGallery>
 
-      <CaseStudyResults data={resultsData} /> */}
+      <CaseStudyResults data={resultsData} />
     </CaseStudyPageWrapper>
   )
 }

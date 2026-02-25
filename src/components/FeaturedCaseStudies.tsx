@@ -13,7 +13,7 @@ const caseStudies = [
       'Building user confidence and saving time with a versatile designer',
     tags: ['Product Design', 'React', 'Design Systems'],
     href: '/work/designer',
-    image: '/images/projects/wall_designer/wall_designer_cover.jpg',
+    image: '/images/projects/designer/wall_designer_cover.jpg',
     stats: [
       // { value: '26%', label: 'AOV Increase' },
       { value: '6.5M+', label: 'Sessions served' },
@@ -23,7 +23,8 @@ const caseStudies = [
   },
   {
     title: 'Eternity Bible',
-    outcome: 'Full-stack React/NextJS application built and shipped solo to app stores in under 1 year',
+    outcome:
+      'Full-stack React/NextJS application built and shipped solo to app stores in under 1 year',
     description: 'Challenging the norms in a saturated market',
     tags: ['NextJS', 'TypeScript', 'Full-Stack'],
     href: '/work/eternity-bible',
@@ -62,19 +63,19 @@ export function FeaturedCaseStudies() {
               ))}
             </div> */}
             {study.stats && (
-                <div className={styles.caseStudyStats}>
-                  {study.stats.map((stat, k) => (
-                    <div key={k} className={styles.caseStudyStat}>
-                      <span className={styles.caseStudyStatValue}>
-                        {stat.value}
-                      </span>
-                      <span className={styles.caseStudyStatLabel}>
-                        {stat.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
+              <div className={styles.caseStudyStats}>
+                {study.stats.map((stat, k) => (
+                  <div key={k} className={styles.caseStudyStat}>
+                    <span className={styles.caseStudyStatValue}>
+                      {stat.value}
+                    </span>
+                    <span className={styles.caseStudyStatLabel}>
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </Link>
       ))}
