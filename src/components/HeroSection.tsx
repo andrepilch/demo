@@ -8,14 +8,14 @@ export function HeroSection() {
       <H1 color='onAccent' className={styles.heroTitle}>
         I strategically design
         <span className={styles.interjection}> and sometimes build</span>{' '}
-        innovative mobile & web products
+        innovative web products
       </H1>
       {/* CTA Buttons */}
       <ButtonGroup className={styles.ctaButtons}>
         <LinkButton
           href='/about'
           variant='primary'
-          style={{marginTop: '1.5rem'}}
+          style={{ marginTop: '1.5rem' }}
         >
           About Me
         </LinkButton>
