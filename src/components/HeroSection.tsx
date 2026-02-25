@@ -6,9 +6,13 @@ export function HeroSection() {
     <Section className={styles.heroSection}>
       {/* Headline */}
       <H1 color='onAccent' className={styles.heroTitle}>
-        I strategically design
-        <span className={styles.interjection}> and sometimes build</span>{' '}
-        innovative web products
+        I strategically design & build innovative web products
+        {/* <span className={styles.interjection}> and sometimes build</span>{' '} */}
+        {/* innovative web products */}
+        <br />
+        <span className={styles.interjection}>
+          with great taste & intuition 😉
+        </span>{' '}
       </H1>
       {/* CTA Buttons */}
       <ButtonGroup className={styles.ctaButtons}>
