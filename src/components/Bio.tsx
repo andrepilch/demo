@@ -29,9 +29,10 @@ export function Bio() {
           {/* <p className={styles.eyebrow}>About Me</p> */}
           <H2 className={styles.pageTitle}>Hi, I'm André Pilch</H2>
           <Body>
-            I'm a christian born and raised in France, now residing and working
+            I'm a Christian born and raised in France, now residing and working
             in the United States. Currently helping digital products grow
-            through design and engineering at whcc. Previously at Thomson Reuters, La Forge Des Marques, & Wowiwe Instruction Co.
+            through design and engineering at whcc. Previously at Thomson
+            Reuters, La Forge Des Marques, & Wowiwe Instruction Co.
             <br />
             <br />
             I'm experienced in concepting and scaling lasting products that
@@ -51,15 +52,15 @@ export function Bio() {
           <Education />
           <div className={styles.resumeLinkWrapper}>
             <div className={styles.resumeLinkContainer}>
-            <Eyebrow
-              as='a'
-              href='https://drive.google.com/file/d/1P4RGrBPG0-VclAu-JuCHNVEtmseylZSO/view?usp=sharing'
-              target='_blank'
-              rel='noopener noreferrer'
-              className={styles.resumeLink}
-              weight='bold'
-            >
-              View my Resume
+              <Eyebrow
+                as='a'
+                href='https://drive.google.com/file/d/1P4RGrBPG0-VclAu-JuCHNVEtmseylZSO/view?usp=sharing'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={styles.resumeLink}
+                weight='bold'
+              >
+                View my Resume
               </Eyebrow>
               <svg
                 className={styles.resumeLinkIcon}
@@ -73,23 +74,27 @@ export function Bio() {
               >
                 <path d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
               </svg>
-              </div>
-                {socialLinks.filter((social) => social.name !== 'Email').map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target={social.href.startsWith('mailto') ? undefined : '_blank'}
-                    rel={
-                      social.href.startsWith('mailto')
-                        ? undefined
-                        : 'noopener noreferrer'
-                    }
-                    className={styles.socialLink}
-                    aria-label={social.name}
-                  >
-                {social.icon}
-              </a>
-            ))}
+            </div>
+            {socialLinks
+              .filter((social) => social.name !== 'Email')
+              .map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target={
+                    social.href.startsWith('mailto') ? undefined : '_blank'
+                  }
+                  rel={
+                    social.href.startsWith('mailto')
+                      ? undefined
+                      : 'noopener noreferrer'
+                  }
+                  className={styles.socialLink}
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
           </div>
         </div>
       </div>
