@@ -12,21 +12,23 @@ function CheckIcon() {
   return (
     <svg
       className={styles.featureCheckIcon}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
+      fill='none'
+      viewBox='0 0 24 24'
+      stroke='currentColor'
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap='round'
+        strokeLinejoin='round'
         strokeWidth={2}
-        d="M5 13l4 4L19 7"
+        d='M5 13l4 4L19 7'
       />
     </svg>
   )
 }
 
-export function CaseStudyFeatureHighlight({ data }: CaseStudyFeatureHighlightProps) {
+export function CaseStudyFeatureHighlight({
+  data,
+}: CaseStudyFeatureHighlightProps) {
   const imageBlock = (
     <div className={styles.imageWrapper}>
       <Image
