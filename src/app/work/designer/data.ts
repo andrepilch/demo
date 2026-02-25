@@ -162,14 +162,9 @@ export const principlesSection: CaseStudySectionData = {
 
 export const productPrinciples: CardItem[] = [
   {
-    title: 'Research-Driven Design',
+    title: 'Research Driven',
     description:
-      'I conducted many forms of user research to understand user needs and pain points to create solutions that meet their needs.',
-  },
-  {
-    title: 'Design System-First',
-    description:
-      'I created the first design system in the company which was used to create consistent designs and experiences.',
+      'I conducted many forms of user research to discover personas, understand comptetition, and identify user needs and pain points in order to create solutions that meet their needs.',
   },
   {
     title: 'Continuous Iteration',
@@ -182,9 +177,19 @@ export const productPrinciples: CardItem[] = [
       'I fostered cross-team collaboration to build the best possible product for users.',
   },
   {
-    title: 'Design for Business Outcomes',
+    title: 'Design for Outcomes',
     description:
-      'Design for metrics that matter: conversion rates, AOV, retention, and long-term product sustainability.',
+      'I design for metrics that matter to the business: conversion rates, AOV, retention, and long-term product sustainability.',
+  },
+  {
+    title: 'Process Oriented',
+    description:
+      'My design process includes research, ideation, prototyping, system building,testing, iteration, release, and scaling.',
+  },
+  {
+    title: 'Design System First',
+    description:
+      'I created the first design system in the company which was used to create consistent designs and experiences.',
   },
 ]
 

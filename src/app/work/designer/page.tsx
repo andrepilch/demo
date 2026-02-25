@@ -3,7 +3,6 @@ import {
   CaseStudyPageWrapper,
   CaseStudyOverview,
   CaseStudyCards,
-  CaseStudyProcessList,
   CaseStudySection,
   CaseStudyStrategyGoals,
   CaseStudyResults,
@@ -13,9 +12,6 @@ import {
 import {
   heroData,
   overviewData,
-  designProcessImages,
-  designProcessSection,
-  designProcessSteps,
   finalDesignsSection,
   finalDesignsImages,
   painPoints,
@@ -48,12 +44,12 @@ export default function DesignerPage() {
 
       <CaseStudyCards section={principlesSection} items={productPrinciples} />
 
-      <CaseStudySection data={designProcessSection}>
+      {/* <CaseStudySection data={designProcessSection}>
         <CaseStudyProcessList
           items={designProcessSteps}
           images={designProcessImages}
         />
-      </CaseStudySection>
+      </CaseStudySection> */}
 
       <CaseStudySection data={solutionSection} />
 
