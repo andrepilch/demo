@@ -262,15 +262,13 @@ export const finalDesignsImages: CaseStudyGalleryImage[] = [
 export const resultsData: CaseStudyResultsData = {
   eyebrow: 'Results',
   title: 'Project Results',
-  description: `Adoption of the Designer has continued to grow year over year. The success of this tool from the beginning set off the plan for creating more apps just like this one and saved the card product line from being discontinued. 
-  
-  Customers praised the tool for its ease of use, huge time savings, and quick learning curve—many calling it a life changer and returning to offer products again that were previously not worth their effort.`,
-
+  description: `Adoption of the Designer has continued to grow year over year. The success of this tool from the beginning set off the plan for creating more apps just like this one and saved the card product line from being discontinued.`,
   results: designerResults,
 }
 
 export const conclusionSection: CaseStudySectionData = {
   eyebrow: 'Conclusion',
-  title: '',
-  description: '',
+  title: 'A Huge Success',
+  description:
+    'Customers praised the tool for its ease of use, big time savings, and quick learning curve — many calling it a life changer and deciding to offer products again that were previously not worth their effort. Tradeshow conversations echoed this: when asked why they choose us over other labs, customers pointed to our software — with the designer as the key differentiator.',
 }

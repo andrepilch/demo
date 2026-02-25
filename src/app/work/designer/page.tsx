@@ -28,6 +28,7 @@ import {
   designFeatures,
   principlesSection,
   productPrinciples,
+  conclusionSection,
 } from './data'
 import Image from 'next/image'
 import * as styles from '../components/case-study.css'
@@ -74,6 +75,7 @@ export default function DesignerPage() {
       </CaseStudyImageGallery>
 
       <CaseStudyResults data={resultsData} />
+      <CaseStudySection data={conclusionSection} />
     </CaseStudyPageWrapper>
   )
 }
