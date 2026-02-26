@@ -6,6 +6,7 @@ const impactStats = [
   { value: '18', label: 'Products Shipped' },
   { value: '1', label: 'Design Patent' },
   { value: '7', label: 'Platforms designed for' },
+  { value: '4', label: 'Design Systems Engineered' },
   { value: '10', label: 'Years longest active product' },
 ]
 
