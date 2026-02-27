@@ -1,6 +1,8 @@
 import * as styles from './Section.css'
 import { H2 } from './Text'
 
+// ALTERNATIVE: AI accelerates the build. It never defines the vision.
+
 export function AI() {
   return (
     <section className={styles.brandBlock}>
