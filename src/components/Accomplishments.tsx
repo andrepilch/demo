@@ -5,6 +5,8 @@ const accomplishments = [
   'Published app to Play Store and App Store',
   'Design Patent (US & Switzerland)',
   'Featured in Behance Showcase',
+  'Featured in Arts & Humanities News',
+  'Featured in The Advocate',
 ]
 
 export function Accomplishments() {
