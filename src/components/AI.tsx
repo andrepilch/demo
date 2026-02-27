@@ -6,8 +6,8 @@ export function AI() {
     <section className={styles.brandBlock}>
       <div className={styles.brandBlockInner}>
         <H2>
-          I use AI to build the right products. <br />
-          I do not use AI to tell me what that product should be.
+          I use AI to help build the right products. <br />I do not use AI to
+          tell me what that product should be.
         </H2>
       </div>
     </section>
