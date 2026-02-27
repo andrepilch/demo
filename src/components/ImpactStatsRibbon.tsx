@@ -1,8 +1,8 @@
 import * as styles from './ImpactStatsRibbon.css'
 
 const impactStats = [
-  { value: '14', label: 'Years Experience' },
-  { value: '5', label: 'Years React Engineering' },
+  { value: '14+', label: 'Years Experience' },
+  { value: '5+', label: 'Years React Engineering' },
   { value: '18', label: 'Products Shipped' },
   { value: '1', label: 'Design Patent' },
   { value: '7', label: 'Platforms designed for' },
