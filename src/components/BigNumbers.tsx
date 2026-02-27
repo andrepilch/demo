@@ -24,10 +24,15 @@ const bigNumbers = [
     description: 'vs. alternative solutions',
   },
   {
-    value: '9min',
-    label: 'Average session',
-    description: 'beating competitors',
+    value: '10+ Years',
+    label: 'Sustained growth',
+    description: 'continuing to scale',
   },
+  // {
+  //   value: '9min',
+  //   label: 'Average session',
+  //   description: 'beating competitors',
+  // },
 ]
 
 export function BigNumbers() {
