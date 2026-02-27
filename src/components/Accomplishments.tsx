@@ -2,11 +2,11 @@ import { Eyebrow } from './Text'
 import * as styles from './Accomplishments.css'
 
 const accomplishments = [
-  'Published app to Play Store and App Store',
-  'Design Patent (US & Switzerland)',
+  'Creator of eternitybible.app, published to Google Play Store and Apple App Store',
+  'Design patents in US and Switzerland for display screen with animated GUI',
   'Featured in Behance Showcase',
-  'Featured in Arts & Humanities News',
   'Featured in The Advocate',
+  'Featured in MSUM Arts & Humanities News',
 ]
 
 export function Accomplishments() {
