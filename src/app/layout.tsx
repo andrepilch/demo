@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://andrepilch.com'),
   title: {
     template: '%s | André Pilch',
-    default: 'André Pilch | Strategic Product Designer',
+    default: 'André Pilch | Strategic Product Design',
   },
   description:
     'I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://andrepilch.com',
     siteName: 'André Pilch',
-    title: 'André Pilch | Senior Product Designer & Frontend Engineer',
+    title: 'André Pilch | Strategic Product Design',
     description:
       'I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.',
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'André Pilch | Senior Product Designer & Frontend Engineer',
+    title: 'André Pilch | Strategic Product Design',
     description:
       'I bridge the gap between product vision and engineering reality. 14 years designing and building innovative mobile & web products.',
     images: ['/images/og/home.jpg'],
