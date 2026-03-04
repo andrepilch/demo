@@ -120,7 +120,7 @@ export function Header() {
                 ))}
               </div>
               <a
-                href='mailto:hello@andrepilch.com'
+                href='mailto:pilch.andre@gmail.com'
                 className={styles.ctaButton}
               >
                 Contact

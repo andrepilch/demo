@@ -17,7 +17,7 @@ export const socialLinks = [
   },
   {
     name: 'Email',
-    href: 'mailto:hello@andrepilch.com',
+    href: 'mailto:pilch.andre@gmail.com',
     icon: (
       <svg
         fill='currentColor'
