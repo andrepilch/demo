@@ -449,6 +449,35 @@ export const imageCaption = style({
 })
 
 // ============================================
+// Lightbox
+// ============================================
+
+export const lightboxOverlay = style({
+  position: 'fixed',
+  inset: 0,
+  zIndex: 2000,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '2rem',
+  backgroundColor: 'rgba(0, 0, 0, 0.75)',
+  cursor: 'pointer',
+})
+
+export const lightboxImageWrapper = style({
+  position: 'relative',
+  width: 'fit-content',
+  height: 'fit-content',
+  maxWidth: '90vw',
+  maxHeight: '90vh',
+  cursor: 'default',
+})
+
+export const imageWrapperClickable = style({
+  cursor: 'pointer',
+})
+
+// ============================================
 // Results / Stats
 // ============================================
 export const resultsGrid = style({

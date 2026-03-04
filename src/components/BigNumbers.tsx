@@ -24,7 +24,7 @@ const bigNumbers = [
     description: 'vs. alternative solutions',
   },
   {
-    value: '10+yrs',
+    value: '10+Yrs',
     label: 'Sustained growth',
     description: 'continuing to scale',
   },
