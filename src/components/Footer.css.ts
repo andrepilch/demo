@@ -6,7 +6,8 @@ export const footer = style({
 })
 
 export const container = style({
-  maxWidth: vars.layout.contentMaxWidth,
+  background: vars.color.textAccentDark,
+  // maxWidth: vars.layout.contentMaxWidth,
   marginLeft: 'auto',
   marginRight: 'auto',
   padding: `2rem ${vars.layout.sectionPaddingX}`,

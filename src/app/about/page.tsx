@@ -12,30 +12,34 @@ import {
   ImpactStatsRibbon,
   H2,
   AI,
+  BridgeAdvantage,
 } from '@/components'
 
 export default function About() {
   return (
-    <div className={styles.pageWrapper}>
-      <Bio />
-      <ImpactStatsRibbon />
-      <PassionAreas />
-      <Partnerships />
-      <LeadershipSection />
+    <>
+      <div className={styles.pageWrapper}>
+        <Bio />
+        <ImpactStatsRibbon />
+        <PassionAreas />
+        <Partnerships />
+        <LeadershipSection />
 
-      <section className={brandBlock}>
-        <div className={brandBlockInner}>
-          <H2>
-            A strong product saves time, adds value, competes well, and provides
-            a good experience start to finish.
-          </H2>
-        </div>
-      </section>
-      <ProductPhilosophy />
-      <Process />
-      <AI />
-      <SideProjects />
+        <section className={brandBlock}>
+          <div className={brandBlockInner}>
+            <H2>
+              A strong product saves time, adds value, competes well, and
+              provides a good experience start to finish.
+            </H2>
+          </div>
+        </section>
+        <ProductPhilosophy />
+        <Process />
+        <BridgeAdvantage />
+        <AI />
+        <SideProjects />
+      </div>
       <CTASection />
-    </div>
+    </>
   )
 }

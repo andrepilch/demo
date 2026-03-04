@@ -21,7 +21,7 @@ export const diagonalShape = style({
   top: 0,
   left: 0,
   width: '100%',
-  height: '250%',
+  height: '200%',
   zIndex: 1,
   pointerEvents: 'none',
   clipPath: 'polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%)',

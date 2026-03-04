@@ -1,11 +1,10 @@
 import {
   DiagonalBackground,
   HeroSection,
-  ImpactStatsRibbon,
+  // ImpactStatsRibbon,
   BigNumbers,
   FeaturedCaseStudies,
   CTASection,
-  BridgeAdvantage,
   CraftFocus,
 } from '@/components'
 import * as styles from './page.css'
@@ -16,16 +15,17 @@ export default function Home() {
       {/* Hero wrapper - provides relative container for diagonal background */}
       <div className={styles.heroWrapper}>
         <DiagonalBackground />
-        <HeroSection />
-        <BigNumbers />
+        <div className={styles.heroContent}>
+          <HeroSection />
+          <BigNumbers />
+        </div>
       </div>
-      <ImpactStatsRibbon />
+      {/* <ImpactStatsRibbon /> */}
       <div className={styles.sectionsWrapper}>
         <FeaturedCaseStudies />
-        <BridgeAdvantage />
         <CraftFocus />
-        <CTASection />
       </div>
+      <CTASection />
     </div>
   )
 }

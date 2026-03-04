@@ -35,6 +35,7 @@ export const interjection = style({
   fontSize: '0.6em',
   fontWeight: '400',
   opacity: 0.85,
+  lineHeight: 1,
   display: 'inline-block',
   transform: 'rotate(-1deg)',
   marginLeft: '0.1em',

@@ -1,31 +1,31 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '@/styles'
 
-// CTA Section
-export const ctaCard = style({
-  position: 'relative',
-  padding: '2.5rem',
-  textAlign: 'center',
-  overflow: 'hidden',
-  background: vars.color.bgCard,
-  border: `1px solid ${vars.color.border}`,
-  borderRadius: vars.radius.xl,
+// CTA Section - full-width brand block
+export const ctaWrapper = style({
+  width: '100vw',
+  marginLeft: 'calc(-50vw + 50%)',
+  marginRight: 'calc(-50vw + 50%)',
+  minHeight: '70vh',
+  background: vars.color.textAccentDark,
+  color: vars.color.textOnAccent,
   display: 'flex',
-  flexDirection: 'column',
   alignItems: 'center',
-  gap: vars.gap.element,
+  justifyContent: 'center',
+  padding: `${vars.gap.section} ${vars.gap.sectionSm}`,
   '@media': {
     'screen and (min-width: 768px)': {
-      padding: '4rem',
+      padding: `${vars.gap.section} ${vars.gap.section}`,
     },
   },
 })
 
-export const ctaGradient = style({
-  position: 'absolute',
-  inset: 0,
-  background: vars.gradient.card,
-  pointerEvents: 'none',
+export const ctaInner = style({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: vars.gap.element,
+  textAlign: 'center',
 })
 
 export const ctaTitle = style({
@@ -54,13 +54,11 @@ export const socialLink = style({
   width: '80px',
   height: '80px',
   borderRadius: '50%',
-  background: vars.color.bgPrimary,
-  // border: `1px solid ${vars.color.border}`,
-  color: vars.color.textSecondary,
+  // background: vars.color.bgPrimary,
+  color: vars.color.textOnAccent,
   transition: 'all 0.3s ease',
   ':hover': {
     color: vars.color.accent,
-    // borderColor: vars.color.accent,
     transform: 'translateY(-2px)',
   },
 })

@@ -27,8 +27,9 @@ export const pageWrapper = style({
 
 export const heroWrapper = style({
   position: 'relative',
-  marginTop: `calc(-1 * ${vars.layout.headerHeight})`,
-  paddingTop: vars.layout.headerHeight,
+  // minHeight: '50vh',
+  // marginTop: `calc(-1 * ${vars.layout.headerHeight})`,
+  // paddingTop: vars.layout.headerHeight,
 })
 
 // Hero Section
@@ -56,10 +57,11 @@ export const container = style({
 })
 
 export const heroContent = style({
-  maxWidth: '56rem',
   display: 'flex',
+  position: 'relative',
+  padding: '164px 0',
   flexDirection: 'column',
-  gap: vars.gap.element,
+  gap: vars.gap.sectionSm,
 })
 
 // Text Styles

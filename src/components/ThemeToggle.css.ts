@@ -28,13 +28,13 @@ export const segment = style({
   zIndex: 1,
   ':hover': {
     color: vars.color.textPrimary,
-    background: vars.color.bgCardHover,
+    background: vars.color.bgSecondary,
   },
 })
 
 export const active = style({
-  background: vars.color.bgPrimary,
-  color: vars.color.textPrimary,
+  background: vars.color.textAccentDark,
+  color: vars.color.textOnAccent,
   boxShadow: vars.shadow.sm,
 })
 

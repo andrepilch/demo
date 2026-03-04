@@ -46,27 +46,27 @@ export const socialLinks = [
 export function CTASection() {
   return (
     <Section>
-      <div className={styles.ctaCard}>
-        {/* Background gradient */}
-        <div className={styles.ctaGradient} />
-        <h2 className={styles.ctaTitle}>Get in Touch</h2>
-        <div className={styles.socialLinks}>
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              target={social.href.startsWith('mailto') ? undefined : '_blank'}
-              rel={
-                social.href.startsWith('mailto')
-                  ? undefined
-                  : 'noopener noreferrer'
-              }
-              className={styles.socialLink}
-              aria-label={social.name}
-            >
-              {social.icon}
-            </a>
-          ))}
+      <div className={styles.ctaWrapper}>
+        <div className={styles.ctaInner}>
+          <h2 className={styles.ctaTitle}>Get in Touch</h2>
+          <div className={styles.socialLinks}>
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target={social.href.startsWith('mailto') ? undefined : '_blank'}
+                rel={
+                  social.href.startsWith('mailto')
+                    ? undefined
+                    : 'noopener noreferrer'
+                }
+                className={styles.socialLink}
+                aria-label={social.name}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </Section>
