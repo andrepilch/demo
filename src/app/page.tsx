@@ -3,7 +3,6 @@ import {
   HeroSection,
   ImpactStatsRibbon,
   BigNumbers,
-  LeadershipSection,
   FeaturedCaseStudies,
   CTASection,
   BridgeAdvantage,
@@ -25,7 +24,6 @@ export default function Home() {
         <FeaturedCaseStudies />
         <BridgeAdvantage />
         <CraftFocus />
-        <LeadershipSection />
         <CTASection />
       </div>
     </div>

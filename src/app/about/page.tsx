@@ -8,6 +8,7 @@ import {
   Process,
   SideProjects,
   CTASection,
+  LeadershipSection,
   ImpactStatsRibbon,
   H2,
   AI,
@@ -20,6 +21,8 @@ export default function About() {
       <ImpactStatsRibbon />
       <PassionAreas />
       <Partnerships />
+      <LeadershipSection />
+
       <section className={brandBlock}>
         <div className={brandBlockInner}>
           <H2>
