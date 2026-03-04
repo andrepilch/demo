@@ -18,7 +18,7 @@ const caseStudies = [
       // { value: '26%', label: 'AOV Increase' },
       { value: '6.5M+', label: 'Sessions served' },
       // { value: '3M', label: 'Sessions served' },
-      { value: '10+ Years', label: 'Sustained growth' },
+      { value: '9+Yrs', label: 'Sustained growth' },
     ],
   },
   {

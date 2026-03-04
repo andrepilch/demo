@@ -23,7 +23,7 @@ export const designerResults: CaseStudyResult[] = [
   },
   { value: '6.5M+', label: 'Sessions served', description: 'and counting' },
   {
-    value: '10yrs+',
+    value: '9+Yrs',
     label: 'Sustained growth',
     description: 'continuing to scale',
   },
