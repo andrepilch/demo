@@ -7,7 +7,7 @@ const impactStats = [
   { value: '1', label: 'Design Patent' },
   { value: '7', label: 'Platforms designed for' },
   { value: '4', label: 'Design Systems Engineered' },
-  { value: '10', label: 'Years longest active product' },
+  { value: '9', label: 'Years longest active product' },
 ]
 
 export function ImpactStatsRibbon() {
