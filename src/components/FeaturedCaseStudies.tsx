@@ -41,7 +41,7 @@ const productStatus = {
 const otherReleasedProducts = [
   {
     title: 'Virtual Cell',
-    description: 'An educational computer game about cell biology',
+    description: 'A desktop educational computer videogame about cell biology',
     status: productStatus.released,
     visible: true,
   },
@@ -109,7 +109,7 @@ const otherReleasedProducts = [
     visible: false,
   },
   {
-    title: 'whcc Wall Designer',
+    title: 'whcc iPad Wall Designer',
     description:
       'A native iPad app for designing, selling, and ordering custom wall groupings',
     status: productStatus.released,
@@ -143,7 +143,7 @@ const otherReleasedProducts = [
     visible: true,
   },
   {
-    title: 'Crafted Frames',
+    title: 'Crafted Frames iOS App',
     description:
       'Native consumer mobile app with AR view on wall for ordering custom print products',
     status: productStatus.released,
