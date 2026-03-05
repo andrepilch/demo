@@ -78,8 +78,7 @@ const productPhilosophies: PhilosophyItem[] = [
   {
     category: 'Brand',
     title: 'Be ethical',
-    description:
-      'Putting users best interest first creates loyalty and trust.',
+    description: 'Putting users best interest first creates loyalty and trust.',
   },
   {
     category: 'Process',
@@ -115,13 +114,14 @@ const productPhilosophies: PhilosophyItem[] = [
     category: 'Prototyping',
     title: 'Prototyping is worth it',
     quote:
-      'While a picture is worth a thousand words, a prototype is worth a thousand meetings',
-    attribution: 'Kevin Grennan',
+      'If a picture is worth a thousand words, then a prototype is worth a thousand meetings.',
+    attribution: 'Tom & David Kelley, IDEO',
   },
   {
     category: 'Simplicity',
     title: 'Guide the user',
-    description: 'Make decisions easy by removing choice when possible. Create structure and hierarchy. Provide visual feedback to actions users take and guide them to the next step.',
+    description:
+      'Make decisions easy by removing choice when possible. Create structure and hierarchy. Provide visual feedback to actions users take and guide them to the next step.',
   },
   {
     category: 'Value',
