@@ -254,7 +254,7 @@ export function FeaturedCaseStudies() {
           and{' '}
           {otherReleasedProducts.length -
             otherReleasedProducts.filter((product) => product.visible).length -
-            2}{' '}
+            6}{' '}
           more...
         </H3>
       </div>
