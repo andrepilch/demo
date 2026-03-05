@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Figtree, Caveat } from 'next/font/google'
+import { Figtree, Mynerve } from 'next/font/google'
 // import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { FixedLogo } from '@/components/FixedLogo'
@@ -12,10 +12,11 @@ const figtree = Figtree({
   variable: '--font-sans',
 })
 
-const caveat = Caveat({
+const mynerve = Mynerve({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-cursive',
+  weight: '400',
 })
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className={`${figtree.variable} ${caveat.variable}`}>
+    <html lang='en' className={`${figtree.variable} ${mynerve.variable}`}>
       <body className={figtree.className}>
         <ThemeProvider defaultTheme='light'>
           <main style={{ flex: 1 }}>

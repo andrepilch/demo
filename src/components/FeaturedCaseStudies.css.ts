@@ -121,3 +121,24 @@ export const tag = style({
   border: '1px solid rgba(14, 165, 233, 0.2)',
   color: vars.color.accent,
 })
+
+export const otherProductsSection = style({
+  columnCount: 1,
+  columnGap: '2rem',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      columnCount: 2,
+    },
+  },
+})
+
+export const otherProductItem = style({
+  breakInside: 'avoid',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.5rem',
+  marginBottom: '2rem',
+  ':last-child': {
+    marginBottom: 0,
+  },
+})

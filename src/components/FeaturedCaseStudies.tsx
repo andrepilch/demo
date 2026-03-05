@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Section, SectionGap, H2, Body } from '@/components'
+import { Section, SectionGap, H2, Body, H3 } from '@/components'
 import * as styles from './FeaturedCaseStudies.css'
 import { eternityResults } from '@/app/work/eternity-bible/data'
 
 const caseStudies = [
   {
-    title: 'WHCC Designer',
+    title: 'whcc Designer',
     outcome:
       'React multi-brand web app for whcc and its partners used by hundreds of thousands of users that continues to scale  ',
     description:
@@ -30,6 +30,163 @@ const caseStudies = [
     href: '/work/eternity-bible',
     image: '/images/projects/eternity/eternity_hand.jpg',
     stats: eternityResults,
+  },
+]
+
+const productStatus = {
+  released: 'Released',
+  unreleased: 'Unreleased',
+}
+
+const otherReleasedProducts = [
+  {
+    title: 'Virtual Cell',
+    description: 'An educational computer game about cell biology',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Archimed Ermes',
+    description:
+      "France's largest media library software that facilitates on-site access to electronic resources and applications offered by institutions",
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'TR Unbeacon',
+    description: 'Customized desktop application for Thomson Reuters',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'Thomson Reuters Convene',
+    description: "TR's own conferencing app backend CMS",
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Thomson Reuters Proview',
+    description:
+      'Cross-platform e-reader application for Law & Accounting volumes with advanced search functionality',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Thomson Reuters Clear',
+    description: 'Proof of concept for TR clear',
+    status: productStatus.unreleased,
+    visible: false,
+  },
+  {
+    title: 'Thomson Reuters Blacks Law',
+    description: 'Proof of concept for TR Blacks Law',
+    status: productStatus.unreleased,
+    visible: false,
+  },
+  {
+    title: 'Thomson Reuters VR',
+    description:
+      'Google Cardboard and Samsung Gear VR headset app which was released to the app stores and was also granted design patents in Switzerland and US and used as a promotional tool for the company at various events including Davos World Economic Forum',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'whcc Card',
+    description: 'A web app for designing and ordering custom cards',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Album',
+    description: 'A web app for designing and ordering custom album',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Wall',
+    description: 'A web app for designing and ordering custom wall',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Wall Designer',
+    description:
+      'A native iPad app for designing, selling, and ordering custom wall groupings',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'whcc Support App',
+    description:
+      'A native iOS app for managing and tracking orders and support requests',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Studio',
+    description:
+      'A web app for managing photo session galleries and products as well as sharing with clients for approval or buying',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'whcc Checkout',
+    description: 'Custom checkout for whcc products',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Lightroom Integration',
+    description:
+      'Custom Lightroom integration with customization and checkout flow in partnership with Adobe for whcc products',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Crafted Frames',
+    description:
+      'Native consumer mobile app with AR view on wall for ordering custom print products',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'whcc Transforms',
+    description: 'Custom transforms for whcc products',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'Dela',
+    description: 'Custom dela for whcc products',
+    status: productStatus.unreleased,
+    visible: false,
+  },
+  {
+    title: 'Design Depot',
+    description: 'Internal tool for managing custom design templates',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Single Product',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Multiproduct',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'Eternity Bible App',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'Thirmensio',
+    description: 'Mobile native application for managing 3D printing projects',
+    status: productStatus.unreleased,
+    visible: false,
   },
 ]
 
@@ -79,6 +236,28 @@ export function FeaturedCaseStudies() {
           </div>
         </Link>
       ))}
+      <H2>Other Products</H2>
+      <div className={styles.otherProductsSection}>
+        {otherReleasedProducts
+          .filter((product) => product.visible)
+          .map((product, i) => (
+            <div key={i} className={styles.otherProductItem}>
+              <H3>{product.title}</H3>
+              {product.description && (
+                <Body className={styles.caseStudyDescription}>
+                  {product.description}
+                </Body>
+              )}
+            </div>
+          ))}
+        <H3>
+          and{' '}
+          {otherReleasedProducts.length -
+            otherReleasedProducts.filter((product) => product.visible).length -
+            2}{' '}
+          more...
+        </H3>
+      </div>
     </Section>
   )
 }

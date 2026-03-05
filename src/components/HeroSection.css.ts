@@ -32,12 +32,12 @@ export const ctaButtons = style({
 
 export const interjection = style({
   fontFamily: 'var(--font-cursive), cursive',
-  fontSize: '0.6em',
+  fontSize: '0.35em',
   fontWeight: '400',
-  opacity: 0.85,
+  opacity: 1,
   lineHeight: 1,
   display: 'inline-block',
-  transform: 'rotate(-1deg)',
+  transform: 'translate(0.4em,-0.5em) rotate(-2deg)',
   marginLeft: '0.1em',
   marginRight: '0.1em',
   whiteSpace: 'nowrap',
