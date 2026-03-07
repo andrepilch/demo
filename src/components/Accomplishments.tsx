@@ -4,9 +4,7 @@ import * as styles from './Accomplishments.css'
 const accomplishments = [
   'Creator of eternitybible.app, published to Google Play Store and Apple App Store',
   'Design patents in US and Switzerland for display screen with animated GUI',
-  'Featured in Behance Showcase',
-  'Featured in The Advocate',
-  'Featured in MSUM Arts & Humanities News',
+  'Featured in Behance Showcase, The Advocate, & MSUM Arts & Humanities News',
 ]
 
 export function Accomplishments() {
