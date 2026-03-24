@@ -13,6 +13,7 @@ import {
   H2,
   AI,
   BridgeAdvantage,
+  CraftFocus,
 } from '@/components'
 
 export default function About() {
@@ -22,6 +23,7 @@ export default function About() {
         <Bio />
         <ImpactStatsRibbon />
         <PassionAreas />
+        <CraftFocus />
         <Partnerships />
         <LeadershipSection />
 
