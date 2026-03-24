@@ -5,6 +5,7 @@ import {
   BigNumbers,
   FeaturedCaseStudies,
   CTASection,
+  CraftFocus,
 } from '@/components'
 import * as styles from './page.css'
 
@@ -22,6 +23,7 @@ export default function Home() {
       {/* <ImpactStatsRibbon /> */}
       <div className={styles.sectionsWrapper}>
         <FeaturedCaseStudies />
+        <CraftFocus />
       </div>
       <CTASection />
     </div>
