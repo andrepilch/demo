@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Section, SectionGap, H2, Body, H3 } from '@/components'
+import { Section, SectionGap, H2, Body, H3, Eyebrow } from '@/components'
 import * as styles from './FeaturedCaseStudies.css'
 import { eternityResults } from '@/app/work/eternity-bible/data'
 
@@ -192,72 +192,78 @@ const otherReleasedProducts = [
 
 export function FeaturedCaseStudies() {
   return (
-    <Section gap={SectionGap.lg}>
-      {caseStudies.map((study, i) => (
-        <Link key={i} href={study.href} className={styles.caseStudyCard}>
-          <div className={styles.caseStudyImage}>
-            <Image
-              src={study.image}
-              alt={study.title}
-              fill
-              className={styles.caseStudyImageInner}
-            />
-          </div>
-          <div className={styles.caseStudyContent}>
-            <div className={styles.caseStudyTitleContainer}>
-              <H2 className={styles.caseStudyTitle}>{study.title}</H2>
-              <Body className={styles.caseStudyDescription}>
-                {study.description}
-              </Body>
-              <Body className={styles.caseStudyOutcome}>{study.outcome}</Body>
-              {/* Mini Stats */}
+    <>
+      <Section gap={SectionGap.md}>
+        <Eyebrow>Featured Case Studies</Eyebrow>
+        {caseStudies.map((study, i) => (
+          <Link key={i} href={study.href} className={styles.caseStudyCard}>
+            <div className={styles.caseStudyImage}>
+              <Image
+                src={study.image}
+                alt={study.title}
+                fill
+                className={styles.caseStudyImageInner}
+              />
             </div>
-            {/* <div className={styles.tagList}>
+            <div className={styles.caseStudyContent}>
+              <div className={styles.caseStudyTitleContainer}>
+                <H2 className={styles.caseStudyTitle}>{study.title}</H2>
+                <Body className={styles.caseStudyDescription}>
+                  {study.outcome}
+                </Body>
+                {/* <Body className={styles.caseStudyOutcome}>{study.outcome}</Body> */}
+                {/* Mini Stats */}
+              </div>
+              {/* <div className={styles.tagList}>
               {study.tags.map((tag, j) => (
                 <span key={j} className={styles.tag}>
                   {tag}
                 </span>
               ))}
             </div> */}
-            {study.stats && (
-              <div className={styles.caseStudyStats}>
-                {study.stats.map((stat, k) => (
-                  <div key={k} className={styles.caseStudyStat}>
-                    <span className={styles.caseStudyStatValue}>
-                      {stat.value}
-                    </span>
-                    <span className={styles.caseStudyStatLabel}>
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </Link>
-      ))}
-      <H2>Other Products</H2>
-      <div className={styles.otherProductsSection}>
-        {otherReleasedProducts
-          .filter((product) => product.visible)
-          .map((product, i) => (
-            <div key={i} className={styles.otherProductItem}>
-              <H3>{product.title}</H3>
-              {product.description && (
-                <Body className={styles.caseStudyDescription}>
-                  {product.description}
-                </Body>
+              {study.stats && (
+                <div className={styles.caseStudyStats}>
+                  {study.stats.map((stat, k) => (
+                    <div key={k} className={styles.caseStudyStat}>
+                      <span className={styles.caseStudyStatValue}>
+                        {stat.value}
+                      </span>
+                      <span className={styles.caseStudyStatLabel}>
+                        {stat.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               )}
             </div>
-          ))}
-        <H3>
-          and{' '}
-          {otherReleasedProducts.length -
-            otherReleasedProducts.filter((product) => product.visible).length -
-            6}{' '}
-          more...
-        </H3>
-      </div>
-    </Section>
+          </Link>
+        ))}
+      </Section>
+      <Section gap={SectionGap.md}>
+        <Eyebrow>Other Products</Eyebrow>
+        <div className={styles.otherProductsSection}>
+          {otherReleasedProducts
+            .filter((product) => product.visible)
+            .map((product, i) => (
+              <div key={i} className={styles.otherProductItem}>
+                <H3>{product.title}</H3>
+                {product.description && (
+                  <Body className={styles.caseStudyDescription}>
+                    {product.description}
+                  </Body>
+                )}
+              </div>
+            ))}
+          <H3>
+            and{' '}
+            {otherReleasedProducts.length -
+              otherReleasedProducts.filter((product) => product.visible)
+                .length -
+              6}{' '}
+            more...
+          </H3>
+        </div>
+      </Section>
+    </>
   )
 }

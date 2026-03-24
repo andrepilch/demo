@@ -4,9 +4,9 @@ import { vars } from '@/styles'
 export const caseStudyCard = style({
   display: 'grid',
   gap: '1.5rem',
-  padding: '1rem',
+  // padding: '1rem',
   background: vars.color.bgCard,
-  border: `1px solid ${vars.color.border}`,
+  // border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius['xl'],
   transition: 'all 0.3s ease',
   ':hover': {
@@ -14,10 +14,10 @@ export const caseStudyCard = style({
     transform: 'translateY(-2px) scale(1.01)',
   },
   '@media': {
-    'screen and (min-width: 768px)': {
+    'screen and (min-width: 982px)': {
       gridTemplateColumns: '2fr 1fr',
       gap: '2.5rem',
-      padding: '1rem',
+      // padding: '1rem',
       borderRadius: vars.radius['4xl'],
     },
   },

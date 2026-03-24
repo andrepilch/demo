@@ -10,10 +10,10 @@ export function HeroSection() {
         {/* I strategically design & build innovative web & mobile products */}
         {/* <span className={styles.interjection}> and sometimes build</span>{' '} */}
         {/* innovative web products */}
-        <br />
-        <span className={styles.interjection}>
+        {/* <br /> */}
+        {/* <span className={styles.interjection}>
           with great taste & intuition 😉
-        </span>{' '}
+        </span>{' '} */}
       </H1>
       {/* CTA Buttons */}
       <ButtonGroup className={styles.ctaButtons}>
