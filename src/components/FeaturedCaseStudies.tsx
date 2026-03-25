@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Section, SectionGap, H2, Body, H3, Eyebrow } from '@/components'
+import {
+  brandBlockFooter,
+  brandBlockInner,
+  gapVariants,
+  sectionContent,
+} from '@/components/Section.css'
 import * as styles from './FeaturedCaseStudies.css'
 import { eternityResults } from '@/app/work/eternity-bible/data'
 
@@ -239,31 +245,35 @@ export function FeaturedCaseStudies() {
           </Link>
         ))}
       </Section>
-      <Section gap={SectionGap.md}>
-        <Eyebrow>Other Products</Eyebrow>
-        <div className={styles.otherProductsSection}>
-          {otherReleasedProducts
-            .filter((product) => product.visible)
-            .map((product, i) => (
-              <div key={i} className={styles.otherProductItem}>
-                <H3>{product.title}</H3>
-                {product.description && (
-                  <Body className={styles.caseStudyDescription}>
-                    {product.description}
-                  </Body>
-                )}
-              </div>
-            ))}
-          <H3>
-            and{' '}
-            {otherReleasedProducts.length -
-              otherReleasedProducts.filter((product) => product.visible)
-                .length -
-              6}{' '}
-            more...
-          </H3>
+      <section className={brandBlockFooter}>
+        <div className={brandBlockInner}>
+          <div className={`${sectionContent} ${gapVariants.md}`}>
+            <Eyebrow color='onAccent'>Other Products</Eyebrow>
+            <div className={styles.otherProductsSection}>
+              {otherReleasedProducts
+                .filter((product) => product.visible)
+                .map((product, i) => (
+                  <div key={i} className={styles.otherProductItem}>
+                    <H3 color='onAccent'>{product.title}</H3>
+                    {product.description && (
+                      <Body className={styles.otherProductBodyOnBrand}>
+                        {product.description}
+                      </Body>
+                    )}
+                  </div>
+                ))}
+              <H3 color='onAccent'>
+                and{' '}
+                {otherReleasedProducts.length -
+                  otherReleasedProducts.filter((product) => product.visible)
+                    .length -
+                  6}{' '}
+                more...
+              </H3>
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
     </>
   )
 }

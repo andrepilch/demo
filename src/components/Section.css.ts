@@ -185,15 +185,14 @@ export const gapVariants = styleVariants({
 })
 
 // ============================================
-// Brand block - full-width accent fill, white text
+// Brand block - full-width fill, white text (background varies)
 // ============================================
 
-export const brandBlock = style({
+const brandBlockLayout = style({
   width: '100vw',
   marginLeft: 'calc(-50vw + 50%)',
   marginRight: 'calc(-50vw + 50%)',
   minHeight: '100vh',
-  background: vars.color.accent,
   color: '#fff',
   display: 'flex',
   alignItems: 'center',
@@ -205,6 +204,18 @@ export const brandBlock = style({
     },
   },
 })
+
+/** Accent (e.g. about page, AI callout). */
+export const brandBlock = style([
+  brandBlockLayout,
+  { background: vars.color.accent },
+])
+
+/** Same layout as brand block; background matches `Footer` container (`textAccentDark`). */
+export const brandBlockFooter = style([
+  brandBlockLayout,
+  { background: vars.color.textAccentDark },
+])
 
 export const brandBlockInner = style({
   width: '100%',

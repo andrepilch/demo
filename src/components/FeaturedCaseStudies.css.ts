@@ -142,3 +142,8 @@ export const otherProductItem = style({
     marginBottom: 0,
   },
 })
+
+/** Body copy on brand (accent) background — not `caseStudyDescription` (theme secondary). */
+export const otherProductBodyOnBrand = style({
+  color: 'rgba(255, 255, 255, 0.85)',
+})
