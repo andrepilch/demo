@@ -24,7 +24,7 @@ const ROUNDED_HYPOTENUSE = 'M 20 108 Q 95 55 160 18'
 
 export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
   const pathname = usePathname()
-  const isRounded = true // Always rounded corners
+  const isRounded = false // Always rounded corners
   const [fillOpacity, setFillOpacity] = useState(0) // 0 = outline only, 1 = fully filled
   const [outlineDrawn, setOutlineDrawn] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -42,8 +42,7 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
   }, [])
 
   // Fill: on homepage and case study pages (/work/...) fill on scroll; elsewhere fill right away
-  const useScrollToFill =
-    pathname === '/' || pathname.startsWith('/work/')
+  const useScrollToFill = pathname === '/' || pathname.startsWith('/work/')
   useEffect(() => {
     if (menuOpen) return
     if (!useScrollToFill) {
@@ -108,7 +107,6 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
     e.preventDefault()
     setMenuOpen(!menuOpen)
   }
-  
 
   const content = (
     <div className={styles.logoWrapper}>
@@ -253,10 +251,7 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
                   <path d={currentPath} />
                 </clipPath>
               </defs>
-              <path
-                className={styles.triangleMenuPath}
-                d={currentPath}
-              />
+              <path className={styles.triangleMenuPath} d={currentPath} />
             </svg>
             <div ref={menuContentRef} className={styles.menuContent}>
               <div className={styles.menuDiagonalLayout}>

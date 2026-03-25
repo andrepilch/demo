@@ -29,10 +29,14 @@ const gradientFlow = keyframes({
   },
 })
 
-// Outline drawing animation
+// Outline drawing animation — dash length must exceed full path perimeter
+// (sharp triangle ~536; rounded path longer) or the stroke won't close visibly
+const OUTLINE_PATH_LENGTH = 700
+const LOGO_OFFSET = 1
+
 const drawOutline = keyframes({
   '0%': {
-    strokeDashoffset: 500,
+    strokeDashoffset: OUTLINE_PATH_LENGTH,
   },
   '100%': {
     strokeDashoffset: 0,
@@ -50,8 +54,8 @@ export const logoContainer = style({
 
 export const triangleSvg = style({
   position: 'absolute',
-  top: '8px',
-  left: '8px',
+  top: LOGO_OFFSET,
+  left: LOGO_OFFSET,
   width: '100%',
   height: '100%',
   overflow: 'visible',
@@ -77,8 +81,8 @@ export const triangleOutline = style({
   fill: 'none',
   stroke: '#00aeef',
   strokeWidth: 2,
-  strokeDasharray: 500,
-  strokeDashoffset: 500,
+  strokeDasharray: OUTLINE_PATH_LENGTH,
+  strokeDashoffset: OUTLINE_PATH_LENGTH,
   filter: 'drop-shadow(0 0 4px rgba(0, 174, 239, 0.8))',
   animation: `${drawOutline} 1.2s ease-out forwards`,
   transition: 'd 4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -103,8 +107,8 @@ export const gradientStop3 = style({
 
 export const logoText = style({
   position: 'absolute',
-  top: '8px',
-  left: '8px',
+  top: LOGO_OFFSET,
+  left: LOGO_OFFSET,
   width: '100%',
   height: '100%',
   color: '#ffffff',
@@ -120,8 +124,8 @@ export const logoText = style({
 // Edge glow effect
 export const edgeGlow = style({
   position: 'absolute',
-  top: '8px',
-  left: '8px',
+  top: LOGO_OFFSET,
+  left: LOGO_OFFSET,
   width: '100%',
   height: '100%',
   pointerEvents: 'none',
@@ -136,7 +140,7 @@ export const edgeGlow = style({
 
 const edgeTrace = keyframes({
   '0%': {
-    strokeDashoffset: 400,
+    strokeDashoffset: OUTLINE_PATH_LENGTH,
   },
   '100%': {
     strokeDashoffset: 0,
@@ -147,8 +151,8 @@ export const edgePath = style({
   stroke: 'rgba(0, 174, 239, 0.8)',
   strokeWidth: 2,
   fill: 'none',
-  strokeDasharray: 400,
-  strokeDashoffset: 400,
+  strokeDasharray: OUTLINE_PATH_LENGTH,
+  strokeDashoffset: OUTLINE_PATH_LENGTH,
   filter: 'drop-shadow(0 0 4px rgba(0, 174, 239, 1))',
   transition: 'd 4s cubic-bezier(0.4, 0, 0.2, 1)',
   selectors: {
