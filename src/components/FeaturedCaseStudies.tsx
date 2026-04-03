@@ -44,7 +44,7 @@ const productStatus = {
   unreleased: 'Unreleased',
 }
 
-const otherReleasedProducts = [
+const otherProducts = [
   {
     title: 'Eternity Bible App',
     status: productStatus.released,
@@ -192,6 +192,10 @@ const otherReleasedProducts = [
 ]
 
 export function FeaturedCaseStudies() {
+  const visibleProducts = otherProducts.filter((product) => product.visible)
+  const WHCC_DESIGNER_PRODUCTS = 5
+  const notVisibleCount =
+    otherProducts.length - visibleProducts.length - WHCC_DESIGNER_PRODUCTS
   return (
     <>
       <Section gap={SectionGap.lg}>
@@ -245,26 +249,17 @@ export function FeaturedCaseStudies() {
           <div className={`${sectionContent} ${gapVariants.md}`}>
             <Eyebrow color='onAccent'>Other Products</Eyebrow>
             <div className={styles.otherProductsSection}>
-              {otherReleasedProducts
-                .filter((product) => product.visible)
-                .map((product, i) => (
-                  <div key={i} className={styles.otherProductItem}>
-                    <H3 color='onAccent'>{product.title}</H3>
-                    {product.description && (
-                      <Body className={styles.otherProductBodyOnBrand}>
-                        {product.description}
-                      </Body>
-                    )}
-                  </div>
-                ))}
-              <H3 color='onAccent'>
-                and{' '}
-                {otherReleasedProducts.length -
-                  otherReleasedProducts.filter((product) => product.visible)
-                    .length -
-                  6}{' '}
-                more...
-              </H3>
+              {visibleProducts.map((product, i) => (
+                <div key={i} className={styles.otherProductItem}>
+                  <H3 color='onAccent'>{product.title}</H3>
+                  {product.description && (
+                    <Body className={styles.otherProductBodyOnBrand}>
+                      {product.description}
+                    </Body>
+                  )}
+                </div>
+              ))}
+              <H3 color='onAccent'>{`and ${notVisibleCount} more...`}</H3>
             </div>
           </div>
         </div>
