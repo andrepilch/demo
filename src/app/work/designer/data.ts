@@ -54,7 +54,7 @@ const projectMeta = {
 }
 
 export const heroData: CaseStudyHeroData = {
-  eyebrow: 'WHCC Designer',
+  eyebrow: 'WHCC Designer Case Study',
   title: 'Building user confidence and saving time with a versatile designer',
   description:
     'React multi-brand web app for whcc and its partners used by hundreds of thousands of users that continues to scale',
