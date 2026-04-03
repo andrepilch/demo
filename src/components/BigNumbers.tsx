@@ -25,7 +25,7 @@ const bigNumbers = [
   },
   {
     value: '9+Yrs',
-    label: 'Sustained growth',
+    label: 'Sustained product growth',
     description: 'continuing to scale',
   },
   // {
