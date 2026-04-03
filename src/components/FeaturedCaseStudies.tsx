@@ -46,85 +46,43 @@ const productStatus = {
 
 const otherReleasedProducts = [
   {
-    title: 'Virtual Cell',
-    description: 'A desktop educational computer videogame about cell biology',
-    status: productStatus.released,
-    visible: true,
-  },
-  {
-    title: 'Archimed Ermes',
-    description:
-      "France's largest media library software that facilitates on-site access to electronic resources and applications offered by institutions",
-    status: productStatus.released,
-    visible: true,
-  },
-  {
-    title: 'TR Unbeacon',
-    description: 'Customized desktop application for Thomson Reuters',
+    title: 'Eternity Bible App',
     status: productStatus.released,
     visible: false,
   },
   {
-    title: 'Thomson Reuters Convene',
-    description: "TR's own conferencing app backend CMS",
-    status: productStatus.released,
-    visible: true,
-  },
-  {
-    title: 'Thomson Reuters Proview',
-    description:
-      'Cross-platform e-reader application for Law & Accounting volumes with advanced search functionality',
-    status: productStatus.released,
-    visible: true,
-  },
-  {
-    title: 'Thomson Reuters Clear',
-    description: 'Proof of concept for TR clear',
-    status: productStatus.unreleased,
-    visible: false,
-  },
-  {
-    title: 'Thomson Reuters Blacks Law',
-    description: 'Proof of concept for TR Blacks Law',
-    status: productStatus.unreleased,
-    visible: false,
-  },
-  {
-    title: 'Thomson Reuters VR',
-    description:
-      'Google Cardboard and Samsung Gear VR headset app which was released to the app stores and was also granted design patents in Switzerland and US and used as a promotional tool for the company at various events including Davos World Economic Forum',
-    status: productStatus.released,
-    visible: true,
-  },
-  {
-    title: 'whcc Card',
-    description: 'A web app for designing and ordering custom cards',
+    title: 'whcc Multiproduct',
     status: productStatus.released,
     visible: false,
   },
   {
-    title: 'whcc Album',
-    description: 'A web app for designing and ordering custom album',
-    status: productStatus.released,
-    visible: false,
-  },
-  {
-    title: 'whcc Wall',
+    title: 'whcc Wall Designer',
     description: 'A web app for designing and ordering custom wall',
     status: productStatus.released,
     visible: false,
   },
   {
-    title: 'whcc iPad Wall Designer',
+    title: 'Dela',
+    description: 'Custom dela for whcc products',
+    status: productStatus.unreleased,
+    visible: false,
+  },
+  {
+    title: 'Crafted Frames iOS App',
     description:
-      'A native iPad app for designing, selling, and ordering custom wall groupings',
+      'Native consumer mobile app with AR view on wall for ordering custom print products',
     status: productStatus.released,
     visible: true,
   },
   {
-    title: 'whcc Support App',
-    description:
-      'A native iOS app for managing and tracking orders and support requests',
+    title: 'whcc Album Designer',
+    description: 'A web app for designing and ordering custom album',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc Product Ordering',
+    description: 'A web app for ordering custom loose print and wall products',
     status: productStatus.released,
     visible: false,
   },
@@ -136,12 +94,6 @@ const otherReleasedProducts = [
     visible: true,
   },
   {
-    title: 'whcc Checkout',
-    description: 'Custom checkout for whcc products',
-    status: productStatus.released,
-    visible: false,
-  },
-  {
     title: 'whcc Lightroom Integration',
     description:
       'Custom Lightroom integration with customization and checkout flow in partnership with Adobe for whcc products',
@@ -149,22 +101,9 @@ const otherReleasedProducts = [
     visible: true,
   },
   {
-    title: 'Crafted Frames iOS App',
-    description:
-      'Native consumer mobile app with AR view on wall for ordering custom print products',
+    title: 'whcc Checkout',
+    description: 'Custom checkout for whcc products',
     status: productStatus.released,
-    visible: true,
-  },
-  {
-    title: 'whcc Transforms',
-    description: 'Custom transforms for whcc products',
-    status: productStatus.released,
-    visible: false,
-  },
-  {
-    title: 'Dela',
-    description: 'Custom dela for whcc products',
-    status: productStatus.unreleased,
     visible: false,
   },
   {
@@ -174,17 +113,9 @@ const otherReleasedProducts = [
     visible: false,
   },
   {
-    title: 'whcc Single Product',
-    status: productStatus.released,
-    visible: false,
-  },
-  {
-    title: 'whcc Multiproduct',
-    status: productStatus.released,
-    visible: false,
-  },
-  {
-    title: 'Eternity Bible App',
+    title: 'whcc Support App',
+    description:
+      'A native iOS app for managing and tracking orders and support requests',
     status: productStatus.released,
     visible: false,
   },
@@ -193,6 +124,70 @@ const otherReleasedProducts = [
     description: 'Mobile native application for managing 3D printing projects',
     status: productStatus.unreleased,
     visible: false,
+  },
+  {
+    title: 'whcc Card Designer',
+    description: 'A web app for designing and ordering custom cards',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'whcc iPad Wall Designer',
+    description:
+      'A native iPad app for designing, selling, and ordering custom wall groupings',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Thomson Reuters VR',
+    description:
+      'Google Cardboard and Samsung Gear VR headset app which was released to the app stores and was also granted design patents in Switzerland and US and used as a promotional tool for the company at various events including Davos World Economic Forum',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Thomson Reuters Proview',
+    description:
+      'Cross-platform e-reader application for Law & Accounting volumes with advanced search functionality',
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Thomson Reuters Blacks Law',
+    description: 'Proof of concept for TR Blacks Law',
+    status: productStatus.unreleased,
+    visible: false,
+  },
+  {
+    title: 'Thomson Reuters Clear',
+    description: 'Proof of concept for TR clear',
+    status: productStatus.unreleased,
+    visible: false,
+  },
+  {
+    title: 'Thomson Reuters Convene',
+    description: "TR's own conferencing app backend CMS",
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'TR Unbeacon',
+    description: 'Customized desktop application for Thomson Reuters',
+    status: productStatus.released,
+    visible: false,
+  },
+  {
+    title: 'Archimed Ermes',
+    description:
+      "France's largest media library software that facilitates on-site access to electronic resources and applications offered by institutions",
+    status: productStatus.released,
+    visible: true,
+  },
+  {
+    title: 'Virtual Cell',
+    description: 'A desktop educational computer videogame about cell biology',
+    status: productStatus.released,
+    visible: true,
   },
 ]
 
