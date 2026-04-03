@@ -12,8 +12,22 @@ import type { CardItem } from '@/app/work/components'
 
 // Re-export for FeaturedCaseStudies
 export const eternityResults: CaseStudyResult[] = [
-  { value: '5★', label: 'Rated', description: 'in Play Store' },
-  { value: '95%', label: 'Engagement', description: 'with core feature' },
+  // { value: '5★', label: 'Rated', description: 'in Play Store' },
+  {
+    value: '95%',
+    label: 'Feature Engagement',
+    description: 'with core feature',
+  },
+  {
+    value: '71%',
+    label: 'Retention Rate',
+    description: 'for initial landings',
+  },
+  {
+    value: '3.4',
+    label: 'Avg pages per session',
+    description: 'across a global audience',
+  },
   // { value: '5', label: 'Growing a team', description: 'people offering help' },
 ]
 
@@ -265,17 +279,18 @@ export const finalDesignsImages: CaseStudyGalleryImage[] = [
 
 export const resultsData: CaseStudyResultsData = {
   eyebrow: 'Impact',
-  // title: 'Project Results',
   description: `Eternity Bible is receiving overwhelmingly positive feedback for its core, innovative feature: the ability to set up multiple, personalized Bibles for different purposes (e.g., personal devotion, family study, Sunday service). Users describe this as a "fantastic" and "game changer" feature that simplifies navigation and allows them to instantly pick up right where they left off in any context.
+  
+  By managing a unified design system, I’ve maintained a cohesive experience across a diverse technical audience, resulting in hundreds of monthly active users across platforms globally, and a 71% retention rate for initial landings.
 
-  The app is organically growing a team with five users who have offered to help with the app with their own time and skills after having seen the value for themselves.`,
+  The value has led to organic growth, including a dedicated team of five users who have volunteered their own time and skills to help scale the project.`,
   results: eternityResults,
 }
 
 export const conclusionSection: CaseStudySectionData = {
   eyebrow: 'Conclusion',
   title: 'Challenging the Norms',
-  description: `The app takes full advantage of digital capabilities to create a better alternative to print.`,
+  description: `The app takes full advantage of digital capabilities to create a better alternative to print. By prioritizing mobile-first excellence, serving a user base that is 77% mobile-based, Eternity Bible demonstrates that a unified, minimalist digital tool can successfully compete with traditional mediums across all platforms.`,
 }
 
 export const digitalBibleBenefits: CardItem[] = [

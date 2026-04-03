@@ -24,7 +24,7 @@ const caseStudies = [
       // { value: '26%', label: 'AOV Increase' },
       { value: '6.5M+', label: 'Sessions served' },
       // { value: '3M', label: 'Sessions served' },
-      { value: '9+Yrs', label: 'Sustained growth' },
+      { value: '9+Yrs', label: 'Sustained product growth' },
     ],
   },
   {
@@ -199,7 +199,7 @@ const otherReleasedProducts = [
 export function FeaturedCaseStudies() {
   return (
     <>
-      <Section gap={SectionGap.md}>
+      <Section gap={SectionGap.lg}>
         <Eyebrow>Featured Case Studies</Eyebrow>
         {caseStudies.map((study, i) => (
           <Link key={i} href={study.href} className={styles.caseStudyCard}>
