@@ -32,8 +32,8 @@ export function Bio() {
             I'm a Christian born and raised in France, now residing and working
             in the United States. Currently working as a Senior Product Designer
             helping digital products grow through design and engineering at
-            whcc. Previously at Thomson Reuters, La Forge Des Marques, & Wowiwe
-            Instruction Co.
+            whcc. Previously at Thomson Reuters, La Forge Des Marques, and
+            Wowiwe Instruction Co.
             <br />
             <br />
             I'm experienced in concepting and scaling lasting products that
