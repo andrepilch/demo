@@ -8,7 +8,7 @@ interface SkillCategory {
 
 // Skills Matrix Data
 const skillsMatrix: SkillCategory[] = [
-    {
+  {
     category: 'Design',
     skills: [
       'Product Strategy',
@@ -78,8 +78,13 @@ const skillsMatrix: SkillCategory[] = [
       'Motion library',
       'Origami Studio',
       'Adobe Suite',
+      'Dovetail',
+      'Lookback',
+      'UserTesting',
       'JIRA',
       'Confluence',
+      'Github Projects',
+      'Linear',
       'Asana',
       'Blender 3D',
     ],
@@ -92,7 +97,11 @@ interface SkillsMatrixProps {
 
 export function SkillsMatrix({ expanded }: SkillsMatrixProps) {
   return (
-    <Section gap={SectionGap.lg} id='skills' className={styles.skillsSectionNoPadding}>
+    <Section
+      gap={SectionGap.lg}
+      id='skills'
+      className={styles.skillsSectionNoPadding}
+    >
       {/* <SectionHeader>
         <Eyebrow>Capabilities</Eyebrow>
         <H2>Skills & Methods</H2>
