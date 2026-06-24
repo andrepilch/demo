@@ -57,7 +57,7 @@ const projectMeta = {
 }
 
 export const heroData: CaseStudyHeroData = {
-  eyebrow: 'Eterntiy Bible App Case Study',
+  eyebrow: 'Eternity Bible App Case Study',
   title: 'Challenging the Norms in a Saturated Market',
   description:
     'Full-stack React/NextJS application built and shipped solo to app stores in under 1 year',
@@ -65,6 +65,10 @@ export const heroData: CaseStudyHeroData = {
   ctaUrl: 'https://about.eternitybible.app',
   accentColor: '#380BBB',
   heroImage: '/images/projects/eternity/eternity_read.jpg',
+  recognition: {
+    label: "Editor's Choice on faith.tools",
+    url: 'https://faith.tools/app/9503-eternity-bible',
+  },
 }
 
 export const overviewData: CaseStudyOverviewData = {

@@ -49,6 +49,40 @@ export const heroContent = style({
   maxWidth: '48rem',
 })
 
+export const heroBadge = style({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+  alignSelf: 'flex-start',
+  marginTop: '0.25rem',
+  marginBottom: '0.25rem',
+  paddingLeft: '0.875rem',
+  paddingRight: '0.875rem',
+  paddingTop: '0.5rem',
+  paddingBottom: '0.5rem',
+  borderRadius: '9999px',
+  fontSize: '0.8125rem',
+  fontWeight: '600',
+  letterSpacing: '0.02em',
+  color: vars.color.textOnAccent,
+  background: 'rgba(255, 255, 255, 0.15)',
+  border: '1px solid rgba(255, 255, 255, 0.3)',
+  backdropFilter: 'blur(8px)',
+  WebkitBackdropFilter: 'blur(8px)',
+  textDecoration: 'none',
+  transition: 'all 0.3s ease',
+  ':hover': {
+    background: 'rgba(255, 255, 255, 0.25)',
+    transform: 'translateY(-1px)',
+  },
+})
+
+export const heroBadgeIcon = style({
+  width: '16px',
+  height: '16px',
+  flexShrink: 0,
+})
+
 export const heroHeadline = style({
   display: 'flex',
   flexDirection: 'column',

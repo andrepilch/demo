@@ -35,6 +35,13 @@ export interface CaseStudyFeatureItem {
   bullets?: string[]
 }
 
+export interface CaseStudyRecognition {
+  /** Recognition label, e.g. "Editor's Choice on faith.tools" */
+  label: string
+  /** Optional link to the recognition source */
+  url?: string
+}
+
 export interface CaseStudyHeroData {
   eyebrow: string
   title: string
@@ -47,6 +54,8 @@ export interface CaseStudyHeroData {
   accentColor?: string
   /** Optional hero background image path */
   heroImage?: string
+  /** Optional award/recognition badge shown above the headline */
+  recognition?: CaseStudyRecognition
 }
 
 export interface CaseStudyOverviewData {

@@ -9,10 +9,12 @@ export type {
   CaseStudyFeatureHighlightData,
   CaseStudyGalleryImage,
   CaseStudyResultsData,
+  CaseStudyRecognition,
 } from './types'
 
 export { CaseStudyPageWrapper } from './CaseStudyPageWrapper'
 export { CaseStudyHero } from './CaseStudyHero'
+export { CaseStudyRecognitionBadge } from './CaseStudyRecognitionBadge'
 export { CaseStudySection } from './CaseStudySection'
 export { CaseStudyOverview } from './CaseStudyOverview'
 export { CaseStudyCardsGrid, type CardItem } from './CaseStudyCardsGrid'
