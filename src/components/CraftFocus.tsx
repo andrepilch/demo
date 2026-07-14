@@ -8,7 +8,7 @@ const craftFocusItems: PhilosophyItem[] = [
   {
     title: 'Designing uniqueness and improving journeys',
     description:
-      "Removing pain points and finding opportunities that competitors and even users just don't see",
+      "Removing pain points and finding opportunities that competitors don't see",
   },
   {
     title: 'Building and scaling systems',
