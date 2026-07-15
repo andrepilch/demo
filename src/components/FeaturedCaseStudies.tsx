@@ -41,7 +41,7 @@ const caseStudies = [
   {
     title: 'ProView E-Reader',
     outcome:
-      'Proview from Thomson Reuters is an e-reader application for large volume law and accounting titles with complex search capabilities.',
+      'Proview from Thomson Reuters was an e-reader application for large volume law and accounting titles with complex search capabilities.',
     description: 'Powering up professional research',
     tags: ['Product Design', 'Mobile UI/UX Design'],
     href: '/work/proview',

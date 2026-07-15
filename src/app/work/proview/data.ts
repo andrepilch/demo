@@ -12,11 +12,11 @@ import type { CardItem } from '@/app/work/components'
 
 // Re-export for FeaturedCaseStudies
 export const proviewResults: CaseStudyResult[] = [
-  {
-    value: '5k',
-    label: 'Monthly Users',
-    description: 'Across platforms',
-  },
+  // {
+  //   value: '5k',
+  //   label: 'Monthly Users',
+  //   description: 'Across platforms',
+  // },
   {
     value: '5 continents',
     label: 'Worldwide BU Stakeholders',
@@ -43,7 +43,7 @@ export const heroData: CaseStudyHeroData = {
   eyebrow: 'ProView Case Study',
   title: 'Powering Up Professional Research',
   description:
-    'Proview from Thomson Reuters is an e-reader application for large volume law and accounting titles with complex search capabilities.',
+    'Proview from Thomson Reuters was an e-reader application for large volume law and accounting titles with complex search capabilities.',
   accentColor: '#FF8000',
   heroImage: '/images/projects/proview/proview_cover.jpg',
 }
