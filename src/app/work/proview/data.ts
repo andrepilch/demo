@@ -19,16 +19,16 @@ export const proviewResults: CaseStudyResult[] = [
   },
   {
     value: '5 continents',
-    label: 'Worldwide BU Såtakeholders',
+    label: 'Worldwide BU Stakeholders',
     description: 'Across languages',
   },
 ]
 
 const projectMeta = {
   role: ['Product Designer', 'Mobile UI/UX Designer'],
-  platforms: ['Tablet (iPad/Android)', 'Desktop Web'],
-  devices: ['iPad', 'Android tablet', 'Desktop', 'Web'],
-  tech: ['Native iOS and Android apps', 'Web app'],
+  platforms: ['Android tablet', 'iPad', 'Desktop Web'],
+  devices: ['Android tablet', 'iPad', 'Desktop', 'Web'],
+  tech: ['Native Android and iOS apps', 'Web app'],
   year: '2014–2016',
   status: 'Sold',
   targetAudience: [
@@ -58,16 +58,16 @@ Legal professionals often need to navigate massive volumes, find specific sectio
 
 export const problemSection: CaseStudySectionData = {
   eyebrow: 'The Challenge',
-  title: 'Problem Identification',
+  title: 'Building on a Shipped Product',
   description:
-    'Professional research has traditionally been tied to physical desks and heavy print volumes.',
+    'ProView already served lawyers and accountants on web and iOS. The next step was expanding the platform set and keeping improvements moving without breaking established research habits.',
 }
 
 export const painPoints: CardItem[] = [
   {
-    title: 'Annotation Loss',
+    title: 'Platform Gap',
     description:
-      'Handwritten notes in print volumes are lost when a new edition is released.',
+      'Android was not yet part of the shipping set — professionals on Android tablets lacked a native home for their libraries.',
   },
   {
     title: 'Search Inefficiency',
@@ -75,9 +75,9 @@ export const painPoints: CardItem[] = [
       'Finding specific terms across multiple physical books is slow and memory-dependent.',
   },
   {
-    title: 'Connectivity Barriers',
+    title: 'Evolving a Live Product',
     description:
-      'Many digital tools fail in courtroom or transit environments without stable internet.',
+      'Improvements had to deepen complex search and annotation tools without disrupting users already relying on ProView day to day.',
   },
 ]
 
@@ -85,7 +85,7 @@ export const strategySection: CaseStudySectionData = {
   eyebrow: 'Strategic Thinking',
   title: 'Product Strategy',
   description:
-    'A professional-grade strategy focused on accuracy, persistence, and mobility.',
+    'Grow the platform footprint on Android, while steadily advancing the capabilities professionals already trusted on web and iOS.',
 }
 
 export const strategyOutcomes: CaseStudyStrategyOutcome[] = [
@@ -93,18 +93,13 @@ export const strategyOutcomes: CaseStudyStrategyOutcome[] = [
     principle: 'Work should never be redundant',
     outcome: 'Automatic note transfer between editions',
   },
-  // {
-  //   principle: 'Accuracy is non-negotiable',
-  //   outcome: 'Integrated search capabilities',
-  // },
   {
-    principle: 'Context is king',
-    outcome: 'Search within eBooks without leaving the current page',
+    principle: 'One research workflow everywhere',
+    outcome: 'Search within an eBook or across a whole library',
   },
   {
-    principle: 'Minimize friction',
-    outcome:
-      'One-tap navigation via Table of Contents and "Recently Read" jump lists',
+    principle: 'Improve without reset',
+    outcome: 'Evolve annotations, search, and navigation',
   },
 ]
 
@@ -116,10 +111,10 @@ export const designProcessSection: CaseStudySectionData = {
 export const designProcessImages: CaseStudyGalleryImage[] = []
 
 export const designProcessSteps: CardItem[] = [
-  'Understand User Mobility: Analyzing where and how lawyers work',
-  'Information Architecture: Organizing vast libraries for quick sorting by title, publisher, or jurisdiction',
-  'Iterative UI Design: Creating a clean reading view that prioritizes content while keeping tools accessible via a single tap',
-  'Offline Capability: Developing a robust download system for anywhere access',
+  'Ramping into a live product: learning ProView’s research patterns and constraints after ship',
+  'Android platform design: adapting the reading and library experience for Android tablets',
+  'Cross-platform features: designing capabilities that could ship on Android, iOS, and web together',
+  'Iterative delivery: refining search, annotations, and navigation with feedback from a global professional audience',
 ].map((title, i) => ({ title, number: i + 1 }))
 
 export const solutionSection: CaseStudySectionData = {
@@ -159,7 +154,7 @@ export const finalDesignsSection: CaseStudySectionData = {
   eyebrow: 'Final Designs',
   title: 'The Full Vision',
   description:
-    'ProView shipped across tablet and desktop platforms as Thomson Reuters’ e-reader for large-volume law and accounting titles.',
+    'Through ongoing improvements and the addition of Android, ProView became a multi-platform e-reader for large-volume law and accounting titles across tablet and desktop.',
 }
 
 export const finalDesignsVideo = {
@@ -173,18 +168,18 @@ export const finalDesignsImages: CaseStudyGalleryImage[] = []
 
 export const resultsData: CaseStudyResultsData = {
   eyebrow: 'Impact',
-  description: `ProView provides professionals with the freedom and flexibility to work wherever and whenever they want. The product was a primary revenue generator for the Advanced Innovation team at Thomson Reuters.`,
+  description: `Expanding to Android and continuing to improve web and iOS gave professionals more ways to work from their libraries wherever they were. ProView remained a primary revenue generator for the Advanced Innovation team at Thomson Reuters.`,
   results: proviewResults,
 }
 
 export const conclusionSection: CaseStudySectionData = {
   eyebrow: 'Conclusion',
   title: 'Professional Tools for High-Stakes Environments',
-  description: `ProView demonstrates that digital eBooks can surpass print by offering persistence and connectivity.`,
+  description: `Joining after ship meant the work was less about inventing ProView from scratch and more about expanding and refining it.`,
 }
 
 export const conclusionBenefits: CardItem[] = [
-  'Offline Accessibility for uninterrupted workflow',
-  'Persistent Annotations that survive edition updates',
-  'Multiple search capabilities to find authoritative content',
+  'Android platform design that extended ProView to a new device class',
+  'Continued feature delivery across web and iOS alongside Android',
+  'Improvements to search, annotations, and navigation on a live product',
 ].map((title) => ({ title }))
