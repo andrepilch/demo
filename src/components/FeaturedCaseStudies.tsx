@@ -9,6 +9,7 @@ import {
 } from '@/components/Section.css'
 import * as styles from './FeaturedCaseStudies.css'
 import { eternityResults } from '@/app/work/eternity-bible/data'
+import { proviewResults } from '@/app/work/proview/data'
 
 const caseStudies = [
   {
@@ -36,6 +37,16 @@ const caseStudies = [
     href: '/work/eternity-bible',
     image: '/images/projects/eternity/eternity_hand.jpg',
     stats: eternityResults,
+  },
+  {
+    title: 'ProView',
+    outcome:
+      'Full-stack interactive eBook platform designed for high-stakes legal and professional environments',
+    description: 'Powering up professional research',
+    tags: ['Product Design', 'UX Strategy', 'Design Systems'],
+    href: '/work/proview',
+    image: '/images/projects/proview/proview_cover.jpg',
+    stats: proviewResults,
   },
 ]
 
@@ -150,7 +161,7 @@ const otherProducts = [
     description:
       'Cross-platform e-reader application for Law & Accounting volumes with advanced search functionality',
     status: productStatus.released,
-    visible: true,
+    visible: false,
   },
   {
     title: 'Thomson Reuters Blacks Law',
