@@ -39,11 +39,11 @@ const caseStudies = [
     stats: eternityResults,
   },
   {
-    title: 'ProView',
+    title: 'ProView E-Reader',
     outcome:
-      'Joined after ship to bring Android forward and keep improving web and iOS for professional research.',
+      'Proview from Thomson Reuters is an e-reader application for large volume law and accounting titles with complex search capabilities.',
     description: 'Powering up professional research',
-    tags: ['Product Designer', 'Mobile UI/UX Designer'],
+    tags: ['Product Design', 'Mobile UI/UX Design'],
     href: '/work/proview',
     image: '/images/projects/proview/proview_cover.jpg',
     stats: proviewResults,
