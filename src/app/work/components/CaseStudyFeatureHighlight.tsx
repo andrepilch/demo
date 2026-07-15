@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Section, SectionGap } from '@/components/Section'
 import { H3 } from '@/components/Text'
+import { CaseStudyFeatureVideo } from './CaseStudyFeatureVideo'
 import type { CaseStudyFeatureHighlightData } from './types'
 import * as styles from './case-study.css'
 
@@ -29,7 +30,13 @@ function CheckIcon() {
 export function CaseStudyFeatureHighlight({
   data,
 }: CaseStudyFeatureHighlightProps) {
-  const imageBlock = (
+  const imageBlock = data.videoSrc ? (
+    <CaseStudyFeatureVideo
+      videoSrc={data.videoSrc}
+      posterSrc={data.imageSrc}
+      alt={data.imageAlt}
+    />
+  ) : (
     <div className={styles.imageWrapper}>
       <Image
         src={data.imageSrc}

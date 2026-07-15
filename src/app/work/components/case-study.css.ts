@@ -623,6 +623,47 @@ export const featureCheckIcon = style({
   marginTop: '2px',
 })
 
+export const featureVideo = style({
+  position: 'absolute',
+  inset: 0,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+})
+
+export const featurePlayButton = style({
+  position: 'absolute',
+  inset: 0,
+  zIndex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  border: 'none',
+  padding: 0,
+  cursor: 'pointer',
+  background: 'rgba(0, 0, 0, 0.28)',
+  transition: 'background 0.2s ease',
+  ':hover': {
+    background: 'rgba(0, 0, 0, 0.38)',
+  },
+  ':focus-visible': {
+    outline: `2px solid ${vars.color.accent}`,
+    outlineOffset: '-2px',
+  },
+})
+
+export const featurePlayIcon = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '64px',
+  height: '64px',
+  borderRadius: '50%',
+  background: 'rgba(255, 255, 255, 0.92)',
+  color: vars.color.textPrimary,
+  boxShadow: '0 4px 24px rgba(0, 0, 0, 0.25)',
+})
+
 // ============================================
 // Icon Styles
 // ============================================

@@ -41,9 +41,9 @@ const caseStudies = [
   {
     title: 'ProView',
     outcome:
-      'Full-stack interactive eBook platform designed for high-stakes legal and professional environments',
+      'Proview from Thomson Reuters is an e-reader application for large volume law and accounting titles with complex deep search capabilities.',
     description: 'Powering up professional research',
-    tags: ['Product Design', 'UX Strategy', 'Design Systems'],
+    tags: ['Product Designer', 'Mobile UI/UX Designer'],
     href: '/work/proview',
     image: '/images/projects/proview/proview_cover.jpg',
     stats: proviewResults,
@@ -156,13 +156,13 @@ const otherProducts = [
     status: productStatus.released,
     visible: true,
   },
-  {
-    title: 'Thomson Reuters Proview',
-    description:
-      'Cross-platform e-reader application for Law & Accounting volumes with advanced search functionality',
-    status: productStatus.released,
-    visible: false,
-  },
+  // {
+  //   title: 'Thomson Reuters Proview',
+  //   description:
+  //     'Cross-platform e-reader application for Law & Accounting volumes with advanced search functionality',
+  //   status: productStatus.released,
+  //   visible: false,
+  // },
   {
     title: 'Thomson Reuters Blacks Law',
     description: 'Proof of concept for TR Blacks Law',

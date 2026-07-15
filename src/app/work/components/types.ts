@@ -46,8 +46,9 @@ export interface CaseStudyHeroData {
   eyebrow: string
   title: string
   description: string
-  ctaLabel: string
-  ctaUrl: string
+  /** Optional CTA label and URL */
+  ctaLabel?: string
+  ctaUrl?: string
   /** CSS background (e.g. gradient + image). Optional; component may use accentColor. */
   backgroundStyle?: string
   /** Accent color for hero (e.g. #380BBB). Used if backgroundStyle not provided. */
@@ -78,6 +79,8 @@ export interface CaseStudyFeatureHighlightData {
   bullets: string[]
   imageSrc: string
   imageAlt: string
+  /** Optional MP4; when set, imageSrc is used as the poster and the video loads only on play */
+  videoSrc?: string
   /** 'left' | 'right' – image position */
   imagePosition: 'left' | 'right'
 }

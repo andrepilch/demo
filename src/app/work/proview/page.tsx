@@ -7,6 +7,7 @@ import {
   CaseStudyProcessList,
   CaseStudyStrategyGoals,
   CaseStudyFeatureHighlight,
+  CaseStudyFeatureVideo,
   CaseStudyImageGallery,
   CaseStudyResults,
 } from '@/app/work/components'
@@ -22,10 +23,9 @@ import {
   designProcessImages,
   solutionSection,
   featureNotesThatNeverFade,
-  featureAuthorityIntegration,
   featureNavigationSearch,
-  featureReadingExperience,
   finalDesignsSection,
+  finalDesignsVideo,
   finalDesignsImages,
   resultsData,
   conclusionSection,
@@ -58,13 +58,19 @@ export default function ProViewCaseStudy() {
       <CaseStudySection data={solutionSection} />
 
       <CaseStudyFeatureHighlight data={featureNotesThatNeverFade} />
-      <CaseStudyFeatureHighlight data={featureAuthorityIntegration} />
       <CaseStudyFeatureHighlight data={featureNavigationSearch} />
-      <CaseStudyFeatureHighlight data={featureReadingExperience} />
 
       <CaseStudyImageGallery
         section={finalDesignsSection}
         images={finalDesignsImages}
+        lead={
+          <CaseStudyFeatureVideo
+            videoSrc={finalDesignsVideo.videoSrc}
+            posterSrc={finalDesignsVideo.posterSrc}
+            alt={finalDesignsVideo.alt}
+            fullWidth
+          />
+        }
       />
 
       <CaseStudyCards section={conclusionSection} items={conclusionBenefits} />

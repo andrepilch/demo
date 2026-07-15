@@ -10,12 +10,15 @@ import * as styles from './case-study.css'
 export interface CaseStudyImageGalleryProps {
   section: CaseStudySectionData
   images: CaseStudyGalleryImage[]
+  /** Rendered above the image grid (e.g. a product video) */
+  lead?: React.ReactNode
   children?: React.ReactNode
 }
 
 export function CaseStudyImageGallery({
   section,
   images,
+  lead,
   children,
 }: CaseStudyImageGalleryProps) {
   const [lightboxImage, setLightboxImage] =
@@ -36,31 +39,34 @@ export function CaseStudyImageGallery({
 
   return (
     <CaseStudySection data={section}>
-      <div className={styles.imageGrid}>
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className={`${styles.imageWrapper} ${styles.imageWrapperClickable}`}
-            onClick={() => setLightboxImage(img)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault()
-                setLightboxImage(img)
-              }
-            }}
-            role='button'
-            tabIndex={0}
-            aria-label={`View ${img.alt}`}
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-        ))}
-      </div>
+      {lead}
+      {images.length > 0 && (
+        <div className={styles.imageGrid}>
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className={`${styles.imageWrapper} ${styles.imageWrapperClickable}`}
+              onClick={() => setLightboxImage(img)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setLightboxImage(img)
+                }
+              }}
+              role='button'
+              tabIndex={0}
+              aria-label={`View ${img.alt}`}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          ))}
+        </div>
+      )}
       {children}
       {lightboxImage &&
         typeof document !== 'undefined' &&
