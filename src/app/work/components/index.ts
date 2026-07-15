@@ -25,6 +25,7 @@ export {
 export { CaseStudyCards } from './CaseStudyCards'
 export { CaseStudyStrategyGoals } from './CaseStudyStrategyGoals'
 export { CaseStudyFeatureHighlight } from './CaseStudyFeatureHighlight'
+export { CaseStudyFeatureVideo } from './CaseStudyFeatureVideo'
 export { CaseStudyImageBlock } from './CaseStudyImageBlock'
 export { CaseStudyImageGallery } from './CaseStudyImageGallery'
 export { CaseStudyResults } from './CaseStudyResults'
