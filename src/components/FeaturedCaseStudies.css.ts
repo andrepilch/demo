@@ -51,6 +51,12 @@ export const caseStudyContent = style({
   flexDirection: 'column',
   justifyContent: 'center',
   gap: '4rem',
+  paddingRight: '1.5rem',
+  '@media': {
+    'screen and (min-width: 982px)': {
+      paddingRight: '2.5rem',
+    },
+  },
 })
 
 export const caseStudyTitleContainer = style({

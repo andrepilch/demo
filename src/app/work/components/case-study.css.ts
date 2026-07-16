@@ -659,7 +659,7 @@ export const featurePlayIcon = style({
   width: '64px',
   height: '64px',
   borderRadius: '50%',
-  background: 'rgba(255, 255, 255, 0.92)',
+  background: vars.color.bgPrimary,
   color: vars.color.textPrimary,
   boxShadow: '0 4px 24px rgba(0, 0, 0, 0.25)',
 })
