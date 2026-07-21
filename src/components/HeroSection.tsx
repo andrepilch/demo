@@ -11,9 +11,9 @@ export function HeroSection() {
         {/* <span className={styles.interjection}> and sometimes build</span>{' '} */}
         {/* innovative web products */}
         {/* <br /> */}
-        {/* <span className={styles.interjection}>
+        <span className={styles.interjection}>
           with great taste & intuition 😉
-        </span>{' '} */}
+        </span>{' '}
       </H1>
       {/* CTA Buttons */}
       <ButtonGroup className={styles.ctaButtons}>
