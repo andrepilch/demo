@@ -390,6 +390,29 @@ export const menuHomeIcon = style({
   height: '2.5rem',
 })
 
+// Philosophy link: emoji, right of home, above avatar
+export const menuPhilosophyLink = style({
+  position: 'absolute',
+  top: '-0.1rem',
+  left: '3.6rem',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '0.25rem',
+  textDecoration: 'none',
+  transition: 'opacity 0.2s ease, transform 0.2s ease',
+  ':hover': {
+    opacity: 0.85,
+    transform: 'scale(1.05)',
+  },
+})
+
+export const menuPhilosophyEmoji = style({
+  fontSize: '1.5rem',
+  lineHeight: 1,
+  display: 'block',
+})
+
 // About link: circular avatar, below home, same horizontal alignment
 export const menuAboutLink = style({
   position: 'absolute',

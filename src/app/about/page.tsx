@@ -1,8 +1,6 @@
 import * as styles from './page.css'
-import { brandBlock, brandBlockInner } from '@/components/Section.css'
 import {
   Bio,
-  ProductPhilosophy,
   PassionAreas,
   Partnerships,
   Process,
@@ -10,9 +8,7 @@ import {
   CTASection,
   LeadershipSection,
   ImpactStatsRibbon,
-  H2,
   AI,
-  BridgeAdvantage,
 } from '@/components'
 
 export default function About() {
@@ -24,18 +20,7 @@ export default function About() {
         <PassionAreas />
         <Partnerships />
         <LeadershipSection />
-
-        <section className={brandBlock}>
-          <div className={brandBlockInner}>
-            <H2>
-              A strong product saves time, adds value, competes well, and
-              provides a good experience start to finish.
-            </H2>
-          </div>
-        </section>
-        <ProductPhilosophy />
         <Process />
-        <BridgeAdvantage />
         <AI />
         <SideProjects />
       </div>

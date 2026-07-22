@@ -18,9 +18,14 @@ export const proviewResults: CaseStudyResult[] = [
   //   description: 'Across platforms',
   // },
   {
-    value: '5 continents',
-    label: 'Worldwide BU Stakeholders',
-    description: 'Across languages',
+    value: '5',
+    label: 'continents',
+    description: 'Worldwide BU Stakeholders, across languages',
+  },
+  {
+    value: '3',
+    label: 'platforms',
+    description: 'iOS, Android, and web',
   },
 ]
 

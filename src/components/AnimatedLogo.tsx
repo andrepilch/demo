@@ -271,6 +271,16 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
                   </svg>
                 </Link>
                 <Link
+                  href='/philosophy'
+                  className={styles.menuPhilosophyLink}
+                  onClick={() => setMenuOpen(false)}
+                  aria-label='Philosophy'
+                >
+                  <span className={styles.menuPhilosophyEmoji} aria-hidden>
+                    🤔
+                  </span>
+                </Link>
+                <Link
                   href='/about'
                   className={styles.menuAboutLink}
                   onClick={() => setMenuOpen(false)}
