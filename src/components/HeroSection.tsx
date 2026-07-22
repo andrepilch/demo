@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { H1, LinkButton, ButtonGroup, Section } from '@/components'
 import * as styles from './HeroSection.css'
 
@@ -17,13 +18,15 @@ export function HeroSection() {
       </H1>
       {/* CTA Buttons */}
       <ButtonGroup className={styles.ctaButtons}>
-        <LinkButton
-          href='/about'
-          variant='primary'
-          style={{ marginTop: '1.5rem' }}
-        >
+        <LinkButton href='/about' variant='primary'>
           About Me
         </LinkButton>
+        <Link
+          href='/philosophy'
+          className={styles.heroOutlinedButton}
+        >
+          Philosophy & Process
+        </Link>
       </ButtonGroup>
     </Section>
   )

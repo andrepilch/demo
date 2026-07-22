@@ -1,4 +1,6 @@
 import { style, keyframes } from '@vanilla-extract/css'
+import { buttonBase, sizeVariants } from './Button.css'
+import { vars } from '@/styles'
 
 const fadeInUp = keyframes({
   from: {
@@ -25,10 +27,27 @@ export const ctaButtons = style({
   display: 'flex',
   flexWrap: 'wrap',
   gap: '1rem',
+  marginTop: '1.5rem',
   opacity: 0,
   animation: `${fadeInUp} 0.6s ease-out forwards`,
   animationDelay: '0.3s',
 })
+
+export const heroOutlinedButton = style([
+  buttonBase,
+  sizeVariants.md,
+  {
+    background: 'transparent',
+    border: `1px solid ${vars.color.textOnAccent}`,
+    color: vars.color.textOnAccent,
+    ':hover': {
+      transform: 'scale(1.04)',
+      boxShadow: vars.shadow.glow,
+      color: vars.color.textOnAccent,
+      borderColor: vars.color.textOnAccent,
+    },
+  },
+])
 
 export const interjection = style({
   fontFamily: 'var(--font-cursive), cursive',
