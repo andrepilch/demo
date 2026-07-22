@@ -25,7 +25,7 @@ export function HeroSection() {
           href='/philosophy'
           className={styles.heroOutlinedButton}
         >
-          Philosophy & Process
+          Philosophy
         </Link>
       </ButtonGroup>
     </Section>
