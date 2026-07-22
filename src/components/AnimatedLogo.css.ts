@@ -390,6 +390,29 @@ export const menuHomeIcon = style({
   height: '2.5rem',
 })
 
+// Philosophy link: thought bubble icon, right of home, above avatar
+export const menuPhilosophyLink = style({
+  position: 'absolute',
+  top: '0.35rem',
+  left: '3.25rem',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '0.25rem',
+  color: vars.color.textPrimary,
+  textDecoration: 'none',
+  transition: 'color 0.2s ease, opacity 0.2s ease',
+  ':hover': {
+    color: vars.color.accent,
+    opacity: 0.85,
+  },
+})
+
+export const menuPhilosophyIcon = style({
+  width: '2.5rem',
+  height: '2.5rem',
+})
+
 // About link: circular avatar, below home, same horizontal alignment
 export const menuAboutLink = style({
   position: 'absolute',

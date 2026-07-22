@@ -106,7 +106,7 @@ export function DesignPhilosophy() {
           </Grid>
 
           <div style={{ textAlign: 'center' }}>
-            <Link href='/about#philosophy' className={styles.linkAccent}>
+            <Link href='/philosophy' className={styles.linkAccent}>
               Read my full Design Philosophy →
             </Link>
           </div>

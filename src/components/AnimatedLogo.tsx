@@ -271,6 +271,21 @@ export function AnimatedLogo({ size = 120, href = '/' }: AnimatedLogoProps) {
                   </svg>
                 </Link>
                 <Link
+                  href='/philosophy'
+                  className={styles.menuPhilosophyLink}
+                  onClick={() => setMenuOpen(false)}
+                  aria-label='Philosophy'
+                >
+                  <svg
+                    className={styles.menuPhilosophyIcon}
+                    viewBox='0 -960 960 960'
+                    fill='currentColor'
+                    aria-hidden
+                  >
+                    <path d='M80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Z' />
+                  </svg>
+                </Link>
+                <Link
                   href='/about'
                   className={styles.menuAboutLink}
                   onClick={() => setMenuOpen(false)}
