@@ -2,6 +2,7 @@ import * as styles from './page.css'
 import { brandBlock, brandBlockInner } from '@/components/Section.css'
 import {
   ProductPhilosophy,
+  BridgeAdvantage,
   CTASection,
   H2,
 } from '@/components'
@@ -19,6 +20,7 @@ export default function Philosophy() {
             </H2>
           </div>
         </section>
+        <BridgeAdvantage />
       </div>
       <CTASection />
     </>

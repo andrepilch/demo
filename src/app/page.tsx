@@ -6,7 +6,6 @@ import {
   FeaturedCaseStudies,
   CTASection,
   CraftFocus,
-  BridgeAdvantage,
 } from '@/components'
 import * as styles from './page.css'
 
@@ -26,7 +25,6 @@ export default function Home() {
         <FeaturedCaseStudies />
         <CraftFocus />
       </div>
-      <BridgeAdvantage />
       <CTASection />
     </div>
   )
