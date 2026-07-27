@@ -23,7 +23,7 @@ const caseStudies = [
     image: '/images/projects/designer/wall_designer_cover.jpg',
     stats: [
       // { value: '26%', label: 'AOV Increase' },
-      { value: '6.5M+', label: 'Sessions served' },
+      { value: '8M+', label: 'Sessions served' },
       // { value: '3M', label: 'Sessions served' },
       { value: '9+Yrs', label: 'Sustained product growth' },
     ],
