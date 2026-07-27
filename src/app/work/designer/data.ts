@@ -21,7 +21,7 @@ export const designerResults: CaseStudyResult[] = [
     label: 'YoY Growth',
     description: 'vs. alternative solutions',
   },
-  { value: '6.5M+', label: 'Sessions served', description: 'and counting' },
+  { value: '8M+', label: 'Sessions served', description: 'and counting' },
   {
     value: '9+Yrs',
     label: 'Sustained growth',
