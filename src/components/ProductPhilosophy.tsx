@@ -94,6 +94,12 @@ const productPhilosophies: PhilosophyItem[] = [
       'Good design is invisible. Keep the user on track by removing friction. Every bit of friction is something in the way of the happy path and a return customer.',
   },
   {
+    category: 'Simplicity',
+    title: 'Value for humans',
+    description:
+      'Adding buttons to software is easy. Keeping only the right buttons is hard. Every point of interaction a human has with tech should be valuable.',
+  },
+  {
     category: 'Collaboration',
     title: 'Work together',
     description: 'Work for the name on the front of the jersey, not the back.',
