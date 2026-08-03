@@ -5,7 +5,7 @@ export const caseStudyCard = style({
   display: 'grid',
   gap: '1.5rem',
   // padding: '1rem',
-  background: vars.color.bgCard,
+  background: vars.color.bgPrimary,
   // border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius['xl'],
   transition: 'all 0.3s ease',
