@@ -3,6 +3,7 @@ import {
   HeroSection,
   // ImpactStatsRibbon,
   BigNumbers,
+  HomeIntro,
   FeaturedCaseStudies,
   CTASection,
   CraftFocus,
@@ -22,6 +23,7 @@ export default function Home() {
       </div>
       {/* <ImpactStatsRibbon /> */}
       <div className={styles.sectionsWrapper}>
+        <HomeIntro />
         <FeaturedCaseStudies />
         <CraftFocus />
       </div>
