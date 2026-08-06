@@ -13,3 +13,28 @@ export const intro = style({
   maxWidth: '42rem',
   color: vars.color.textPrimary,
 })
+
+export const aboutLink = style({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '0.25rem',
+  alignSelf: 'flex-start',
+  marginTop: '0.25rem',
+  color: vars.color.accent,
+  fontSize: '0.875rem',
+  transition: 'opacity 0.2s ease',
+  ':hover': {
+    opacity: 0.8,
+  },
+})
+
+export const aboutLinkIcon = style({
+  width: '16px',
+  height: '16px',
+  transition: 'transform 0.2s ease',
+  selectors: {
+    [`${aboutLink}:hover &`]: {
+      transform: 'translateX(4px)',
+    },
+  },
+})
