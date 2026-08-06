@@ -3,10 +3,13 @@ import { Section, SectionGap } from './Section'
 import { H2, H3, Body, Eyebrow } from './Text'
 import { Accomplishments } from './Accomplishments'
 import { Education } from './Education'
+import { getYearsOfExperience } from '@/lib/experience'
 import * as styles from './Bio.css'
 import { socialLinks } from './CTASection'
 
 export function Bio() {
+  const years = getYearsOfExperience()
+
   return (
     <Section gap={SectionGap.md}>
       <div className={styles.heroGrid}>
@@ -32,16 +35,16 @@ export function Bio() {
             I'm a Christian born and raised in France, now residing and working
             in the United States. Currently working to help digital products grow
             through design and engineering at WHCC (previously at Thomson
-            Reuters, La Forge Des Marques, and Wowiwe Instruction Co). With over
-            15 years of visual design and branding expertise paired with modern
-            software engineering, I simplify complex ideas into clear,
+            Reuters, La Forge Des Marques, and Wowiwe Instruction Co). With over{' '}
+            {years} years of visual design and branding expertise paired with
+            modern software engineering, I simplify complex ideas into clear,
             intuitive, and scalable digital products.
           </Body>
           <H3>Bringing Vision to Reality</H3>
           <Body>
             My path started at age 10 tinkering with Photoshop and basic web
             design, which led to a classically trained background (5-year BFA)
-            in Graphic Design. Over the last 15+ years, I’ve applied those
+            in Graphic Design. Over the last {years}+ years, I’ve applied those
             visual roots across software products of all scales—taking ideas
             from zero to one, setting strategic direction, and leading end-to-end
             redesigns.

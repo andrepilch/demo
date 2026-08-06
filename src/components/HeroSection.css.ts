@@ -23,6 +23,18 @@ export const heroTitle = style({
   animationDelay: '0.1s',
 })
 
+export const heroIntro = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+  maxWidth: '42rem',
+  marginTop: '1.5rem',
+  opacity: 0,
+  animation: `${fadeInUp} 0.6s ease-out forwards`,
+  animationDelay: '0.2s',
+  color: 'rgba(255, 255, 255, 0.9)',
+})
+
 export const ctaButtons = style({
   display: 'flex',
   flexWrap: 'wrap',
