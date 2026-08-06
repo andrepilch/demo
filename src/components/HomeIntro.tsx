@@ -1,14 +1,30 @@
 import Link from 'next/link'
+import type { CSSProperties } from 'react'
 import { Section, SectionGap, Body } from '@/components'
 import { getYearsOfExperience } from '@/lib/experience'
-import * as styles from './HomeIntro.css'
+import { vars } from '@/styles'
+
+const introStyle: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+  maxWidth: '42rem',
+  color: vars.color.textPrimary,
+}
+
+const aboutLinkStyle: CSSProperties = {
+  alignSelf: 'flex-start',
+  marginTop: '0.25rem',
+  color: vars.color.accent,
+  fontSize: '0.875rem',
+}
 
 export function HomeIntro() {
   const years = getYearsOfExperience()
 
   return (
-    <Section gap={SectionGap.md} className={styles.section}>
-      <div className={styles.intro}>
+    <Section gap={SectionGap.md}>
+      <div style={introStyle}>
         <Body>
           Classically trained with a 5-year BFA in Graphic Design, I’ve spent
           over {years} years building digital products from scratch and leading
@@ -26,7 +42,7 @@ export function HomeIntro() {
           systems, leading research, and doing whatever it takes to ship
           exceptional software.
         </Body>
-        <Link href='/about' className={styles.aboutLink}>
+        <Link href='/about' style={aboutLinkStyle}>
           Learn more about me
         </Link>
       </div>
