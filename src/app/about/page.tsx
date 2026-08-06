@@ -20,8 +20,8 @@ export default function About() {
         <PassionAreas />
         <Partnerships />
         <LeadershipSection />
-        <Process />
         <AI />
+        <Process />
         <SideProjects />
       </div>
       <CTASection />

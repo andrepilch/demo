@@ -27,7 +27,7 @@ export function HomeIntro() {
           exceptional software.
         </Body>
         <Link href='/about' className={styles.aboutLink}>
-          About Me
+          Learn more about me
         </Link>
       </div>
     </Section>
