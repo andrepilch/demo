@@ -61,27 +61,29 @@ const heroStyles = `
 
 export function HeroSection() {
   return (
-    <Section className='heroSection-root'>
+    <>
       <style>{heroStyles}</style>
-      {/* Headline */}
-      <H1 color='onAccent' className='heroSection-title'>
-        I design & build innovative web products
-        <span className='heroSection-interjection'>
-          with great taste & intuition 😉
-        </span>{' '}
-      </H1>
-      {/* CTA Buttons */}
-      <ButtonGroup className='heroSection-ctas'>
-        <LinkButton href='/about' variant='primary'>
-          About Me
-        </LinkButton>
-        <Link
-          href='/philosophy'
-          className={`${buttonBase} ${sizeVariants.md} heroSection-outlined`}
-        >
-          Philosophy
-        </Link>
-      </ButtonGroup>
-    </Section>
+      <Section className='heroSection-root'>
+        {/* Headline */}
+        <H1 color='onAccent' className='heroSection-title'>
+          I design & build innovative web products
+          <span className='heroSection-interjection'>
+            with great taste & intuition 😉
+          </span>{' '}
+        </H1>
+        {/* CTA Buttons */}
+        <ButtonGroup className='heroSection-ctas'>
+          <LinkButton href='/about' variant='primary'>
+            About Me
+          </LinkButton>
+          <Link
+            href='/philosophy'
+            className={`${buttonBase} ${sizeVariants.md} heroSection-outlined`}
+          >
+            Philosophy
+          </Link>
+        </ButtonGroup>
+      </Section>
+    </>
   )
 }
