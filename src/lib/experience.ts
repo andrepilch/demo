@@ -1,5 +1,5 @@
-/** Year professional design career began (see CareerTimeline). */
-export const CAREER_START_YEAR = 2009
+/** Year professional design career began. */
+export const CAREER_START_YEAR = 2011
 
 /** Years of experience based on the current calendar year. */
 export function getYearsOfExperience(now = new Date()): number {
