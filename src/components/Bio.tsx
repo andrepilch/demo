@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Section, SectionGap } from './Section'
-import { H2, Body, Eyebrow } from './Text'
+import { H2, H3, Body, Eyebrow } from './Text'
 import { Accomplishments } from './Accomplishments'
 import { Education } from './Education'
 import * as styles from './Bio.css'
@@ -30,24 +30,54 @@ export function Bio() {
           <H2 className={styles.pageTitle}>Hi, I'm André Pilch</H2>
           <Body>
             I'm a Christian born and raised in France, now residing and working
-            in the United States. Currently working as a Senior Product Designer
-            helping digital products grow through design and engineering at
-            whcc. Previously at Thomson Reuters, La Forge Des Marques, and
-            Wowiwe Instruction Co.
-            <br />
-            <br />
-            I'm experienced in concepting and scaling lasting products that
-            align with product strategy and vision. Skilled at simplifying
-            complex ideas into clear usable solutions.
-            <br />
-            <br />
-            My extensive design experience combined with years of software
-            engineering allow me to push the boundaries of innovation with
-            seamless collaboration.
-            <br />
-            <br />
-            When I'm not designing or coding, you'll find me learning about God,
-            spending time with my family, or kayaking down a river.
+            in the United States. Currently working to help digital products grow
+            through design and engineering at WHCC (previously at Thomson
+            Reuters, La Forge Des Marques, and Wowiwe Instruction Co). With over
+            15 years of visual design and branding expertise paired with modern
+            software engineering, I simplify complex ideas into clear,
+            intuitive, and scalable digital products.
+          </Body>
+          <H3>Bringing Vision to Reality</H3>
+          <Body>
+            My path started at age 10 tinkering with Photoshop and basic web
+            design, which led to a classically trained background (5-year BFA)
+            in Graphic Design. Over the last 15+ years, I’ve applied those
+            visual roots across software products of all scales—taking ideas
+            from zero to one, setting strategic direction, and leading end-to-end
+            redesigns.
+          </Body>
+          <Body>
+            I’ve designed across virtually every medium, including native
+            iOS/Android, responsive web, desktop, 3D modeling, and emerging
+            hardware (Watch, VR, Glass). My extensive design foundation combined
+            with frontend engineering allows me to push the boundaries of
+            innovation while driving seamless cross-functional collaboration.
+          </Body>
+          <H3>Bridging Design & Engineering</H3>
+          <Body>
+            To build faster and close the gap between design and development, I
+            stepped directly into engineering. Whether I’m conducting user
+            research, establishing analytics frameworks, building high-fidelity
+            interactive prototypes, or shipping production React code, I thrive
+            on working through complexity to achieve the core vision.
+          </Body>
+          <Body>
+            Most recently, I turned a 10-year goal into reality by designing,
+            building, and deploying Eternity—a Bible app published on the Apple
+            App Store, Google Play Store, and web using React, Next.js, Supabase,
+            and Vercel.
+          </Body>
+          <H3>How I Work</H3>
+          <Body>
+            Whether it’s writing production code, building multi-level design
+            systems, or aligning stakeholders, I fill whatever gaps are needed
+            to keep products moving forward. Ultimately, I see my work as a way
+            to steward the talents God has given me to build meaningful,
+            human-centered software.
+          </Body>
+          <Body>
+            When I’m not designing or coding, you’ll find me studying God's
+            word, spending time with my family, or kayaking down a river.
           </Body>
           <Accomplishments />
           <Education />
