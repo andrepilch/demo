@@ -52,7 +52,7 @@ export function Bio() {
           <Body>
             I’ve designed across virtually every medium, including native
             iOS/Android, responsive web, desktop, 3D modeling, and emerging
-            hardware (Watch, VR, Glass, AR). My extensive design foundation combined
+            hardware (Watch, AR, VR, Glass). My extensive design foundation combined
             with frontend engineering allows me to push the boundaries of
             innovation while driving seamless cross-functional collaboration.
           </Body>
