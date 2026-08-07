@@ -36,9 +36,9 @@ export function Bio() {
             in the United States. Currently working to help digital products
             grow through design and engineering at WHCC. Previously at Thomson
             Reuters, La Forge Des Marques, and Wowiwe Instruction Co. With over{' '}
-            {years} years of visual design and branding expertise paired with
-            modern software engineering, I simplify complex ideas into clear,
-            intuitive, and scalable digital products.
+            {years} years of visual design expertise paired with modern software
+            engineering, I simplify complex ideas into clear, intuitive, and
+            scalable digital products.
           </Body>
           <H3>Bringing Vision to Reality</H3>
           <Body>
