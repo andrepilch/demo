@@ -7,6 +7,7 @@ import {
 import { H2, Body } from './Text'
 import { Card } from './Card'
 import { iconMd } from './Button'
+import { getReactEngineeringYears } from '@/lib/experience'
 
 const bridgeCards = [
   {
@@ -92,6 +93,8 @@ const bridgeCards = [
 ]
 
 export function BridgeAdvantage() {
+  const reactYears = getReactEngineeringYears()
+
   return (
     <Section id="bridge">
         <SectionContent>
@@ -100,8 +103,8 @@ export function BridgeAdvantage() {
           {/* <H2>Design-to-Code: Why It Matters</H2> */}
           <H2>Advantages of working at the intersection of design and code</H2>
             <Body color="secondary">
-              My 5 years of React/TypeScript experience isn't just a bonus—it's
-              a fundamental part of how I design better products.
+              My {reactYears} years of React/TypeScript experience isn't just a
+              bonus—it's a fundamental part of how I design better products.
             </Body>
           </SectionHeader>
           <Grid cols={2} gap="tight">

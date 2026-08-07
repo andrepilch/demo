@@ -3,9 +3,12 @@ import {
   HeroSection,
   // ImpactStatsRibbon,
   BigNumbers,
+  HomeIntro,
   FeaturedCaseStudies,
   CTASection,
   CraftFocus,
+  StrongProductBanner,
+  BridgeAdvantage,
 } from '@/components'
 import * as styles from './page.css'
 
@@ -22,8 +25,11 @@ export default function Home() {
       </div>
       {/* <ImpactStatsRibbon /> */}
       <div className={styles.sectionsWrapper}>
+        <HomeIntro />
         <FeaturedCaseStudies />
         <CraftFocus />
+        <StrongProductBanner />
+        <BridgeAdvantage />
       </div>
       <CTASection />
     </div>
