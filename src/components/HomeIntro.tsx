@@ -26,10 +26,10 @@ export function HomeIntro() {
     <Section gap={SectionGap.md}>
       <div style={introStyle}>
         <Body>
-          Classically trained with a 5-year BFA in Graphic Design, I’ve spent
-          over {years} years designing digital products from scratch or working
-          on major platform redesigns. My work spans native mobile, responsive
-          web, 3D modeling, and interactive prototyping.
+          Classically trained in design with a 5-year BFA, I’ve spent over{' '}
+          {years} years designing digital products from scratch or working on
+          major platform redesigns. My work spans native mobile, responsive web,
+          3D modeling, and interactive prototyping.
         </Body>
         <Body>
           In recent years, I’ve expanded into frontend engineering. Writing

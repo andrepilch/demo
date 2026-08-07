@@ -33,9 +33,9 @@ export function Bio() {
           <H2 className={styles.pageTitle}>Hi, I'm André Pilch</H2>
           <Body>
             I'm a Christian born and raised in France, now residing and working
-            in the United States. Currently working to help digital products grow
-            through design and engineering at WHCC (previously at Thomson
-            Reuters, La Forge Des Marques, and Wowiwe Instruction Co). With over{' '}
+            in the United States. Currently working to help digital products
+            grow through design and engineering at WHCC. Previously at Thomson
+            Reuters, La Forge Des Marques, and Wowiwe Instruction Co. With over{' '}
             {years} years of visual design and branding expertise paired with
             modern software engineering, I simplify complex ideas into clear,
             intuitive, and scalable digital products.
@@ -45,16 +45,16 @@ export function Bio() {
             My path started at age 10 tinkering with Photoshop and basic web
             design, which led to a classically trained background (5-year BFA)
             in Graphic Design. Over the last {years}+ years, I’ve applied those
-            visual roots across software products of all scales—taking ideas
-            from zero to one, setting strategic direction, and leading end-to-end
-            redesigns.
+            visual roots across software products of all scales, taking ideas
+            from zero to one, setting strategic direction, and leading
+            end-to-end redesigns.
           </Body>
           <Body>
             I’ve designed across virtually every medium, including native
             iOS/Android, responsive web, desktop, 3D modeling, and emerging
-            hardware (Watch, AR, VR, Glass). My extensive design foundation combined
-            with frontend engineering allows me to push the boundaries of
-            innovation while driving seamless cross-functional collaboration.
+            hardware (Watch, AR, VR, Glass). My extensive design foundation
+            combined with frontend engineering allows me to push the boundaries
+            of innovation while driving seamless cross-functional collaboration.
           </Body>
           <H3>Bridging Design & Engineering</H3>
           <Body>
@@ -65,10 +65,10 @@ export function Bio() {
             on working through complexity to achieve the core vision.
           </Body>
           <Body>
-            Most recently, I turned a 10-year goal into reality by designing,
-            building, and deploying Eternity—a Bible app published on the Apple
-            App Store, Google Play Store, and web using React, Next.js, Supabase,
-            and Vercel.
+            Most recently, I turned a goal into reality by designing, building,
+            and deploying Eternity, a full-stack Bible app published on the
+            Apple App Store, Google Play Store, and web using React, Next.js,
+            Supabase, and Vercel.
           </Body>
           <H3>How I Work</H3>
           <Body>
