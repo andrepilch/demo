@@ -3,12 +3,10 @@ import {
   Bio,
   PassionAreas,
   Partnerships,
-  Process,
   SideProjects,
   CTASection,
   LeadershipSection,
   ImpactStatsRibbon,
-  AI,
 } from '@/components'
 
 export default function About() {
@@ -20,8 +18,6 @@ export default function About() {
         <PassionAreas />
         <Partnerships />
         <LeadershipSection />
-        <AI />
-        <Process />
         <SideProjects />
       </div>
       <CTASection />
