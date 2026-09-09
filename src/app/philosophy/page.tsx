@@ -1,5 +1,12 @@
 import * as styles from './page.css'
-import { ProductPhilosophy, CTASection, AI, Process } from '@/components'
+import {
+  ProductPhilosophy,
+  CTASection,
+  AI,
+  Process,
+  StrongProductBanner,
+  BridgeAdvantage,
+} from '@/components'
 
 export default function Philosophy() {
   return (
@@ -8,6 +15,8 @@ export default function Philosophy() {
         <ProductPhilosophy />
         <AI />
         <Process />
+        <StrongProductBanner />
+        <BridgeAdvantage />
       </div>
       <CTASection />
     </>

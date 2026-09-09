@@ -7,8 +7,6 @@ import {
   FeaturedCaseStudies,
   CTASection,
   CraftFocus,
-  StrongProductBanner,
-  BridgeAdvantage,
 } from '@/components'
 import * as styles from './page.css'
 
@@ -28,8 +26,6 @@ export default function Home() {
         <HomeIntro />
         <FeaturedCaseStudies />
         <CraftFocus />
-        <StrongProductBanner />
-        <BridgeAdvantage />
       </div>
       <CTASection />
     </div>
