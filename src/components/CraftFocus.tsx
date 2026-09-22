@@ -6,28 +6,33 @@ import { Button } from './Button'
 
 const craftFocusItems: PhilosophyItem[] = [
   {
-    title: 'Designing uniqueness and improving journeys',
+    title: 'Unique Solutions',
     description:
-      "Removing pain points and finding opportunities that competitors don't see",
+      "Standing out from the competition by finding opportunities that competitors don't see and solving unsolved problems",
   },
   {
-    title: 'Building and scaling systems',
+    title: 'Better Journeys',
     description:
-      'Leveraging design tokens and components for reusability and efficiency',
+      'Removing pain points to make the product easier to use and more enjoyable',
   },
   {
-    title: 'Making impactful improvements',
-    description: 'Based on research and data insights',
+    title: 'Scalable Systems',
+    description:
+      'Leveraging design tokens and components for reusability and efficiency means the product can grow with the business',
   },
   {
-    title: 'Sweating the details on components',
-    description:
-      'Designing in code means my attention to detail actually reaches beyond design files to every customer',
+    title: 'Impactful Improvements',
+    description: 'Better design decisions based on research and data insights',
   },
   {
-    title: 'Defining, designing, building, and refining the 0 to 1',
+    title: 'Attention to Detail',
     description:
-      'This is the foundation of the product and it needs to be done right',
+      'Designing in code means my attention to detail on every component or interaction actually reaches beyond design files to every customer',
+  },
+  {
+    title: 'Zero to One',
+    description:
+      'Defining, designing, building, and refining the foundation of the product sets the stage for years to come',
   },
   // {
   //   title: 'Writing clean, re-usable CSS',

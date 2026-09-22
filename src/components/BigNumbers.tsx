@@ -1,50 +1,46 @@
 import {
   Section,
-  SectionContent,
-  SectionHeader,
-  Grid,
-  Eyebrow,
+  // SectionContent,
+  // SectionHeader,
+  // Grid,
+  // Eyebrow,
+  HomeIntro,
   // H2,
-  StatNumber,
-  H3,
-  Body,
+  // StatNumber,
+  // H3,
+  // Body,
   SectionGap,
 } from '@/components'
 import * as styles from './BigNumbers.css'
 
-const bigNumbers = [
-  {
-    value: '26%',
-    label: 'AOV Increase',
-    description: 'vs. alternative solutions',
-  },
-  {
-    value: '1.44x',
-    label: 'YoY Growth',
-    description: 'vs. alternative solutions',
-  },
-  {
-    value: '9+Yrs',
-    label: 'Product growth',
-    description: 'continuing to scale',
-  },
-  // {
-  //   value: '9min',
-  //   label: 'Average session',
-  //   description: 'beating competitors',
-  // },
-]
+// const bigNumbers = [
+//   {
+//     value: '26%',
+//     label: 'AOV Increase',
+//     description: 'vs. alternative solutions',
+//   },
+//   {
+//     value: '1.44x',
+//     label: 'YoY Growth',
+//     description: 'vs. alternative solutions',
+//   },
+//   {
+//     value: '9+Yrs',
+//     label: 'Product growth',
+//     description: 'continuing to scale',
+//   }
+// ]
 
 export function BigNumbers() {
   return (
     <Section gap={SectionGap.lg}>
       <div className={styles.whiteWrapper}>
-        <SectionContent>
-          <SectionHeader align='left'>
-            {/* <Eyebrow>Impact By The Numbers</Eyebrow> */}
-            <Eyebrow>Designing for Business Outcomes</Eyebrow>
-          </SectionHeader>
-          <Grid cols={3}>
+        {/* <SectionContent> */}
+        {/* <SectionHeader align='left'> */}
+        {/* <Eyebrow>Impact By The Numbers</Eyebrow> */}
+        {/* <Eyebrow>Designing for Business Outcomes</Eyebrow> */}
+        {/* </SectionHeader> */}
+        {/* <Grid cols={3}>
             {bigNumbers.map((stat, i) => (
               <div key={i} className={styles.statCard}>
                 <StatNumber gradient='accent'>{stat.value}</StatNumber>
@@ -54,8 +50,9 @@ export function BigNumbers() {
                 </span>
               </div>
             ))}
-          </Grid>
-        </SectionContent>
+          </Grid> */}
+        <HomeIntro />
+        {/* </SectionContent> */}
       </div>
     </Section>
   )
