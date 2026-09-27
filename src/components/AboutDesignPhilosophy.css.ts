@@ -18,8 +18,8 @@ export const frameworkCard = style({
     top: 0,
     left: 0,
     right: 0,
-    height: '3px',
-    background: `linear-gradient(90deg, ${vars.color.accent}, transparent)`,
+    height: '2px',
+    background: vars.color.accent,
   },
 })
 

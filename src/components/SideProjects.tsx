@@ -59,7 +59,12 @@ export function SideProjects() {
         return (
           <CardWrapper
             key={i}
-            className={styles.projectCard}
+            className={[
+              styles.projectCard,
+              project.url ? styles.projectCardInteractive : '',
+            ]
+              .filter(Boolean)
+              .join(' ')}
             {...linkProps}
           >
             {project.image != null && project.image !== '' && (

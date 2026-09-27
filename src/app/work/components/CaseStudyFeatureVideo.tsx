@@ -10,6 +10,8 @@ export interface CaseStudyFeatureVideoProps {
   alt: string
   /** Full-width layout (e.g. shipped product). Default is feature-highlight half-width. */
   fullWidth?: boolean
+  /** Full-viewport immersive media plane (editors / proview demos). */
+  fullViewport?: boolean
 }
 
 export function CaseStudyFeatureVideo({
@@ -17,6 +19,7 @@ export function CaseStudyFeatureVideo({
   posterSrc,
   alt,
   fullWidth = false,
+  fullViewport = false,
 }: CaseStudyFeatureVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [started, setStarted] = useState(false)
@@ -42,8 +45,14 @@ export function CaseStudyFeatureVideo({
     setStarted(false)
   }
 
+  const wrapperClass = fullViewport
+    ? styles.fullViewportMedia
+    : fullWidth
+      ? styles.imageFull
+      : styles.imageWrapper
+
   return (
-    <div className={fullWidth ? styles.imageFull : styles.imageWrapper}>
+    <div className={wrapperClass}>
       {!started && (
         <>
           <Image

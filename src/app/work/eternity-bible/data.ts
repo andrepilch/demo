@@ -263,6 +263,24 @@ export const featureMultipleLanguages: CaseStudyFeatureHighlightData = {
   imagePosition: 'left',
 }
 
+// TODO(eternity media): Replace interim image with an updated screenshot of the
+// "Download for offline use" UI when Andre provides it
+// (e.g. public/images/projects/eternity/eternity_offline_download.jpg).
+export const featureOfflineDownload: CaseStudyFeatureHighlightData = {
+  eyebrow: 'Offline Access',
+  title: 'Download for Offline Use',
+  description: `Free-use Bible translations can be downloaded for offline reading so Scripture stays available without a connection.`,
+  bullets: [
+    'Download free-use translations for offline reading',
+    'Read downloaded translations without a connection',
+    'Main tabs work offline for pages you’ve already visited',
+  ],
+  // Interim asset until a dedicated offline-download screenshot is added
+  imageSrc: '/images/projects/eternity/eternity_cover.jpg',
+  imageAlt: 'Download Bible translations for offline use',
+  imagePosition: 'right',
+}
+
 export const finalDesignsSection: CaseStudySectionData = {
   eyebrow: 'Final Designs',
   title: 'The Shipped Product',

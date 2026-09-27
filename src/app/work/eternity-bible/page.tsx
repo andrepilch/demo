@@ -29,6 +29,7 @@ import {
   finalDesignsImages,
   resultsData,
   featureMultipleLanguages,
+  featureOfflineDownload,
   designProcessImages,
   conclusionSection,
   digitalBibleBenefits,
@@ -65,6 +66,7 @@ export default function EternityCaseStudy() {
       <CaseStudyFeatureHighlight data={featureOneTapAccess} />
       <CaseStudyFeatureHighlight data={featureSearchByMeaning} />
       <CaseStudyFeatureHighlight data={featureMultipleLanguages} />
+      <CaseStudyFeatureHighlight data={featureOfflineDownload} />
 
       <CaseStudyImageGallery
         section={finalDesignsSection}

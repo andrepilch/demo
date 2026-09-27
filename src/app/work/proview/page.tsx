@@ -60,17 +60,14 @@ export default function ProViewCaseStudy() {
       <CaseStudyFeatureHighlight data={featureNotesThatNeverFade} />
       <CaseStudyFeatureHighlight data={featureNavigationSearch} />
 
-      <CaseStudyImageGallery
-        section={finalDesignsSection}
-        images={finalDesignsImages}
-        lead={
-          <CaseStudyFeatureVideo
-            videoSrc={finalDesignsVideo.videoSrc}
-            posterSrc={finalDesignsVideo.posterSrc}
-            alt={finalDesignsVideo.alt}
-            fullWidth
-          />
-        }
+      <CaseStudySection data={finalDesignsSection} />
+
+      {/* Full-viewport shipped-product demo */}
+      <CaseStudyFeatureVideo
+        videoSrc={finalDesignsVideo.videoSrc}
+        posterSrc={finalDesignsVideo.posterSrc}
+        alt={finalDesignsVideo.alt}
+        fullViewport
       />
 
       <CaseStudyCards section={conclusionSection} items={conclusionBenefits} />

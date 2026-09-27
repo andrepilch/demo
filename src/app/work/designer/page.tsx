@@ -28,6 +28,7 @@ import {
 } from './data'
 import Image from 'next/image'
 import * as styles from '../components/case-study.css'
+
 export default function DesignerPage() {
   return (
     <CaseStudyPageWrapper>
@@ -58,19 +59,24 @@ export default function DesignerPage() {
       <CaseStudyFeatureHighlight data={designFeatures} />
       <CaseStudyFeatureHighlight data={multipleBrandSupport} />
 
+      {/* Full-viewport product demo — editors / wall designer */}
+      <div
+        className={styles.fullViewportMedia}
+        aria-label='WHCC Wall Designer product demo'
+      >
+        <Image
+          src='/images/projects/designer/wall.gif'
+          alt='Wall Designer'
+          fill
+          style={{ objectFit: 'cover' }}
+          unoptimized
+        />
+      </div>
+
       <CaseStudyImageGallery
         section={finalDesignsSection}
         images={finalDesignsImages}
-      >
-        <div className={styles.imageFull}>
-          <Image
-            src='/images/projects/designer/wall.gif'
-            alt='Wall Designer'
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-      </CaseStudyImageGallery>
+      />
 
       <CaseStudySection data={conclusionSection} />
     </CaseStudyPageWrapper>

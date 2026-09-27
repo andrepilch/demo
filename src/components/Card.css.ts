@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '@/styles'
 
-// Shared card style matching process/framework cards: accent bar, bg, border
+// Shared card style: quiet surface, no hover (cards are not click targets)
 export const card = style({
   position: 'relative',
   padding: '2rem',
@@ -12,20 +12,14 @@ export const card = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.5rem',
-  transition: 'all 0.3s ease',
-  ':hover': {
-    background: vars.color.bgCardHover,
-    borderColor: vars.color.borderLight,
-    transform: 'translateY(-2px)',
-  },
   '::before': {
     content: '""',
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
-    height: '3px',
-    background: `linear-gradient(90deg, ${vars.color.accent}, transparent)`,
+    height: '2px',
+    background: vars.color.accent,
   },
 })
 
