@@ -8,7 +8,6 @@ import {
   CaseStudyStrategyGoals,
   CaseStudyFeatureHighlight,
   CaseStudyFeatureVideo,
-  CaseStudyImageGallery,
   CaseStudyResults,
 } from '@/app/work/components'
 import {
@@ -26,7 +25,6 @@ import {
   featureNavigationSearch,
   finalDesignsSection,
   finalDesignsVideo,
-  finalDesignsImages,
   resultsData,
   conclusionSection,
   conclusionBenefits,
