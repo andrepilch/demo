@@ -1,16 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { Outfit } from 'next/font/google'
 import { HERO_COPY } from './eternity-tokens'
 import { HeroStage } from './HeroStage'
 import * as styles from './eternity-hero.css'
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-outfit',
-})
 
 /**
  * Eternity portfolio cover — HeroStage ported from andrepilch/eternity
@@ -22,8 +15,7 @@ export function EternityPortfolioCover({
   caseStudyHref?: string
 }) {
   return (
-    <div className={outfit.variable}>
-      <HeroStage>
+    <HeroStage>
         <div data-hero-content className={styles.copyPanel}>
           <h2 className={styles.tagline}>{HERO_COPY.tagline}</h2>
           <p className={styles.subtitle}>{HERO_COPY.subtitle}</p>
@@ -33,7 +25,6 @@ export function EternityPortfolioCover({
             </Link>
           </div>
         </div>
-      </HeroStage>
-    </div>
+    </HeroStage>
   )
 }

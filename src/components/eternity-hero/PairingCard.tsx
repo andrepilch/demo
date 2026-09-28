@@ -1,3 +1,5 @@
+'use client'
+
 import type { CSSProperties } from 'react'
 import type { Pairing } from './eternity-tokens'
 import * as styles from './eternity-hero.css'

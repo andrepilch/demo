@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Section, SectionGap, Body, H3, Eyebrow } from '@/components'
+import { Section, SectionGap } from '@/components/Section'
+import { Body, H3, Eyebrow } from '@/components/Text'
 import {
   brandBlockFooter,
   brandBlockInner,
@@ -13,7 +14,7 @@ import {
 import { heroData as proviewHero, proviewResults } from '@/app/work/proview/data'
 import { buildHeroBackground } from '@/app/work/components/buildHeroBackground'
 import type { CaseStudyHeroData, CaseStudyResult } from '@/app/work/components'
-import { EternityPortfolioCover } from '@/components/eternity-hero'
+import { EternityPortfolioCover } from '@/components/eternity-hero/EternityPortfolioCover'
 import * as heroStyles from '@/app/work/components/case-study.css'
 import * as styles from './FeaturedCaseStudies.css'
 
