@@ -19,6 +19,7 @@ export const eternityFrame = style({
   marginRight: 'calc(-50vw + 50%)',
   border: 'none',
   background: '#ffffff',
+  overflow: 'clip',
   '@supports': {
     '(height: 100dvh)': {
       height: '100dvh',

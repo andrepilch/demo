@@ -1,8 +1,12 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import styles from './EternityPortfolioCover.module.css'
+
+/** My Bibles screen from the Eternity case study gallery (final designs). */
+const PHONE_SCREENSHOT = '/images/projects/eternity/eternity_home.jpg'
 
 const BOOK_COLORS = [
   '#D4C4AD',
@@ -12,44 +16,6 @@ const BOOK_COLORS = [
   '#9E6B6B',
   '#7B9E7B',
   '#5E7A9A',
-]
-
-const PAIRINGS = [
-  {
-    name: 'Sermon',
-    color: '#D4C4AD',
-    ref: 'John 6:68',
-    translation: 'ESV',
-    when: '2m ago',
-  },
-  {
-    name: 'Family',
-    color: '#7B6B8E',
-    ref: 'Genesis 9:16',
-    translation: 'NKJV',
-    when: '14h ago',
-  },
-  {
-    name: 'Psalms',
-    color: '#aab88f',
-    ref: 'Psalm 23:4',
-    translation: 'ESV',
-    when: '1d ago',
-  },
-  {
-    name: 'Kids',
-    color: '#6B9E9A',
-    ref: 'Luke 1:16',
-    translation: 'NLT',
-    when: '3d ago',
-  },
-  {
-    name: 'Personal',
-    color: '#9E6B6B',
-    ref: 'Luke 1:17',
-    translation: 'NTLS',
-    when: '7d ago',
-  },
 ]
 
 interface BookParticle {
@@ -178,64 +144,27 @@ function FloatingBooksCanvas() {
 }
 
 function PhoneMockup() {
-  const col1 = PAIRINGS.filter((_, i) => i % 2 === 0)
-  const col2 = PAIRINGS.filter((_, i) => i % 2 === 1)
-
   return (
     <div className={styles.phoneLayer}>
       <div className={styles.phone}>
         <div className={styles.phoneBezel} />
         <div className={styles.phoneNotch} aria-hidden />
         <div className={styles.phoneScreen}>
-          <div className={styles.screenContent}>
-            <div className={styles.screenTitle}>My Bibles</div>
-            <div className={styles.pairingGrid}>
-              <div>
-                {col1.map((pairing) => (
-                  <div
-                    key={pairing.name}
-                    className={styles.pairingCard}
-                    style={{ background: pairing.color, marginBottom: 8 }}
-                  >
-                    <span className={styles.pairingName}>{pairing.name}</span>
-                    <span className={styles.pairingRef}>{pairing.ref}</span>
-                    <span className={styles.pairingMeta}>
-                      {pairing.translation} · {pairing.when}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div>
-                <div className={styles.addCard}>+ Add Bible</div>
-                {col2.map((pairing) => (
-                  <div
-                    key={pairing.name}
-                    className={styles.pairingCard}
-                    style={{ background: pairing.color, marginTop: 8 }}
-                  >
-                    <span className={styles.pairingName}>{pairing.name}</span>
-                    <span className={styles.pairingRef}>{pairing.ref}</span>
-                    <span className={styles.pairingMeta}>
-                      {pairing.translation} · {pairing.when}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <nav className={styles.tabBar} aria-label='App navigation'>
-              <span className={styles.tabActive}>Bibles</span>
-              <span>Read</span>
-              <span>Notes</span>
-              <span>Search</span>
-            </nav>
-          </div>
+          <Image
+            src={PHONE_SCREENSHOT}
+            alt='My Bibles - Multiple Bible cards for different contexts'
+            fill
+            sizes='300px'
+            className={styles.phoneScreenshot}
+            priority
+          />
         </div>
       </div>
     </div>
   )
 }
 
-/** Full-viewport Eternity portfolio cover — floating books + phone device UI. */
+/** Full-viewport Eternity portfolio cover — floating books + phone screenshot. */
 export function EternityPortfolioCover() {
   const [mounted, setMounted] = useState(false)
 
@@ -247,7 +176,7 @@ export function EternityPortfolioCover() {
     <section className={styles.cover} data-eternity-cover>
       {mounted && <FloatingBooksCanvas />}
       <div className={styles.stage}>
-        {mounted && <PhoneMockup />}
+        <PhoneMockup />
         <div className={styles.copyPanel}>
           <h2 className={styles.tagline}>Open the Bible more often</h2>
           <p className={styles.subtitle}>

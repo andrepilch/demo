@@ -52,8 +52,7 @@
   height: 520px;
   margin-left: -130px;
   margin-top: -260px;
-  transform-origin: center center;
-  animation: phoneIntro 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 768px) {
@@ -62,19 +61,6 @@
     height: 600px;
     margin-left: -150px;
     margin-top: -300px;
-  }
-}
-
-@keyframes phoneIntro {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) perspective(1200px) rotateX(52deg)
-      rotateY(-18deg) rotateZ(-28deg) scale(2.15);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) perspective(1200px) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) scale(1);
   }
 }
 
@@ -92,7 +78,7 @@
   inset: 4px;
   border-radius: 36px;
   overflow: hidden;
-  background: #ffffff;
+  background: #000;
 }
 
 .phoneNotch {
@@ -107,79 +93,13 @@
   z-index: 2;
 }
 
-.screenContent {
-  display: flex;
-  flex-direction: column;
+.phoneScreenshot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
-  padding: 40px 12px 0;
-  font-size: 11px;
-}
-
-.screenTitle {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 12px;
-  padding-left: 4px;
-}
-
-.pairingGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  flex: 1;
-  overflow: hidden;
-  align-content: start;
-}
-
-.pairingCard {
-  border-radius: 12px;
-  padding: 10px 8px;
-  color: #fff;
-  min-height: 72px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.pairingName {
-  font-weight: 700;
-  font-size: 12px;
-}
-
-.pairingRef {
-  font-size: 10px;
-  opacity: 0.9;
-}
-
-.pairingMeta {
-  font-size: 9px;
-  opacity: 0.75;
-  margin-top: auto;
-}
-
-.addCard {
-  border-radius: 12px;
-  border: 1.5px dashed #ccc;
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-  font-size: 11px;
-}
-
-.tabBar {
-  display: flex;
-  justify-content: space-around;
-  padding: 8px 0 10px;
-  border-top: 1px solid #eee;
-  font-size: 9px;
-  color: #888;
-}
-
-.tabActive {
-  color: #380bbb;
-  font-weight: 600;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .copyPanel {
@@ -191,7 +111,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  animation: copyFade 0.85s ease 2.85s both;
 }
 
 @media (min-width: 768px) {
@@ -199,17 +118,6 @@
     left: max(3rem, 8vw);
     bottom: max(3rem, 10vh);
     width: min(100% - 6rem, 40rem);
-  }
-}
-
-@keyframes copyFade {
-  0% {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

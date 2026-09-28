@@ -236,6 +236,7 @@ export function FeaturedCaseStudies() {
           className={styles.eternityFrame}
           src='/covers/eternity'
           title='Eternity'
+          tabIndex={-1}
         />
         <ImagePortfolioCover {...proviewProject} />
       </div>

@@ -11,7 +11,12 @@ export default function EternityCoverPage() {
   return (
     <>
       <style>{`
-        html, body { margin: 0; background: #fff; overflow: hidden; }
+        html, body {
+          margin: 0;
+          background: #fff;
+          overflow: hidden;
+          overscroll-behavior: none;
+        }
       `}</style>
       <div
         style={{
