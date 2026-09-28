@@ -40,32 +40,9 @@ export const philosophyCard = style({
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.lg,
-  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
   animation: `${cardFadeIn} 0.5s ease-out backwards`,
   position: 'relative',
   overflow: 'hidden',
-  ':hover': {
-    background: vars.color.bgCardHover,
-    borderColor: vars.color.borderLight,
-    transform: 'translateY(-3px)',
-    boxShadow: `0 8px 24px rgba(0, 0, 0, 0.15)`,
-  },
-  '::before': {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '3px',
-    height: '100%',
-    background: vars.color.accent,
-    opacity: 0,
-    transition: 'opacity 0.3s ease',
-  },
-  selectors: {
-    '&:hover::before': {
-      opacity: 1,
-    },
-  },
 })
 
 // Animation delay variants for staggered appearance

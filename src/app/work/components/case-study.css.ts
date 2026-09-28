@@ -11,6 +11,7 @@ export const pageWrapper = style({
   flexDirection: 'column',
   gap: vars.gap.section,
   paddingBottom: vars.gap.section,
+  overflowX: 'hidden',
 })
 
 // ============================================
@@ -19,6 +20,9 @@ export const pageWrapper = style({
 
 export const heroSection = style({
   position: 'relative',
+  display: 'flex',
+  alignItems: 'center',
+  minHeight: '100vh',
   paddingTop: '8rem',
   paddingBottom: '4rem',
   backgroundSize: 'cover',
@@ -26,6 +30,11 @@ export const heroSection = style({
   backgroundRepeat: 'no-repeat',
   color: vars.color.textOnAccent,
   overflow: 'hidden',
+  '@supports': {
+    '(min-height: 100dvh)': {
+      minHeight: '100dvh',
+    },
+  },
 })
 
 export const heroContainer = style({
@@ -137,8 +146,8 @@ export const heroButton = style({
   transition: 'all 0.3s ease',
   width: 'fit-content',
   ':hover': {
-    transform: 'translateY(-2px)',
-    boxShadow: vars.shadow.glow,
+    transform: 'translateY(-1px)',
+    boxShadow: vars.shadow.md,
   },
 })
 
@@ -276,11 +285,6 @@ export const processStepItem = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.75rem',
-  transition: 'all 0.3s ease',
-  ':hover': {
-    borderColor: vars.color.borderLight,
-    transform: 'translateY(-2px)',
-  },
 })
 
 export const processStepNumber = style({
@@ -343,11 +347,6 @@ export const problemCard = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.75rem',
-  transition: 'all 0.3s ease',
-  ':hover': {
-    borderColor: vars.color.borderLight,
-    transform: 'translateY(-2px)',
-  },
 })
 
 export const problemNumber = style({
@@ -403,8 +402,8 @@ export const goalCard = style({
     top: 0,
     left: 0,
     right: 0,
-    height: '3px',
-    background: `linear-gradient(90deg, ${vars.color.accent}, transparent)`,
+    height: '2px',
+    background: vars.color.accent,
   },
 })
 
@@ -475,6 +474,30 @@ export const imageFull = style({
   border: `1px solid ${vars.color.border}`,
 })
 
+/** Full-bleed, full-viewport media plane for immersive product covers/demos */
+export const fullViewportMedia = style({
+  position: 'relative',
+  width: '100vw',
+  marginLeft: 'calc(-50vw + 50%)',
+  marginRight: 'calc(-50vw + 50%)',
+  minHeight: '100vh',
+  overflow: 'hidden',
+  background: vars.color.bgSecondary,
+  '@supports': {
+    '(min-height: 100dvh)': {
+      minHeight: '100dvh',
+    },
+  },
+})
+
+export const fullViewportMediaInner = style({
+  position: 'absolute',
+  inset: 0,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+})
+
 export const imageCaption = style({
   marginTop: '0.75rem',
   color: vars.color.textMuted,
@@ -540,10 +563,7 @@ export const resultCard = style({
 export const resultValue = style({
   fontSize: '3.5rem',
   fontWeight: '700',
-  background: `linear-gradient(135deg, ${vars.color.accent}, #00d4ff)`,
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
+  color: vars.color.accent,
   lineHeight: 1.1,
   '@media': {
     'screen and (min-width: 768px)': {
@@ -582,6 +602,8 @@ export const featureSection = style({
 export const featureContent = style({
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'flex-start',
+  textAlign: 'left',
   gap: '1rem',
 })
 

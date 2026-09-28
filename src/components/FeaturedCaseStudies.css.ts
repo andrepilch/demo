@@ -8,10 +8,10 @@ export const caseStudyCard = style({
   background: vars.color.bgPrimary,
   // border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius['xl'],
-  transition: 'all 0.3s ease',
+  transition: 'background 0.3s ease, transform 0.3s ease',
   ':hover': {
-    background: vars.gradient.card,
-    transform: 'translateY(-2px) scale(1.01)',
+    background: vars.color.bgCardHover,
+    transform: 'translateY(-2px)',
   },
   '@media': {
     'screen and (min-width: 982px)': {
@@ -121,11 +121,11 @@ export const tag = style({
   paddingRight: '0.75rem',
   paddingTop: '0.375rem',
   paddingBottom: '0.375rem',
-  borderRadius: '9999px',
+  borderRadius: vars.radius.md,
   fontSize: '0.875rem',
-  background: 'rgba(14, 165, 233, 0.1)',
-  border: '1px solid rgba(14, 165, 233, 0.2)',
-  color: vars.color.accent,
+  background: vars.color.bgSecondary,
+  border: `1px solid ${vars.color.border}`,
+  color: vars.color.textSecondary,
 })
 
 export const otherProductsSection = style({

@@ -1,9 +1,7 @@
 import {
   DiagonalBackground,
   HeroSection,
-  // ImpactStatsRibbon,
-  BigNumbers,
-  // HomeIntro,
+  HomeIntro,
   FeaturedCaseStudies,
   CTASection,
   CraftFocus,
@@ -18,14 +16,12 @@ export default function Home() {
         <DiagonalBackground />
         <div className={styles.heroContent}>
           <HeroSection />
-          <BigNumbers />
         </div>
       </div>
-      {/* <ImpactStatsRibbon /> */}
       <div className={styles.sectionsWrapper}>
-        <CraftFocus />
-        {/* <HomeIntro /> */}
+        <HomeIntro />
         <FeaturedCaseStudies />
+        <CraftFocus />
       </div>
       <CTASection />
     </div>

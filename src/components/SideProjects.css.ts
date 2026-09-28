@@ -13,7 +13,7 @@ export const projectGrid = style({
   },
 })
 
-// Project Card
+// Project Card — base (no hover; used when card is not a link)
 export const projectCard = style({
   display: 'flex',
   flexDirection: 'column',
@@ -22,7 +22,11 @@ export const projectCard = style({
   background: vars.color.bgCard,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.xl,
-  transition: 'all 0.3s ease',
+})
+
+/** Hover affordance only for clickable project cards */
+export const projectCardInteractive = style({
+  transition: 'background 0.3s ease, border-color 0.3s ease, transform 0.3s ease',
   ':hover': {
     background: vars.color.bgCardHover,
     borderColor: vars.color.borderLight,
@@ -63,7 +67,7 @@ export const projectHeader = style({
 export const projectTitle = style({
   transition: 'color 0.2s ease',
   selectors: {
-    [`${projectCard}:hover &`]: {
+    [`${projectCardInteractive}:hover &`]: {
       color: vars.color.accent,
     },
   },
@@ -74,7 +78,7 @@ export const projectStatus = style({
   paddingRight: '0.75rem',
   paddingTop: '0.25rem',
   paddingBottom: '0.25rem',
-  borderRadius: '9999px',
+  borderRadius: vars.radius.md,
   fontSize: '0.75rem',
   fontWeight: '500',
   background: 'rgba(34, 197, 94, 0.1)',
@@ -100,7 +104,7 @@ export const projectLinkIcon = style({
   height: '16px',
   transition: 'transform 0.2s ease',
   selectors: {
-    [`${projectCard}:hover &`]: {
+    [`${projectCardInteractive}:hover &`]: {
       transform: 'translateX(4px)',
     },
   },
@@ -117,11 +121,11 @@ export const skillBadge = style({
   paddingRight: '0.75rem',
   paddingTop: '0.375rem',
   paddingBottom: '0.375rem',
-  borderRadius: '9999px',
+  borderRadius: vars.radius.md,
   fontSize: '0.875rem',
-  background: 'rgba(14, 165, 233, 0.1)',
-  border: '1px solid rgba(14, 165, 233, 0.2)',
-  color: vars.color.accent,
+  background: vars.color.bgSecondary,
+  border: `1px solid ${vars.color.border}`,
+  color: vars.color.textSecondary,
 })
 
 // Max width wrapper

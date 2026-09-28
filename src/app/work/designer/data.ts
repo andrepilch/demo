@@ -218,6 +218,17 @@ export const solutionSection: CaseStudySectionData = {
   description: '',
 }
 
+// TODO(editors media): Replace GIF/still assets with updated screenshots and
+// videos when Andre provides them. Do not invent placeholder media.
+// Expected drop (suggested paths — adjust names to match delivery):
+// - public/images/projects/designer/wall_designer_cover.jpg (hero / cover still)
+// - public/images/projects/designer/collage_handles.mp4 (or updated .gif)
+// - public/images/projects/designer/theming.mp4 (or updated .gif)
+// - public/images/projects/designer/wall.mp4 (full-vh demo; replace wall.gif)
+// - public/images/projects/designer/editor_variations.* (gallery stills/clips)
+// Wire new files into designFeatures / multipleBrandSupport / finalDesignsImages
+// and the fullViewportMedia block in page.tsx once assets land in public/.
+
 export const designFeatures: CaseStudyFeatureHighlightData = {
   eyebrow: 'Interaction Design',
   title: 'Built-in Design Features',

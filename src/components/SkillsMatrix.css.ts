@@ -29,11 +29,11 @@ export const skillBadge = style({
   paddingRight: '0.75rem',
   paddingTop: '0.375rem',
   paddingBottom: '0.375rem',
-  borderRadius: '9999px',
+  borderRadius: vars.radius.md,
   fontSize: '0.875rem',
-  background: 'rgba(14, 165, 233, 0.1)',
-  border: '1px solid rgba(14, 165, 233, 0.2)',
-  color: vars.color.accent,
+  background: vars.color.bgSecondary,
+  border: `1px solid ${vars.color.border}`,
+  color: vars.color.textSecondary,
 })
 
 // Accordion
