@@ -15,7 +15,7 @@ import { heroData as proviewHero, proviewResults } from '@/app/work/proview/data
 import { buildHeroBackground } from '@/app/work/components/buildHeroBackground'
 import type { CaseStudyHeroData, CaseStudyResult } from '@/app/work/components'
 import * as heroStyles from '@/app/work/components/case-study.css'
-import { EternityPortfolioCover } from './EternityPortfolioCover'
+import { PortfolioCovers } from './PortfolioCovers'
 import * as styles from './FeaturedCaseStudies.css'
 
 interface ImagePortfolioProject {
@@ -232,9 +232,10 @@ export function FeaturedCaseStudies() {
         <Eyebrow>Featured Case Studies</Eyebrow>
       </Section>
       <div className={styles.portfolioCovers}>
-        <ImagePortfolioCover {...designerProject} />
-        <EternityPortfolioCover />
-        <ImagePortfolioCover {...proviewProject} />
+        <PortfolioCovers
+          designer={<ImagePortfolioCover {...designerProject} />}
+          proview={<ImagePortfolioCover {...proviewProject} />}
+        />
       </div>
       <section className={brandBlockFooter}>
         <div className={brandBlockInner}>
