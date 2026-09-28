@@ -1,5 +1,9 @@
 'use client'
 
+import {
+  eternityResults,
+  heroData as eternityHero,
+} from '@/app/work/eternity-bible/data'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
@@ -178,12 +182,19 @@ export function EternityPortfolioCover() {
       <div className={styles.stage}>
         <PhoneMockup />
         <div className={styles.copyPanel}>
-          <h2 className={styles.tagline}>Open the Bible more often</h2>
-          <p className={styles.subtitle}>
-            Pick up reading or listening where you left off in any Bible on any
-            device without distractions and untracked. It&apos;s just you and the
-            Bible.
-          </p>
+          <p className={styles.eyebrow}>{eternityHero.eyebrow}</p>
+          <h2 className={styles.title}>{eternityHero.title}</h2>
+          <p className={styles.description}>{eternityHero.description}</p>
+          {eternityResults.length > 0 && (
+            <div className={styles.stats}>
+              {eternityResults.map((stat) => (
+                <div key={stat.label} className={styles.stat}>
+                  <span className={styles.statValue}>{stat.value}</span>
+                  <span className={styles.statLabel}>{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          )}
           <Link
             href='/work/eternity-bible'
             target='_top'
