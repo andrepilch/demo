@@ -7,6 +7,25 @@ export const portfolioCovers = style({
   flexDirection: 'column',
 })
 
+/**
+ * Eternity cover is a separate static route so its client chunk is not part
+ * of the home page webpack graph.
+ */
+export const eternityFrame = style({
+  display: 'block',
+  width: '100vw',
+  height: '100vh',
+  marginLeft: 'calc(-50vw + 50%)',
+  marginRight: 'calc(-50vw + 50%)',
+  border: 'none',
+  background: '#ffffff',
+  '@supports': {
+    '(height: 100dvh)': {
+      height: '100dvh',
+    },
+  },
+})
+
 /** Full-bleed link wrapping each portfolio cover hero */
 export const portfolioCover = style({
   display: 'block',

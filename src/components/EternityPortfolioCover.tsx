@@ -255,7 +255,11 @@ export function EternityPortfolioCover() {
             device without distractions and untracked. It&apos;s just you and the
             Bible.
           </p>
-          <Link href='/work/eternity-bible' className={styles.ctaLink}>
+          <Link
+            href='/work/eternity-bible'
+            target='_top'
+            className={styles.ctaLink}
+          >
             View Case Study
           </Link>
         </div>
