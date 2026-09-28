@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import { H1, LinkButton, ButtonGroup, Section } from '@/components'
+import { LinkButton, ButtonGroup } from '@/components/Button'
+import { Section } from '@/components/Section'
+import { H1 } from '@/components/Text'
 import { buttonBase, sizeVariants } from './Button.css'
 import { vars } from '@/styles'
 

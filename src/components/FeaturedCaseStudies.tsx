@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import { Section, SectionGap } from '@/components/Section'
 import { Body, H3, Eyebrow } from '@/components/Text'
 import {
@@ -14,7 +15,6 @@ import {
 import { heroData as proviewHero, proviewResults } from '@/app/work/proview/data'
 import { buildHeroBackground } from '@/app/work/components/buildHeroBackground'
 import type { CaseStudyHeroData, CaseStudyResult } from '@/app/work/components'
-import { FeaturedEternityCover } from '@/components/FeaturedEternityCover'
 import * as heroStyles from '@/app/work/components/case-study.css'
 import * as styles from './FeaturedCaseStudies.css'
 
@@ -218,7 +218,11 @@ function ImagePortfolioCover({ href, hero, stats }: ImagePortfolioProject) {
   )
 }
 
-export function FeaturedCaseStudies() {
+export function FeaturedCaseStudies({
+  eternityCover,
+}: {
+  eternityCover: ReactNode
+}) {
   const visibleProducts = otherProducts.filter((product) => product.visible)
   const WHCC_DESIGNER_PRODUCTS = 5
   const notVisibleCount =
@@ -233,7 +237,7 @@ export function FeaturedCaseStudies() {
       </Section>
       <div className={styles.portfolioCovers}>
         <ImagePortfolioCover {...designerProject} />
-        <FeaturedEternityCover />
+        {eternityCover}
         <ImagePortfolioCover {...proviewProject} />
       </div>
       <section className={brandBlockFooter}>

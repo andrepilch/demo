@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import * as styles from './FeaturedCaseStudies.css'
+import * as styles from './FeaturedEternityCover.css'
 
 const EternityPortfolioCover = dynamic(
   () =>
@@ -9,8 +9,8 @@ const EternityPortfolioCover = dynamic(
       (mod) => mod.EternityPortfolioCover
     ),
   {
-    ssr: true,
-    loading: () => <div className={styles.eternityCover} aria-hidden />,
+    ssr: false,
+    loading: () => <div className={styles.loadingShell} aria-hidden />,
   }
 )
 
