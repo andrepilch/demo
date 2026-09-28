@@ -74,7 +74,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className={`${figtree.variable} ${mynerve.variable}`}>
+    <html
+      lang='en'
+      className={`${figtree.variable} ${mynerve.variable}`}
+    >
       <body className={figtree.className}>
         <ThemeProvider defaultTheme='light'>
           <main style={{ flex: 1 }}>

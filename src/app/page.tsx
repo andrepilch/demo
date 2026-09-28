@@ -1,11 +1,9 @@
-import {
-  DiagonalBackground,
-  HeroSection,
-  HomeIntro,
-  FeaturedCaseStudies,
-  CTASection,
-  CraftFocus,
-} from '@/components'
+import { CraftFocus } from '@/components/CraftFocus'
+import { CTASection } from '@/components/CTASection'
+import { DiagonalBackground } from '@/components/DiagonalBackground'
+import { FeaturedCaseStudies } from '@/components/FeaturedCaseStudies'
+import { HeroSection } from '@/components/HeroSection'
+import { HomeIntro } from '@/components/HomeIntro'
 import * as styles from './page.css'
 
 export default function Home() {

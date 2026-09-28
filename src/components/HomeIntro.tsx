@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { CSSProperties } from 'react'
-import { Section, SectionGap, Body } from '@/components'
+import { Section, SectionGap } from '@/components/Section'
+import { Body } from '@/components/Text'
 import { getYearsOfExperience } from '@/lib/experience'
 import { vars } from '@/styles'
 
