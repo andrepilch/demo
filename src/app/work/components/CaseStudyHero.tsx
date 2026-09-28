@@ -1,7 +1,16 @@
 import type { CaseStudyHeroData } from './types'
 import { CaseStudyRecognitionBadge } from './CaseStudyRecognitionBadge'
-import { buildHeroBackground } from './buildHeroBackground'
 import * as styles from './case-study.css'
+
+function buildHeroBackground(data: CaseStudyHeroData): string {
+  if (data.backgroundStyle) return data.backgroundStyle
+  const accent = data.accentColor ?? '#380BBB'
+  const image = data.heroImage ?? ''
+  if (image) {
+    return `linear-gradient(135deg, ${accent}e6 0%, ${accent}99 50%, ${accent}80 100%), url("${image}")`
+  }
+  return `linear-gradient(135deg, ${accent}e6 0%, ${accent}99 100%)`
+}
 
 export interface CaseStudyHeroProps {
   data: CaseStudyHeroData
