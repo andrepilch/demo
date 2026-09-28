@@ -14,7 +14,7 @@ import {
 import { heroData as proviewHero, proviewResults } from '@/app/work/proview/data'
 import { buildHeroBackground } from '@/app/work/components/buildHeroBackground'
 import type { CaseStudyHeroData, CaseStudyResult } from '@/app/work/components'
-import { EternityPortfolioCover } from '@/components/eternity-hero/EternityPortfolioCover'
+import { FeaturedEternityCover } from '@/components/FeaturedEternityCover'
 import * as heroStyles from '@/app/work/components/case-study.css'
 import * as styles from './FeaturedCaseStudies.css'
 
@@ -233,9 +233,7 @@ export function FeaturedCaseStudies() {
       </Section>
       <div className={styles.portfolioCovers}>
         <ImagePortfolioCover {...designerProject} />
-        <div className={styles.eternityCover}>
-          <EternityPortfolioCover caseStudyHref='/work/eternity-bible' />
-        </div>
+        <FeaturedEternityCover />
         <ImagePortfolioCover {...proviewProject} />
       </div>
       <section className={brandBlockFooter}>
