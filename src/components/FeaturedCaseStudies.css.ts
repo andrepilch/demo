@@ -7,6 +7,13 @@ export const portfolioCovers = style({
   flexDirection: 'column',
 })
 
+/** Full-bleed wrapper for the interactive Eternity HeroStage cover */
+export const eternityCover = style({
+  width: '100vw',
+  marginLeft: 'calc(-50vw + 50%)',
+  marginRight: 'calc(-50vw + 50%)',
+})
+
 /** Full-bleed link wrapping each portfolio cover hero */
 export const portfolioCover = style({
   display: 'block',

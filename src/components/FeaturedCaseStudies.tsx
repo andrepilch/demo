@@ -10,55 +10,26 @@ import {
   heroData as designerHero,
   designerResults,
 } from '@/app/work/designer/data'
-import { eternityResults } from '@/app/work/eternity-bible/data'
 import { heroData as proviewHero, proviewResults } from '@/app/work/proview/data'
 import { buildHeroBackground } from '@/app/work/components/buildHeroBackground'
-import { CaseStudyRecognitionBadge } from '@/app/work/components/CaseStudyRecognitionBadge'
-import type {
-  CaseStudyHeroData,
-  CaseStudyResult,
-  CaseStudyRecognition,
-} from '@/app/work/components'
+import type { CaseStudyHeroData, CaseStudyResult } from '@/app/work/components'
+import { EternityPortfolioCover } from '@/components/eternity-hero'
 import * as heroStyles from '@/app/work/components/case-study.css'
 import * as styles from './FeaturedCaseStudies.css'
 
-interface PortfolioProject {
+interface ImagePortfolioProject {
   href: string
   hero: CaseStudyHeroData
   stats: CaseStudyResult[]
-  recognition?: CaseStudyRecognition
 }
 
-/**
- * Eternity portfolio cover mirrors about.eternitybible.app hero content.
- * The live about hero is a scroll-driven phone mockup (My Bibles UI); this
- * reuses the matching static mockup asset already in public/.
- */
-const eternityAboutHero: CaseStudyHeroData = {
-  eyebrow: 'Eternity Bible',
-  title: 'Open the Bible more often',
-  description:
-    "Pick up reading or listening where you left off in any Bible on any device without distractions and untracked. It's just you and the Bible.",
-  accentColor: '#380BBB',
-  heroImage: '/images/projects/eternity/eternity_home.jpg',
-}
-
-const portfolioProjects: PortfolioProject[] = [
+const imagePortfolioProjects: ImagePortfolioProject[] = [
   {
     href: '/work/designer',
     hero: designerHero,
     stats: designerResults.filter((stat) =>
       ['8M+', '9+Yrs'].includes(stat.value)
     ),
-  },
-  {
-    href: '/work/eternity-bible',
-    hero: eternityAboutHero,
-    stats: eternityResults,
-    recognition: {
-      label: "Editor's Choice on faith.tools",
-      url: 'https://faith.tools/app/9503-eternity-bible',
-    },
   },
   {
     href: '/work/proview',
@@ -212,12 +183,7 @@ const otherProducts = [
   },
 ]
 
-function PortfolioProjectCover({
-  href,
-  hero,
-  stats,
-  recognition,
-}: PortfolioProject) {
+function ImagePortfolioCover({ href, hero, stats }: ImagePortfolioProject) {
   const background = buildHeroBackground(hero)
   const label = `View ${hero.eyebrow} case study`
 
@@ -230,9 +196,6 @@ function PortfolioProjectCover({
         <div className={heroStyles.heroContainer}>
           <div className={heroStyles.heroContent}>
             <div className={heroStyles.heroHeadline}>
-              {recognition && (
-                <CaseStudyRecognitionBadge recognition={recognition} />
-              )}
               <p className={heroStyles.heroEyebrow}>{hero.eyebrow}</p>
               <h2 className={heroStyles.heroTitle}>{hero.title}</h2>
             </div>
@@ -260,15 +223,19 @@ export function FeaturedCaseStudies() {
   const notVisibleCount =
     otherProducts.length - visibleProducts.length - WHCC_DESIGNER_PRODUCTS
 
+  const [designerProject, proviewProject] = imagePortfolioProjects
+
   return (
     <>
       <Section gap={SectionGap.md}>
         <Eyebrow>Featured Case Studies</Eyebrow>
       </Section>
       <div className={styles.portfolioCovers}>
-        {portfolioProjects.map((project) => (
-          <PortfolioProjectCover key={project.href} {...project} />
-        ))}
+        <ImagePortfolioCover {...designerProject} />
+        <div className={styles.eternityCover}>
+          <EternityPortfolioCover caseStudyHref='/work/eternity-bible' />
+        </div>
+        <ImagePortfolioCover {...proviewProject} />
       </div>
       <section className={brandBlockFooter}>
         <div className={brandBlockInner}>
