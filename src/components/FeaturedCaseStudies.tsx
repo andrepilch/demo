@@ -1,50 +1,51 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { Section, SectionGap, H2, Body, H3, Eyebrow } from '@/components'
+import { Section, SectionGap, Body, H3, Eyebrow } from '@/components'
 import {
   brandBlockFooter,
   brandBlockInner,
   gapVariants,
   sectionContent,
 } from '@/components/Section.css'
+import {
+  heroData as designerHero,
+  designerResults,
+} from '@/app/work/designer/data'
+import {
+  heroData as eternityHero,
+  eternityResults,
+} from '@/app/work/eternity-bible/data'
+import {
+  heroData as proviewHero,
+  proviewResults,
+} from '@/app/work/proview/data'
+import { buildHeroBackground } from '@/app/work/components/buildHeroBackground'
+import { CaseStudyRecognitionBadge } from '@/app/work/components/CaseStudyRecognitionBadge'
+import type { CaseStudyHeroData, CaseStudyResult } from '@/app/work/components'
+import * as heroStyles from '@/app/work/components/case-study.css'
 import * as styles from './FeaturedCaseStudies.css'
-import { eternityResults } from '@/app/work/eternity-bible/data'
-import { proviewResults } from '@/app/work/proview/data'
 
-const caseStudies = [
+interface PortfolioProject {
+  href: string
+  hero: CaseStudyHeroData
+  stats: CaseStudyResult[]
+}
+
+const portfolioProjects: PortfolioProject[] = [
   {
-    title: 'whcc Designer',
-    outcome:
-      'React multi-brand web app for whcc and its partners used by hundreds of thousands of users that continues to scale  ',
-    description:
-      'Building user confidence and saving time with a versatile designer',
-    tags: ['Product Design', 'React', 'Design Systems'],
     href: '/work/designer',
-    image: '/images/projects/designer/wall_designer_cover.jpg',
-    stats: [
-      // { value: '26%', label: 'AOV Increase' },
-      { value: '8M+', label: 'Sessions served' },
-      { value: '9+Yrs', label: 'Product growth' },
-    ],
+    hero: designerHero,
+    stats: designerResults.filter((stat) =>
+      ['8M+', '9+Yrs'].includes(stat.value)
+    ),
   },
   {
-    title: 'Eternity Bible',
-    outcome:
-      'Full-stack React/NextJS application built and shipped solo to app stores in under 1 year',
-    description: 'Challenging the norms in a saturated market',
-    tags: ['NextJS', 'TypeScript', 'Full-Stack'],
     href: '/work/eternity-bible',
-    image: '/images/projects/eternity/eternity_hand.jpg',
+    hero: eternityHero,
     stats: eternityResults,
   },
   {
-    title: 'ProView E-Reader',
-    outcome:
-      'Proview from Thomson Reuters was an e-reader application for large volume law and accounting titles with complex search capabilities',
-    description: 'Powering up professional research',
-    tags: ['Product Design', 'Mobile UI/UX Design'],
     href: '/work/proview',
-    image: '/images/projects/proview/proview_cover.jpg',
+    hero: proviewHero,
     stats: proviewResults,
   },
 ]
@@ -155,13 +156,6 @@ const otherProducts = [
     status: productStatus.released,
     visible: true,
   },
-  // {
-  //   title: 'Thomson Reuters Proview',
-  //   description:
-  //     'Cross-platform e-reader application for Law & Accounting volumes with advanced search functionality',
-  //   status: productStatus.released,
-  //   visible: false,
-  // },
   {
     title: 'Thomson Reuters Blacks Law',
     description: 'Proof of concept for TR Blacks Law',
@@ -201,59 +195,59 @@ const otherProducts = [
   },
 ]
 
+function PortfolioProjectCover({ href, hero, stats }: PortfolioProject) {
+  const background = buildHeroBackground(hero)
+  const label = `View ${hero.eyebrow.replace(/ case study$/i, '')} case study`
+
+  return (
+    <Link href={href} className={styles.portfolioCover} aria-label={label}>
+      <section
+        className={heroStyles.heroSection}
+        style={{ backgroundImage: background }}
+      >
+        <div className={heroStyles.heroContainer}>
+          <div className={heroStyles.heroContent}>
+            <div className={heroStyles.heroHeadline}>
+              {hero.recognition && (
+                <CaseStudyRecognitionBadge recognition={hero.recognition} />
+              )}
+              <p className={heroStyles.heroEyebrow}>{hero.eyebrow}</p>
+              <h2 className={heroStyles.heroTitle}>{hero.title}</h2>
+            </div>
+            <p className={heroStyles.heroDescription}>{hero.description}</p>
+            {stats.length > 0 && (
+              <div className={styles.coverStats}>
+                {stats.map((stat) => (
+                  <div key={stat.label} className={styles.coverStat}>
+                    <span className={styles.coverStatValue}>{stat.value}</span>
+                    <span className={styles.coverStatLabel}>{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    </Link>
+  )
+}
+
 export function FeaturedCaseStudies() {
   const visibleProducts = otherProducts.filter((product) => product.visible)
   const WHCC_DESIGNER_PRODUCTS = 5
   const notVisibleCount =
     otherProducts.length - visibleProducts.length - WHCC_DESIGNER_PRODUCTS
+
   return (
     <>
-      <Section gap={SectionGap.lg}>
+      <Section gap={SectionGap.md}>
         <Eyebrow>Featured Case Studies</Eyebrow>
-        {caseStudies.map((study, i) => (
-          <Link key={i} href={study.href} className={styles.caseStudyCard}>
-            <div className={styles.caseStudyImage}>
-              <Image
-                src={study.image}
-                alt={study.title}
-                fill
-                className={styles.caseStudyImageInner}
-              />
-            </div>
-            <div className={styles.caseStudyContent}>
-              <div className={styles.caseStudyTitleContainer}>
-                <H2 className={styles.caseStudyTitle}>{study.title}</H2>
-                <Body className={styles.caseStudyDescription}>
-                  {study.outcome}
-                </Body>
-                {/* <Body className={styles.caseStudyOutcome}>{study.outcome}</Body> */}
-                {/* Mini Stats */}
-              </div>
-              {/* <div className={styles.tagList}>
-              {study.tags.map((tag, j) => (
-                <span key={j} className={styles.tag}>
-                  {tag}
-                </span>
-              ))}
-            </div> */}
-              {study.stats && (
-                <div className={styles.caseStudyStats}>
-                  {study.stats.map((stat, k) => (
-                    <div key={k} className={styles.caseStudyStat}>
-                      <span className={styles.caseStudyStatValue}>
-                        {stat.value}
-                      </span>
-                      <span className={styles.caseStudyStatLabel}>
-                        {stat.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </Link>
-        ))}
       </Section>
+      <div className={styles.portfolioCovers}>
+        {portfolioProjects.map((project) => (
+          <PortfolioProjectCover key={project.href} {...project} />
+        ))}
+      </div>
       <section className={brandBlockFooter}>
         <div className={brandBlockInner}>
           <div className={`${sectionContent} ${gapVariants.md}`}>
